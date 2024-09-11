@@ -1,0 +1,71 @@
+
+
+
+
+
+
+
+.footer {
+    
+    margin-top: 50px;
+    background-color: #242424;
+
+    text-align: center;
+    color: #ffffff;
+}
+.footer p 
+{
+    color: #ffffff;
+    margin: 1px;
+}
+.footer-ico
+{
+    height: 60px;
+}
+.footer-ico:hover
+{
+    transform: scale(110%);
+}
+.footer-fond
+{
+    width: 100%;
+
+    
+}
+/* Style pour la liste de liens dans le footer */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+.footer ul:hover {color: #ff4f34;}
+.footer ul li {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+/* Style pour les liens dans le footer */
+.footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer ul li a:hover {
+    text-decoration: none;
+    color: #ff2a2a;
+}
+
+/* Style pour l'image dans le footer */
+.footer-logo {
+    width: 100px; /* Changer la largeur selon vos besoins */
+    height: auto; /* Pour maintenir les proportions de l'image */
+}
+
+/* Media query pour le rendre responsive */
+@media (max-width: 768px) {
+    .footer ul li {
+        display: block;
+        margin-bottom: 1px;
+    }
+}

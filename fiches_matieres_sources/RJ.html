@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <title>Le Support - SOURCES</title>
+    <link rel="icon" href="../img/s.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            
+        }
+        .acces
+        {
+            width: 75%;
+            margin-left: 15%;
+        }
+        .matiere-container
+        {
+            color: #fff;
+            width: 80%;
+            margin-left: 10%;
+            background-color: #0f0f0f;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .matiere
+        {
+            color: #ffd8d8;
+            transition: 0.5s;
+            margin-left: 10%;
+        }
+        .matiere:hover
+        {
+            transform: scale(115%);
+            margin-left: 15%;
+            transition: 0.5s;
+            color: #c40000;
+            
+            
+        }
+        .matiere-container h2
+        {
+
+            color: #ffffff;
+            transition: 0.5s;
+        }
+        .logo
+        {
+            width: 40%;
+            margin-left: 30%;
+        }
+        a
+        {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        
+        h1
+        {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 5px;
+        }
+        h2
+        {
+            color: #ff1100;
+            margin-left: 7%;
+            float: left;
+        }
+        h3
+        {
+            text-align: center;
+        }
+        .tlivre
+        {
+            text-align: center;
+        }
+        .ici
+        {
+            color: #ff1515;
+            text-decoration: none;
+        }
+        .ici:hover
+        {
+            color: #ffffff;
+        }
+        .sep
+        {
+            width: 50%;
+            height: 3px;
+            background-color: #ff3815;
+            margin-left: 25%;
+            
+        }
+        .petitsep
+        {
+            width: 70%;
+            height: 1px;
+            background-color: #ffffff;
+            margin-top: 13%;
+            
+            rotate:calc(90deg);
+            
+        }
+        .sep2
+        {
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-radius: 20px;
+            background-color: #2e2e2e;
+            position: relative;
+           transition: 0.5s;
+        }
+        .sep2:hover{
+        transform: scale(105%) ;
+        transition: 0.5s;
+        }
+        .sep3
+        {
+            
+            display: flex;
+           
+            
+            align-items: center;
+            margin: 1%;
+            padding: 1.5%;
+            background-color: #ff2b1c;
+            color: #ffffff;
+            border: none;
+            
+            border-radius: 20px;
+            transition: 0.5s;
+            
+            width: 15%;
+            height: 200px;
+        }
+        .sep4
+        {
+            display: flex;
+            float: right;
+           
+            margin: 1%;
+            padding: 1.5%;
+            background-color: #585858;
+            color: #ffffff;
+            border-radius: 20px;
+            transition: 0.5s;
+            width: 76%;
+            height: 200px;
+        } 
+        
+        .livre
+        {
+            width: 90%;
+            margin-left: 5%;
+            border-radius: 15px;
+        }
+        .titre
+        {
+        text-decoration:underline;
+        font-family:Arial, Helvetica, sans-serif;
+        width: 150px;
+        float: left;
+        text-align: center;
+        }
+        .auteur
+        {
+            color: #ff2b1c;
+            margin-left: 15%;
+            margin-top: 20%;
+            float: left;
+            
+        }
+        .centre
+        {
+            text-align: center;
+          
+        }
+        .bouton1
+        {
+            width: 150px;
+            height: 50px;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 8%;
+            margin-top: 100%;
+            margin-left: 30%;
+            transition: 0.5s;
+        }
+        .bouton1:hover 
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+        .bouton2
+        {
+            width: 150px;
+            height: 30px;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 8%;
+            margin-top: 5px;
+            transition: 0.5s;
+        }
+        .bouton2:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+        .video
+        {
+            width: 90%;
+            margin-left: 5%;
+            border-radius: 20px;
+        }
+        .video-img
+        {
+            width: 50%;
+            margin-left: 25%;
+            border-radius: 15px;
+        }
+        .video1
+        {
+            background-color:#585858;
+            width: 300px;
+            height: auto;
+            margin: 15px;
+            float: left;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .video1:hover
+        {
+            transition: 0.5s;
+            background-color:#3b3636;
+        }
+        .videocontainer
+        {
+            margin-left: 10%;
+        }
+        .podcastcontainer
+        {
+            width: 90%;
+            margin-left: 10%;
+            
+        }
+        .podcast
+        {
+            background-color:#585858;
+            width: 150px;
+            height: auto;
+            margin: 15px;
+            float: left;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;  
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .podcast:hover
+        {
+            background-color:#3b3636;
+            transition: 0.5s;
+        }
+        .podcast img
+        {
+            width: 150px;
+            border-radius: 15px;
+        }
+        .text
+        {
+            background-color:#585858;
+            width: 300px;
+            height: auto;
+            margin: 15px;
+            float: left;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;
+            transition: 0.5s;
+        }
+        
+        .text:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color:#3b3636;
+            
+        }
+        .text img
+        {
+            width: 50% ;
+            align-items: center;
+        }
+        .retour
+        {
+            width: 10%;
+            position: absolute;
+        }
+        .annotation1
+        {
+            position: absolute;
+            margin-top: 5%;
+            margin-left: -10%;
+            width: 10%;
+            z-index: 100;
+            rotate:calc(10deg);
+        }
+        .annotation2
+        {
+            position: absolute;
+            margin-top: -5%;
+            margin-left: 20%;
+            width: 10%;
+            z-index: 100;
+            rotate:calc(-10deg);
+            float: left;
+        }
+        .annotation3
+        {
+            position: absolute;
+            margin-top: -5%;
+            margin-left: 40%;
+            width: 30%;
+            z-index: 100;
+            
+            float: left;
+        }
+        .annotation4
+        {
+            position: absolute;
+            margin-top: 27%;
+            margin-left: 5%;
+            width: 15%;
+            z-index: 100;
+            
+            float: left;
+        }
+        .annotation5
+        {
+            position: absolute;
+            margin-top: 10%;
+            margin-left: -90%;
+            width: 8%;
+            z-index: 100;
+            
+            
+        }
+        .annotation8
+        {
+            position: absolute;
+            margin-top: -6%;
+            margin-left: 0%;
+            width: 18%;
+            z-index: 100;
+        }
+        .annotation9
+        {
+            position: absolute;
+            margin-top: -6%;
+            margin-left: -5%;
+            width: 18%;
+            z-index: 100;
+        }
+        .site
+        {
+            
+            width: 90%;
+            height: 20px;
+            margin-left: 5%;
+            background-color: #585858;
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        .site:hover
+        {
+            background-color: #2e2e2e;
+            transition: 0.5s;
+            transform: scale(105%);
+        }
+        .site1
+        {
+            float: left;
+            margin-left: 75%;
+            margin-top: -30px;
+            
+        }
+        .logo-site
+        {
+            height: 120%;
+            float: left;
+
+        }
+        .titre-site
+        {
+            color: #580000;
+            font-size:large;
+            text-align: left;
+            margin-top: -15px;
+            margin-left: 5%;
+        }
+
+        .PDF
+        {
+            
+            width: 20%;
+            height: 110ù;
+            margin-left: 5%;
+            margin-top: 20px;
+            background-color: #585858;
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s;
+            float: left;
+        }
+        .PDF:hover
+        {
+            transform: scale(110%);
+            background-color: #3e3e3e;
+           
+        }
+        .logo-PDF
+        {
+            width: 50%;
+            margin-left: 25%;
+            border-radius: 15px;
+        }
+        .bouton
+        { 
+            width: 70%;
+            height: 40px;
+            margin-left: 15% ;
+            border-radius: 15px;
+            background-color: #b20021;
+            border: #1e1e1e;
+            transition: 0.5s;
+            margin-top: 25px;
+        }
+        button:hover
+        {
+            transform: scale(110%);
+            background-color: #820000;
+            transition: 0.5s;
+        }
+        .bouton-PDF 
+        { 
+            color: #ffffff;
+            display: inline;
+        }
+        .bouton-PDF a
+        { 
+            color: #ff7070;
+            display: inline;
+        }
+        .colo
+        {
+            color: #ff9797;
+        }
+        .bouton3
+        {
+            width: 75%;
+            height: 30px;
+            margin-left: 15%;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 2%;
+            margin-top: 5px;
+            transition: 0.5s;
+        }
+        .bouton3:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+.film
+{
+    width: 15%;
+    margin-left: 4%;
+    float: inline-start;
+    border-radius: 15px;
+    transition: 0.5s;
+    margin-top: 25px;
+}
+.film:hover
+{
+    transform: scale(115%);
+    opacity: calc(50%);
+    
+}
+.txt-film
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+.dedicace
+{
+    text-align: center;
+}
+.prof
+{
+    color: #b20021;
+}
+       
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRFK7PDSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BRFK7PDSFQ');
+</script>
+
+<body>
+    <a href="../index.html"><img class="retour" style="width: 10%; position: absolute;" src="../img/retour.png" alt=""></a>
+    <img class="logo" src="../img/source.png" alt="">
+
+    
+    
+    
+    
+   
+    <div class="matiere-container">
+        <h2>table des matieres :</h2> <br><br><br>
+        <a href="#1"> <p class="matiere">OUVRAGES</p></a>
+        <a href="#2"> <p class="matiere">VIDEOS</p></a>
+        <a href="#3"> <p class="matiere">PODCASTS</p></a>
+        <a href="#4"> <p class="matiere">TEXTES</p></a>
+        <a href="#5"> <p class="matiere">SITES</p></a>
+        <img style="width: 12%; margin-top: -16%; margin-left: 60%; position: absolute;"  src="../img/schema RJ.png" alt="">
+        
+   </div>
+
+
+    <!--
+======================================================================================
+RAISONNEMENT JURIDIQUE
+======================================================================================
+    -->
+  
+    <h1>RAISONNEMENT JURIDIQUE ( I / II )</h1>
+
+       
+           
+    
+            <br><br><br><br>
+    
+
+            <div class="sep2">
+                <div class="sep4">
+                    <p> <span class="titre">100 principes juridiques
+                        </span> <br><br> <span class="auteur">Stefan Goltzberg</span> </p> <br>
+                    <br><div class="petitsep"></div>
+                    <p>"L'exception confirme la règle" , "Qui ne dit mot consent" , "Le législateur n'est pas négligent" , "Lex semper loquitur" , "La lettre tue" ... Ce recueil réunit les principes juridiques les plus courants et les illustre par des cas réels et hypo­thétiques. Il permettra tant aux étudiants qu'aux juristes de recourir aux maximes et principes les plus à même de soutenir leur argumentation. En facilitant la maîtrise de ces principes indispensables aux juristes, un tel outil se révèlera précieux pour tous les professionnels du droit.</p>
+                </div>
+                <div class="sep3">
+                    <img class="livre" src="https://images.epagine.fr/422/9782130826422_1_75.jpg" alt=""> 
+                    <a href="https://www.librairiedalloz.fr/livre/9782130826422-100-principes-juridiques-stefan-goltzberg/">
+                        <div class="bouton1">rechercher : <br> dalloz</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sep2">
+                <div class="sep4">
+                    <p> <span class="titre">Le droit romain
+                        </span> <br><br> <span class="auteur">Michel Villey</span> </p> <br>
+                    <br><div class="petitsep"></div>
+                    <p>
+                        « Un honnête homme ouvre sans enthousiasme un ouvrage sur le droit romain. Il accepterait sans trop de répugnance qu’on lui parlât du droit moderne; qu'on lui montrât comment nos lois s’efforcent d’organiser en leur technique savante nos sociétés modernes ; mais il recule devant le droit romain», écrit Michel Villey.
+                    </p>
+                </div>
+                <div class="sep3">
+                    <img class="livre" src="https://www.puf.com/sites/puf/files/styles/large/public/pim_images/13061753.jpg?itok=mjvsD5Bi" alt=""> 
+                    <a href="https://www.puf.com/le-droit-romain">
+                        <div class="bouton1">rechercher : <br> PUF.com</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sep2">
+                <div class="sep4">
+                    <p> <span class="titre">Introduction au droit
+                        </span> <br><br> <span class="auteur">
+                            Fabre-Magnan Muriel</span> </p> <br>
+                    <br><div class="petitsep"></div>
+                    <p>
+                        Nul ne peut échapper au droit. Celui qui naît se voit déjà doté d’une filiation, d’un nom, d’un prénom, et aussi sans doute d’un domicile et d’une nationalité. Tout au long de la vie se nouent de multiples liens juridiques créateurs d’obligations diverses (achats les plus quotidiens, mariage, contrat de travail, etc.). Même la mort est soumise à de nombreuses règles de droit (sort du cadavre, respect dû à la mémoire des morts). Cette familiarité du droit ne doit pas tromper : le droit est une discipline complexe, au vocabulaire particulier, à la technicité indéniable.    
+                    </p>
+                </div>
+                <div class="sep3">
+                    <img class="livre" src="https://www.puf.com/sites/puf/files/styles/large/public/pim_images/Visuel_couverture%20en%20attente.jpg?itok=mACjvveA" alt=""> 
+                    <a href="https://www.puf.com/introduction-au-droit">
+                        <div class="bouton1">rechercher : <br> PUF.com</div>
+                    </a>
+                </div>
+            </div>
+    
+    
+    
+    
+
+
+
+    <h2 id="2">videos</h2>
+    <br><br><br><br>
+
+    <div class="videocontainer">
+        
+        <a href="https://www.youtube.com/@theoriedudroit6366">
+            <div class="video1"> 
+                <img class="video-img" src="../img/logo ytp.jpg" alt=""> 
+                <p>La Théorie du droit <br>
+                </p>
+            </div>
+        </a>
+
+       
+        <a href="https://www.youtube.com/watch?v=kQRLlenB15E">
+            <div class="video1"> 
+                <iframe src="https://www.youtube.com/embed/kQRLlenB15E" title="3 questions de culture juridique (proposition/projet de loi ? Leur entrée en vigueur ? Bâtonnier ?)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <p>3 questions de culture juridique<br> 
+                    Rémy Dandan - Avocat et enseignant
+                </p>
+            </div>
+        </a>
+        
+
+
+
+
+<div class="video1"><img class="video" src="../img/video.png" alt=""> <p>en attente de contenu <br>... <br><br>
+    t'as une video de fouuuu et tu peux la proposer  <a class="ici" href="https://www.instagram.com/charl3s_kremer/">ici </a></p>
+</div>
+       
+    </div>
+
+   
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+    <h2 id="3">podcasts</h2>
+    <br><br><br><br>
+    <div class="podcastcontainer">
+     
+        <div class="podcast">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/France_Culture_logo_2021.svg/640px-France_Culture_logo_2021.svg.png" alt=""><p>Antoine Garapon <br>Esprit de justice</p>
+            <a href="https://www.leclubdesjuristes.com/podcasts/quid-juris/"><div class="bouton2">France Culture</div></a>
+            </div>
+       
+        <div class="podcast">
+            <img src="https://thumborcdn.acast.com/MYfm0hKJEvXCm2GhV9DS4VW6PNc=/150x150/https%3A%2F%2Fassets.pippa.io%2Fshows%2F654dfeeafd344d00135e7ff9%2F1699610526831-1e824325393fa04e505630384cca8508.jpeg" alt=""><p>le club des juristes <br>  Quid Juris ?</p>
+            <a href="https://www.leclubdesjuristes.com/podcasts/"><div class="bouton2">le club des juristes</div></a>
+         
+        </div>
+        <div class="podcast">
+            <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+            <a href=""><div class="bouton2">...</div></a>
+            <a href=""><div class="bouton2">...</div></a>
+        </div>
+        <div class="podcast">
+            <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+            <a href=""><div class="bouton2">...</div></a>
+            <a href=""><div class="bouton2">...</div></a>
+        </div>
+        <div class="podcast">
+            <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+            <a href=""><div class="bouton2">...</div></a>
+            <a href=""><div class="bouton2">...</div></a>
+        </div>
+
+    </div>
+       
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br>
+
+    <h2 id="4">textes</h2>
+    <br><br><br><br>
+    <div class="video">
+        <a href="https://www.cairn.info/fiches-de-culture-juridique--9782340029897.htm"> 
+            <div class="text"> 
+                <img class="video" src="../img/cairn.png" alt=""> 
+                 <p>CAIRN - Fiches de Culture juridique<br>
+                    Jean-Philippe Tricoit <br> <br>
+                
+                    les 50 fiches de cet ouvrage comprennent : <br>
+
+                    - Les fiches de cours comprenant les définitions à connaître, les erreurs à éviter, les points essentiels à retenir ; <br>
+                    -  Des exercices corrigés pour vérifier ses connaissances ; <br>
+                    - Des repères bibliographiques pour aller plus loin.
+                </p>
+            </div>
+           </a>
+
+           <a href=""> 
+            <div class="text"> 
+                <img class="video" src="../img/textes.png" alt=""> 
+                 <p>TITRE - AUTEUR <br>mouais....bon bha si tu vois cette section c'est qu'on a encore du taff toi et moi...  
+                    donc viens donner un coup  de mains en donnant des idees de textes  <a class="ici" href="https://www.instagram.com/charl3s_kremer/">ici </a></p> </p>
+                
+            </div>
+           </a>
+           <a href=""> 
+            <div class="text"> 
+                <img class="video" src="../img/textes.png" alt=""> 
+                 <p>TITRE - AUTEUR <br>mouais....bon bha si tu vois cette section c'est qu'on a encore du taff toi et moi...  
+                    donc viens donner un coup  de mains en donnant des idees de textes  <a class="ici" href="https://www.instagram.com/charl3s_kremer/">ici </a></p> </p>
+                
+            </div>
+           </a>
+
+
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <h2 id="5">sites</h2>
+           <br><br><br><br>
+           
+           <a href="https://www.courdecassation.fr"> 
+            <div class="site">
+            <img class="logo-site" src="../img/cass.png" alt="">
+                    </p> <h1 class="titre-site">cour de cassation</h1>  <p class="site1">  https://www.courdecassation.fr</p></div>
+    
+             
+                </a>
+<br><br>
+            <a href="https://ufr-dsp.parisnanterre.fr/livrets-pedagogiques"> 
+                <div class="site">
+                <img class="logo-site" src="../img/logo ufr dsp.png" alt="">
+                        </p> <h1 class="titre-site">les livrets pedagogiques ( UFR DSP)</h1>  <p class="site1">  https://www.courdecassation.fr</p>
+                    
+                </div>
+            </a>
+                    
+                    
+        </div>
+       
+    
+
+    <br><br><br>
+    
+
+</div>
+</div>
+
+
+
+
+
+
+
+<footer class="footer">
+    
+    <ul>
+        <li><a href="../index.html"><img class="footer-ico" src="../img/footer accueil.png" alt=""></a></li>
+        <li><a href="../arborescence/CGU.html"><img class="footer-ico" src="../img/footer CGU.png" alt=""></a></li>
+        <li><a href="../arborescence/signaler.html"><img class="footer-ico"src="../img/footer erreur.png" alt=""></a></li>
+    </ul>
+   
+    <img class="footer-logo" src="../img/logo 4.0.png" alt="Description de l'image"> 
+    <p>©2024 lesupport.me</p>
+  <img class="footer-fond" src="../img/footer nanterre.png" alt="">
+  </footer>
+  
+  
+
+
+
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contenus = document.querySelectorAll('.contenu');
+
+  contenus.forEach(contenu => {
+    contenu.style.display = 'none';
+  });
+
+  const boutons = document.querySelectorAll('.bouton');
+
+  boutons.forEach(bouton => {
+    bouton.addEventListener('click', () => {
+      const contenu = bouton.nextElementSibling;
+      contenu.style.display = contenu.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+});
+        
+        </script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const contenus = document.querySelectorAll('.contenu');
+    
+      contenus.forEach(contenu => {
+        contenu.style.display = 'none';
+      });
+    
+      const boutons = document.querySelectorAll('.bouton-PDF');
+    
+      boutons.forEach(bouton => {
+        bouton.addEventListener('click', () => {
+          const contenu = bouton.nextElementSibling;
+          contenu.style.display = contenu.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    });
+            
+            </script>
+
+</body>
+</html>

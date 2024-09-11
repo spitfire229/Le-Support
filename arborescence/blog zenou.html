@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE SUPPORT - blog</title>
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+
+
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-decoration: none;
+    scroll-behavior: smooth;
+  }
+
+  .logo {
+    width: 40%;
+    margin-left: 30%;
+  }
+  a{
+    text-decoration: none;
+    color: #FFF;
+  }
+h3
+{
+  font-size: 2vw;
+}
+  .slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+    
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    flex: 0 0 24%;
+    margin: 5px;
+    
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: 1px solid #ff6200;
+  }
+  *.slide img:hover {
+    transform: scale(90%);
+    border-radius: 15px;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+  }
+
+  .next {
+    right: 0;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  .banniere-zenou
+  {
+    width: 80%;
+    height: 35px;
+    padding-top: 10px;
+    margin-left: 10%;
+    text-align: center;
+    background-color: #2b2d42;
+    border-radius: 100px 100px 10px 10px;
+    border: 1px solid #ff6200;
+  }
+  h3
+  {
+    margin: 0px;
+    
+  }
+
+</style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRFK7PDSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BRFK7PDSFQ');
+</script>
+
+
+<body>
+<a href="../index.html"><img style="width: 10%; position: absolute;" src="../img/retour.png" alt=""></a>
+<img class="logo" src="../img/logo blog.png" alt="">
+
+<br><br>
+
+<a href="https://www.cabinet-zenou.fr/"><div class="banniere-zenou"> <h3>CABINET ZENOU </h3></div></a>
+
+<div class="slider-container" id="slider1">
+  <div class="slider">
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/les-coups-et-blessures-ayant-entraine-la-mort-sans-intention-de-la-donner.html"><img src="../img/zenou.png" alt="Image 1"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/l-homicide-involontaire-en-droit-penal.html"><img src="../img/zenou 2.png" alt="Image 2"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/victime-injures-violences.html"><img src="../img/zenou 3.png" alt="Image 3"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/en-quoi-consiste-la-sequestration.html"><img src="../img/zenou 4.png" alt="Image 4"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/vol-avec-circonstance-aggravante.html"><img src="../img/zenou 5.png" alt="Image 5"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/escroquerie-definition-sanctions-et-moyens-d-action.html"><img src="../img/zenou 6.png" alt="Image 6"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/tribunal-correctionnel-role-saisine-et-procedure.html"><img src="../img/zenou 7.png" alt="Image 6"></a></div>
+    <div class="slide"><a href="https://www.cabinet-zenou.fr/actualites/droit-penal/le-trafic-de-stupefiants-definition-sanctions-et-peines.html"><img src="../img/zenou 8.png" alt="Image 6"></a></div>
+    <div class="slide"><img src="" alt=""></div>
+    
+  </div>
+  <button class="prev" onclick="moveSlider('slider1', -1)">❮</button>
+  <button class="next" onclick="moveSlider('slider1', 1)">❯</button>
+</div>
+<img style="width: 80%; margin-left: 10%;" src="../img/blog baniere.png" alt="">
+<div class="slider-container" id="slider2">
+  <div class="slider">
+    <div class="slide"><img src="../img/blogue masqué.png" alt="Image 8"></div>
+    <div class="slide"><img src="../img/blogue masqué.png" alt="Image 9"></div>
+    <div class="slide"><img src="../img/blogue masqué.png" alt="Image 10"></div>
+    <div class="slide"><img src="../img/blogue masqué.png" alt="Image 11"></div>
+    <div class="slide"><img src="../img/blogue masqué.png" alt="Image 11"></div>
+  </div>
+  <button class="prev" onclick="moveSlider('slider2', -1)">❮</button>
+  <button class="next" onclick="moveSlider('slider2', 1)">❯</button>
+</div>
+
+
+
+<footer class="footer">
+  <ul>
+      <li><a href="./index.html">accueil</a></li>
+      <li><a href="./arborescence/CGU.html">mentions légales</a></li>
+  </ul>
+  <p>©2024 lesupport.me</p>
+  <img src="../img/logo 3.0.png" alt="Description de l'image">
+</footer>
+
+
+<script>
+  function moveSlider(sliderId, n) {
+    const slider = document.getElementById(sliderId);
+    const slides = slider.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let slideIndex = parseInt(slider.getAttribute('data-slide-index')) || 0;
+    slideIndex += n;
+
+    if (slideIndex < 0) {
+      slideIndex = totalSlides - 4;
+    } else if (slideIndex > totalSlides - 4) {
+      slideIndex = 0;
+    }
+
+    slider.setAttribute('data-slide-index', slideIndex);
+    slider.querySelector('.slider').style.transform = `translateX(-${slideIndex * 25}%)`;
+  }
+</script>
+
+</body>
+</html>

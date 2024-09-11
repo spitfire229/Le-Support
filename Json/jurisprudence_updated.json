@@ -1,0 +1,58 @@
+{
+  "jurisprudences": [
+    {
+      "name": "Arrêt Blanco",
+      "court": "Tribunal des Conflits",
+      "date": "8 février 1873",
+      "summary": "Cet arrêt établit le principe de la responsabilité de l'État pour les dommages causés par les services publics, marquant ainsi la naissance du droit administratif moderne."
+    },
+    {
+      "name": "Arrêt Amical des Annamites de Paris",
+      "court": "Conseil d'État, Assemblée",
+      "date": "11 juillet 1956",
+      "summary": "Cet arrêt consacre la liberté d'association comme un principe fondamental reconnu par les lois de la République, renforçant ainsi la protection des droits fondamentaux."
+    },
+    {
+      "name": "Arrêt Koné",
+      "court": "Conseil d'État, Assemblée",
+      "date": "3 juillet 1996",
+      "summary": "Le Conseil d'État affirme que la France ne peut extrader un individu pour des motifs politiques, établissant un principe fondamental de respect des droits humains."
+    },
+    {
+      "name": "Arrêt Nicolo",
+      "court": "Conseil d'État",
+      "date": "20 octobre 1989",
+      "summary": "Par cet arrêt, le Conseil d'État accepte de contrôler la compatibilité des lois nationales avec les traités internationaux, renforçant ainsi la hiérarchie des normes."
+    },
+    {
+      "name": "Arrêt Jamart",
+      "court": "Conseil d'État",
+      "date": "7 février 1936",
+      "summary": "L'arrêt Jamart reconnaît un pouvoir réglementaire général aux ministres pour l'organisation de leurs services, même en l'absence de texte législatif explicite."
+    },
+    {
+      "name": "Arrêt Dame Lamotte",
+      "court": "Conseil d'État",
+      "date": "17 février 1950",
+      "summary": "Le Conseil d'État établit qu'il est toujours possible de contester un acte administratif par un recours pour excès de pouvoir, créant ainsi un principe général du droit."
+    },
+    {
+      "name": "Arrêt Dehaene",
+      "court": "Conseil d'État",
+      "date": "7 juillet 1950",
+      "summary": "Cet arrêt reconnaît le droit de grève aux fonctionnaires tout en permettant à l'administration de le limiter pour des motifs d'ordre public, s'inscrivant dans le respect du préambule de 1946."
+    },
+    {
+      "name": "Arrêt Arrighi",
+      "court": "Conseil d'État",
+      "date": "6 novembre 1936",
+      "summary": "L'arrêt Arrighi instaure la théorie de la loi écran, selon laquelle le juge administratif ne peut contrôler la constitutionnalité d'une loi faisant écran entre la Constitution et un acte administratif."
+    },
+    {
+      "name": "Arrêt Quintin",
+      "court": "Conseil d'État",
+      "date": "17 mai 1991",
+      "summary": "Le Conseil d'État, par cet arrêt, applique la théorie de l'écran transparent, permettant le contrôle de constitutionnalité des actes administratifs lorsque la loi servant de fondement est de portée générale."
+    }
+  ]
+}

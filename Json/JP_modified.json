@@ -1,0 +1,250 @@
+{
+    "jurisprudences": [
+        {
+            "name": "Arrêt Blanco",
+            "court": "Cet arrêt, rendu par le Tribunal des Conflits le 8 février 1873, est fondamental dans le droit administratif français. Il établit la responsabilité de l'État pour les dommages causés par les services publics, marquant la naissance de la notion de service public et consacrant le juge administratif comme compétent pour traiter ces questions.",
+            "date": "8 février 1873",
+            "summary": "Établissement du principe de la responsabilité de l'État pour les dommages causés par les services publics. C'est un arrêt fondateur du droit administratif français."
+        },
+        {
+            "name": "Arrêt Amical des Annamites de Paris",
+            "court": "Le Conseil d'État, en Assemblée, a rendu cet arrêt le 11 juillet 1956, reconnaissant la liberté d'association comme un principe à valeur constitutionnelle. Cet arrêt marque la première reconnaissance d'un Principe Fondamental Recherché par les Lois de la République (PFRLR).",
+            "date": "11 juillet 1956",
+            "summary": "Reconnaissance de la liberté d'association comme un principe à valeur constitutionnelle, marquant la première mention d'un PFRLR."
+        },
+        {
+            "name": "Arrêt Koné",
+            "court": "Le 3 juillet 1996, le Conseil d'État a consacré un PFRLR interdisant l'extradition d'un étranger pour des motifs politiques. Cet arrêt confirme la primauté des principes fondamentaux du droit français sur les accords internationaux en matière d'extradition.",
+            "date": "3 juillet 1996",
+            "summary": "Le Conseil d'État consacre un PFRLR interdisant l'extradition d'un étranger pour des motifs politiques."
+        },
+        {
+            "name": "Arrêt Nicolo",
+            "court": "Cet arrêt du 20 octobre 1989 marque un tournant dans la jurisprudence du Conseil d'État en acceptant de contrôler la conformité des lois nationales aux traités internationaux, renforçant ainsi la suprématie des traités sur les lois internes.",
+            "date": "20 octobre 1989",
+            "summary": "Le Conseil d'État accepte de contrôler la conformité des lois nationales aux traités internationaux, renforçant la suprématie des traités sur les lois internes."
+        },
+        {
+            "name": "Arrêt Jamart",
+            "court": "Le Conseil d'État, par cet arrêt du 7 février 1936, reconnaît que les ministres disposent d'un pouvoir réglementaire pour l'organisation de leurs services, même en l'absence de texte législatif spécifique les y autorisant.",
+            "date": "7 février 1936",
+            "summary": "Les ministres disposent d'un pouvoir réglementaire pour l'organisation de leurs services, même en l'absence de texte."
+        },
+        {
+            "name": "Arrêt Dame Lamotte",
+            "court": "Conseil d'État",
+            "date": "17 février 1950",
+            "summary": "Établissement d'un principe général du droit selon lequel tout acte administratif est susceptible de recours pour excès de pouvoir."
+        },
+        {
+            "name": "Arrêt Dehaene",
+            "court": "Conseil d'État",
+            "date": "7 juillet 1950",
+            "summary": "Reconnaissance du droit de grève pour les agents publics, tout en permettant au gouvernement de limiter ce droit pour assurer l'ordre public."
+        },
+        {
+            "name": "Arrêt Arrighi",
+            "court": "Conseil d'État",
+            "date": "6 novembre 1936",
+            "summary": "Le Conseil d'État se déclare incompétent pour contrôler la constitutionnalité des lois, établissant la théorie de la loi écran."
+        },
+        {
+            "name": "Arrêt Quintin",
+            "court": "Conseil d'État",
+            "date": "17 mai 1991",
+            "summary": "Application de la théorie de l'écran transparent, permettant le contrôle de constitutionnalité des actes administratifs pris sur le fondement d'une loi à portée générale."
+        },
+        {
+            "name": "Arrêt Dame veuve Trompier-Gravier",
+            "court": "Conseil d'État, Section",
+            "date": "5 mai 1944",
+            "summary": "Première application des principes généraux du droit concernant les droits de la défense."
+        },
+        {
+            "name": "Arrêt Société KPMG",
+            "court": "Conseil d'État",
+            "date": "24 mars 2006",
+            "summary": "Consécration du principe général de sécurité juridique, permettant des dérogations pour des raisons d'ordre public."
+        },
+        {
+            "name": "Arrêt Commune de Morsang-sur-Orge",
+            "court": "Conseil d'État, Assemblée",
+            "date": "27 octobre 1995",
+            "summary": "Reconnaissance de la dignité humaine comme composante de l'ordre public, permettant l'interdiction de pratiques dégradantes comme le lancer de nain."
+        },
+        {
+            "name": "Arrêt Benjamin",
+            "court": "Conseil d'État",
+            "date": "19 mai 1933",
+            "summary": "Mise en place du principe de proportionnalité dans le cadre des mesures de police, conciliant ordre public et liberté de réunion."
+        },
+        {
+            "name": "Arrêt Barel",
+            "court": "Conseil d'État",
+            "date": "28 mai 1954",
+            "summary": "Consécration du principe d'égalité d'accès aux emplois publics, interdisant toute discrimination fondée sur les opinions politiques ou religieuses."
+        },
+        {
+            "name": "Arrêt Rubin de Servens",
+            "court": "Conseil d'État",
+            "date": "2 mars 1962",
+            "summary": "Le Conseil d'État refuse de contrôler les actes de gouvernement pris en application de l'article 16 de la Constitution."
+        },
+        {
+            "name": "Arrêt Labonne",
+            "court": "Conseil d'État",
+            "date": "8 août 1919",
+            "summary": "Reconnaissance du pouvoir de police générale du Président de la République en l'absence de disposition législative contraire."
+        },
+        {
+            "name": "Arrêt Association France Nature Environnement",
+            "court": "Conseil d'État",
+            "date": "10 janvier 2001",
+            "summary": "Les directives européennes peuvent être invoquées à l'encontre d'actes réglementaires pris après l'expiration du délai de transposition."
+        },
+        {
+            "name": "Arrêt Ponard",
+            "court": "Conseil d'État",
+            "date": "14 novembre 1958",
+            "summary": "L'administration est tenue de ne pas appliquer un texte réglementaire lorsqu'il est jugé illégal."
+        },
+        {
+            "name": "Arrêt Société du Journal l'Aurore",
+            "court": "Conseil d'État, Assemblée",
+            "date": "25 juin 1948",
+            "summary": "Établissement du principe général du droit de non-rétroactivité des actes administratifs."
+        },
+        {
+            "name": "Arrêt Société des concerts du conservatoire",
+            "court": "Conseil d'État, Section",
+            "date": "9 mars 1951",
+            "summary": "Consécration du principe d'égalité des usagers devant le service public."
+        },
+        {
+            "name": "Arrêt Conseil de la concurrence",
+            "court": "Conseil Constitutionnel",
+            "date": "23 janvier 1987",
+            "summary": "Le Conseil Constitutionnel affirme la compétence de l'ordre administratif pour annuler et réformer les actes administratifs."
+        },
+        {
+            "name": "Arrêt Rothschild",
+            "court": "Conseil d'État",
+            "date": "6 décembre 1855",
+            "summary": "La responsabilité de l'État est engagée uniquement en cas de faute, selon un droit exorbitant du droit commun."
+        },
+        {
+            "name": "Arrêt Didier",
+            "court": "Conseil d'État",
+            "date": "3 décembre 1999",
+            "summary": "Le principe d'impartialité du juge est un principe général du droit, impliquant l'applicabilité de l'article 6 de la CEDH."
+        },
+        {
+            "name": "Arrêt SARL du Parc d'Activité de Blotzheim",
+            "court": "Conseil d'État, Assemblée",
+            "date": "18 décembre 1998",
+            "summary": "Le Conseil d'État accepte de contrôler la procédure de ratification ou d'approbation des traités."
+        },
+        {
+            "name": "Arrêt Aggoun",
+            "court": "Conseil d'État, Assemblée",
+            "date": "5 mars 2003",
+            "summary": "Le juge administratif peut contrôler la procédure de ratification des traités par voie d'exception."
+        },
+        {
+            "name": "Arrêt GISTI",
+            "court": "Conseil d'État",
+            "date": "8 décembre 1978",
+            "summary": "Consécration du droit de mener une vie familiale normale comme principe général du droit."
+        },
+        {
+            "name": "Arrêt Sarran",
+            "court": "Conseil d'État",
+            "date": "30 octobre 1998",
+            "summary": "La Constitution française prévaut sur les traités internationaux, selon le Conseil d'État."
+        },
+        {
+            "name": "Arrêt Commune d'Annecy",
+            "court": "Conseil d'État",
+            "date": "3 octobre 2008",
+            "summary": "Le Conseil d'État annule un décret pour méconnaissance de la Charte de l'Environnement, en reconnaissant son caractère constitutionnel."
+        },
+        {
+            "name": "Arrêt Arcelor",
+            "court": "Conseil d'État, Assemblée",
+            "date": "8 février 2007",
+            "summary": "Si un décret transpose une directive européenne fidèlement, il est présumé conforme à la Constitution. Sinon, le Conseil d'État vérifie s'il affecte une règle constitutionnelle."
+        },
+        {
+            "name": "Arrêt Canal, Robin et Godot",
+            "court": "Conseil d'État, Assemblée",
+            "date": "19 octobre 1962",
+            "summary": "Annulation de l'ordonnance du 3 juin 1962 pour violation des principes généraux du droit, en particulier le droit de recours."
+        },
+        {
+            "name": "Arrêt D'Aillières",
+            "court": "Conseil d'État",
+            "date": "7 février 1947",
+            "summary": "Principe général du droit : Un pourvoi en cassation est toujours ouvert même sans texte explicite le prévoyant."
+        },
+        {
+            "name": "Arrêt Huglo",
+            "court": "Conseil d'État, Assemblée",
+            "date": "2 juillet 1982",
+            "summary": "Confirmation du caractère exécutoire des actes administratifs, qui s'applique immédiatement même en cas de recours."
+        },
+        {
+            "name": "Arrêt Prince Napoléon",
+            "court": "Conseil d'État",
+            "date": "19 février 1875",
+            "summary": "Abandon de la notion de mobile politique pour définir les actes de gouvernement, les restreignant aux actes comportant une prérogative de puissance publique."
+        },
+        {
+            "name": "Arrêt Association AC!",
+            "court": "Conseil d'État, Assemblée",
+            "date": "11 mai 2004",
+            "summary": "Le juge administratif peut annuler une décision avec effet rétroactif, sauf exception pour motifs d'ordre public."
+        },
+        {
+            "name": "Arrêt Ternon",
+            "court": "Conseil d'État, Assemblée",
+            "date": "26 octobre 2001",
+            "summary": "Un acte individuel créateur de droit ne peut être retiré que dans un délai de quatre mois, sauf s'il est illégal."
+        },
+        {
+            "name": "Arrêt Société Tropic Travaux Signalisation",
+            "court": "Conseil d'État, Assemblée",
+            "date": "16 juillet 2007",
+            "summary": "Ouverture du recours pour excès de pouvoir aux concurrents évincés d'un marché public."
+        },
+        {
+            "name": "Arrêt Czabaj",
+            "court": "Conseil d'État",
+            "date": "13 juillet 2016",
+            "summary": "Le destinataire d'une décision administrative individuelle doit la contester dans un délai raisonnable d'un an, conformément au principe de sécurité juridique."
+        },
+        {
+            "name": "Arrêt Société Fairvesta International GMBH",
+            "court": "Conseil d'État, Assemblée",
+            "date": "21 mars 2016",
+            "summary": "Extension du recours pour excès de pouvoir à certaines décisions des autorités de régulation, même lorsqu'elles ne sont pas décisoires."
+        },
+        {
+            "name": "Arrêt Société GDF Suez",
+            "court": "Conseil d'État",
+            "date": "19 juillet 2010",
+            "summary": "Le Conseil d'État reconnaît le caractère impératif d'une circulaire ministérielle, la rendant susceptible de contrôle juridictionnel."
+        },
+        {
+            "name": "Arrêt Hardouin",
+            "court": "Conseil d'État",
+            "date": "17 février 1995",
+            "summary": "Abandon du critère de l'objet de la décision pour les sanctions disciplinaires, ouvrant la voie au recours pour excès de pouvoir."
+        },
+        {
+            "name": "Arrêt Commune de Béziers",
+            "court": "Conseil d'État",
+            "date": "28 décembre 2009",
+            "summary": "Le juge des référés peut prononcer la résiliation d'un contrat administratif en cas d'irrégularité substantielle."
+        }
+    ]
+}

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <title>Le Support - SOURCES</title>
+    <link rel="icon" href="../img/s.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            
+        }
+        .acces
+        {
+            width: 75%;
+            margin-left: 15%;
+        }
+        .matiere-container
+        {
+            color: #fff;
+            width: 80%;
+            margin-left: 10%;
+            background-color: #0f0f0f;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .matiere
+        {
+            color: #ffd8d8;
+            transition: 0.5s;
+            margin-left: 10%;
+        }
+        .matiere:hover
+        {
+            transform: scale(115%);
+            margin-left: 15%;
+            transition: 0.5s;
+            color: #c40000;
+            
+            
+        }
+        .matiere-container h2
+        {
+
+            color: #ffffff;
+            transition: 0.5s;
+        }
+        .logo
+        {
+            width: 40%;
+            margin-left: 30%;
+        }
+        a
+        {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        
+        h1
+        {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 5px;
+        }
+        h2
+        {
+            color: #ff1100;
+            margin-left: 7%;
+            float: left;
+        }
+        h3
+        {
+            text-align: center;
+        }
+        .tlivre
+        {
+            text-align: center;
+        }
+        .ici
+        {
+            color: #ff1515;
+            text-decoration: none;
+        }
+        .ici:hover
+        {
+            color: #ffffff;
+        }
+        .sep
+        {
+            width: 50%;
+            height: 3px;
+            background-color: #ff3815;
+            margin-left: 25%;
+            
+        }
+        .petitsep
+        {
+            width: 70%;
+            height: 1px;
+            background-color: #ffffff;
+            margin-top: 13%;
+            
+            rotate:calc(90deg);
+            
+        }
+        .sep2
+        {
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            border-radius: 20px;
+            background-color: #2e2e2e;
+            position: relative;
+           transition: 0.5s;
+        }
+        .sep2:hover{
+        transform: scale(105%) ;
+        transition: 0.5s;
+        }
+        .sep3
+        {
+            
+            display: flex;
+           
+            
+            align-items: center;
+            margin: 1%;
+            padding: 1.5%;
+            background-color: #ff2b1c;
+            color: #ffffff;
+            border: none;
+            
+            border-radius: 20px;
+            transition: 0.5s;
+            
+            width: 15%;
+            height: 200px;
+        }
+        .sep4
+        {
+            display: flex;
+            float: right;
+           
+            margin: 1%;
+            padding: 1.5%;
+            background-color: #585858;
+            color: #ffffff;
+            border-radius: 20px;
+            transition: 0.5s;
+            width: 76%;
+            height: 200px;
+        } 
+        
+        .livre
+        {
+            width: 90%;
+            margin-left: 5%;
+            border-radius: 15px;
+        }
+        .titre
+        {
+        text-decoration:underline;
+        font-family:Arial, Helvetica, sans-serif;
+        width: 150px;
+        float: left;
+        text-align: center;
+        }
+        .auteur
+        {
+            color: #ff2b1c;
+            margin-left: 15%;
+            margin-top: 20%;
+            float: left;
+            
+        }
+        .centre
+        {
+            text-align: center;
+          
+        }
+        .bouton1
+        {
+            width: 150px;
+            height: 50px;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 8%;
+            margin-top: 100%;
+            margin-left: 30%;
+            transition: 0.5s;
+        }
+        .bouton1:hover 
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+        .bouton2
+        {
+            width: 150px;
+            height: 30px;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 8%;
+            margin-top: 5px;
+            transition: 0.5s;
+        }
+        .bouton2:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+        .video
+        {
+            width: 90%;
+            margin-left: 5%;
+            border-radius: 20px;
+        }
+        .video-img
+        {
+            width: 50%;
+            margin-left: 25%;
+            border-radius: 15px;
+        }
+        .video1
+        {
+            background-color:#585858;
+            width: 300px;
+            height: auto;
+            margin: 15px;
+            float: left;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .video1:hover
+        {
+            transition: 0.5s;
+            background-color:#3b3636;
+        }
+        .videocontainer
+        {
+            margin-left: 10%;
+        }
+        .podcastcontainer
+        {
+            width: 90%;
+            margin-left: 10%;
+            
+        }
+        .podcast
+        {
+            background-color:#585858;
+            width: 150px;
+            height: auto;
+            margin: 15px;
+            float: left;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;  
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .podcast:hover
+        {
+            background-color:#3b3636;
+            transition: 0.5s;
+        }
+        .podcast img
+        {
+            width: 150px;
+            border-radius: 15px;
+        }
+        .text
+        {
+            background-color:#585858;
+            width: 300px;
+            height: auto;
+            margin: 15px;
+            float: left;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;
+            transition: 0.5s;
+        }
+        
+        .text:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color:#3b3636;
+            
+        }
+        .text img
+        {
+            width: 50% ;
+            align-items: center;
+        }
+        .retour
+        {
+            width: 10%;
+            position: absolute;
+        }
+        .annotation1
+        {
+            position: absolute;
+            margin-top: 5%;
+            margin-left: -10%;
+            width: 10%;
+            z-index: 100;
+            rotate:calc(10deg);
+        }
+        .annotation2
+        {
+            position: absolute;
+            margin-top: -5%;
+            margin-left: 20%;
+            width: 10%;
+            z-index: 100;
+            rotate:calc(-10deg);
+            float: left;
+        }
+        .annotation3
+        {
+            position: absolute;
+            margin-top: -5%;
+            margin-left: 40%;
+            width: 30%;
+            z-index: 100;
+            
+            float: left;
+        }
+        .annotation4
+        {
+            position: absolute;
+            margin-top: 27%;
+            margin-left: 5%;
+            width: 15%;
+            z-index: 100;
+            
+            float: left;
+        }
+        .annotation5
+        {
+            position: absolute;
+            margin-top: 10%;
+            margin-left: -90%;
+            width: 8%;
+            z-index: 100;
+            
+            
+        }
+        .annotation8
+        {
+            position: absolute;
+            margin-top: -6%;
+            margin-left: 0%;
+            width: 18%;
+            z-index: 100;
+        }
+        .annotation9
+        {
+            position: absolute;
+            margin-top: -6%;
+            margin-left: -5%;
+            width: 18%;
+            z-index: 100;
+        }
+        .site
+        {
+            
+            width: 90%;
+            height: 20px;
+            margin-left: 5%;
+            background-color: #585858;
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        .site:hover
+        {
+            background-color: #2e2e2e;
+            transition: 0.5s;
+            transform: scale(105%);
+        }
+        .site1
+        {
+            float: left;
+            margin-left: 75%;
+            margin-top: -30px;
+            
+        }
+        .logo-site
+        {
+            height: 120%;
+            float: left;
+
+        }
+        .titre-site
+        {
+            color: #580000;
+            font-size:large;
+            text-align: left;
+            margin-top: -15px;
+            margin-left: 5%;
+        }
+
+        .PDF
+        {
+            
+            width: 20%;
+            height: 110ù;
+            margin-left: 5%;
+            margin-top: 20px;
+            background-color: #585858;
+            padding: 20px;
+            border-radius: 20px;
+            transition: 0.5s;
+            float: left;
+        }
+        .PDF:hover
+        {
+            transform: scale(110%);
+            background-color: #3e3e3e;
+           
+        }
+        .logo-PDF
+        {
+            width: 50%;
+            margin-left: 25%;
+            border-radius: 15px;
+        }
+        .bouton
+        { 
+            width: 70%;
+            height: 40px;
+            margin-left: 15% ;
+            border-radius: 15px;
+            background-color: #b20021;
+            border: #1e1e1e;
+            transition: 0.5s;
+            margin-top: 25px;
+        }
+        button:hover
+        {
+            transform: scale(110%);
+            background-color: #820000;
+            transition: 0.5s;
+        }
+        .bouton-PDF 
+        { 
+            color: #ffffff;
+            display: inline;
+        }
+        .bouton-PDF a
+        { 
+            color: #ff7070;
+            display: inline;
+        }
+        .colo
+        {
+            color: #ff9797;
+        }
+        .bouton3
+        {
+            width: 75%;
+            height: 30px;
+            margin-left: 15%;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 2%;
+            margin-top: 5px;
+            transition: 0.5s;
+        }
+        .bouton3:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+.film
+{
+    width: 15%;
+    margin-left: 4%;
+    float: inline-start;
+    border-radius: 15px;
+    transition: 0.5s;
+    margin-top: 25px;
+}
+.film:hover
+{
+    transform: scale(115%);
+    opacity: calc(50%);
+    
+}
+.txt-film
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+.dedicace
+{
+    text-align: center;
+}
+.prof
+{
+    color: #b20021;
+}
+       
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRFK7PDSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BRFK7PDSFQ');
+</script>
+
+<body>
+    <a href="../index.html"><img class="retour" style="width: 10%; position: absolute;" src="../img/retour.png" alt=""></a>
+    <img class="logo" src="../img/source.png" alt="">
+
+
+
+
+
+
+    
+    
+
+    <div class="matiere-container">
+        <h2>table des matieres :</h2> <br><br><br>
+        <a href="#1"> <p class="matiere">PDF</p></a>
+        <a href="#2"> <p class="matiere">PODCASTS</p></a>
+        <a href="#3"> <p class="matiere">FILMS</p></a>
+        
+       <img style="width: 12%; margin-top: -16%; margin-left: 60%; position: absolute;"  src="../img/schema science po.png" alt="">
+        
+   </div>
+
+
+
+
+    <h1>SCIENCES POLITIQUES</h1>
+    
+    
+    
+
+    <!--
+======================================================================================
+SCIENCE POLITIQUE
+======================================================================================
+    -->
+
+ 
+
+    
+     
+            <h2 id="1">PDF</h2>
+            <br><br><br><br>
+            
+            <img class="annotation9" src="../img/annotation 9.png" alt="">
+        <div class="PDF">
+                <img class="logo-PDF" src="../img/persee.png" alt=""> <br>
+                <p class="bouton-PDF">LA GUERRE ET LA CONSTRUCTION DE L'ETAT EN TANT QUE CRIME ORGANISE -Charles Tilly  <br><br>
+                    L'article examine les analogies qui existent entre la guerre, le processus </p>           
+                <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+            <div class="contenu">
+                <p>
+                     de formation de l'Etat et le
+                     crime organisé, à partir de l'expérience des Etats européens durant le XVIe et le XVIIe siècles. La
+                     formation des Etats-nations résulte de la manière dont des « faiseurs d'Etat » ont réussi à assurer la
+                     protection d'une large partie de la population sur un territoire déterminé et dont ils ont utilisé pour ce
+                     faire des instruments organisés de violence. L'article soutient que la guerre, l'extraction, la formation de
+                     l'Etat et la protection sont des phénomènes interdépendants et que cette interdépendance explique les
+                     formes et les structures des différents Etats nationaux en Europe. 
+                </p>
+                    <a download="./PDF/polix_0295-2319_2000_num_13_49_1075.pdf" href="./PDF/polix_0295-2319_2000_num_13_49_1075.pdf"><div class="bouton3">telecharger le PDF</div></a>
+            </div>  
+        </div>
+
+             
+        <div class="PDF">
+            <img class="logo-PDF" src="../img/option-14198-110x90.jpg" alt=""> <br>
+            <p class="bouton-PDF">LES THEORIES DE LA NATION - Denis Monière <br><br>
+                Dissocier comme nous allons le faire la conception ethnique de la conception civique 
+                de la nation tient plus de la nécessité didactique que</p>           
+            <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+        <div class="contenu">
+            <p>
+                 de la fidélité au processus 
+                historique. Dans l’univers des idées, les courants de pensées s’entremêlent et s’appuient 
+                les uns sur les autres. Il y a donc une relation dialectique entre la définition allemande 
+                et la définition française de la nation. Ce qu’on appelle la théorie allemande a été développé 
+                à la fin du XVIIIe siècle en opposition à l’universalisme abstrait propagé par les rationalistes 
+                français et la philosophie des Lumières, dont la conséquence politique fut l’invasion des États 
+                allemands par les armées de Napoléon. Par la suite, à la fin du XIXe siècle, la conception 
+                élective de la nation sera théorisée comme réponse philosophique à la conquête de l’Alsace et 
+                de la Lorraine par les armées prussiennes. Mais avant d’aborder cette dialectique, 
+                voyons comment l’idée de nation s’est mariée à la pensée libérale.
+            </p>
+                <a href="https://books.openedition.org/pum/15557?lang=en"><div class="bouton3">visiter le site</div></a>
+            </div></div>
+
+
+            <div class="PDF">
+                <img class="logo-PDF" src="../img/JSTOR.png" alt=""> <br>
+                <p class="bouton-PDF">AN ECONOMIC THEORY OF POLITICAL ACTION IN A DEMOCRACY <br> - Anthony Downs <br><br>
+                    IN SPITE of the tremendous impor-
+                    tance of government decisions in
+                    every  </p>           
+                <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+            <div class="contenu">
+                <p>
+                     phase of economic life, eco-
+                    nomic theorists have never success-
+                    fully integrated government with pri-
+                    vate decision-makers in a single gen-
+                    eral equilibrium theory. Instead they
+                    have treated government action as an
+                    exogenous variable, determined by po-
+                    litical considerations that lie outside the
+                    purview of economics. This view is really
+                    a carry-over from the classical premise
+                    that the private sector is a self-regulating
+                    mechanism and that any government
+                    action beyond maintenance of law and
+                    order is "interference" with it rather
+                    than an intrinsic part of it.
+                </p>
+                    <a href=" https://www.cairn.info/dictionnaire-des-politiques-publiques--9782724615500-page-530.htm"><div class="bouton3">visiter le site</div></a>
+            </div>
+            </div>
+
+
+
+
+            <div class="PDF">
+                <img class="logo-PDF" src="../img/cairnbox.png" alt=""> <br>
+                <p class="bouton-PDF">LE SENTIMENT NATIONAL, UNE "ILLUSION BIEN FONDEE"? - Igor Martinache <br><br>
+                    La notion de « problème public » – quoique intuitivement compréhensible 
+                    – n’est pas simple à définir : elle n’est ni stabilisée ni</p>           
+                <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+            <div class="contenu">
+                <p>
+                     utilisée souvent 
+                    telle quelle dans la littérature ; de plus, un problème public est loin d’être 
+                    un fait objectif, mais plutôt le produit d’un processus de problématisation. 
+                    L’exemple de la politique environnementale démontre que la pollution n’a commencé 
+                    à être considérée comme un problème public qu’à partir des années 1970, alors 
+                    qu’elle existait depuis l’apparition de la grande industrie : autrement dit, 
+                    l’existence d’un fait objectif n’implique pas sa qualification automatique en 
+                    tant que problème public.
+                </p>
+                    <a href="https://www-cairn-info.faraway.parisnanterre.fr/magazine-alternatives-economiques-2011-10-page-68.htm"><div class="bouton3">visiter le site</div></a>
+            </div>
+            </div>
+
+            <div class="PDF">
+                <img class="logo-PDF" src="../img/cairnbox.png" alt=""> <br>
+                <p class="bouton-PDF">LES CLIVAGES ET LA STRUCTURATION DES SYSTEMES PARTISANS - Pascal Delwit <br><br>
+                    La nation est de nouveau au coeur des débats, qu'il s'agisse de lui 
+                    restituer une souveraineté qu'elle aurait perdue</p>           
+                <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+            <div class="contenu">
+                <p>
+                    La nation est de nouveau au coeur des débats, qu'il s'agisse de lui 
+                    restituer une souveraineté qu'elle aurait perdue ou d'en durcir les frontières. 
+                    Or, loin de constituer une communauté immuable, celle-ci est avant tout l'objet 
+                    d'une croyance dont la vigueur est d'autant plus surprenante que son invention 
+                    est récente. Mais elle reste aussi, en pratique, l'espace principal dans lequel 
+                    s'accomplit la solidarité entre ceux qui y appartiennent.
+                </p>
+                    <a href="https://www-cairn-info.faraway.parisnanterre.fr/magazine-alternatives-economiques-2011-10-page-68.htm"><div class="bouton3">visiter le site</div></a>
+            </div>
+            </div>
+
+            <div class="PDF">
+                <img class="logo-PDF" src="../img/cairnbox.png" alt=""> <br>
+                <p class="bouton-PDF">LES PARTIS CARTELISES SELON KATZ ET MAIR <br> - Paul Bacot <br><br>
+                    Les mots d’abord — en faisant le pari que le travail sur les mots nous aide dans le travail sur 
+                    les concepts et, partant, dans la compréhension de </p>           
+                <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+            <div class="contenu">
+                <p>
+                    la réalité. Nous évoquerons ainsi, 
+                    en partant des mots et de leurs sens, et en prenant au sérieux la métaphore suggérée par 
+                    l’emploi de cartel hors de son domaine habituel d’usage, quelques-uns des problèmes posés 
+                    par le modèle de Richard S. Katz et Peter Mair.
+                    Le syntagme anglais cartel party est généralement traduit en français 
+                    par l’expression parti cartel (ou parti-cartel) , notamment dans 
+                    les index thématiques et dans les citations du texte de Katz et Mair. Il 
+                    s’agit évidemment d’une traduction un peu rapide, consistant simplement 
+                    par principe à inverser l’ordre des mots.
+                </p>
+                    <a href="https://www-cairn-info.faraway.parisnanterre.fr/magazine-alternatives-economiques-2011-10-page-68.htm"><div class="bouton3">visiter le site</div></a>
+            </div>
+            </div>
+
+       
+
+
+            <div class="PDF">
+                <img class="logo-PDF" src="../img/cairnbox.png" alt=""> <br>
+                <p class="bouton-PDF">PROBLEME PUBLIC <br> - Elizabeth Sheppard <br><br><br>
+                    La notion de « problème public » – quoique intuitivement compréhensible – n’est pas simple à définir 
+                    : elle n’est ni stabilisée ni
+                </p>           
+                <a class="bouton-PDF"> <span class="colo"> suite ... </span> </a> 
+            <div class="contenu">
+                <p>
+                    La notion de « problème public » – quoique intuitivement compréhensible – n’est pas simple à définir 
+                    : elle n’est ni stabilisée ni utilisée souvent telle quelle dans la littérature ; de plus, un problème 
+                    public est loin d’être un fait objectif, mais plutôt le produit d’un processus de problématisation. 
+                    L’exemple de la politique environnementale démontre que la pollution n’a commencé à être considérée 
+                    comme un problème public qu’à partir des années 1970, alors qu’elle existait depuis l’apparition de 
+                    la grande industrie : autrement dit, l’existence d’un fait objectif n’implique pas sa qualification 
+                    automatique en tant que problème public.
+                </p>
+                    <a href=" https://www.cairn.info/dictionnaire-des-politiques-publiques--9782724615500-page-530.htm"><div class="bouton3">visiter le site</div></a>
+            </div>
+            </div>
+       
+        
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            
+            <div class="sep"></div>
+            
+            <h2 id="2">podcasts</h2>
+        <br><br><br><br>
+        <div class="podcastcontainer">
+            <div class="podcast">
+                <img src="../img/uclouvain.png" alt=""><p>Découvrir la science politique</p>
+                <a href="https://uclouvain.be/fr/decouvrir/decouvrir-la-science-politique-le-podcast.html"><div class="bouton2">UClouvain</div></a>
+                
+            </div>
+            <div class="podcast">
+                <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+                <a href=""><div class="bouton2">...</div></a>
+                <a href=""><div class="bouton2">...</div></a>
+            </div>
+            <div class="podcast">
+                <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+                <a href=""><div class="bouton2">...</div></a>
+                <a href=""><div class="bouton2">...</div></a>
+            </div>
+            <div class="podcast">
+                <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+                <a href=""><div class="bouton2">...</div></a>
+                <a href=""><div class="bouton2">...</div></a>
+            </div>
+            <div class="podcast">
+                <img src="../img/podcast.png" alt=""><p>en attente de contenu ...</p>
+                <a href=""><div class="bouton2">...</div></a>
+                <a href=""><div class="bouton2">...</div></a>
+            </div>
+
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
+
+        <div class="sep"></div>
+            
+            <h2 id="3">films</h2> <br><br>
+            
+
+            <p class="txt-film">MME elif Becan :  <br><br>
+                 " Des films qui n'ont pas de lien direct avec mon cours mais si vous voulez procrastiner,  ces films sont divertissants et encouragent tous à penser à réfléchir sur les thématiques élaborées en cours :-)"</p>
+            
+            <br><br>
+
+
+        <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=227320.html">
+            <img class="film" src="https://fr.web.img5.acsta.net/c_310_420/o_club-allocine-310x420.png_0_se/pictures/16/07/05/10/58/324651.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=58911.html">
+            <img class="film" src="https://fr.web.img2.acsta.net/c_310_420/medias/nmedia/18/36/31/71/18479867.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/rechercher/?q=Twelve+Angry+Men%2C+1957">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/35/24/09/18784292.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=5762.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/pictures/14/11/25/12/09/240011.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=175581.html">
+            <img class="film" src="https://fr.web.img3.acsta.net/c_310_420/pictures/15/02/04/11/17/060744.jpg" alt="">  
+          </a>
+
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=61505.html">
+            <img class="film" src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/92/83/85/20244611.jpg" alt="">  
+          </a>
+
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=857.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/00/02/56/56/aff.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=175305.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/o_club-allocine-310x420.png_0_se/medias/nmedia/18/82/28/51/19634452.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=251903.html">
+            <img class="film" src="https://fr.web.img4.acsta.net/c_310_420/pictures/19/02/14/17/04/0258747.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=228499.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/pictures/14/07/02/16/01/158254.jpg" alt="">  
+          </a>
+
+
+          <a href="https://www.imdb.com/title/tt0058946/">
+            <img class="film" src="../img/all the.png" alt="">  
+          </a>
+
+
+          <a href="https://www.imdb.com/title/tt0058946/">
+            <img class="film" src="../img/battle of algers.png" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=52715.html">
+            <img class="film" src="https://fr.web.img2.acsta.net/c_310_420/medias/nmedia/18/35/12/19/affiche.jpg" alt="">  
+          </a>
+
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=249783.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/pictures/17/04/06/17/51/540330.jpg" alt="">  
+          </a>
+
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=2253.html">
+            <img class="film" src="https://fr.web.img4.acsta.net/c_310_420/pictures/19/06/24/15/19/0423711.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=197326.html">
+            <img class="film" src="https://fr.web.img4.acsta.net/c_310_420/medias/nmedia/18/90/83/22/20459623.jpg" alt="">  
+          </a>
+
+          
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=2596.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/65/20/00/18836165.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=42792.html">
+            <img class="film" src="https://fr.web.img5.acsta.net/c_310_420/pictures/17/01/19/11/57/026172.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=123734.html">
+            <img class="film" src="https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/63/93/01/18948378.jpg" alt="">  
+          </a>
+
+          <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=143026.html">
+            <img class="film" src="https://fr.web.img3.acsta.net/c_310_420/medias/nmedia/18/70/45/12/19149593.jpg" alt="">  
+          </a>
+
+
+
+
+
+
+
+    </div>
+             
+
+    
+    
+</div>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+
+<footer class="footer">
+    
+    <ul>
+        <li><a href="../index.html"><img class="footer-ico" src="../img/footer accueil.png" alt=""></a></li>
+        <li><a href="../arborescence/CGU.html"><img class="footer-ico" src="../img/footer CGU.png" alt=""></a></li>
+        <li><a href="../arborescence/signaler.html"><img class="footer-ico"src="../img/footer erreur.png" alt=""></a></li>
+    </ul>
+   
+    <img class="footer-logo" src="../img/logo 4.0.png" alt="Description de l'image"> 
+    <p>©2024 lesupport.me</p>
+  <img class="footer-fond" src="../img/footer nanterre.png" alt="">
+  </footer>
+  
+  
+
+
+
+
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contenus = document.querySelectorAll('.contenu');
+
+  contenus.forEach(contenu => {
+    contenu.style.display = 'none';
+  });
+
+  const boutons = document.querySelectorAll('.bouton');
+
+  boutons.forEach(bouton => {
+    bouton.addEventListener('click', () => {
+      const contenu = bouton.nextElementSibling;
+      contenu.style.display = contenu.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+});
+        
+        </script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const contenus = document.querySelectorAll('.contenu');
+    
+      contenus.forEach(contenu => {
+        contenu.style.display = 'none';
+      });
+    
+      const boutons = document.querySelectorAll('.bouton-PDF');
+    
+      boutons.forEach(bouton => {
+        bouton.addEventListener('click', () => {
+          const contenu = bouton.nextElementSibling;
+          contenu.style.display = contenu.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    });
+            
+            </script>
+
+</body>
+</html>

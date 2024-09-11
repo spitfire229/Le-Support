@@ -1,0 +1,2815 @@
+{
+  "Droit Pénal": [
+    {
+      "title": "QCM 1: Introduction au Droit Pénal",
+      "questions": [
+        {
+          "question": "Qu'est-ce que le droit pénal?",
+          "options": [
+            "Un ensemble de normes juridiques qui réglemente le recours par l'État à la sanction pénale.",
+            "Un ensemble de lois pour la protection des consommateurs.",
+            "Un droit qui régit les relations commerciales.",
+            "Un ensemble de règles concernant le droit du travail."
+          ],
+          "answer": "Un ensemble de normes juridiques qui réglemente le recours par l'État à la sanction pénale."
+        },
+        {
+          "question": "Le droit pénal est-il un droit public ou privé?",
+          "options": [
+            "Public",
+            "Privé",
+            "Les deux",
+            "Ni l'un ni l'autre"
+          ],
+          "answer": "Privé"
+        },
+        {
+          "question": "Le droit pénal est souvent considéré comme le droit le plus ___?",
+          "options": [
+            "Brutal",
+            "Complexe",
+            "Flexible",
+            "Protecteur"
+          ],
+          "answer": "Brutal"
+        },
+        {
+          "question": "Le principe de légalité des délits et des peines signifie que:",
+          "options": [
+            "Il ne peut y avoir de répression sans texte préalable.",
+            "Les juges peuvent créer des délits.",
+            "Les lois pénales peuvent être appliquées rétroactivement.",
+            "Les peines peuvent être décidées arbitrairement."
+          ],
+          "answer": "Il ne peut y avoir de répression sans texte préalable."
+        },
+        {
+          "question": "Quel texte ne fait pas partie des fondements du principe de légalité?",
+          "options": [
+            "Déclaration des droits de l'homme et du citoyen",
+            "Déclaration universelle des droits de l'homme",
+            "Pacte international des droits civils et politiques",
+            "Convention de Genève"
+          ],
+          "answer": "Convention de Genève"
+        },
+        {
+          "question": "Quelle est la fonction principale du droit pénal?",
+          "options": [
+            "Indemniser les victimes",
+            "Protéger les libertés individuelles",
+            "Réguler le marché économique",
+            "Faciliter les échanges commerciaux"
+          ],
+          "answer": "Protéger les libertés individuelles"
+        },
+        {
+          "question": "Qu'est-ce qu'une sanction pénale?",
+          "options": [
+            "Un mal infligé en conséquence d'un acte contraire au droit",
+            "Une récompense pour un bon comportement",
+            "Une mesure de protection sociale",
+            "Une simple amende administrative"
+          ],
+          "answer": "Un mal infligé en conséquence d'un acte contraire au droit"
+        },
+        {
+          "question": "Le droit pénal est considéré comme le dernier rempart car:",
+          "options": [
+            "Il sanctionne toutes les autres branches du droit",
+            "Il est le premier recours en cas de litige",
+            "Il se substitue au droit civil",
+            "Il est le plus ancien des droits"
+          ],
+          "answer": "Il sanctionne toutes les autres branches du droit"
+        },
+        {
+          "question": "Le pouvoir d'incriminer en droit pénal appartient à:",
+          "options": [
+            "Le législateur",
+            "Le juge",
+            "Le président",
+            "Le procureur"
+          ],
+          "answer": "Le législateur"
+        },
+        {
+          "question": "Quelles sont les trois étapes du raisonnement pénal?",
+          "options": [
+            "Texte applicable, responsabilités, détermination de la sanction",
+            "Identification du suspect, arrestation, jugement",
+            "Plainte, enquête, condamnation",
+            "Débat, délibération, verdict"
+          ],
+          "answer": "Texte applicable, responsabilités, détermination de la sanction"
+        },
+        {
+          "question": "Quelle est la différence entre le droit pénal et la procédure pénale?",
+          "options": [
+            "Le droit pénal concerne les règles de fond, la procédure pénale concerne les règles de forme.",
+            "Il n'y a pas de différence.",
+            "Le droit pénal est théorique, la procédure pénale est pratique.",
+            "Le droit pénal est national, la procédure pénale est internationale."
+          ],
+          "answer": "Le droit pénal concerne les règles de fond, la procédure pénale concerne les règles de forme."
+        },
+        {
+          "question": "Quel est l'objectif de la sanction pénale?",
+          "options": [
+            "Dissuader ou punir",
+            "Indemniser les victimes",
+            "Encourager la réhabilitation",
+            "Aider les criminels à se réintégrer"
+          ],
+          "answer": "Dissuader ou punir"
+        },
+        {
+          "question": "Le droit pénal ne peut se concrétiser qu'à travers:",
+          "options": [
+            "Une procédure",
+            "Un décret",
+            "Une ordonnance",
+            "Un contrat"
+          ],
+          "answer": "Une procédure"
+        },
+        {
+          "question": "Le principe de légalité est aussi mentionné dans quel texte européen?",
+          "options": [
+            "Charte des droits fondamentaux de l'UE",
+            "Traité de Maastricht",
+            "Convention de Vienne",
+            "Accord de Schengen"
+          ],
+          "answer": "Charte des droits fondamentaux de l'UE"
+        },
+        {
+          "question": "Quel est le rôle du juge en droit pénal?",
+          "options": [
+            "Constater la culpabilité et condamner",
+            "Rédiger les lois pénales",
+            "Appliquer les décisions du président",
+            "Surveiller l'exécution des sanctions"
+          ],
+          "answer": "Constater la culpabilité et condamner"
+        },
+        {
+          "question": "Quel est l'un des objets du droit pénal?",
+          "options": [
+            "Le crime",
+            "Le commerce",
+            "La santé",
+            "L'éducation"
+          ],
+          "answer": "Le crime"
+        },
+        {
+          "question": "Qu'est-ce que la criminologie?",
+          "options": [
+            "Une discipline descriptive qui explique le phénomène criminel",
+            "Une partie du droit civil",
+            "L'étude des relations commerciales",
+            "Une technique de réhabilitation"
+          ],
+          "answer": "Une discipline descriptive qui explique le phénomène criminel"
+        },
+        {
+          "question": "Quelles sont les formes de criminologie mentionnées?",
+          "options": [
+            "Radicale et descriptive",
+            "Descriptive et préventive",
+            "Analytique et normative",
+            "Comparative et historique"
+          ],
+          "answer": "Radicale et descriptive"
+        },
+        {
+          "question": "Le droit pénal peut-il être considéré comme protecteur?",
+          "options": [
+            "Oui, car il limite le pouvoir répressif de l'État",
+            "Non, il n'a aucun effet protecteur",
+            "Oui, car il indemnise les victimes",
+            "Non, il est uniquement punitif"
+          ],
+          "answer": "Oui, car il limite le pouvoir répressif de l'État"
+        },
+        {
+          "question": "Le droit pénal est-il omniprésent dans la société?",
+          "options": [
+            "Oui, il touche à de nombreuses disciplines juridiques",
+            "Non, il est rarement utilisé",
+            "Oui, mais uniquement dans les affaires civiles",
+            "Non, il est limité aux affaires criminelles"
+          ],
+          "answer": "Oui, il touche à de nombreuses disciplines juridiques"
+        }
+      ]
+    },
+    {
+      "title": "QCM 2: Principes Fondamentaux du Droit Pénal",
+      "questions": [
+        {
+          "question": "Le principe de légalité des délits et des peines est fondé sur quel article de la Déclaration des droits de l'homme et du citoyen?",
+          "options": [
+            "Article 8",
+            "Article 5",
+            "Article 10",
+            "Article 15"
+          ],
+          "answer": "Article 8"
+        },
+        {
+          "question": "Quel est le principal objectif des sanctions pénales?",
+          "options": [
+            "Dissuader les infractions",
+            "Récompenser les citoyens",
+            "Faciliter les transactions commerciales",
+            "Encourager la créativité"
+          ],
+          "answer": "Dissuader les infractions"
+        },
+        {
+          "question": "Quels sont les trois pouvoirs en droit pénal?",
+          "options": [
+            "Incriminer, condamner, exécuter les sanctions",
+            "Légiférer, juger, appliquer",
+            "Créer, interpréter, appliquer",
+            "Rédiger, voter, promulguer"
+          ],
+          "answer": "Incriminer, condamner, exécuter les sanctions"
+        },
+        {
+          "question": "Qui est responsable de l'incrimination en droit pénal?",
+          "options": [
+            "Le législateur",
+            "Le juge",
+            "Le procureur",
+            "Le président"
+          ],
+          "answer": "Le législateur"
+        },
+        {
+          "question": "La légitimité du droit pénal repose sur:",
+          "options": [
+            "La protection des libertés individuelles",
+            "La force militaire",
+            "La popularité des lois",
+            "L'accord des criminels"
+          ],
+          "answer": "La protection des libertés individuelles"
+        },
+        {
+          "question": "Quelle est la première étape du raisonnement pénal?",
+          "options": [
+            "Identifier le texte applicable",
+            "Arrestation",
+            "Jugement",
+            "Condamnation"
+          ],
+          "answer": "Identifier le texte applicable"
+        },
+        {
+          "question": "Le principe de légalité interdit:",
+          "options": [
+            "Les lois rétroactives",
+            "Les jugements",
+            "Les condamnations",
+            "Les sanctions"
+          ],
+          "answer": "Les lois rétroactives"
+        },
+        {
+          "question": "Le droit pénal spécial est distinct du droit pénal général car:",
+          "options": [
+            "Il concerne des infractions spécifiques",
+            "Il s'applique à tous les crimes",
+            "Il est universel",
+            "Il est plus ancien"
+          ],
+          "answer": "Il concerne des infractions spécifiques"
+        },
+        {
+          "question": "Quel est le rôle de la procédure pénale?",
+          "options": [
+            "Réguler la mise en œuvre du droit pénal",
+            "Créer de nouvelles lois",
+            "Enquêter sur les crimes",
+            "Punir les coupables"
+          ],
+          "answer": "Réguler la mise en œuvre du droit pénal"
+        },
+        {
+          "question": "Quel texte international évoque le principe de légalité?",
+          "options": [
+            "Déclaration universelle des droits de l'homme",
+            "Charte de l'ONU",
+            "Traité de Versailles",
+            "Accord de Paris"
+          ],
+          "answer": "Déclaration universelle des droits de l'homme"
+        },
+        {
+          "question": "La légitimité de la sanction pénale repose sur:",
+          "options": [
+            "La nécessité de protéger l'ordre social",
+            "La volonté de récompenser les bons comportements",
+            "L'accord de la communauté internationale",
+            "Le consentement des criminels"
+          ],
+          "answer": "La nécessité de protéger l'ordre social"
+        },
+        {
+          "question": "Quel est l'objet du droit pénal?",
+          "options": [
+            "Les comportements contraires à l'ordre social",
+            "Les transactions commerciales",
+            "La protection des consommateurs",
+            "La régulation du marché économique"
+          ],
+          "answer": "Les comportements contraires à l'ordre social"
+        },
+        {
+          "question": "Le droit pénal permet:",
+          "options": [
+            "De limiter le pouvoir répressif de l'État",
+            "D'augmenter les taxes",
+            "De favoriser le commerce international",
+            "D'encourager les arts"
+          ],
+          "answer": "De limiter le pouvoir répressif de l'État"
+        },
+        {
+          "question": "Le droit pénal a une dimension:",
+          "options": [
+            "Historique",
+            "Économique",
+            "Scientifique",
+            "Religieuse"
+          ],
+          "answer": "Historique"
+        },
+        {
+          "question": "Le juge pénal doit:",
+          "options": [
+            "Appliquer les lois pénales",
+            "Créer des délits",
+            "Négocier les peines",
+            "Ignorer les circonstances atténuantes"
+          ],
+          "answer": "Appliquer les lois pénales"
+        },
+        {
+          "question": "Quel est le but principal de la criminologie?",
+          "options": [
+            "Étudier et expliquer le phénomène criminel",
+            "Rédiger des lois",
+            "Punir les criminels",
+            "Protéger les victimes"
+          ],
+          "answer": "Étudier et expliquer le phénomène criminel"
+        },
+        {
+          "question": "Quelles disciplines sont liées au droit pénal?",
+          "options": [
+            "Criminologie et procédure pénale",
+            "Économie et politique",
+            "Sociologie et psychologie",
+            "Linguistique et histoire"
+          ],
+          "answer": "Criminologie et procédure pénale"
+        },
+        {
+          "question": "La procédure pénale concerne:",
+          "options": [
+            "Les règles de forme du droit pénal",
+            "Les lois civiles",
+            "Les relations commerciales",
+            "Les droits de l'homme"
+          ],
+          "answer": "Les règles de forme du droit pénal"
+        },
+        {
+          "question": "La protection des droits fondamentaux est une dimension du droit pénal?",
+          "options": [
+            "Oui",
+            "Non",
+            "Peut-être",
+            "Rarement"
+          ],
+          "answer": "Oui"
+        },
+        {
+          "question": "Le droit pénal permet de réguler:",
+          "options": [
+            "Les comportements criminels",
+            "Les marchés financiers",
+            "Les contrats de travail",
+            "Les échanges internationaux"
+          ],
+          "answer": "Les comportements criminels"
+        }
+      ]
+    },
+    {
+      "title": "QCM 3: La Sanction Pénale",
+      "questions": [
+        {
+          "question": "La sanction pénale a pour but de:",
+          "options": [
+            "Punir et dissuader",
+            "Récompenser",
+            "Réhabiliter",
+            "Encourager"
+          ],
+          "answer": "Punir et dissuader"
+        },
+        {
+          "question": "La sanction pénale est un mal infligé en réponse à:",
+          "options": [
+            "Un acte contraire au droit",
+            "Une bonne action",
+            "Un contrat",
+            "Un accident"
+          ],
+          "answer": "Un acte contraire au droit"
+        },
+        {
+          "question": "La légitimité de la sanction pénale repose sur:",
+          "options": [
+            "La nécessité de protéger l'ordre social",
+            "La popularité de la loi",
+            "Le consentement des criminels",
+            "L'accord de l'ONU"
+          ],
+          "answer": "La nécessité de protéger l'ordre social"
+        },
+        {
+          "question": "La sanction pénale est décidée par:",
+          "options": [
+            "Le juge",
+            "Le législateur",
+            "Le président",
+            "Le procureur"
+          ],
+          "answer": "Le juge"
+        },
+        {
+          "question": "Le droit pénal est considéré comme le dernier rempart car:",
+          "options": [
+            "Il sanctionne toutes les autres branches du droit",
+            "Il est le premier recours en cas de litige",
+            "Il se substitue au droit civil",
+            "Il est le plus ancien des droits"
+          ],
+          "answer": "Il sanctionne toutes les autres branches du droit"
+        },
+        {
+          "question": "Quelles sont les fonctions de la sanction pénale?",
+          "options": [
+            "Punir, dissuader, réhabiliter",
+            "Indemniser, protéger, encourager",
+            "Récompenser, aider, instruire",
+            "Contrôler, réguler, négocier"
+          ],
+          "answer": "Punir, dissuader, réhabiliter"
+        },
+        {
+          "question": "La procédure pénale concerne:",
+          "options": [
+            "Les règles de forme du droit pénal",
+            "Les lois civiles",
+            "Les relations commerciales",
+            "Les droits de l'homme"
+          ],
+          "answer": "Les règles de forme du droit pénal"
+        },
+        {
+          "question": "Le juge pénal doit:",
+          "options": [
+            "Appliquer les lois pénales",
+            "Créer des délits",
+            "Négocier les peines",
+            "Ignorer les circonstances atténuantes"
+          ],
+          "answer": "Appliquer les lois pénales"
+        },
+        {
+          "question": "Quel est le but principal de la criminologie?",
+          "options": [
+            "Étudier et expliquer le phénomène criminel",
+            "Rédiger des lois",
+            "Punir les criminels",
+            "Protéger les victimes"
+          ],
+          "answer": "Étudier et expliquer le phénomène criminel"
+        },
+        {
+          "question": "Le droit pénal permet:",
+          "options": [
+            "De limiter le pouvoir répressif de l'État",
+            "D'augmenter les taxes",
+            "De favoriser le commerce international",
+            "D'encourager les arts"
+          ],
+          "answer": "De limiter le pouvoir répressif de l'État"
+        },
+        {
+          "question": "Quelles disciplines sont liées au droit pénal?",
+          "options": [
+            "Criminologie et procédure pénale",
+            "Économie et politique",
+            "Sociologie et psychologie",
+            "Linguistique et histoire"
+          ],
+          "answer": "Criminologie et procédure pénale"
+        },
+        {
+          "question": "Le droit pénal spécial est distinct du droit pénal général car:",
+          "options": [
+            "Il concerne des infractions spécifiques",
+            "Il s'applique à tous les crimes",
+            "Il est universel",
+            "Il est plus ancien"
+          ],
+          "answer": "Il concerne des infractions spécifiques"
+        },
+        {
+          "question": "Le principe de légalité interdit:",
+          "options": [
+            "Les lois rétroactives",
+            "Les jugements",
+            "Les condamnations",
+            "Les sanctions"
+          ],
+          "answer": "Les lois rétroactives"
+        },
+        {
+          "question": "Quel est le principal objectif des sanctions pénales?",
+          "options": [
+            "Dissuader les infractions",
+            "Récompenser les citoyens",
+            "Faciliter les transactions commerciales",
+            "Encourager la créativité"
+          ],
+          "answer": "Dissuader les infractions"
+        },
+        {
+          "question": "Le droit pénal a une dimension:",
+          "options": [
+            "Historique",
+            "Économique",
+            "Scientifique",
+            "Religieuse"
+          ],
+          "answer": "Historique"
+        },
+        {
+          "question": "La légitimité de la sanction pénale repose sur:",
+          "options": [
+            "La nécessité de protéger l'ordre social",
+            "La volonté de récompenser les bons comportements",
+            "L'accord de la communauté internationale",
+            "Le consentement des criminels"
+          ],
+          "answer": "La nécessité de protéger l'ordre social"
+        },
+        {
+          "question": "Le droit pénal permet de réguler:",
+          "options": [
+            "Les comportements criminels",
+            "Les marchés financiers",
+            "Les contrats de travail",
+            "Les échanges internationaux"
+          ],
+          "answer": "Les comportements criminels"
+        },
+        {
+          "question": "Quel texte international évoque le principe de légalité?",
+          "options": [
+            "Déclaration universelle des droits de l'homme",
+            "Charte de l'ONU",
+            "Traité de Versailles",
+            "Accord de Paris"
+          ],
+          "answer": "Déclaration universelle des droits de l'homme"
+        },
+        {
+          "question": "La protection des droits fondamentaux est une dimension du droit pénal?",
+          "options": [
+            "Oui",
+            "Non",
+            "Peut-être",
+            "Rarement"
+          ],
+          "answer": "Oui"
+        },
+        {
+          "question": "Quel est l'objet du droit pénal?",
+          "options": [
+            "Les comportements contraires à l'ordre social",
+            "Les transactions commerciales",
+            "La protection des consommateurs",
+            "La régulation du marché économique"
+          ],
+          "answer": "Les comportements contraires à l'ordre social"
+        }
+      ]
+    },
+    {
+      "title": "QCM 4: La Criminologie",
+      "questions": [
+        {
+          "question": "La criminologie est définie comme:",
+          "options": [
+            "Une discipline descriptive qui explique le phénomène criminel",
+            "Une partie du droit civil",
+            "L'étude des relations commerciales",
+            "Une technique de réhabilitation"
+          ],
+          "answer": "Une discipline descriptive qui explique le phénomène criminel"
+        },
+        {
+          "question": "Quelles sont les formes de criminologie mentionnées?",
+          "options": [
+            "Radicale et descriptive",
+            "Descriptive et préventive",
+            "Analytique et normative",
+            "Comparative et historique"
+          ],
+          "answer": "Radicale et descriptive"
+        },
+        {
+          "question": "Le droit pénal spécial est distinct du droit pénal général car:",
+          "options": [
+            "Il concerne des infractions spécifiques",
+            "Il s'applique à tous les crimes",
+            "Il est universel",
+            "Il est plus ancien"
+          ],
+          "answer": "Il concerne des infractions spécifiques"
+        },
+        {
+          "question": "Quel est le but principal de la criminologie?",
+          "options": [
+            "Étudier et expliquer le phénomène criminel",
+            "Rédiger des lois",
+            "Punir les criminels",
+            "Protéger les victimes"
+          ],
+          "answer": "Étudier et expliquer le phénomène criminel"
+        },
+        {
+          "question": "Quel est le principal objectif des sanctions pénales?",
+          "options": [
+            "Dissuader les infractions",
+            "Récompenser les citoyens",
+            "Faciliter les transactions commerciales",
+            "Encourager la créativité"
+          ],
+          "answer": "Dissuader les infractions"
+        },
+        {
+          "question": "La légitimité de la sanction pénale repose sur:",
+          "options": [
+            "La nécessité de protéger l'ordre social",
+            "La popularité de la loi",
+            "Le consentement des criminels",
+            "L'accord de l'ONU"
+          ],
+          "answer": "La nécessité de protéger l'ordre social"
+        },
+        {
+          "question": "La sanction pénale a pour but de:",
+          "options": [
+            "Punir et dissuader",
+            "Récompenser",
+            "Réhabiliter",
+            "Encourager"
+          ],
+          "answer": "Punir et dissuader"
+        },
+        {
+          "question": "La protection des droits fondamentaux est une dimension du droit pénal?",
+          "options": [
+            "Oui",
+            "Non",
+            "Peut-être",
+            "Rarement"
+          ],
+          "answer": "Oui"
+        },
+        {
+          "question": "La sanction pénale est un mal infligé en réponse à:",
+          "options": [
+            "Un acte contraire au droit",
+            "Une bonne action",
+            "Un contrat",
+            "Un accident"
+          ],
+          "answer": "Un acte contraire au droit"
+        },
+        {
+          "question": "Le principe de légalité interdit:",
+          "options": [
+            "Les lois rétroactives",
+            "Les jugements",
+            "Les condamnations",
+            "Les sanctions"
+          ],
+          "answer": "Les lois rétroactives"
+        },
+        {
+          "question": "Le droit pénal permet:",
+          "options": [
+            "De limiter le pouvoir répressif de l'État",
+            "D'augmenter les taxes",
+            "De favoriser le commerce international",
+            "D'encourager les arts"
+          ],
+          "answer": "De limiter le pouvoir répressif de l'État"
+        },
+        {
+          "question": "La légitimité de la sanction pénale repose sur:",
+          "options": [
+            "La nécessité de protéger l'ordre social",
+            "La volonté de récompenser les bons comportements",
+            "L'accord de la communauté internationale",
+            "Le consentement des criminels"
+          ],
+          "answer": "La nécessité de protéger l'ordre social"
+        },
+        {
+          "question": "La procédure pénale concerne:",
+          "options": [
+            "Les règles de forme du droit pénal",
+            "Les lois civiles",
+            "Les relations commerciales",
+            "Les droits de l'homme"
+          ],
+          "answer": "Les règles de forme du droit pénal"
+        },
+        {
+          "question": "Le juge pénal doit:",
+          "options": [
+            "Appliquer les lois pénales",
+            "Créer des délits",
+            "Négocier les peines",
+            "Ignorer les circonstances atténuantes"
+          ],
+          "answer": "Appliquer les lois pénales"
+        },
+        {
+          "question": "Quel est l'objet du droit pénal?",
+          "options": [
+            "Les comportements contraires à l'ordre social",
+            "Les transactions commerciales",
+            "La protection des consommateurs",
+            "La régulation du marché économique"
+          ],
+          "answer": "Les comportements contraires à l'ordre social"
+        },
+        {
+          "question": "Le droit pénal est considéré comme le dernier rempart car:",
+          "options": [
+            "Il sanctionne toutes les autres branches du droit",
+            "Il est le premier recours en cas de litige",
+            "Il se substitue au droit civil",
+            "Il est le plus ancien des droits"
+          ],
+          "answer": "Il sanctionne toutes les autres branches du droit"
+        },
+        {
+          "question": "Le droit pénal a une dimension:",
+          "options": [
+            "Historique",
+            "Économique",
+            "Scientifique",
+            "Religieuse"
+          ],
+          "answer": "Historique"
+        },
+        {
+          "question": "Quel texte international évoque le principe de légalité?",
+          "options": [
+            "Déclaration universelle des droits de l'homme",
+            "Charte de l'ONU",
+            "Traité de Versailles",
+            "Accord de Paris"
+          ],
+          "answer": "Déclaration universelle des droits de l'homme"
+        },
+        {
+          "question": "Quelles disciplines sont liées au droit pénal?",
+          "options": [
+            "Criminologie et procédure pénale",
+            "Économie et politique",
+            "Sociologie et psychologie",
+            "Linguistique et histoire"
+          ],
+          "answer": "Criminologie et procédure pénale"
+        }
+      ]
+    },
+    {
+      "title": "QCM 5: Règles et Principes de Base",
+      "questions": [
+        {
+          "question": "Qu'est-ce que le droit pénal?",
+          "options": [
+            "Un ensemble de normes juridiques qui réglemente le recours par l'État à la sanction pénale.",
+            "Un ensemble de lois pour la protection des consommateurs.",
+            "Un droit qui régit les relations commerciales.",
+            "Un ensemble de règles concernant le droit du travail."
+          ],
+          "answer": "Un ensemble de normes juridiques qui réglemente le recours par l'État à la sanction pénale."
+        },
+        {
+          "question": "Le droit pénal est souvent considéré comme le droit le plus ___?",
+          "options": [
+            "Brutal",
+            "Complexe",
+            "Flexible",
+            "Protecteur"
+          ],
+          "answer": "Brutal"
+        },
+        {
+          "question": "Le principe de légalité en droit pénal signifie que:",
+          "options": [
+            "Aucun crime ou délit ne peut être puni sans texte de loi.",
+            "Toutes les infractions sont punies de la même manière.",
+            "La loi pénale est rétroactive.",
+            "Les juges peuvent créer de nouvelles infractions."
+          ],
+          "answer": "Aucun crime ou délit ne peut être puni sans texte de loi."
+        },
+        {
+          "question": "Le droit pénal permet:",
+          "options": [
+            "De limiter le pouvoir répressif de l'État",
+            "D'augmenter les taxes",
+            "De favoriser le commerce international",
+            "D'encourager les arts"
+          ],
+          "answer": "De limiter le pouvoir répressif de l'État"
+        },
+        {
+          "question": "Le principe de territorialité en droit pénal signifie que:",
+          "options": [
+            "La loi pénale s'applique sur le territoire national",
+            "La loi pénale s'applique aux citoyens à l'étranger",
+            "La loi pénale est la même partout",
+            "Les crimes sont jugés sur le lieu de résidence du coupable"
+          ],
+          "answer": "La loi pénale s'applique sur le territoire national"
+        },
+        {
+          "question": "La sanction pénale a pour but de:",
+          "options": [
+            "Punir et dissuader",
+            "Récompenser",
+            "Réhabiliter",
+            "Encourager"
+          ],
+          "answer": "Punir et dissuader"
+        },
+        {
+          "question": "Le principe de légalité interdit:",
+          "options": [
+            "Les lois rétroactives",
+            "Les jugements",
+            "Les condamnations",
+            "Les sanctions"
+          ],
+          "answer": "Les lois rétroactives"
+        },
+        {
+          "question": "Quel texte international évoque le principe de légalité?",
+          "options": [
+            "Déclaration universelle des droits de l'homme",
+            "Charte de l'ONU",
+            "Traité de Versailles",
+            "Accord de Paris"
+          ],
+          "answer": "Déclaration universelle des droits de l'homme"
+        },
+        {
+          "question": "Le droit pénal spécial est distinct du droit pénal général car:",
+          "options": [
+            "Il concerne des infractions spécifiques",
+            "Il s'applique à tous les crimes",
+            "Il est universel",
+            "Il est plus ancien"
+          ],
+          "answer": "Il concerne des infractions spécifiques"
+        },
+        {
+          "question": "Le juge pénal doit:",
+          "options": [
+            "Appliquer les lois pénales",
+            "Créer des délits",
+            "Négocier les peines",
+            "Ignorer les circonstances atténuantes"
+          ],
+          "answer": "Appliquer les lois pénales"
+        },
+        {
+          "question": "Quel est le principal objectif des sanctions pénales?",
+          "options": [
+            "Dissuader les infractions",
+            "Récompenser les citoyens",
+            "Faciliter les transactions commerciales",
+            "Encourager la créativité"
+          ],
+          "answer": "Dissuader les infractions"
+        },
+        {
+          "question": "Quel est le rôle de la procédure pénale?",
+          "options": [
+            "Réguler la mise en œuvre du droit pénal",
+            "Créer de nouvelles lois",
+            "Enquêter sur les crimes",
+            "Punir les coupables"
+          ],
+          "answer": "Réguler la mise en œuvre du droit pénal"
+        },
+        {
+          "question": "Le droit pénal permet de réguler:",
+          "options": [
+            "Les comportements criminels",
+            "Les marchés financiers",
+            "Les contrats de travail",
+            "Les échanges internationaux"
+          ],
+          "answer": "Les comportements criminels"
+        },
+        {
+          "question": "La légitimité de la sanction pénale repose sur:",
+          "options": [
+            "La nécessité de protéger l'ordre social",
+            "La volonté de récompenser les bons comportements",
+            "L'accord de la communauté internationale",
+            "Le consentement des criminels"
+          ],
+          "answer": "La nécessité de protéger l'ordre social"
+        },
+        {
+          "question": "La protection des droits fondamentaux est une dimension du droit pénal?",
+          "options": [
+            "Oui",
+            "Non",
+            "Peut-être",
+            "Rarement"
+          ],
+          "answer": "Oui"
+        },
+        {
+          "question": "Le droit pénal a une dimension:",
+          "options": [
+            "Historique",
+            "Économique",
+            "Scientifique",
+            "Religieuse"
+          ],
+          "answer": "Historique"
+        },
+        {
+          "question": "Le droit pénal est considéré comme le dernier rempart car:",
+          "options": [
+            "Il sanctionne toutes les autres branches du droit",
+            "Il est le premier recours en cas de litige",
+            "Il se substitue au droit civil",
+            "Il est le plus ancien des droits"
+          ],
+          "answer": "Il sanctionne toutes les autres branches du droit"
+        },
+        {
+          "question": "Le droit pénal spécial est distinct du droit pénal général car:",
+          "options": [
+            "Il concerne des infractions spécifiques",
+            "Il s'applique à tous les crimes",
+            "Il est universel",
+            "Il est plus ancien"
+          ],
+          "answer": "Il concerne des infractions spécifiques"
+        },
+        {
+          "question": "Quel est le principal objectif des sanctions pénales?",
+          "options": [
+            "Dissuader les infractions",
+            "Récompenser les citoyens",
+            "Faciliter les transactions commerciales",
+            "Encourager la créativité"
+          ],
+          "answer": "Dissuader les infractions"
+        },
+        {
+          "question": "La criminologie est définie comme:",
+          "options": [
+            "Une discipline descriptive qui explique le phénomène criminel",
+            "Une partie du droit civil",
+            "L'étude des relations commerciales",
+            "Une technique de réhabilitation"
+          ],
+          "answer": "Une discipline descriptive qui explique le phénomène criminel"
+        },
+        {
+          "question": "Les sanctions pénales servent à:",
+          "options": [
+            "Punir, dissuader, réhabiliter",
+            "Indemniser, protéger, encourager",
+            "Récompenser, aider, instruire",
+            "Contrôler, réguler, négocier"
+          ],
+          "answer": "Punir, dissuader, réhabiliter"
+        }
+      ]
+    }
+  ],
+
+  "Histoire des sources": [
+      {
+          "title": "Premier QCM",
+          "questions": [
+              {
+                  "question": "Quelles sont les sources formelles du droit ?",
+                  "options": ["La constitution, les traités, la loi, l'ordonnance, le règlement, la jurisprudence, la doctrine", "La morale, la religion, les normes techniques", "Les normes sanitaires, les règles d’hygiène", "La politesse et les conventions sociales"],
+                  "answer": "La constitution, les traités, la loi, l'ordonnance, le règlement, la jurisprudence, la doctrine"
+              },
+              {
+                  "question": "Quels sont les deux critères de la règle de droit selon le texte ?",
+                  "options": ["La contrainte et la justiciabilité", "La morale et la religion", "Les normes sociales et les normes techniques", "Les sanctions et les récompenses"],
+                  "answer": "La contrainte et la justiciabilité"
+              },
+              {
+                  "question": "Quelle est la caractéristique d'une norme juridique ?",
+                  "options": ["Elle peut être imposée par un juge", "Elle est toujours écrite", "Elle est toujours religieuse", "Elle est seulement morale"],
+                  "answer": "Elle peut être imposée par un juge"
+              },
+              {
+                  "question": "Quand la science juridique commence-t-elle à se développer en France ?",
+                  "options": ["À partir du 3ème siècle avant notre ère", "Au 18ème siècle avant notre ère", "Pendant la période féodale", "Au Moyen Âge"],
+                  "answer": "À partir du 3ème siècle avant notre ère"
+              },
+              {
+                  "question": "Qui étaient les premiers à enseigner le droit dans les écoles ?",
+                  "options": ["Les juristes consult", "Les prêtres", "Les rois", "Les philosophes"],
+                  "answer": "Les juristes consult"
+              },
+              {
+                  "question": "Quelles sont les sources organiques du droit ?",
+                  "options": ["Les organes étatiques et privés", "Les normes sanitaires", "Les règles de politesse", "Les institutions religieuses uniquement"],
+                  "answer": "Les organes étatiques et privés"
+              },
+              {
+                  "question": "Qui rendait des canons applicables à la communauté catholique ?",
+                  "options": ["Les conciles", "Les rois", "Les seigneurs", "Les comtes"],
+                  "answer": "Les conciles"
+              },
+              {
+                  "question": "Qu'est-ce que la période féodale en France ?",
+                  "options": ["Une période où l'État a quasiment disparu", "Une période de centralisation du pouvoir", "Une période de paix et de prospérité", "Une période de développement industriel"],
+                  "answer": "Une période où l'État a quasiment disparu"
+              },
+              {
+                  "question": "Qui exerçait l'autorité pendant la période féodale ?",
+                  "options": ["Les seigneurs", "Les rois", "Les juristes", "Les prêtres"],
+                  "answer": "Les seigneurs"
+              },
+              {
+                  "question": "Quelle est la principale source du droit pendant la période médiévale ?",
+                  "options": ["La science juridique", "La législation royale", "Les décisions des conciles", "Les coutumes locales"],
+                  "answer": "La science juridique"
+              },
+              {
+                  "question": "Quel rôle jouaient les comtes à l'intérieur des comtés ?",
+                  "options": ["Rôle administratif et militaire", "Rôle uniquement militaire", "Rôle uniquement religieux", "Rôle académique"],
+                  "answer": "Rôle administratif et militaire"
+              },
+              {
+                  "question": "Quelle est la différence entre droit noble et droit roturier ?",
+                  "options": ["Le droit noble concerne la transmission des fiefs, le droit roturier les champs et les bêtes", "Le droit noble est religieux, le droit roturier est séculier", "Le droit noble est scientifique, le droit roturier est technique", "Le droit noble est imposé par le roi, le droit roturier par les seigneurs"],
+                  "answer": "Le droit noble concerne la transmission des fiefs, le droit roturier les champs et les bêtes"
+              },
+              {
+                  "question": "Quel était le rôle des corporations de métiers dans les villes médiévales ?",
+                  "options": ["Développer un droit commun pour les bourgeois", "Imposer des règles sanitaires", "Gouverner les villes", "Enseigner la doctrine religieuse"],
+                  "answer": "Développer un droit commun pour les bourgeois"
+              },
+              {
+                  "question": "Que faisaient les assemblées d'anciens des communautés juives à Troyes en Champagne ?",
+                  "options": ["Établir des règles pour la communauté", "Enseigner le droit", "Gouverner la région", "Construire des synagogues"],
+                  "answer": "Établir des règles pour la communauté"
+              },
+              {
+                  "question": "Quelle était la peine la plus grave en droit canonique ?",
+                  "options": ["L'excommunication", "La prison", "L'amende", "La flagellation"],
+                  "answer": "L'excommunication"
+              },
+              {
+                  "question": "Qu'est-ce qui a permis l'apparition des sciences juridiques au Moyen Âge ?",
+                  "options": ["La renaissance des villes", "L'autorité des seigneurs", "Les invasions barbares", "Les croisades"],
+                  "answer": "La renaissance des villes"
+              },
+              {
+                  "question": "À quoi servaient les universités au Moyen Âge ?",
+                  "options": ["À étudier des livres de droit", "À former des chevaliers", "À enseigner la médecine", "À construire des cathédrales"],
+                  "answer": "À étudier des livres de droit"
+              },
+              {
+                  "question": "Qui rendait les décisions dans les tribunaux seigneuriaux ?",
+                  "options": ["Les seigneurs", "Les comtes", "Les évêques", "Les rois"],
+                  "answer": "Les seigneurs"
+              },
+              {
+                  "question": "Quel est le rôle du Conseil constitutionnel dans l'État de droit moderne ?",
+                  "options": ["Imposer le bloc de constitutionnalité au législateur", "Rédiger des lois", "Appliquer des peines", "Gouverner l'État"],
+                  "answer": "Imposer le bloc de constitutionnalité au législateur"
+              },
+              {
+                  "question": "Quelle doctrine a influencé les ordonnances de Louis XIV et Louis XV ?",
+                  "options": ["La méthode cartésienne", "Le pluralisme juridique", "Le droit conciliaire", "La science politique"],
+                  "answer": "La méthode cartésienne"
+              }
+          ]
+      },
+      {
+          "title": "Second QCM",
+          "questions": [
+              {
+                  "question": "Qu'est-ce que le droit local seigneurial ?",
+                  "options": ["Le droit en vigueur uniquement à l'intérieur d'une seigneurie", "Le droit imposé par le roi", "Le droit de l'Église", "Le droit des marchands"],
+                  "answer": "Le droit en vigueur uniquement à l'intérieur d'une seigneurie"
+              },
+              {
+                  "question": "Quelle période de l'histoire française est appelée la période féodale ?",
+                  "options": ["Du 9ème au 13ème siècle", "Du 5ème au 9ème siècle", "Du 13ème au 15ème siècle", "Du 15ème au 18ème siècle"],
+                  "answer": "Du 9ème au 13ème siècle"
+              },
+              {
+                  "question": "Quelle dynastie a gouverné la France avant la période féodale ?",
+                  "options": ["Les Mérovingiens", "Les Capétiens", "Les Bourbons", "Les Plantagenêts"],
+                  "answer": "Les Mérovingiens"
+              },
+              {
+                  "question": "Quel est le principal repère de distinction pour la règle de droit ?",
+                  "options": ["La contrainte extérieure et physique", "La politesse", "Les normes techniques", "Les coutumes locales"],
+                  "answer": "La contrainte extérieure et physique"
+              },
+              {
+                  "question": "Quel rôle jouaient les seigneurs pendant la période féodale ?",
+                  "options": ["Ils faisaient régner l'ordre", "Ils enseignaient le droit", "Ils étaient des prêtres", "Ils étaient des philosophes"],
+                  "answer": "Ils faisaient régner l'ordre"
+              },
+              {
+                  "question": "Qu'est-ce que la justiciabilité d'une norme ?",
+                  "options": ["La possibilité de s'en prévaloir devant un juge", "Son adaptation à la morale", "Son application par les comtes", "Son approbation par l'Église"],
+                  "answer": "La possibilité de s'en prévaloir devant un juge"
+              },
+              {
+                  "question": "Quand la profession de juriste apparaît-elle ?",
+                  "options": ["Au 2ème et 3ème siècle de notre ère", "Au 18ème siècle avant notre ère", "Pendant la période féodale", "À la Renaissance"],
+                  "answer": "Au 2ème et 3ème siècle de notre ère"
+              },
+              {
+                  "question": "Qui formait le personnel administratif de la royauté mérovingienne ?",
+                  "options": ["Les comtes", "Les rois", "Les évêques", "Les seigneurs"],
+                  "answer": "Les comtes"
+              },
+              {
+                  "question": "Quelle est la période du roi mérovingien Childebert III ?",
+                  "options": ["694 à 711", "580 à 597", "711 à 728", "650 à 667"],
+                  "answer": "694 à 711"
+              },
+              {
+                  "question": "Quelle est la source de droit fondée sur la coutume ?",
+                  "options": ["Le droit local seigneurial", "Le droit canonique", "Les ordonnances royales", "Le droit de l'Église"],
+                  "answer": "Le droit local seigneurial"
+              },
+              {
+                  "question": "Quel est le rôle des ordonnances royales de Louis XIV et Louis XV ?",
+                  "options": ["Réformer le droit français en s'inspirant de la méthode cartésienne", "Imposer le droit religieux", "Réguler le commerce", "Gouverner les villes"],
+                  "answer": "Réformer le droit français en s'inspirant de la méthode cartésienne"
+              },
+              {
+                  "question": "Quelle institution rendait la justice en dernier ressort ?",
+                  "options": ["Le Parlement de Paris", "Les conciles", "Les seigneurs", "Les comtes"],
+                  "answer": "Le Parlement de Paris"
+              },
+              {
+                  "question": "Qu'est-ce que le droit canonique ?",
+                  "options": ["Le droit de l'Église catholique", "Le droit militaire", "Le droit royal", "Le droit des villes"],
+                  "answer": "Le droit de l'Église catholique"
+              },
+              {
+                  "question": "Quelle est la fonction des universités médiévales ?",
+                  "options": ["Enseigner le droit", "Former des soldats", "Gouverner les villes", "Construire des églises"],
+                  "answer": "Enseigner le droit"
+              },
+              {
+                  "question": "Quelle est la différence entre les sources formelles et organiques du droit ?",
+                  "options": ["Les sources formelles sont des règles explicites, les sources organiques désignent les institutions qui produisent ces règles", "Les sources formelles sont orales, les sources organiques sont écrites", "Les sources formelles sont religieuses, les sources organiques sont séculières", "Les sources formelles sont coutumières, les sources organiques sont techniques"],
+                  "answer": "Les sources formelles sont des règles explicites, les sources organiques désignent les institutions qui produisent ces règles"
+              },
+              {
+                  "question": "Quel est le principe de l'excommunication ?",
+                  "options": ["Exclure un membre de la communauté catholique", "Imposer une amende", "Enseigner la morale chrétienne", "Exiger un service militaire"],
+                  "answer": "Exclure un membre de la communauté catholique"
+              },
+              {
+                  "question": "Quel est le rôle du droit féodal ?",
+                  "options": ["Réguler les relations entre seigneurs et vassaux", "Appliquer les lois du roi", "Enseigner la théologie", "Gouverner les villes"],
+                  "answer": "Réguler les relations entre seigneurs et vassaux"
+              },
+              {
+                  "question": "Quelle était la nature des lois sous les Mérovingiens ?",
+                  "options": ["Des lois écrites et des coutumes", "Des normes religieuses uniquement", "Des règles techniques", "Des décisions des conciles"],
+                  "answer": "Des lois écrites et des coutumes"
+              },
+              {
+                  "question": "Comment les lois étaient-elles transmises pendant la période féodale ?",
+                  "options": ["Par tradition orale et par écrit", "Par des publications officielles", "Par des enseignements religieux", "Par des écoles royales"],
+                  "answer": "Par tradition orale et par écrit"
+              },
+              {
+                  "question": "Qu'est-ce que le pluralisme juridique médiéval ?",
+                  "options": ["La coexistence de plusieurs systèmes de droit différents", "L'unification du droit", "La centralisation du pouvoir juridique", "La suppression des coutumes locales"],
+                  "answer": "La coexistence de plusieurs systèmes de droit différents"
+              }
+          ]
+      }
+      
+  ],
+  
+    "Construction Européenne": [
+      {
+        "title": "QCM 1 : Les grandes étapes de la construction européenne",
+        "questions": [
+          {
+            "question": "Quelle année marque la signature de l'Acte Unique Européen?",
+            "options": ["1985", "1986", "1990", "1992"],
+            "answer": "1986"
+          },
+          {
+            "question": "Quel traité a introduit la citoyenneté européenne?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Acte Unique Européen", "Traité de Lisbonne"],
+            "answer": "Traité de Maastricht"
+          },
+          {
+            "question": "Le Traité de Lisbonne a permis de:",
+            "options": ["Créer l'Union Douanière", "Établir l'UE comme personne morale", "Introduire l'Euro", "Signer les Accords de Schengen"],
+            "answer": "Établir l'UE comme personne morale"
+          },
+          {
+            "question": "Quel accord a permis la libre circulation des personnes au sein de l'espace Schengen?",
+            "options": ["Acte Unique Européen", "Traité de Rome", "Accord de Luxembourg", "Accords de Schengen"],
+            "answer": "Accords de Schengen"
+          },
+          {
+            "question": "En quelle année le Traité de Maastricht a-t-il été signé?",
+            "options": ["1990", "1991", "1992", "1993"],
+            "answer": "1992"
+          },
+          {
+            "question": "Le traité de Rome a été signé en:",
+            "options": ["1957", "1958", "1960", "1961"],
+            "answer": "1957"
+          },
+          {
+            "question": "Quel événement a lancé la Communauté économique européenne?",
+            "options": ["Le Traité de Maastricht", "Le Traité de Rome", "L'Acte Unique Européen", "Les Accords de Schengen"],
+            "answer": "Le Traité de Rome"
+          },
+          {
+            "question": "Quel traité a remplacé les Communautés européennes par l'Union européenne?",
+            "options": ["Traité de Lisbonne", "Traité de Maastricht", "Traité de Nice", "Traité de Rome"],
+            "answer": "Traité de Maastricht"
+          },
+          {
+            "question": "Quel événement a marqué l'achèvement du Marché intérieur en 1993?",
+            "options": ["La signature de l'Acte Unique Européen", "L'entrée en vigueur du Traité de Maastricht", "L'introduction de l'Euro", "La signature du Traité de Lisbonne"],
+            "answer": "L'entrée en vigueur du Traité de Maastricht"
+          },
+          {
+            "question": "Quel traité a créé la Politique étrangère et de sécurité commune (PESC)?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Traité d'Amsterdam", "Traité de Nice"],
+            "answer": "Traité de Maastricht"
+          },
+          {
+            "question": "Le Traité d'Amsterdam, signé en 1997, a principalement renforcé:",
+            "options": ["Le rôle du Parlement européen", "La Politique Agricole Commune", "Les compétences judiciaires", "L'Union économique et monétaire"],
+            "answer": "Le rôle du Parlement européen"
+          },
+          {
+            "question": "La Charte des droits fondamentaux de l'Union européenne est juridiquement contraignante depuis:",
+            "options": ["1997", "2000", "2004", "2009"],
+            "answer": "2009"
+          },
+          {
+            "question": "Quel traité a été signé en 1951 pour créer la CECA?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Traité de Paris", "Traité de Nice"],
+            "answer": "Traité de Paris"
+          },
+          {
+            "question": "Lequel de ces pays n'était pas un membre fondateur de la CEE?",
+            "options": ["France", "Belgique", "Royaume-Uni", "Pays-Bas"],
+            "answer": "Royaume-Uni"
+          },
+          {
+            "question": "Quel traité a introduit la coopération renforcée?",
+            "options": ["Traité de Maastricht", "Traité d'Amsterdam", "Traité de Nice", "Traité de Lisbonne"],
+            "answer": "Traité d'Amsterdam"
+          },
+          {
+            "question": "L'élargissement de l'UE en 2004 a intégré combien de nouveaux États membres?",
+            "options": ["8", "10", "12", "15"],
+            "answer": "10"
+          },
+          {
+            "question": "Quel traité a introduit les trois piliers de l'UE?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Traité de Nice", "Traité de Lisbonne"],
+            "answer": "Traité de Maastricht"
+          },
+          {
+            "question": "L'Euro a été introduit comme monnaie unique en:",
+            "options": ["1997", "1999", "2001", "2002"],
+            "answer": "1999"
+          },
+          {
+            "question": "Le référendum de 2005 rejetant le traité constitutionnel européen a eu lieu dans:",
+            "options": ["Pays-Bas et France", "France et Allemagne", "Pays-Bas et Espagne", "Italie et Belgique"],
+            "answer": "Pays-Bas et France"
+          },
+          {
+            "question": "Le Brexit, entraînant la sortie du Royaume-Uni de l'UE, a été déclenché par un référendum en:",
+            "options": ["2014", "2015", "2016", "2017"],
+            "answer": "2016"
+          }
+        ]
+      },
+      {
+        "title": "QCM 2 : Les institutions européennes et leurs évolutions",
+        "questions": [
+          {
+            "question": "Quel traité a fusionné les institutions des Communautés européennes?",
+            "options": ["Traité de Rome", "Traité de Bruxelles", "Traité de Maastricht", "Traité de Fusion"],
+            "answer": "Traité de Fusion"
+          },
+          {
+            "question": "Le Conseil Européen est devenu une institution officielle avec le:",
+            "options": ["Traité de Nice", "Acte Unique Européen", "Traité de Maastricht", "Traité de Lisbonne"],
+            "answer": "Traité de Lisbonne"
+          },
+          {
+            "question": "Quelle est la fonction principale du Conseil Européen?",
+            "options": ["Légiférer sur les lois européennes", "Définir les priorités politiques de l'UE", "Superviser la politique monétaire", "Gérer les relations extérieures"],
+            "answer": "Définir les priorités politiques de l'UE"
+          },
+          {
+            "question": "La citoyenneté européenne a été introduite par quel traité?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Traité d'Amsterdam", "Traité de Lisbonne"],
+            "answer": "Traité de Maastricht"
+          },
+          {
+            "question": "Quelle institution européenne est chargée de représenter les citoyens de l'UE?",
+            "options": ["La Commission Européenne", "Le Parlement Européen", "Le Conseil Européen", "La Cour de Justice de l'Union Européenne"],
+            "answer": "Le Parlement Européen"
+          },
+          {
+            "question": "Le Parlement Européen a été directement élu pour la première fois en:",
+            "options": ["1975", "1979", "1984", "1989"],
+            "answer": "1979"
+          },
+          {
+            "question": "Quelle institution propose des législations pour l'Union Européenne?",
+            "options": ["Le Parlement Européen", "Le Conseil Européen", "La Commission Européenne", "La Cour de Justice de l'Union Européenne"],
+            "answer": "La Commission Européenne"
+          },
+          {
+            "question": "Qui est chargé de l'application des traités au sein de l'UE?",
+            "options": ["Le Parlement Européen", "Le Conseil de l'Union Européenne", "La Commission Européenne", "Le Conseil Européen"],
+            "answer": "La Commission Européenne"
+          },
+          {
+            "question": "Le siège du Parlement Européen est situé à:",
+            "options": ["Bruxelles", "Strasbourg", "Luxembourg", "Francfort"],
+            "answer": "Strasbourg"
+          },
+          {
+            "question": "Quelle institution est responsable de la politique monétaire des pays de la zone euro?",
+            "options": ["La Banque Centrale Européenne", "La Commission Européenne", "Le Conseil Européen", "Le Parlement Européen"],
+            "answer": "La Banque Centrale Européenne"
+          },
+          {
+            "question": "Le Conseil de l'Union Européenne représente:",
+            "options": ["Les citoyens de l'UE", "Les intérêts des États membres", "Les intérêts des entreprises", "Les ONG"],
+            "answer": "Les intérêts des États membres"
+          },
+          {
+            "question": "La Cour de justice de l'Union européenne siège à:",
+            "options": ["Bruxelles", "Strasbourg", "Luxembourg", "La Haye"],
+            "answer": "Luxembourg"
+          },
+          {
+            "question": "Le Haut Représentant de l'Union pour les affaires étrangères et la politique de sécurité est membre de:",
+            "options": ["La Commission Européenne", "Le Conseil Européen", "Le Parlement Européen", "Le Conseil de l'Union Européenne"],
+            "answer": "La Commission Européenne"
+          },
+          {
+            "question": "Combien de juges composent la Cour de justice de l'Union européenne?",
+            "options": ["25", "27", "28", "30"],
+            "answer": "27"
+          },
+          {
+            "question": "La Cour des comptes européenne est responsable de:",
+            "options": ["La gestion des affaires économiques", "L'audit des finances de l'UE", "La supervision des politiques sociales", "L'organisation des élections européennes"],
+            "answer": "L'audit des finances de l'UE"
+          },
+          {
+            "question": "Quel organe consultatif représente les autorités régionales et locales au sein de l'UE?",
+            "options": ["Le Conseil de l'Union Européenne", "Le Comité des Régions", "Le Parlement Européen", "Le Conseil Européen"],
+            "answer": "Le Comité des Régions"
+          },
+          {
+            "question": "Lequel des traités suivants a introduit le poste de Président du Conseil Européen?",
+            "options": ["Traité de Rome", "Traité de Nice", "Traité de Lisbonne", "Traité d'Amsterdam"],
+            "answer": "Traité de Lisbonne"
+          },
+          {
+            "question": "Quelle institution européenne a le pouvoir de censurer la Commission Européenne?",
+            "options": ["Le Conseil Européen", "Le Conseil de l'Union Européenne", "Le Parlement Européen", "La Cour de Justice de l'Union Européenne"],
+            "answer": "Le Parlement Européen"
+          },
+          {
+            "question": "Combien de députés siègent actuellement au Parlement Européen?",
+            "options": ["705", "751", "766", "800"],
+            "answer": "705"
+          },
+          {
+            "question": "Quel est le rôle du Médiateur européen?",
+            "options": ["Résoudre les litiges entre les États membres", "Protéger les citoyens contre la mauvaise administration", "Superviser les élections européennes", "Représenter les intérêts des États membres"],
+            "answer": "Protéger les citoyens contre la mauvaise administration"
+          }
+        ]
+      },
+      {
+        "title": "QCM 3 : Les compétences et les réformes de l'Union Européenne",
+        "questions": [
+          {
+            "question": "Quel traité a introduit trois catégories de compétences au sein de l'UE?",
+            "options": ["Traité de Maastricht", "Traité de Nice", "Traité de Lisbonne", "Traité d'Amsterdam"],
+            "answer": "Traité de Lisbonne"
+          },
+          {
+            "question": "Les compétences exclusives de l'UE incluent principalement:",
+            "options": ["L'éducation", "La politique monétaire pour les pays de la zone euro", "La culture", "La santé publique"],
+            "answer": "La politique monétaire pour les pays de la zone euro"
+          },
+          {
+            "question": "Quelle réforme a permis la création du Grand Marché Intérieur en 1992?",
+            "options": ["Acte Unique Européen", "Traité de Rome", "Traité de Lisbonne", "Traité de Nice"],
+            "answer": "Acte Unique Européen"
+          },
+          {
+            "question": "Le projet de constitution européenne a été rejeté en 2005 par référendum dans quels pays?",
+            "options": ["France et Espagne", "Pays-Bas et Allemagne", "France et Pays-Bas", "Italie et Belgique"],
+            "answer": "France et Pays-Bas"
+          },
+          {
+            "question": "Quel événement a provoqué la sortie du Royaume-Uni de l'Union Européenne?",
+            "options": ["Traité de Nice", "Brexit", "Traité de Maastricht", "Référendum sur l'Acte Unique Européen"],
+            "answer": "Brexit"
+          },
+          {
+            "question": "La compétence partagée entre l'UE et les États membres ne concerne pas:",
+            "options": ["La politique agricole", "Les transports", "La culture", "L'environnement"],
+            "answer": "La culture"
+          },
+          {
+            "question": "Quel traité a permis de renforcer le rôle des Parlements nationaux?",
+            "options": ["Traité de Maastricht", "Traité d'Amsterdam", "Traité de Nice", "Traité de Lisbonne"],
+            "answer": "Traité de Lisbonne"
+          },
+          {
+            "question": "L'union douanière au sein de l'UE implique:",
+            "options": ["Un marché unique", "L'abolition des droits de douane entre États membres", "Une politique agricole commune", "Une politique étrangère commune"],
+            "answer": "L'abolition des droits de douane entre États membres"
+          },
+          {
+            "question": "Les États membres doivent suivre quelles règles en matière de politique de concurrence?",
+            "options": ["Les règles établies par chaque État", "Les directives nationales", "Les règles définies par l'OMC", "Les règles de l'UE"],
+            "answer": "Les règles de l'UE"
+          },
+          {
+            "question": "La politique agricole commune est une compétence de type:",
+            "options": ["Exclusif", "Partagé", "Coordonné", "Complémentaire"],
+            "answer": "Partagé"
+          },
+          {
+            "question": "Quelle institution contrôle la légalité des actes adoptés par les institutions européennes?",
+            "options": ["Le Parlement Européen", "La Commission Européenne", "Le Conseil de l'Union Européenne", "La Cour de Justice de l'Union Européenne"],
+            "answer": "La Cour de Justice de l'Union Européenne"
+          },
+          {
+            "question": "Le Traité de Nice a principalement réformé:",
+            "options": ["Les institutions de l'UE", "Les politiques sociales", "La politique extérieure", "L'union économique et monétaire"],
+            "answer": "Les institutions de l'UE"
+          },
+          {
+            "question": "La procédure législative ordinaire est également connue sous le nom de:",
+            "options": ["Procédure de co-décision", "Procédure d'avis conforme", "Procédure de consultation", "Procédure de concertation"],
+            "answer": "Procédure de co-décision"
+          },
+          {
+            "question": "Quel traité a instauré une politique de coopération policière et judiciaire en matière pénale?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Traité de Lisbonne", "Traité de Nice"],
+            "answer": "Traité de Maastricht"
+          },
+          {
+            "question": "Quel concept a été introduit pour renforcer la gouvernance économique de la zone euro?",
+            "options": ["Pacte de stabilité et de croissance", "Union bancaire", "Coordination ouverte", "Règle d'or budgétaire"],
+            "answer": "Pacte de stabilité et de croissance"
+          },
+          {
+            "question": "La politique étrangère et de sécurité commune est une compétence:",
+            "options": ["Exclusive", "Partagée", "Coordonnée", "Complémentaire"],
+            "answer": "Coordonnée"
+          },
+          {
+            "question": "Quel traité a établi le Fonds européen de développement régional (FEDER)?",
+            "options": ["Traité de Rome", "Traité de Maastricht", "Acte Unique Européen", "Traité de Lisbonne"],
+            "answer": "Acte Unique Européen"
+          },
+          {
+            "question": "Les compétences d'appui de l'UE incluent:",
+            "options": ["La politique étrangère", "L'éducation", "La justice", "La défense"],
+            "answer": "L'éducation"
+          },
+          {
+            "question": "Quel mécanisme permet à l'UE d'imposer des sanctions aux États membres?",
+            "options": ["Le Pacte de stabilité", "La procédure d'infraction", "L'avis conforme", "Le référendum"],
+            "answer": "La procédure d'infraction"
+          },
+          {
+            "question": "Le principe de subsidiarité signifie que:",
+            "options": ["L'UE agit uniquement quand les États ne peuvent pas", "Les États membres prennent toutes les décisions", "L'UE décide pour les États", "Les États membres sont prioritaires sur l'UE"],
+            "answer": "L'UE agit uniquement quand les États ne peuvent pas"
+          }
+        ]
+      }
+    ],
+    
+      "responsabilité civile": [
+          {
+              "title": "Responsabilité contractuelle et délictuelle",
+              "questions": [
+                  {
+                      "question": "Quel est le fondement juridique principal de la responsabilité civile délictuelle?",
+                      "options": [
+                          "L'article 1240 du Code civil",
+                          "L'article 1231-1 du Code civil",
+                          "L'article 1245-1 du Code civil",
+                          "L'article 1147 du Code civil"
+                      ],
+                      "answer": "L'article 1240 du Code civil"
+                  },
+                  {
+                      "question": "Dans quel cas la responsabilité civile contractuelle peut-elle être invoquée?",
+                      "options": [
+                          "En cas d'inexécution d'une obligation née d'un contrat",
+                          "En cas de dommage causé par un tiers",
+                          "En cas de délit pénal",
+                          "En cas de force majeure"
+                      ],
+                      "answer": "En cas d'inexécution d'une obligation née d'un contrat"
+                  },
+                  {
+                      "question": "Selon la jurisprudence, quel est le rôle du juge dans la qualification d'une faute délictuelle?",
+                      "options": [
+                          "Le juge doit toujours se référer à la loi.",
+                          "Le juge dispose d'un pouvoir souverain pour apprécier les faits.",
+                          "Le juge doit suivre strictement la qualification proposée par les parties.",
+                          "Le juge ne peut pas requalifier les faits."
+                      ],
+                      "answer": "Le juge dispose d'un pouvoir souverain pour apprécier les faits."
+                  },
+                  {
+                      "question": "Quelle est la différence majeure entre la responsabilité contractuelle et délictuelle?",
+                      "options": [
+                          "La responsabilité contractuelle découle d'un contrat, la délictuelle d'un acte illicite.",
+                          "La responsabilité contractuelle nécessite une preuve de faute, la délictuelle non.",
+                          "La responsabilité délictuelle permet une réparation intégrale, la contractuelle non.",
+                          "La responsabilité délictuelle concerne uniquement les dommages corporels."
+                      ],
+                      "answer": "La responsabilité contractuelle découle d'un contrat, la délictuelle d'un acte illicite."
+                  },
+                  {
+                      "question": "Quels sont les éléments constitutifs de la responsabilité civile délictuelle?",
+                      "options": [
+                          "Une faute, un dommage, et un lien de causalité",
+                          "Une intention, une faute, et un dommage",
+                          "Un contrat, un préjudice, et un lien de causalité",
+                          "Un accord préalable, un dommage, et une compensation"
+                      ],
+                      "answer": "Une faute, un dommage, et un lien de causalité"
+                  },
+                  {
+                      "question": "Quel type de préjudice peut être réparé au titre de la responsabilité civile délictuelle?",
+                      "options": [
+                          "Uniquement les préjudices matériels",
+                          "Les préjudices matériels, corporels et moraux",
+                          "Uniquement les préjudices corporels",
+                          "Les préjudices moraux uniquement"
+                      ],
+                      "answer": "Les préjudices matériels, corporels et moraux"
+                  },
+                  {
+                      "question": "Quelle est la portée de la clause limitative de responsabilité dans un contrat?",
+                      "options": [
+                          "Elle peut limiter la responsabilité sauf en cas de faute lourde ou dolosive.",
+                          "Elle exclut toute responsabilité du débiteur.",
+                          "Elle est systématiquement invalide en droit français.",
+                          "Elle peut être invoquée même en cas de dol."
+                      ],
+                      "answer": "Elle peut limiter la responsabilité sauf en cas de faute lourde ou dolosive."
+                  },
+                  {
+                      "question": "Quelle est la condition pour que la responsabilité du fait des choses soit engagée?",
+                      "options": [
+                          "Le fait générateur doit être lié à une chose sous la garde du responsable.",
+                          "Le fait générateur doit être un acte volontaire du responsable.",
+                          "Le fait générateur doit provenir d'un acte illicite.",
+                          "Le fait générateur doit être un dommage corporel."
+                      ],
+                      "answer": "Le fait générateur doit être lié à une chose sous la garde du responsable."
+                  },
+                  {
+                      "question": "Quelle est la conséquence juridique en cas de force majeure dans l'exécution d'un contrat?",
+                      "options": [
+                          "L'exonération totale de la responsabilité du débiteur.",
+                          "L'obligation de verser des dommages et intérêts.",
+                          "La nullité du contrat.",
+                          "La résiliation unilatérale du contrat par le créancier."
+                      ],
+                      "answer": "L'exonération totale de la responsabilité du débiteur."
+                  },
+                  {
+                      "question": "Quel est le principe général de la réparation en matière de responsabilité civile?",
+                      "options": [
+                          "La réparation doit être intégrale mais ne doit pas excéder le préjudice.",
+                          "La réparation doit être forfaitaire.",
+                          "La réparation doit être symbolique.",
+                          "La réparation doit être double de la valeur du préjudice."
+                      ],
+                      "answer": "La réparation doit être intégrale mais ne doit pas excéder le préjudice."
+                  }
+              ]
+          },
+      
+          {
+              "title": "Les régimes spéciaux de responsabilité",
+              "questions": [
+                  {
+                      "question": "Quel régime spécial s'applique aux accidents de la circulation en France?",
+                      "options": [
+                          "Le régime de la loi Badinter",
+                          "Le régime de l'article 1240 du Code civil",
+                          "Le régime de l'article 1384 du Code civil",
+                          "Le régime de la loi du 5 juillet 1985"
+                      ],
+                      "answer": "Le régime de la loi Badinter"
+                  },
+                  {
+                      "question": "Dans quel cas un employeur peut-il être exonéré de la responsabilité des faits de ses préposés?",
+                      "options": [
+                          "En cas de preuve d'une faute personnelle du préposé détachable de ses fonctions.",
+                          "En cas d'une clause contractuelle limitant cette responsabilité.",
+                          "En cas de force majeure.",
+                          "En cas de non-respect des ordres donnés par l'employeur."
+                      ],
+                      "answer": "En cas de preuve d'une faute personnelle du préposé détachable de ses fonctions."
+                  },
+                  {
+                      "question": "Quel est l'impact de la faute inexcusable de la victime sur la réparation des dommages?",
+                      "options": [
+                          "Elle entraîne une réduction ou une exclusion de l'indemnisation.",
+                          "Elle n'a aucun impact sur l'indemnisation.",
+                          "Elle entraîne automatiquement la nullité du contrat.",
+                          "Elle oblige la victime à indemniser l'auteur du dommage."
+                      ],
+                      "answer": "Elle entraîne une réduction ou une exclusion de l'indemnisation."
+                  },
+                  {
+                      "question": "Quelle est la particularité du régime de responsabilité pour les produits défectueux?",
+                      "options": [
+                          "Il s'agit d'une responsabilité sans faute.",
+                          "Il s'agit d'une responsabilité pour faute prouvée.",
+                          "Il est limité aux préjudices corporels.",
+                          "Il est limité aux préjudices matériels."
+                      ],
+                      "answer": "Il s'agit d'une responsabilité sans faute."
+                  },
+                  {
+                      "question": "Quel est l'objectif principal du régime spécial de responsabilité des parents du fait de leurs enfants mineurs?",
+                      "options": [
+                          "Protéger les victimes en assurant une réparation même en l'absence de faute des parents.",
+                          "Sanctionner les parents pour le comportement de leurs enfants.",
+                          "Encourager la discipline chez les enfants.",
+                          "Protéger les droits des enfants dans la société."
+                      ],
+                      "answer": "Protéger les victimes en assurant une réparation même en l'absence de faute des parents."
+                  },
+                  {
+                      "question": "Quel texte législatif encadre la responsabilité des commettants pour les faits de leurs préposés?",
+                      "options": [
+                          "L'article 1242 alinéa 5 du Code civil",
+                          "L'article 1384 alinéa 1 du Code civil",
+                          "L'article 1382 du Code civil",
+                          "L'article 1134 du Code civil"
+                      ],
+                      "answer": "L'article 1242 alinéa 5 du Code civil"
+                  },
+                  {
+                      "question": "Quel est le rôle de l'assurance responsabilité civile professionnelle?",
+                      "options": [
+                          "Elle couvre les dommages causés par l'assuré dans l'exercice de son activité professionnelle.",
+                          "Elle couvre uniquement les dommages corporels causés à des tiers.",
+                          "Elle n'est applicable qu'aux professions réglementées.",
+                          "Elle garantit la réparation des dommages matériels uniquement."
+                      ],
+                      "answer": "Elle couvre les dommages causés par l'assuré dans l'exercice de son activité professionnelle."
+                  },
+                  {
+                      "question": "Dans quel cas peut-on invoquer la responsabilité pour faute inexcusable de l'employeur?",
+                      "options": [
+                          "Lorsqu'il y a violation délibérée d'une règle de sécurité ayant causé un dommage au salarié.",
+                          "Lorsque l'employeur n'a pas respecté un délai de préavis de licenciement.",
+                          "Lorsque l'employeur refuse de verser une prime de fin d'année.",
+                          "Lorsque l'employeur est en situation de liquidation judiciaire."
+                      ],
+                      "answer": "Lorsqu'il y a violation délibérée d'une règle de sécurité ayant causé un dommage au salarié."
+                  },
+                  {
+                      "question": "Quelle est la particularité de la responsabilité du fait des animaux?",
+                      "options": [
+                          "Elle s'applique même en l'absence de faute du propriétaire.",
+                          "Elle nécessite la preuve d'une faute du propriétaire.",
+                          "Elle est limitée aux dommages matériels.",
+                          "Elle est subordonnée à l'existence d'un contrat."
+                      ],
+                      "answer": "Elle s'applique même en l'absence de faute du propriétaire."
+                  },
+                  {
+                      "question": "Quelle est la limite de la réparation du préjudice écologique?",
+                      "options": [
+                          "La réparation ne peut excéder le coût de la remise en état.",
+                          "La réparation est toujours symbolique.",
+                          "Le préjudice écologique ne peut être réparé que par des compensations financières.",
+                          "Le préjudice écologique n'est pas réparable."
+                      ],
+                      "answer": "La réparation ne peut excéder le coût de la remise en état."
+                  }
+              ]
+          },
+          {
+              "title": "Les causes d'exonération et les limites de la responsabilité",
+              "questions": [
+                  {
+                      "question": "Quel est l'effet de la force majeure sur la responsabilité civile?",
+                      "options": [
+                          "Elle exonère totalement de la responsabilité.",
+                          "Elle réduit la responsabilité à 50%.",
+                          "Elle n'a aucun effet sur la responsabilité.",
+                          "Elle augmente la responsabilité en cas de dommages."
+                      ],
+                      "answer": "Elle exonère totalement de la responsabilité."
+                  },
+                  {
+                      "question": "Quelle est la différence entre la faute lourde et la faute dolosive?",
+                      "options": [
+                          "La faute lourde est une négligence grave, tandis que la faute dolosive implique une intention de nuire.",
+                          "La faute lourde implique une intention de nuire, la faute dolosive est une simple négligence.",
+                          "La faute lourde se réfère à une erreur de droit, la faute dolosive à une erreur de fait.",
+                          "Il n'y a pas de différence juridique entre les deux."
+                      ],
+                      "answer": "La faute lourde est une négligence grave, tandis que la faute dolosive implique une intention de nuire."
+                  },
+                  {
+                      "question": "Qu'est-ce qu'une clause de non-responsabilité?",
+                      "options": [
+                          "Une clause contractuelle qui limite ou exclut la responsabilité d'une partie en cas d'inexécution.",
+                          "Une clause qui impose une indemnisation forfaitaire en cas de dommage.",
+                          "Une clause qui garantit l'exécution d'une obligation.",
+                          "Une clause qui impose des sanctions pénales."
+                      ],
+                      "answer": "Une clause contractuelle qui limite ou exclut la responsabilité d'une partie en cas d'inexécution."
+                  },
+                  {
+                      "question": "Quel est l'effet de la cause étrangère sur la responsabilité contractuelle?",
+                      "options": [
+                          "Elle permet d'exonérer le débiteur de sa responsabilité.",
+                          "Elle renforce la responsabilité du créancier.",
+                          "Elle annule automatiquement le contrat.",
+                          "Elle permet de doubler les dommages-intérêts."
+                      ],
+                      "answer": "Elle permet d'exonérer le débiteur de sa responsabilité."
+                  },
+                  {
+                      "question": "Quelle est la condition pour que la réparation du préjudice soit limitée?",
+                      "options": [
+                          "La preuve que la victime a contribué à son propre dommage.",
+                          "La gravité du préjudice.",
+                          "Le statut juridique de la victime.",
+                          "La nature du contrat en cause."
+                      ],
+                      "answer": "La preuve que la victime a contribué à son propre dommage."
+                  },
+                  {
+                      "question": "Dans quel cas une clause limitative de responsabilité est-elle réputée non écrite?",
+                      "options": [
+                          "En cas de faute lourde ou dolosive du débiteur.",
+                          "En cas de dommage matériel.",
+                          "Lorsque les parties sont d'accord.",
+                          "En cas de mauvaise exécution partielle."
+                      ],
+                      "answer": "En cas de faute lourde ou dolosive du débiteur."
+                  },
+                  {
+                      "question": "Comment une clause pénale est-elle qualifiée?",
+                      "options": [
+                          "Comme une stipulation qui fixe à l'avance une indemnisation en cas d'inexécution.",
+                          "Comme une clause qui exclut la responsabilité.",
+                          "Comme une clause qui impose des sanctions pénales.",
+                          "Comme une clause qui annule le contrat en cas de faute."
+                      ],
+                      "answer": "Comme une stipulation qui fixe à l'avance une indemnisation en cas d'inexécution."
+                  },
+                  {
+                      "question": "Quel est l'effet de la cause de justification sur la responsabilité pénale?",
+                      "options": [
+                          "Elle peut exonérer totalement l'auteur de l'acte.",
+                          "Elle double la peine prévue.",
+                          "Elle n'a aucun effet.",
+                          "Elle entraîne l'annulation du procès."
+                      ],
+                      "answer": "Elle peut exonérer totalement l'auteur de l'acte."
+                  },
+                  {
+                      "question": "Dans quel cas une réparation en nature est-elle privilégiée?",
+                      "options": [
+                          "Lorsque le préjudice peut être réparé par la remise en état ou la restitution.",
+                          "Lorsqu'il y a impossibilité de calculer le montant des dommages.",
+                          "Lorsqu'il y a une clause contractuelle prévoyant cette forme de réparation.",
+                          "Lorsqu'il s'agit d'un préjudice moral."
+                      ],
+                      "answer": "Lorsque le préjudice peut être réparé par la remise en état ou la restitution."
+                  },
+                  {
+                      "question": "Quelle est la conséquence de la faute exclusive de la victime sur la responsabilité du défendeur?",
+                      "options": [
+                          "Elle exonère totalement le défendeur de sa responsabilité.",
+                          "Elle entraîne une réduction de moitié de l'indemnisation.",
+                          "Elle n'a aucun impact.",
+                          "Elle oblige le défendeur à payer des dommages-intérêts."
+                      ],
+                      "answer": "Elle exonère totalement le défendeur de sa responsabilité."
+                  }
+              ]
+          }
+      ],
+     
+        "droit constitutionnel S1": [
+          {
+            "title": "QCM 1: Histoire et Sources du Droit Constitutionnel",
+            "questions": [
+              {
+                "question": "Quel événement est considéré comme le point de départ du droit constitutionnel moderne en France?",
+                "options": [
+                  "La Révolution française de 1789",
+                  "La Constitution de 1791",
+                  "Le Consulat de Napoléon",
+                  "La Constitution de 1958"
+                ],
+                "answer": "La Révolution française de 1789"
+              },
+              {
+                "question": "La Déclaration des Droits de l'Homme et du Citoyen de 1789 a été intégrée dans quelle Constitution?",
+                "options": [
+                  "Constitution de 1791",
+                  "Constitution de 1848",
+                  "Constitution de 1946",
+                  "Constitution de 1958"
+                ],
+                "answer": "Constitution de 1958"
+              },
+              {
+                "question": "Lequel des éléments suivants n'est pas une source formelle du droit constitutionnel?",
+                "options": [
+                  "Les traités internationaux",
+                  "La jurisprudence constitutionnelle",
+                  "Les lois organiques",
+                  "Les discours présidentiels"
+                ],
+                "answer": "Les discours présidentiels"
+              },
+              {
+                "question": "Quelle est la principale caractéristique de la Constitution de 1791?",
+                "options": [
+                  "La monarchie constitutionnelle",
+                  "La séparation des pouvoirs",
+                  "La République",
+                  "La dictature du prolétariat"
+                ],
+                "answer": "La monarchie constitutionnelle"
+              },
+              {
+                "question": "Quelle est la fonction principale du Conseil Constitutionnel sous la Ve République?",
+                "options": [
+                  "Vérifier la constitutionnalité des lois",
+                  "Conseiller le Président",
+                  "Rédiger des lois",
+                  "Appliquer la Constitution"
+                ],
+                "answer": "Vérifier la constitutionnalité des lois"
+              },
+              {
+                "question": "Quelle est la portée juridique de la Déclaration des Droits de l'Homme et du Citoyen de 1789 dans le droit constitutionnel français?",
+                "options": [
+                  "Elle a une valeur uniquement symbolique",
+                  "Elle a une valeur constitutionnelle",
+                  "Elle est intégrée aux traités internationaux",
+                  "Elle est uniquement une source historique"
+                ],
+                "answer": "Elle a une valeur constitutionnelle"
+              },
+              {
+                "question": "Lequel des régimes suivants a institué le contrôle de constitutionnalité en France?",
+                "options": [
+                  "La IIIe République",
+                  "La IVe République",
+                  "La Ve République",
+                  "Le Consulat"
+                ],
+                "answer": "La Ve République"
+              },
+              {
+                "question": "En quelle année la Constitution de la Ve République a-t-elle été adoptée?",
+                "options": [
+                  "1946",
+                  "1958",
+                  "1791",
+                  "1875"
+                ],
+                "answer": "1958"
+              },
+              {
+                "question": "Quel principe fondamental est consacré par la Constitution de 1958?",
+                "options": [
+                  "La séparation des pouvoirs",
+                  "L'égalité devant la loi",
+                  "La souveraineté du peuple",
+                  "Toutes ces réponses"
+                ],
+                "answer": "Toutes ces réponses"
+              },
+              {
+                "question": "Quel article de la Constitution de 1958 est relatif au Conseil constitutionnel?",
+                "options": [
+                  "Article 16",
+                  "Article 49",
+                  "Article 61",
+                  "Article 89"
+                ],
+                "answer": "Article 61"
+              }
+            ]
+          },
+          {
+            "title": "QCM 2: Institutions et Structures Politiques",
+            "questions": [
+              {
+                "question": "Quel est le rôle principal du Président de la République en France sous la Ve République?",
+                "options": [
+                  "Chef des armées",
+                  "Chef du gouvernement",
+                  "Chef de l'administration",
+                  "Représentant de la nation"
+                ],
+                "answer": "Chef des armées"
+              },
+              {
+                "question": "Quelle institution est responsable de la nomination du Premier ministre en France?",
+                "options": [
+                  "L'Assemblée nationale",
+                  "Le Sénat",
+                  "Le Président de la République",
+                  "Le Conseil constitutionnel"
+                ],
+                "answer": "Le Président de la République"
+              },
+              {
+                "question": "Quel est le rôle du Parlement sous la Ve République?",
+                "options": [
+                  "Légiférer et contrôler l'action du gouvernement",
+                  "Rédiger la Constitution",
+                  "Nommer les ministres",
+                  "Administrer la justice"
+                ],
+                "answer": "Légiférer et contrôler l'action du gouvernement"
+              },
+              {
+                "question": "Quelle est la fonction principale du Premier ministre en France?",
+                "options": [
+                  "Représenter le pays à l'étranger",
+                  "Diriger l'administration",
+                  "Coordonner l'action du gouvernement",
+                  "Présider le Conseil constitutionnel"
+                ],
+                "answer": "Coordonner l'action du gouvernement"
+              },
+              {
+                "question": "Quelle institution peut initier une révision constitutionnelle en France?",
+                "options": [
+                  "Le Président de la République",
+                  "Le Parlement",
+                  "Les citoyens via un référendum",
+                  "Toutes ces réponses"
+                ],
+                "answer": "Toutes ces réponses"
+              },
+              {
+                "question": "En cas de désaccord entre les deux chambres du Parlement français, quelle procédure est utilisée?",
+                "options": [
+                  "La dissolution de l'une des chambres",
+                  "La réunion d'une commission mixte paritaire",
+                  "La convocation du Conseil constitutionnel",
+                  "Un référendum"
+                ],
+                "answer": "La réunion d'une commission mixte paritaire"
+              },
+              {
+                "question": "Quel est le mode de scrutin utilisé pour l'élection du Président de la République en France?",
+                "options": [
+                  "Scrutin proportionnel",
+                  "Scrutin uninominal majoritaire à deux tours",
+                  "Scrutin de liste",
+                  "Scrutin indirect"
+                ],
+                "answer": "Scrutin uninominal majoritaire à deux tours"
+              },
+              {
+                "question": "Laquelle des institutions suivantes a le pouvoir de dissoudre l'Assemblée nationale en France?",
+                "options": [
+                  "Le Sénat",
+                  "Le Président de la République",
+                  "Le Conseil constitutionnel",
+                  "Le Premier ministre"
+                ],
+                "answer": "Le Président de la République"
+              },
+              {
+                "question": "Quel article de la Constitution de 1958 prévoit l'état d'urgence?",
+                "options": [
+                  "Article 16",
+                  "Article 49",
+                  "Article 36",
+                  "Article 89"
+                ],
+                "answer": "Article 16"
+              },
+              {
+                "question": "Quel est le rôle du Conseil d'État en France?",
+                "options": [
+                  "Conseiller juridique du gouvernement",
+                  "Assurer le contrôle de constitutionnalité",
+                  "Diriger les forces armées",
+                  "Proposer des lois"
+                ],
+                "answer": "Conseiller juridique du gouvernement"
+              }
+            ]
+          },
+          {
+            "title": "QCM 3: Justice Constitutionnelle et Droits Fondamentaux",
+            "questions": [
+              {
+                "question": "Quel est le rôle principal de la justice constitutionnelle?",
+                "options": [
+                  "Assurer la suprématie de la Constitution",
+                  "Protéger les droits fondamentaux",
+                  "Contrôler la légalité des actes administratifs",
+                  "Appliquer les décisions de justice"
+                ],
+                "answer": "Assurer la suprématie de la Constitution"
+              },
+              {
+                "question": "Le contrôle de constitutionnalité a priori s'applique:",
+                "options": [
+                  "Après la promulgation d'une loi",
+                  "Avant la promulgation d'une loi",
+                  "À la fois avant et après la promulgation d'une loi",
+                  "Uniquement sur les actes administratifs"
+                ],
+                "answer": "Avant la promulgation d'une loi"
+              },
+              {
+                "question": "Quel type de contrôle de constitutionnalité est pratiqué par le Conseil constitutionnel en France?",
+                "options": [
+                  "Contrôle décentralisé",
+                  "Contrôle centralisé",
+                  "Contrôle diffus",
+                  "Contrôle politique"
+                ],
+                "answer": "Contrôle centralisé"
+              },
+              {
+                "question": "Quel est le fondement des droits fondamentaux en France?",
+                "options": [
+                  "Les traités internationaux",
+                  "Les lois organiques",
+                  "La Constitution",
+                  "Les coutumes"
+                ],
+                "answer": "La Constitution"
+              },
+              {
+                "question": "Quel droit fondamental est explicitement garanti par la Constitution de 1958?",
+                "options": [
+                  "Le droit à la propriété",
+                  "Le droit à l'éducation",
+                  "Le droit à la santé",
+                  "Le droit de grève"
+                ],
+                "answer": "Le droit de grève"
+              },
+              {
+                "question": "Le Conseil constitutionnel peut être saisi par:",
+                "options": [
+                  "Le Président de la République",
+                  "60 députés ou 60 sénateurs",
+                  "Le Premier ministre",
+                  "Toutes ces réponses"
+                ],
+                "answer": "Toutes ces réponses"
+              },
+              {
+                "question": "Quel est le rôle du Conseil constitutionnel dans les élections en France?",
+                "options": [
+                  "Organiser les élections",
+                  "Superviser les opérations de vote",
+                  "Proclamer les résultats",
+                  "Modifier la loi électorale"
+                ],
+                "answer": "Proclamer les résultats"
+              },
+              {
+                "question": "En quelle année a été institué le contrôle de constitutionnalité par le Conseil constitutionnel?",
+                "options": [
+                  "1958",
+                  "1946",
+                  "1791",
+                  "1971"
+                ],
+                "answer": "1958"
+              },
+              {
+                "question": "Quel principe est au cœur de la justice constitutionnelle?",
+                "options": [
+                  "La primauté de la loi",
+                  "La suprématie de la Constitution",
+                  "La séparation des pouvoirs",
+                  "Le respect des traités internationaux"
+                ],
+                "answer": "La suprématie de la Constitution"
+              },
+              {
+                "question": "La QPC (Question Prioritaire de Constitutionnalité) permet:",
+                "options": [
+                  "À tout citoyen de contester une loi",
+                  "Au Conseil constitutionnel d'intervenir directement",
+                  "Au Parlement de proposer une révision constitutionnelle",
+                  "Aux juges de déclarer une loi inconstitutionnelle"
+                ],
+                "answer": "À tout citoyen de contester une loi"
+              }
+            ]
+          }
+        ],
+        
+          "droit constitutionnel S2": [
+            {
+              "title": "QCM 1 - Conseil Constitutionnel et Institutions",
+              "questions": [
+                {
+                  "question": "Quelle est la durée du mandat des membres du Conseil Constitutionnel?",
+                  "options": [
+                    "6 ans",
+                    "9 ans",
+                    "12 ans",
+                    "À vie"
+                  ],
+                  "answer": "9 ans"
+                },
+                {
+                  "question": "Quelle est la composition du Conseil Constitutionnel ?",
+                  "options": [
+                    "9 membres, dont 3 nommés par le Président de la République",
+                    "12 membres, dont 4 nommés par le Sénat",
+                    "9 membres, dont 3 nommés par le Président du Sénat",
+                    "6 membres nommés par le Conseil d'État"
+                  ],
+                  "answer": "9 membres, dont 3 nommés par le Président de la République"
+                },
+                {
+                  "question": "Quel est le rôle du Conseil Constitutionnel lors des élections présidentielles ?",
+                  "options": [
+                    "Organiser les élections",
+                    "Contrôler la régularité des élections",
+                    "Nomme les candidats",
+                    "Préparer les bulletins de vote"
+                  ],
+                  "answer": "Contrôler la régularité des élections"
+                },
+                {
+                  "question": "Comment sont choisis les membres du Conseil Constitutionnel ?",
+                  "options": [
+                    "Par le suffrage universel",
+                    "Par le Président de la République et les présidents des deux assemblées",
+                    "Par l'Assemblée nationale",
+                    "Par le Conseil d'État"
+                  ],
+                  "answer": "Par le Président de la République et les présidents des deux assemblées"
+                },
+                {
+                  "question": "Qui peut saisir le Conseil Constitutionnel pour vérifier la conformité d'une loi avec la Constitution ?",
+                  "options": [
+                    "Le Premier ministre uniquement",
+                    "Le Président de la République uniquement",
+                    "60 députés ou 60 sénateurs",
+                    "Le Conseil d'État"
+                  ],
+                  "answer": "60 députés ou 60 sénateurs"
+                },
+                {
+                  "question": "Quelle est la procédure utilisée par le Conseil Constitutionnel pour vérifier la régularité des élections législatives ?",
+                  "options": [
+                    "Contrôle à priori",
+                    "Contrôle à posteriori",
+                    "Contrôle mixte",
+                    "Aucun contrôle n'est effectué"
+                  ],
+                  "answer": "Contrôle à posteriori"
+                },
+                {
+                  "question": "Quel est le rôle du service juridique du Conseil Constitutionnel ?",
+                  "options": [
+                    "Veiller à la régularité des opérations de vote",
+                    "Préparer les décisions du Conseil",
+                    "Contrôler l'organisation des élections",
+                    "Gérer les ressources humaines du Conseil"
+                  ],
+                  "answer": "Préparer les décisions du Conseil"
+                },
+                {
+                  "question": "Quelle est la compétence exclusive du Conseil Constitutionnel ?",
+                  "options": [
+                    "Interpréter la Constitution",
+                    "Rédiger les amendements à la Constitution",
+                    "Contrôler la constitutionnalité des lois",
+                    "Organiser les élections présidentielles"
+                  ],
+                  "answer": "Contrôler la constitutionnalité des lois"
+                },
+                {
+                  "question": "Comment le Conseil Constitutionnel rend-il ses décisions ?",
+                  "options": [
+                    "À l'unanimité",
+                    "À la majorité absolue",
+                    "À la majorité simple",
+                    "À la majorité qualifiée"
+                  ],
+                  "answer": "À la majorité simple"
+                },
+                {
+                  "question": "Quelle est la durée maximale de l'état d'urgence ?",
+                  "options": [
+                    "1 mois",
+                    "3 mois",
+                    "6 mois",
+                    "Indéfinie"
+                  ],
+                  "answer": "12 jours, renouvelable"
+                },
+                {
+                  "question": "Quelle autorité peut saisir le Conseil Constitutionnel d'une question prioritaire de constitutionnalité (QPC) ?",
+                  "options": [
+                    "Le Président de la République",
+                    "Un citoyen",
+                    "Un juge",
+                    "Le Premier ministre"
+                  ],
+                  "answer": "Un juge"
+                },
+                {
+                  "question": "Quel contrôle s'effectue avant la promulgation d'une loi organique ?",
+                  "options": [
+                    "Contrôle de conformité avec la Constitution",
+                    "Contrôle de conformité avec les traités internationaux",
+                    "Contrôle de conformité avec la loi ordinaire",
+                    "Contrôle de conformité avec la jurisprudence"
+                  ],
+                  "answer": "Contrôle de conformité avec la Constitution"
+                },
+                {
+                  "question": "Dans quel cas le Conseil Constitutionnel peut-il être saisi directement par les citoyens ?",
+                  "options": [
+                    "Il n'y a aucune possibilité de saisine directe",
+                    "Lors d'un référendum",
+                    "Lors d'une élection législative",
+                    "Lors d'une élection présidentielle"
+                  ],
+                  "answer": "Il n'y a aucune possibilité de saisine directe"
+                },
+                {
+                  "question": "Quelle est la différence entre un contrôle de constitutionnalité a priori et a posteriori ?",
+                  "options": [
+                    "A priori : avant promulgation; A posteriori : après promulgation",
+                    "A priori : après promulgation; A posteriori : avant promulgation",
+                    "A priori : par le Parlement; A posteriori : par le Président",
+                    "A priori : par le Conseil d'État; A posteriori : par le Conseil Constitutionnel"
+                  ],
+                  "answer": "A priori : avant promulgation; A posteriori : après promulgation"
+                },
+                {
+                  "question": "Quel est le rôle du Conseil Constitutionnel en cas de contestation des résultats d'une élection présidentielle ?",
+                  "options": [
+                    "Il proclame les résultats définitifs",
+                    "Il organise un nouveau scrutin",
+                    "Il transmet la contestation à l'Assemblée nationale",
+                    "Il annule l'élection"
+                  ],
+                  "answer": "Il proclame les résultats définitifs"
+                },
+                {
+                  "question": "Quelle est la fonction principale des membres de droit du Conseil Constitutionnel ?",
+                  "options": [
+                    "Présider les séances du Conseil",
+                    "Participer aux délibérations",
+                    "Contrôler les finances du Conseil",
+                    "Exercer un pouvoir de veto sur les décisions"
+                  ],
+                  "answer": "Participer aux délibérations"
+                },
+                {
+                  "question": "Comment est nommé le Président du Conseil Constitutionnel ?",
+                  "options": [
+                    "Il est élu par les membres du Conseil",
+                    "Il est nommé par le Président de la République",
+                    "Il est nommé par le Premier ministre",
+                    "Il est nommé par le Président de l'Assemblée nationale"
+                  ],
+                  "answer": "Il est nommé par le Président de la République"
+                },
+                {
+                  "question": "Quelle est la conséquence d'une déclaration d'inconstitutionnalité par le Conseil Constitutionnel ?",
+                  "options": [
+                    "La loi est abrogée",
+                    "La loi est suspendue",
+                    "La loi est amendée",
+                    "La loi est renvoyée au Parlement pour révision"
+                  ],
+                  "answer": "La loi est abrogée"
+                },
+                {
+                  "question": "Quel est le délai de promulgation d'une loi après sa déclaration de conformité par le Conseil Constitutionnel ?",
+                  "options": [
+                    "7 jours",
+                    "15 jours",
+                    "1 mois",
+                    "Sans délai spécifique"
+                  ],
+                  "answer": "Sans délai spécifique"
+                },
+                {
+                  "question": "Qui nomme les membres du Conseil supérieur de la magistrature ?",
+                  "options": [
+                    "Le Président de la République",
+                    "Le Premier ministre",
+                    "Le Conseil Constitutionnel",
+                    "Le Conseil d'État"
+                  ],
+                  "answer": "Le Président de la République"
+                }
+              ]
+            },
+            {
+              "title": "QCM 2 - Les prérogatives du Président de la République",
+              "questions": [
+                {
+                  "question": "Quel pouvoir le Président de la République exerce-t-il directement sur le gouvernement ?",
+                  "options": [
+                    "Il préside le Conseil des ministres",
+                    "Il peut révoquer le Premier ministre",
+                    "Il peut nommer tous les membres du gouvernement",
+                    "Il peut dissoudre l'Assemblée nationale"
+                  ],
+                  "answer": "Il préside le Conseil des ministres"
+                },
+                {
+                  "question": "Dans quelle situation le Président peut-il dissoudre l'Assemblée nationale ?",
+                  "options": [
+                    "En cas de crise politique majeure",
+                    "Lorsque le gouvernement est renversé par une motion de censure",
+                    "Chaque fois que le Conseil des ministres le décide",
+                    "Lorsque le Sénat refuse de voter une loi"
+                  ],
+                  "answer": "Lorsque le gouvernement est renversé par une motion de censure"
+                },
+                {
+                  "question": "Quel est le rôle du Président en cas de vacance de la Présidence de la République ?",
+                  "options": [
+                    "Il nomme un successeur provisoire",
+                    "Le Président du Sénat assure l'intérim",
+                    "L'Assemblée nationale prend en charge les fonctions présidentielles",
+                    "Le gouvernement assure la continuité de l'État"
+                  ],
+                  "answer": "Le Président du Sénat assure l'intérim"
+                },
+                {
+                  "question": "Comment le Président de la République exerce-t-il son pouvoir de nomination ?",
+                  "options": [
+                    "Il nomme les membres du gouvernement sans consulter le Premier ministre",
+                    "Il nomme les membres du gouvernement sur proposition du Premier ministre",
+                    "Il consulte le Conseil d'État pour chaque nomination",
+                    "Il doit obtenir l'accord de l'Assemblée nationale"
+                  ],
+                  "answer": "Il nomme les membres du gouvernement sur proposition du Premier ministre"
+                },
+                {
+                  "question": "Quel est le rôle du Président de la République en matière de politique étrangère ?",
+                  "options": [
+                    "Il détermine la politique étrangère",
+                    "Il exécute la politique décidée par le Parlement",
+                    "Il est consulté mais n'a pas de pouvoir décisionnel",
+                    "Il délègue entièrement la politique étrangère au ministre des Affaires étrangères"
+                  ],
+                  "answer": "Il détermine la politique étrangère"
+                },
+                {
+                  "question": "Quel est le rôle du Président en cas d'utilisation de l'article 16 de la Constitution ?",
+                  "options": [
+                    "Il peut prendre toutes les mesures exigées par les circonstances",
+                    "Il doit obtenir l'accord du Parlement",
+                    "Il peut dissoudre l'Assemblée nationale sans consulter le gouvernement",
+                    "Il peut suspendre la Constitution"
+                  ],
+                  "answer": "Il peut prendre toutes les mesures exigées par les circonstances"
+                },
+                {
+                  "question": "Comment est choisi le Premier ministre ?",
+                  "options": [
+                    "Il est nommé par le Président de la République",
+                    "Il est élu par l'Assemblée nationale",
+                    "Il est nommé par le Conseil d'État",
+                    "Il est désigné par le Président du Sénat"
+                  ],
+                  "answer": "Il est nommé par le Président de la République"
+                },
+                {
+                  "question": "Quel est le rôle du Président concernant la promulgation des lois ?",
+                  "options": [
+                    "Il promulgue les lois votées par le Parlement",
+                    "Il peut refuser de promulguer une loi",
+                    "Il peut modifier une loi avant de la promulguer",
+                    "Il peut déléguer cette fonction au Premier ministre"
+                  ],
+                  "answer": "Il promulgue les lois votées par le Parlement"
+                },
+                {
+                  "question": "Comment le Président de la République peut-il exercer son pouvoir de grâce ?",
+                  "options": [
+                    "Il peut gracier toute personne condamnée",
+                    "Il peut gracier uniquement avec l'accord du Conseil des ministres",
+                    "Il doit obtenir l'approbation du Parlement",
+                    "Il ne peut gracier que les crimes politiques"
+                  ],
+                  "answer": "Il peut gracier toute personne condamnée"
+                },
+                {
+                  "question": "Quel est le rôle du Président dans les relations avec le Parlement ?",
+                  "options": [
+                    "Il peut dissoudre le Parlement",
+                    "Il préside les sessions parlementaires",
+                    "Il peut adresser des messages au Parlement",
+                    "Il nomme les présidents des deux chambres"
+                  ],
+                  "answer": "Il peut adresser des messages au Parlement"
+                },
+                {
+                  "question": "Dans quel cas le Président peut-il organiser un référendum ?",
+                  "options": [
+                    "Lorsqu'il souhaite modifier la Constitution",
+                    "Pour toute question d'importance nationale",
+                    "À la demande du Premier ministre",
+                    "Pour valider un traité international"
+                  ],
+                  "answer": "Lorsqu'il souhaite modifier la Constitution"
+                },
+                {
+                  "question": "Quel est le pouvoir du Président concernant les nominations aux plus hauts postes de l'État ?",
+                  "options": [
+                    "Il nomme tous les hauts fonctionnaires",
+                    "Il propose les candidats et le Parlement approuve",
+                    "Il nomme les hauts fonctionnaires sur proposition du Premier ministre",
+                    "Il nomme sans aucune consultation"
+                  ],
+                  "answer": "Il nomme les hauts fonctionnaires sur proposition du Premier ministre"
+                },
+                {
+                  "question": "Comment le Président peut-il utiliser son droit de veto sur une loi ?",
+                  "options": [
+                    "Il n'a pas de droit de veto",
+                    "Il peut opposer un veto et renvoyer la loi au Parlement",
+                    "Il peut opposer un veto définitif",
+                    "Il doit consulter le Conseil constitutionnel avant d'opposer un veto"
+                  ],
+                  "answer": "Il n'a pas de droit de veto"
+                },
+                {
+                  "question": "Quel est le rôle du Président dans la défense nationale ?",
+                  "options": [
+                    "Il est le chef des armées",
+                    "Il délègue entièrement ce pouvoir au ministre de la Défense",
+                    "Il consulte le Parlement avant toute décision militaire",
+                    "Il est responsable uniquement de la défense civile"
+                  ],
+                  "answer": "Il est le chef des armées"
+                },
+                {
+                  "question": "Comment le Président peut-il décréter l'état d'urgence ?",
+                  "options": [
+                    "En concertation avec le Premier ministre",
+                    "Sur avis du Conseil constitutionnel",
+                    "Avec l'accord du Parlement",
+                    "Par décret en Conseil des ministres"
+                  ],
+                  "answer": "Par décret en Conseil des ministres"
+                },
+                {
+                  "question": "Quel est le pouvoir du Président de la République en matière de justice ?",
+                  "options": [
+                    "Il nomme les juges",
+                    "Il exerce un pouvoir de contrôle sur les décisions judiciaires",
+                    "Il est le garant de l'indépendance de la justice",
+                    "Il peut annuler les décisions judiciaires"
+                  ],
+                  "answer": "Il est le garant de l'indépendance de la justice"
+                },
+                {
+                  "question": "Quelle est la procédure pour la révision de la Constitution ?",
+                  "options": [
+                    "Elle est initiée par le Président ou le Parlement",
+                    "Elle est décidée par le Président seul",
+                    "Elle nécessite l'approbation du Conseil constitutionnel",
+                    "Elle est votée directement par le peuple"
+                  ],
+                  "answer": "Elle est initiée par le Président ou le Parlement"
+                },
+                {
+                  "question": "Quel est le rôle du Président dans le processus législatif ?",
+                  "options": [
+                    "Il peut proposer des projets de loi",
+                    "Il peut amender des lois",
+                    "Il peut annuler des lois",
+                    "Il peut suspendre des lois"
+                  ],
+                  "answer": "Il peut proposer des projets de loi"
+                },
+                {
+                  "question": "Dans quel cas le Président peut-il convoquer le Congrès ?",
+                  "options": [
+                    "Pour toute question d'importance nationale",
+                    "Pour réviser la Constitution",
+                    "Pour adresser un message à la nation",
+                    "Pour proposer un vote de confiance"
+                  ],
+                  "answer": "Pour réviser la Constitution"
+                }
+              ]
+            },
+            {
+              "title": "QCM 3 - Le contrôle de constitutionnalité",
+              "questions": [
+                {
+                  "question": "Quel est l'objet principal du contrôle de constitutionnalité ?",
+                  "options": [
+                    "Vérifier la conformité des lois à la Constitution",
+                    "Vérifier la légitimité des traités internationaux",
+                    "Contrôler les actes du gouvernement",
+                    "Superviser les élections"
+                  ],
+                  "answer": "Vérifier la conformité des lois à la Constitution"
+                },
+                {
+                  "question": "Qui peut saisir le Conseil Constitutionnel pour un contrôle de constitutionnalité ?",
+                  "options": [
+                    "Le Président de la République",
+                    "Le Premier ministre",
+                    "60 députés ou 60 sénateurs",
+                    "Tout citoyen"
+                  ],
+                  "answer": "60 députés ou 60 sénateurs"
+                },
+                {
+                  "question": "Quand le contrôle de constitutionnalité est-il exercé de manière obligatoire ?",
+                  "options": [
+                    "Pour les lois organiques",
+                    "Pour toutes les lois",
+                    "Pour les traités internationaux",
+                    "Pour les règlements"
+                  ],
+                  "answer": "Pour les lois organiques"
+                },
+                {
+                  "question": "Quel est l'effet d'une décision d'inconstitutionnalité sur une loi votée ?",
+                  "options": [
+                    "La loi est annulée",
+                    "La loi est modifiée",
+                    "La loi est renvoyée au Parlement",
+                    "La loi est suspendue"
+                  ],
+                  "answer": "La loi est annulée"
+                },
+                {
+                  "question": "Quelle est la nature du contrôle de constitutionnalité exercé sur les lois ?",
+                  "options": [
+                    "A priori",
+                    "A posteriori",
+                    "Mixte",
+                    "Aucun"
+                  ],
+                  "answer": "Mixte"
+                },
+                {
+                  "question": "Quel texte fonde la compétence du Conseil Constitutionnel en matière de contrôle de constitutionnalité ?",
+                  "options": [
+                    "La Constitution de 1958",
+                    "La Déclaration des Droits de l'Homme et du Citoyen",
+                    "Le Code civil",
+                    "Le Traité de Maastricht"
+                  ],
+                  "answer": "La Constitution de 1958"
+                },
+                {
+                  "question": "Quelle est la portée d'une décision du Conseil Constitutionnel déclarant une loi inconstitutionnelle ?",
+                  "options": [
+                    "Erga omnes",
+                    "Inter partes",
+                    "Non rétroactive",
+                    "Elle n'a pas d'effet"
+                  ],
+                  "answer": "Erga omnes"
+                },
+                {
+                  "question": "Quels actes sont soumis au contrôle de constitutionnalité ?",
+                  "options": [
+                    "Les lois",
+                    "Les règlements",
+                    "Les décisions de justice",
+                    "Les contrats"
+                  ],
+                  "answer": "Les lois"
+                },
+                {
+                  "question": "Quel est l'effet du contrôle de constitutionnalité a priori ?",
+                  "options": [
+                    "Il empêche la promulgation d'une loi inconstitutionnelle",
+                    "Il permet la révision de la Constitution",
+                    "Il bloque l'application des traités internationaux",
+                    "Il suspend les actes administratifs"
+                  ],
+                  "answer": "Il empêche la promulgation d'une loi inconstitutionnelle"
+                },
+                {
+                  "question": "Qui peut soulever une question prioritaire de constitutionnalité (QPC) ?",
+                  "options": [
+                    "Un citoyen lors d'un procès",
+                    "Un membre du gouvernement",
+                    "Le Président de la République",
+                    "Le Conseil d'État"
+                  ],
+                  "answer": "Un citoyen lors d'un procès"
+                },
+                {
+                  "question": "Quelle est la condition préalable pour que le Conseil Constitutionnel soit saisi d'une QPC ?",
+                  "options": [
+                    "La question doit être sérieuse et nouvelle",
+                    "La question doit concerner une loi récente",
+                    "La question doit avoir été soulevée par le Président",
+                    "La question doit être approuvée par le Parlement"
+                  ],
+                  "answer": "La question doit être sérieuse et nouvelle"
+                },
+                {
+                  "question": "Quels sont les effets d'une décision de non-conformité partielle d'une loi ?",
+                  "options": [
+                    "Seules les dispositions non conformes sont annulées",
+                    "Toute la loi est annulée",
+                    "La loi est renvoyée pour modification",
+                    "La loi est suspendue"
+                  ],
+                  "answer": "Seules les dispositions non conformes sont annulées"
+                },
+                {
+                  "question": "Dans quel délai le Conseil Constitutionnel doit-il statuer sur une QPC ?",
+                  "options": [
+                    "3 mois",
+                    "6 mois",
+                    "1 mois",
+                    "Aucun délai n'est imposé"
+                  ],
+                  "answer": "3 mois"
+                },
+                {
+                  "question": "Quel est le rôle du Conseil Constitutionnel dans le contrôle de la régularité des élections ?",
+                  "options": [
+                    "Il examine les réclamations",
+                    "Il organise les élections",
+                    "Il valide les listes électorales",
+                    "Il proclame les résultats"
+                  ],
+                  "answer": "Il examine les réclamations"
+                },
+                {
+                  "question": "Quelle est la conséquence d'une décision du Conseil Constitutionnel qui juge une loi conforme à la Constitution ?",
+                  "options": [
+                    "La loi est promulguée",
+                    "La loi est amendée",
+                    "La loi est renvoyée au Parlement",
+                    "La loi est suspendue"
+                  ],
+                  "answer": "La loi est promulguée"
+                },
+                {
+                  "question": "Qui peut demander un contrôle a posteriori de constitutionnalité ?",
+                  "options": [
+                    "Un justiciable via la QPC",
+                    "Le Président de la République",
+                    "Le Conseil d'État",
+                    "Le Premier ministre"
+                  ],
+                  "answer": "Un justiciable via la QPC"
+                },
+                {
+                  "question": "Quel est le lien entre la QPC et le contrôle de constitutionnalité ?",
+                  "options": [
+                    "La QPC est une forme de contrôle a posteriori",
+                    "La QPC est une forme de contrôle a priori",
+                    "La QPC remplace le contrôle a priori",
+                    "La QPC n'a pas de lien avec le contrôle de constitutionnalité"
+                  ],
+                  "answer": "La QPC est une forme de contrôle a posteriori"
+                },
+                {
+                  "question": "Quel rôle joue le Conseil Constitutionnel dans le processus législatif ?",
+                  "options": [
+                    "Il vérifie la conformité des lois à la Constitution",
+                    "Il rédige les lois",
+                    "Il vote les lois",
+                    "Il promulgue les lois"
+                  ],
+                  "answer": "Il vérifie la conformité des lois à la Constitution"
+                },
+                {
+                  "question": "Que se passe-t-il si une loi est déclarée partiellement conforme par le Conseil Constitutionnel ?",
+                  "options": [
+                    "Les dispositions conformes peuvent être promulguées",
+                    "Toute la loi est abrogée",
+                    "La loi est suspendue",
+                    "La loi est renvoyée au Parlement"
+                  ],
+                  "answer": "Les dispositions conformes peuvent être promulguées"
+                },
+                {
+                  "question": "Quelle est la conséquence de la promulgation d'une loi par le Président de la République ?",
+                  "options": [
+                    "La loi entre en vigueur",
+                    "La loi est soumise à un contrôle supplémentaire",
+                    "La loi est renvoyée au Parlement",
+                    "La loi est suspendue"
+                  ],
+                  "answer": "La loi entre en vigueur"
+                }
+              ]
+            }
+          ]
+        }
+        
+      
+      
+    
+    
+  
+  
+
+

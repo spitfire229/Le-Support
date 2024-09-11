@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE SUPPORT</title>
+    <link rel="icon" href="./img/icon.png" />
+    <link rel="stylesheet" href="./CSS/footer.CSS">
+    <link rel="stylesheet" href="./CSS/perso.css">
+    <link rel="stylesheet" href="./CSS/frise chonologique.css">
+    <link rel="stylesheet" href="./CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="./CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="./CSS/frise chonologique mobile.css" media="screen and (max-width: 767px)">
+    
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRFK7PDSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BRFK7PDSFQ');
+</script>
+
+
+
+
+
+<body onload="checkPopup()">
+
+
+<div class="bricolage-section">
+<img class="mobile cache2" src="./img/cache2.png" alt="" id="toggleButton">
+
+
+
+<section id="contentSection">
+
+    <div id="sidebar">
+       
+        <h2>Sections :
+            </h2>
+        <ul>
+            <a class="section" href="#" onclick="changeContent('news')">Assos</a> <br><br>
+            <a class="section" href="#" onclick="changeContent('doc')">Cours CM</a><br><br>
+            <a class="section" href="#" onclick="changeContent('ouvrages')">Ouvrages</a><br><br> 
+            <a class="section" href="#" onclick="changeContent('outils')">Outils</a><br><br>
+            <a class="section" href="#" onclick="changeContent('Service Nanterre')">Services Nanterre</a><br><br>
+            <a class="section" href="#" onclick="changeContent('boutiques')">Boutique Nanterre</a><br><br>
+            <a class="section" href="#" onclick="changeContent('partenaires')"></a><br><br>
+            <a  onclick="changeContent('ajouts')"><img class="enter" src="./img/services.png" alt=""></a>
+            <a  onclick="changeContent('coop')"><img class="enter"  src="./img/cooperation.png" alt=""></a>
+            
+            <br>
+
+        </ul>
+
+        <div id="menu">
+            <img src="./img/licence 1.png" alt="Image 1">
+            <img src="./img/licence 2.png" alt="Image 2">
+            <img src="./img/licence 3.png" alt="Image 3">
+            <img src="./img/master 1.png" alt="Image 3">
+            <img src="./img/master 2.png" alt="Image 3">
+        </div>
+  
+
+        <div class="bottom">
+                        <div class="bottom-left">
+                            <a href="./arborescence/login.html"><img class="login" src="./img/login.png" alt=""></a>
+                        </div>
+                        <div class="bottom-right">
+                            <a class="section"  href="#" onclick="changeContent('parametres')">
+                                <img class="contact" src="./img/contact.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+            <img class="mobile test" src="./img/test.png" alt=""  >
+            <img class="mobile test1" src="./img/txt le support .png" alt=""  >
+        </section>
+    </div>
+
+<div class="marge" >
+
+
+
+<div id="content">
+    <div class="ghost">
+        <h2>Bienvenue sur <span class="orange">LE SUPPORT </span></h2>
+
+
+        <p class="desktop"> &#128072; Sélectionnez une section sur la gauche pour afficher le contenu correspondant ici.</p>
+        <p class="mobile"> &#x261D; Cliquez sur le bouton en haut à gauche pour sélectionner une section et afficher le contenu correspondant ici.</p>
+        
+        
+        </div>
+        <button class="desktop" onclick="clearStorage()">Effacer le localStorage</button>
+
+        <div id="myPopup" class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3>Bienvenue sur Le Support.</h3>
+            <p>
+                Pour des raisons techniques le support se voit dans l’obligation de restreindre certains de ses services, aussi des coupures peuvent avoir lieux. 
+                <br>Nous nous excusons pour la gêne occasionnée. 
+                </p>
+                <a href="#annonce" class="orange">en savoir plus...</a>
+        </div>
+<img class="desktop parvis" src="./img/parvis-lancement.png" alt="">
+<img class="lancement" src="./img/lancement.png" alt="">
+<img class="mobile parvis-tel" src="./img/accueille mobile.png" alt="">
+<div class="sep-blanche">.</div>
+<h1 id="patch">TABLEAU DE BORD</h1>
+<div class="anim desktop">
+    <a href="#patch">
+    <img class="fleche-patch" src="./img/tableau de bord.png" alt="Votre image">
+</a>
+</div>
+
+
+
+<div class="back">
+<div class="timeline-container">
+    <div class="heads">
+        <div class="year">Année 2024/2025</div>
+        <div id="current-date-display"></div>
+        <div id="days-to-next-event"></div>
+    </div>
+    <div class="months">
+        <div class="month" style="left: calc(0% - 2%);">Jan</div>
+        <div class="month" style="left: calc(8.33% - 2%);">Fév</div>
+        <div class="month" style="left: calc(16.66% - 2%);">Mar</div>
+        <div class="month" style="left: calc(25% - 2%);">Avr</div>
+        <div class="month" style="left: calc(33.33% - 2%);">Mai</div>
+        <div class="month" style="left: calc(41.66% - 2%);">Juin</div>
+        <div class="month" style="left: calc(50% - 2%);">Juil</div>
+        <div class="month" style="left: calc(58.33% - 2%);">Aoû</div>
+        <div class="month" style="left: calc(66.66% - 2%);">Sep</div>
+        <div class="month" style="left: calc(75% - 2%);">Oct</div>
+        <div class="month" style="left: calc(83.33% - 2%);">Nov</div>
+        <div class="month" style="left: calc(91.66% - 2%);">Déc</div>
+    </div>
+    <div class="timeline">
+        <div class="current-date" id="current-date"></div>
+        <!-- Elements clés -->
+        <div class="key-event" data-date="2024-09-08" style="left: calc(75% - 5px);">
+            <span>pré-rentrée</span>
+            <span>8/15 sep</span>
+        </div>
+        <div class="key-event" data-date="2025-01-06" style="left: calc(02% - 5px);">
+            <span>exams 1er sem</span>
+            <span>6/19 janv</span>
+        </div>
+        <div class="key-event" data-date="2025-08-20" style="left: calc(39% - 5px);">
+            <span>exams 2eme sem</span>
+            <span>16/29 mai</span>
+        </div>
+        <div class="key-event" data-date="2025-11-25" style="left: calc(51% - 5px);">
+            <span>rattrapages</span>
+            <span>16/29 juin</span>
+        </div>
+        <!-- Icônes -->
+        <div class="icon" style="left: calc(95% - 12px);"></div>
+        <div class="icon2" style="left: calc(60% - 12px);"></div>
+        <div class="icon3" style="left: calc(47% - 12px);"></div>
+        <div class="icon4" style="left: calc(37% - 12px);"></div>
+        <div class="icon5" style="left: calc(92% - 12px);"></div>
+        <div class="icon6" style="left: calc(76% - 12px);"></div>
+        <div class="icon7" style="left: calc(1.5% - 12px);"></div>
+        <!-- Curseurs -->
+        <div class="cursor" style="left: calc(51% - 5px);"></div>
+        <div class="cursor" style="left: calc(39% - 5px);"></div>
+        <div class="cursor" style="left: calc(75% - 3px);"></div>
+        <div class="cursor" style="left: calc(02% - 5px);"></div>
+
+    </div>
+</div>
+<a href="./PDF/202405-UPN-calendrier-univ-v02.pdf" download="calendrier universitaire 2024/2025 fac NANTERRE">
+    <img style="width: 20%; margin-top: 50px;margin-left: 5%;" src="./img/download calendar.png" alt="">
+</a>
+</div>
+
+
+
+
+<div class="body-container3">
+<div class="container3">
+    <div class="box box1"><a href="#annonce"></a></div>
+    <div class="box box2"><a href="https://bu.parisnanterre.fr/"></a></div>
+    <div class="box box3"><a href="./arborescence/signaler.html"></a></div>
+    <div class="box box4"><a href="./arborescence/selection auteur.html"></a></div>
+    <div class="box box5"><a onclick="changeContent('coop')"></a></div>
+    <div class="box box6"><a href="./arborescence/patch note.html"></a></div>
+</div>
+</div>
+<div class="annonce" id="annonce">
+    <div class="fond">
+        <h3>chers confrères élèves, professeurs, chargés de TD et plus généralement utilisateurs de tous horizons, </h3> 
+        <p>        Comme vous avez pu le voir, Le Support a subi quelques modifications pour préparer un retour en force en cette période de rentrée universitaire. 
+            <br>
+            <br>        De nombreux contenus sont à présent disponibles, sujets blancs, QCM, fiches méthodologiques, jurisprudence et autres publications de doctrine attendent de vous être utiles. 
+            <br>        De plus, le support se tourne à présent vers vous, en offrant la possibilité d'apporter individuellement sa pierre à l'édifice et de partager ses ressources au bénéfice de la communauté étudiante. de nouvelles interfaces pour mettre en avant votre travail et modérer le site sont mis à votre disposition pour faire évoluer le support, que vous puissiez vous l’approprier, qu’il soit votre.  
+            <br>
+            <br>        Pour ce qui est des mauvaises nouvelles, Le Support connaît une période d’incertitude quant à la subsistance de ses serveurs, aussi, de courtes interruptions des services du Support peuvent survenir dans l’attente d’une situation moins précaire. En vous présentant mes excuses pour la gêne occasionnée par cette situation qui m’handicape autant que vous. 
+            <br>
+            <br>        Soyez assuré que les services du support seront maintenus à long terme.
+            <br>
+            <br>        En vous souhaitant bon travail  !!!
+            <br>
+            <br>        Amicalement,
+            <br>        
+            <br>        Le Support. 
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    
+    <ul>
+        <li><a href="./index.html"><img class="footer-ico" src="./img/footer accueil.png" alt=""></a></li>
+        <li><a href="./arborescence/CGU.html"><img class="footer-ico" src="./img/footer CGU.png" alt=""></a></li>
+        <li><a href="./arborescence/signaler.html"><img class="footer-ico"src="./img/footer erreur.png" alt=""></a></li>
+    </ul>
+   
+    <img class="footer-logo" src="./img/logo 4.0.png" alt="Description de l'image"> 
+    <p>©2024 lesupport.me</p>
+<img class="footer-fond" src="./img/footer nanterre.png" alt="">
+</footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<script src="./JS/login- inscription mail.js"></script>
+<script src="./JS/index-sidebar  telephone .js"></script>
+<script src="./JS/index.js"></script>
+<script src="./JS/link profils user.js"></script>
+<script src="./JS/frise chosnologique.js"></script>
+
+
+
+<script src="./JS/index- pop up.js">
+
+</script>
+
+</html>
