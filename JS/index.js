@@ -205,9 +205,13 @@
 
                         + "<img class=\"année\" src=\"./img/licence 2.png\" >"+
                         "<br>"+"<br>"+"<br>"
+
+
+
+
                         +"<h2>troisiéme semestre</h2>"
-                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
+                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1GYM4YQbXeJjDTie3tGyEXf8mQdnfvlq6ffmTOa4rAqs/edit?usp=sharing\"'>" +
+                        "<img src=\"./img/dox.png\" alt=\"./img/dox.png\">" +
                         "<span>DROIT ADMINISTRATIF </span>" +
                         "</button>" 
 
