@@ -144,7 +144,8 @@
                         "<br>"+"<br>"+"<br>"    
 
 
-+"<div class=\"debug1\">"+
++"<div class=\"debug1\">"
++ "<img class=\"center60\" src=\"./img/warning cours.png\" >"+
                         "<h2>premier semestre</h2>" + 
                         "<button  onclick='window.location.href=\"https://docs.google.com/document/d/1hbaJR7Rm6DOqXa3NRNp4hduYJTJj3d331aAQvwE9HsI/edit?usp=sharing\"'>" +
                         "<img src=\"./img/dox.png\" alt=\"./img/dox.png\">" +
@@ -206,7 +207,7 @@
                         + "<img class=\"année\" src=\"./img/licence 2.png\" >"+
                         "<br>"+"<br>"+"<br>"
 
-
+                        + "<img class=\"center60\" src=\"./img/warning cours.png\" >"
 
 
                         +"<h2>troisiéme semestre</h2>"

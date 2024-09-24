@@ -1,0 +1,37 @@
+{
+  "etudiant": {
+    "nom": "Jean Dupont",
+    "niveau": "Master 2 Droit",
+    "description": "description..."
+  },
+  "supports": [
+    {
+      "type": "Cours",
+      "title": "Cours de Droit Constitutionnel",
+      "description": "Un ensemble de notes et de résumés sur le droit constitutionnel.",
+      "link": "#",
+      "format": "PDF"
+    },
+    {
+      "type": "Examen",
+      "title": "Examen blanc de Droit Pénal",
+      "description": "Une simulation d'examen de droit pénal avec correction.",
+      "link": "#",
+      "format": "PDF"
+    },
+    {
+      "type": "Vidéo",
+      "title": "Vidéo explicative sur le droit administratif",
+      "description": "Une vidéo qui résume les principes fondamentaux du droit administratif.",
+      "link": "#",
+      "format": "Vidéo"
+    },
+    {
+      "type": "Schéma",
+      "title": "Schéma du processus législatif",
+      "description": "Un schéma détaillant les étapes du processus législatif.",
+      "link": "#",
+      "format": "Image"
+    }
+  ]
+}
