@@ -168,7 +168,7 @@
                         "<span>SCIENCE PO </span>" +
                         "</button>"+
                         "<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
+                        "<img src=\"./img/refusé.png\" alt=\"./img/dox.png\">" +
                         "<span>COMMON LAW </span>" +
                         "</button>" 
                         
@@ -216,19 +216,14 @@
                         "<span>DROIT ADMINISTRATIF </span>" +
                         "</button>" 
 
+                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1tYiHNJK4Vm5vXbuGDYDr-toBbr32-HLFLCM-ry2QSG8/edit?usp=sharing\"'>" +
+                        "<img src=\"./img/dox.png\" alt=\"./img/dox.png\">" +
+                        "<span>FINANCES PUBLIQUES</span>" +
+                        "</button>" 
+
                         +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
                         "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
                         "<span>DROIT CIVIL DES CONTRATS </span>" +
-                        "</button>" 
-
-                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
-                        "<span>DROIT DE L'UE </span>" +
-                        "</button>" 
-
-                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
-                        "<span>FINANCES PUBLIQUES</span>" +
                         "</button>" 
 
                         +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
@@ -245,6 +240,12 @@
                         "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
                         "<span>DIP</span>" +
                         "</button>" 
+
+                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
+                        "<img src=\"./img/refusé.png\" alt=\"./img/dox.png\">" +
+                        "<span>DROIT DE L'UE </span>" +
+                        "</button>" 
+
 
                         + "<img class=\"année\" src=\"./img/licence 3.png\" >"+
                         "<br>"+"<br>"+"<br>"
