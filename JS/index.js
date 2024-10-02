@@ -221,24 +221,24 @@
                         "<span>FINANCES PUBLIQUES</span>" +
                         "</button>" 
 
-                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
+                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1WW-aBjgbN8wNRAr2-eMDy7mvtk4B8fVgvA6sM_Gdiw8/edit?usp=sharing\"'>" +
+                        "<img src=\"./img/dox.png\" alt=\"./img/dox.png\">" +
                         "<span>DROIT CIVIL DES CONTRATS </span>" +
                         "</button>" 
 
-                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
+                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1byIBVVxTKpoazyUtA-1wFkBb4m2SfFkPmwKQoy3gOWs/edit?usp=sharing\"'>" +
+                        "<img src=\"./img/dox.png\" alt=\"./img/dox.png\">" +
                         "<span>DROIT DE LA FAMILLE</span>" +
                         "</button>" 
-
+                        
+                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1rpNZCOMnEs3T5oi94AFK-Ugup1HssNZ_bBavqhGUJag/edit?usp=sharing\"'>" +
+                        "<img src=\"./img/dox.png\" alt=\"./img/dox.png\">" +
+                        "<span>DIP</span>" +
+                        "</button>" 
+                       
                         +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
                         "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
                         "<span>HISTOIRE DU DROIT PRIVE </span>" +
-                        "</button>" 
-
-                        +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
-                        "<img src=\"./img/HS.png\" alt=\"./img/dox.png\">" +
-                        "<span>DIP</span>" +
                         "</button>" 
 
                         +"<button onclick='window.location.href=\"https://docs.google.com/document/d/1Voccb\"'>" +
