@@ -283,13 +283,11 @@
                         "<button onclick='window.location.href=\"https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-professionnels/code-avocat-2024-annote-commente_9782247232116\"'>" +
                         "<img src=\"./img/CODEA.jpg\" alt=\"./img/dox.png\">" +
                         "<span>CODE DE L'AVOCAT</span>" +
-                        "</button>" + "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+
+                        "</button>" +
                         "<button onclick='window.location.href=\"https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/lexiques/lexique-termes-juridiques-2022-2023_9782247220915\"'>" +
                         "<img src=\"./img/LTJ.jpg\" alt=\"./img/dox.png\">" +
                         "<span>LEXIQUE DES TERMES JURIDIQUES</span>" + "</button>" +
-                        "<button onclick='window.location.href=\"https://drive.google.com/file/d/1CcmoWHxupN9s38sf6au14vh556r-Gl10/view\"'>" +
-                        "<img src=\"./img/DCODEUR.png\" alt=\"./img/dox.png\">" +
-                        "<span>LE D-CODEUR</span>" + "</button>"+
+                        
                         "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"+ "<br>"
                         
                         + "<button onclick='window.location.href=\"https://www-labase-lextenso-fr.faraway.parisnanterre.fr/droit-constitutionnel-2\"'>" +
@@ -304,7 +302,16 @@
                         "<img src=\"./img/intro au droit euro.jpg\" alt=\"./img/dox.png\">" +
                         "<span>INTRODUCTION AU DROIT EUROPEEN <br> Carlos Santulli</span>" + "</button>"
 
-                        +"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"
+                        +"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"
+                        
+                        + "<button onclick='window.location.href=\"https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/grands-arrets/grands-arrets-jurisprudence-administrative_9782247156917 \"'>" +
+                        "<img src=\"./img/GAJA.jpg\" alt=\"./img/dox.png\">" +
+                        "<span>GAJA <br> Marceau Long, Prosper Weil et Guy Braibant</span>" + "</button>"
+                      
+                        + "<button onclick='window.location.href=\"https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/grands-arrets/grands-arrets-jurisprudence-administrative_9782247156917 \"'>" +
+                        "<img src=\"./img/droit civil et droit admin.jpg\" alt=\"./img/dox.png\">" +
+                        "<span>Droit civil et droit administratif<br> Christophe Jamin; Fabrice Melleray;</span>" + "</button>"
+
                         ;
                     break;
                     case 'Service Nanterre':
