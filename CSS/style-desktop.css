@@ -1167,4 +1167,57 @@ p
                 transition: 0.5s;
                 font-size: large;
             }
+            .disclaimer {
+                background-color: #660000;
+                color: white;
+                border-radius: 20px;
+                padding: 20px 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                position: relative;
+                width: 80%;
+                margin-top: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+                
+            }
+    
+            .disclaimer h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.2em;
+                margin: 0 0 10px 0;
+                text-transform: uppercase;
+            }
+    
+            .disclaimer p {
+                font-size: 1rem;
+                margin: 0;
+            }
+    
+            .warning {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+                color: #ffc107;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+            .message {
+                background: linear-gradient(to right, #b02900, #330000);
+                color: white;
+                border-radius: 30px;
+                padding: 20px 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                font-size: 1rem;
+                font-weight: bold;
+                width: 60%;
+                margin-left: 15%;
+                max-width: 800px;
+            }
+            .selected
+            {
+                color: #ff3c00;
+            }
     
