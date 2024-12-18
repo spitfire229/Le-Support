@@ -49,7 +49,7 @@
             <li><a href="../arborescence/CGU.html"><img class="footer-ico" src="../img/footer CGU.png" alt=""></a></li>
             <li><a href="../arborescence/signaler.html"><img class="footer-ico"src="../img/footer erreur.png" alt=""></a></li>
         </ul>
-       
+   
         <img class="footer-logo" src="../img/logo 4.0.png" alt="Description de l'image"> 
         <p>©2024 lesupport.me</p>
     <img class="footer-fond" src="../img/footer nanterre.png" alt="">
@@ -76,21 +76,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Fonction pour mettre à jour le tableau HTML avec les données triées
-    function updateTable(data) {
-        const tableBody = document.querySelector('tbody');
-        tableBody.innerHTML = '';
-        data.forEach(item => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${item.name}</td>
-                <td>${item.date}</td>
-                <td>${item.court}</td>
-                <td>${item.facts}</td>
-                <td>${item.summary}</td>
-            `;
-            tableBody.appendChild(row);
-        });
-    }
+// Fonction pour mettre à jour le tableau HTML avec les données triées
+function updateTable(data) {
+    const tableBody = document.querySelector('tbody');
+    tableBody.innerHTML = '';
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.date}</td>
+            <td>${item.court}</td>
+            <td>${item.facts}</td>
+            <td>${item.summary}</td>
+            <td>
+                <a href="${item.file}" download>
+                    <img src="${item.dwld}" alt="Télécharger" style="width: 50px; cursor: pointer;">
+                </a>
+            </td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
 
     // Fonction pour filtrer les données selon le texte de recherche
     function filterData(data, query) {
