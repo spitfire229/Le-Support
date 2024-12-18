@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fonction pour charger les données JSON
     function loadData() {
-        return fetch('../json/JP.json')
+        return fetch('../Json/JP.json')
             .then(response => response.json())
             .then(data => data.jurisprudences);
     }
