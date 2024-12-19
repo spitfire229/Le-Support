@@ -9,9 +9,14 @@ function checkPopup() {
 
 // Fonction pour afficher la pop-up
 function showPopup() {
-    const popup = document.getElementById("myPopup");
-    popup.style.display = "block";
+    const popup = document.getElementById("popup");
+    if (popup) {
+        popup.style.display = "block";
+    } else {
+        console.error("L'élément avec l'ID 'popup' n'existe pas.");
+    }
 }
+
 
 // Fonction pour fermer la pop-up
 function closePopup() {
