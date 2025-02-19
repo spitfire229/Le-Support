@@ -21,26 +21,6 @@
     ]
   }, 
   {
-    "id": 2,
-    "nom": "Georges Vedel",
-    "image": "../img/grandes_figures/vedel.jpg",
-    "periode": "1910 - 2002",
-    "faits": "Constitutionnaliste influent, académicien et professeur de droit public.",
-    "histoire": "Georges Vedel est un juriste français considéré comme l'un des plus grands constitutionnalistes du XXe siècle. Il a joué un rôle clé dans la modernisation du droit public en France et a fortement influencé l'évolution du droit constitutionnel et administratif.",
-    "etudes": "Après des études à la Faculté de droit de Toulouse, il devient agrégé de droit public en 1936. Il enseigne ensuite dans plusieurs grandes universités, dont Paris et l'Institut d'études politiques.",
-    "ecrits": [
-        "Manuel élémentaire de droit constitutionnel (1949) : un ouvrage de référence pour les étudiants et praticiens du droit public.<br>",
-        "Droit administratif (en plusieurs éditions) : un traité fondamental sur l'organisation et le fonctionnement de l'administration publique.<br>",
-        "Publications et discours sur le Conseil constitutionnel et l'État de droit.<br>"
-    ],
-    "faits_marquants": [
-        "Rénovateur du droit constitutionnel français : il a contribué à moderniser l'enseignement du droit public et à adapter la discipline aux évolutions politiques.",
-        "Membre du Conseil constitutionnel (1980-1989) : il a marqué cette institution par ses avis éclairés sur la protection des droits fondamentaux et l'équilibre des pouvoirs.",
-        "Élu à l'Académie française en 1998 : reconnaissance de son influence intellectuelle et juridique.",
-        "Défenseur de la construction européenne : il a plaidé pour une intégration juridique et institutionnelle renforcée au sein de l'Union européenne."
-    ]
-},
-{
   "id": 3,
   "nom": "René Savatier",
   "image": "../img/grandes_figures/savatier.jpeg",
@@ -61,6 +41,27 @@
       "Membre de l'Académie des sciences morales et politiques : reconnaissance de son apport intellectuel au droit français."
   ]
 },
+{
+  "id": 2,
+  "nom": "Georges Vedel",
+  "image": "../img/grandes_figures/vedel.jpg",
+  "periode": "1910 - 2002",
+  "faits": "Constitutionnaliste influent, académicien et professeur de droit public.",
+  "histoire": "Georges Vedel est un juriste français considéré comme l'un des plus grands constitutionnalistes du XXe siècle. Il a joué un rôle clé dans la modernisation du droit public en France et a fortement influencé l'évolution du droit constitutionnel et administratif.",
+  "etudes": "Après des études à la Faculté de droit de Toulouse, il devient agrégé de droit public en 1936. Il enseigne ensuite dans plusieurs grandes universités, dont Paris et l'Institut d'études politiques.",
+  "ecrits": [
+      "Manuel élémentaire de droit constitutionnel (1949) : un ouvrage de référence pour les étudiants et praticiens du droit public.<br>",
+      "Droit administratif (en plusieurs éditions) : un traité fondamental sur l'organisation et le fonctionnement de l'administration publique.<br>",
+      "Publications et discours sur le Conseil constitutionnel et l'État de droit.<br>"
+  ],
+  "faits_marquants": [
+      "Rénovateur du droit constitutionnel français : il a contribué à moderniser l'enseignement du droit public et à adapter la discipline aux évolutions politiques.",
+      "Membre du Conseil constitutionnel (1980-1989) : il a marqué cette institution par ses avis éclairés sur la protection des droits fondamentaux et l'équilibre des pouvoirs.",
+      "Élu à l'Académie française en 1998 : reconnaissance de son influence intellectuelle et juridique.",
+      "Défenseur de la construction européenne : il a plaidé pour une intégration juridique et institutionnelle renforcée au sein de l'Union européenne."
+  ]
+},
+
 {
   "id": 4,
   "nom": "Philippe de Beaumanoir",
