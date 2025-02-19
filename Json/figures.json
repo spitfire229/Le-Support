@@ -21,7 +21,7 @@
     ]
   }, 
   {
-  "id": 3,
+  "id": 2,
   "nom": "René Savatier",
   "image": "../img/grandes_figures/savatier.jpeg",
   "periode": "1892 - 1984",
@@ -42,7 +42,7 @@
   ]
 },
 {
-  "id": 2,
+  "id": 3,
   "nom": "Georges Vedel",
   "image": "../img/grandes_figures/vedel.jpg",
   "periode": "1910 - 2002",
