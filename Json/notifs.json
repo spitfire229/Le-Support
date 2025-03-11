@@ -4,5 +4,11 @@
         "heure": "**:**",
         "matiere": "bienvenu",
         "message": "cette section comportera quelques inforations relatives a l'avancement du support et de la vie etudiante. elle se mettra a jour d'elle meme. "
+    },
+    {
+        "date": "test",
+        "heure": "**:**",
+        "matiere": "bienvenu",
+        "message": "cette section comportera quelques inforations relatives a l'avancement du support et de la vie etudiante. elle se mettra a jour d'elle meme. "
     }
 ]
