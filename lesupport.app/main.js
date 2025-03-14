@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Menu, shell } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu, shell, dialog } = require('electron');
 const { exec } = require('child_process');
 
 //test
@@ -90,7 +90,7 @@ function checkForUpdates() {
                                             type: "info",
                                             buttons: ["OK"],
                                             title: "Mise à jour terminée",
-                                            message: "Les fichiers ont été mis à jour. Veuillez redémarrer l'application."
+                                            message: "Les fichiers ont été mis à jour avec succes ;). Cependant votre programme fonctionne toujours sur une version anterieure, vous pouvez redémarrer votre application pour béneficier des nouveautées."
                                         });
                                     }
                                 });
