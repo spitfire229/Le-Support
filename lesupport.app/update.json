@@ -1,0 +1,17 @@
+{
+  "latestVersion": "1.2.1",
+  "files": [
+    {
+      "path": "main.js",
+      "url": "https://github.com/ton-repo/ton-projet/raw/main/main.js"
+    },
+    {
+      "path": "renderer.js",
+      "url": "https://github.com/ton-repo/ton-projet/raw/main/renderer.js"
+    },
+    {
+      "path": "index.html",
+      "url": "https://github.com/ton-repo/ton-projet/raw/main/index.html"
+    }
+  ]
+}
