@@ -1,9 +1,11 @@
-app-electron
-├── lesupport - setup/
+racine
+├── lesupport.app
 │   ├── main.js            # Processus principal d’Electron
 │   ├── index.html         # Interface principale
 │   ├── renderer.js        # Gestion de l'interface et des événements
 │   ├── package.json       # Configuration du projet
+│   ├── update.json
+│   ├── version.json
 │   ├── style-sheets/           # Dossier des scripts Python
 │       ├── style.css
 │       ├── light-style.css
