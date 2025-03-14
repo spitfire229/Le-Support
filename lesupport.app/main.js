@@ -1,28 +1,61 @@
 const { app, BrowserWindow, ipcMain, Menu, shell } = require('electron');
 const { exec } = require('child_process');
 
-
+//test
 let mainWindow;
 
-const { dialog } = require('electron');
+
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-const packageJson = require('./package.json'); // Lire la version actuelle de l'application
-const updateUrl = "https://lesupport.me/update.json"; // URL du fichier update.json
 
+const versionFilePath = path.join(__dirname, 'version.json'); // Fichier local de version
+const updateUrl = "https://lesupport.me/lesupport.app/update.json"; // URL du fichier update.json
+
+// Fonction pour lire la version actuelle du programme
+function getCurrentVersion() {
+    if (fs.existsSync(versionFilePath)) {
+        try {
+            const versionData = fs.readFileSync(versionFilePath, 'utf-8');
+            return JSON.parse(versionData).currentVersion;
+        } catch (error) {
+            console.error("Erreur de lecture du fichier version.json :", error);
+            return "0.0.0"; // Valeur par défaut si erreur
+        }
+    } else {
+        console.warn("⚠️ version.json introuvable. Création avec version 0.0.0.");
+        updateLocalVersion("0.0.0"); // Création du fichier si absent
+        return "0.0.0";
+    }
+}
+
+// Fonction pour mettre à jour la version locale après la mise à jour
+function updateLocalVersion(newVersion) {
+    try {
+        fs.writeFileSync(versionFilePath, JSON.stringify({ currentVersion: newVersion }, null, 2));
+        console.log(`✅ Fichier version.json mis à jour avec la version ${newVersion}`);
+    } catch (error) {
+        console.error("❌ Erreur lors de la mise à jour de version.json :", error);
+    }
+}
+
+// Fonction pour télécharger un fichier et le remplacer dans l'application
 function downloadFile(fileUrl, savePath, callback) {
     const file = fs.createWriteStream(savePath);
     https.get(fileUrl, (response) => {
         response.pipe(file);
         file.on("finish", () => {
-            file.close(callback);
+            file.close(() => {
+                console.log(`📥 Fichier mis à jour : ${savePath}`);
+                callback();
+            });
         });
     }).on("error", (err) => {
-        console.error(`Erreur de téléchargement pour ${fileUrl}:`, err);
+        console.error(`❌ Erreur de téléchargement pour ${fileUrl}:`, err);
     });
 }
 
+// Vérifier si une mise à jour est nécessaire
 function checkForUpdates() {
     https.get(updateUrl, (res) => {
         let data = "";
@@ -32,38 +65,46 @@ function checkForUpdates() {
                 const updateInfo = JSON.parse(data);
                 const latestVersion = updateInfo.latestVersion;
                 const filesToUpdate = updateInfo.files;
+                const currentVersion = getCurrentVersion();
 
-                if (latestVersion !== packageJson.version) {
+                console.log(`🔍 Version actuelle : ${currentVersion}, Dernière version disponible : ${latestVersion}`);
+
+                if (currentVersion < latestVersion) { // Vérifie si la version actuelle est inférieure
                     let fileList = filesToUpdate.map(file => `- ${file.path}`).join("\n");
 
                     dialog.showMessageBox({
                         type: "info",
                         buttons: ["Mettre à jour", "Ignorer"],
                         title: "Mise à jour disponible",
-                        message: `Nouvelle version disponible (${latestVersion}) !\nLes fichiers suivants seront mis à jour :\n${fileList}`
+                        message: `Une nouvelle version (${latestVersion}) est disponible.\nLes fichiers suivants seront mis à jour :\n${fileList}`
                     }).then(result => {
                         if (result.response === 0) { // L'utilisateur accepte la mise à jour
+                            let downloadedFiles = 0;
                             filesToUpdate.forEach(file => {
                                 const savePath = path.join(__dirname, file.path);
                                 downloadFile(file.url, savePath, () => {
-                                    console.log(`${file.path} mis à jour !`);
+                                    downloadedFiles++;
+                                    if (downloadedFiles === filesToUpdate.length) {
+                                        updateLocalVersion(latestVersion); // 🔴 Mise à jour après téléchargement de tous les fichiers
+                                        dialog.showMessageBox({
+                                            type: "info",
+                                            buttons: ["OK"],
+                                            title: "Mise à jour terminée",
+                                            message: "Les fichiers ont été mis à jour. Veuillez redémarrer l'application."
+                                        });
+                                    }
                                 });
-                            });
-
-                            dialog.showMessageBox({
-                                type: "info",
-                                buttons: ["OK"],
-                                title: "Mise à jour terminée",
-                                message: "Les fichiers ont été mis à jour. Veuillez redémarrer l'application."
                             });
                         }
                     });
+                } else {
+                    console.log("✅ Le programme est déjà à jour.");
                 }
             } catch (error) {
-                console.error("Erreur lors de la récupération des mises à jour :", error);
+                console.error("❌ Erreur lors de la récupération des mises à jour :", error);
             }
         });
-    }).on("error", err => console.error("Erreur réseau :", err));
+    }).on("error", err => console.error("❌ Erreur réseau :", err));
 }
 
 // Vérifier la mise à jour au démarrage
@@ -71,6 +112,7 @@ app.whenReady().then(() => {
     checkForUpdates();
     createMainWindow();
 });
+
 
 
 function createMainWindow() {
