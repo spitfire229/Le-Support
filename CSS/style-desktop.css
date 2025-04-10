@@ -39,7 +39,7 @@ body {
    font-size: medium;
     height: 100vh;
     scroll-behavior: smooth;
-    background-color: #1e1e1e;
+    background-color: #242424 ;
     color: #fff;
     transition: all 0.5s ease;
     display: block;
@@ -137,9 +137,10 @@ h2 {
 }
 .login
         {
-            width: 60%;
-            margin: 10%;
-            margin-left: 25%;
+width: 60%;
+margin-left: 20%;
+
+
         }
         .logo
         {
@@ -354,30 +355,15 @@ border-radius: 20px;
     width: 100%;
     position: absolute;
     bottom: 0;
+    text-align: left;
+    padding-top: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
     
 }
-.bottom-right:hover, .bottom-left:hover
+.bottom:hover
 {
-background-color: #303030;
-
-border-radius: 15px 15px 0px 0px;
-}
-.bottom-left
-{
-    margin:0;
-    width: 49%;
-    float: left;
-   
-    align-items: center;
-    
-}
-.bottom-right
-{
-    width: 49%;
-    float: right;
-    
-    align-items: center;
-    
+    background-color: #464646;
 }
 
 
