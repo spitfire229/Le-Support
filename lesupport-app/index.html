@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesupport - loader</title>
+    <link rel="stylesheet" href="./style-sheets/style.css">
+    <link rel="stylesheet" href="./style-sheets/light-style.css">
+</head>
+<body>
+test
+    
+    <div class="sidebar-right">
+        <button class="icon" onclick="changeIframe('https://lesupport.me')"><img class="icon-img" src="./img/lesupport.png" alt=""></button>
+        
+
+
+        <button class="icon pop-up-btn" data-popup-id="popup1">
+            <img src="./img/logo nanterre.png" alt="Docs">
+        </button>
+        <div id="popup1" class="popup">
+            <a href="https://portail.parisnanterre.fr/page-student/"><button class="icon"><img src="./img/ent nanterre.svg" alt="Sheets"></button></a>
+            <a href="https://coursenligne.parisnanterre.fr/"><button class="icon"><img src="./img/CEL.svg" alt="Sheets"></button></a>
+            <a href="https://myplanning.parisnanterre.fr/direct/myplanning.jsp?ticket=ST-26389-hPV9ioXQQMN-l5mFDUZQjNeCeQM-superman"><button class="icon"><img src="./img/EDT.svg" alt="Sheets"></button></a>
+        </div>
+        
+        <button class="icon pop-up-btn" data-popup-id="popup2">
+            <img src="./img/suite google.png" alt="Docs">
+        </button>
+        <div id="popup2" class="popup">
+            <a href="https://docs.google.com/document/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggdoc.svg" alt="Docs"></button></a>
+            <a href="https://docs.google.com/spreadsheets/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggsheet.svg" alt="Sheets"></button></a>
+            <a href="https://docs.google.com/presentation/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggslides.svg" alt="Sheets"></button></a>
+            <a href="https://docs.google.com/forms/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggforms.svg" alt="Sheets"></button></a>
+            <a href="https://drive.google.com/drive/home"><button class="icon pop_up_icon"><img src="./img/ggdrive.svg" alt="Sheets"></button></a>
+            <a href="https://mail.google.com/mail/u/0/"><button class="icon pop_up_icon"><img src="./img/ggmail.svg" alt="Sheets"></button></a>
+        </div>
+        
+
+        <button class="icon pop-up-btn" data-popup-id="popup4">
+            <img src="./img/logo marteau.png" alt="Docs">
+        </button>
+        <div id="popup4" class="popup">
+            <a href="https://www-dalloz-fr.faraway.parisnanterre.fr/etudiants"><button class="icon pop_up_icon"><img src="./img/logo dalloz.png" alt="Docs"></button></a>
+            <a href="https://signin.lexisnexis.com/lnaccess/app/signin?back=https://www-lexis360intelligence-fr.faraway.parisnanterre.fr/legan-callback&aci=lint"><button class="icon pop_up_icon"><img src="./img/logo lexis.png" alt="Docs"></button></a>
+            <a href="https://www.legifrance.gouv.fr/liste/code?etatTexte=VIGUEUR&etatTexte=VIGUEUR_DIFF"><button class="icon pop_up_icon"><img src="./img/logo code.png" alt="Docs"></button></a>
+        </div>
+
+        <button class="icon pop-up-btn" data-popup-id="popup3">
+            <img src="./img/logo mapper.png" alt="Docs">
+        </button>
+        <div id="popup3" class="popup">
+            <p>A très bientôt pour de nouveaux programmes</p>
+        </div>
+        
+
+        <button class="icon" id="schema-button">
+            <img src="./utils/protocole Hermes/protocole hermes.png" alt="Hermes">
+        </button>
+        <div id="popup4" class="popup">
+            <p>A très bientôt pour de nouveaux programmes</p>
+        </div>
+        
+        
+        
+
+
+
+
+
+
+
+
+
+        <div class="bottom-buttons">
+            <div class="separator"></div>
+            <button class="icon"><img src="./img/notif.png" alt=""></button>
+            <button class="icon" ><img src="./img/console.png" alt=""></button>
+            <button class="icon" ><img class="parametres" src="./img/paramettre.png" alt=""></button>
+        </div>
+    </div>
+
+
+
+        <!-- Page des paramètres (glisse depuis la droite) -->
+<div id="settings-page">
+    <h4>PARAMETTRES</h4>
+
+    <label for="theme">Thème :</label>
+    <select id="theme">
+        <option value="light">Clair</option>
+        <option value="dark">Sombre</option>
+    </select>
+
+    <label for="volume">Volume :</label>
+    <input type="range" id="volume" min="0" max="100">
+
+    <button id="close-settings">Fermer</button>
+</div>
+
+
+<div class="mid-bar">
+    <div class="div-background">
+        <iframe id="content-frame" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div class="sidebar-left" id="console-page"><button id="clear-notifications">Vider les notification</button>
+        <h4>CONSOLE DES LOG</h4>
+        <pre id="console-output"></pre>
+        
+    </div>
+
+    <div class="sidebar-left-notif" id="notif-page">
+        <button id="reload-notifications">Recharger les notifications</button>
+<h4>CONSOLE DES NOTIFS</h4>
+
+        
+        <pre id="notif-output"></pre>
+        
+    </div>
+
+
+
+
+    <script src="renderer.js"></script>
+    <script src="./pop_up.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+</html>
