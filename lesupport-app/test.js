@@ -1,0 +1,1 @@
+ipcRenderer.send('launch-hermes');

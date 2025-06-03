@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirDrop Windows</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            color: #fff;
+            padding: 20px; 
+            background-image: url('./background.png');
+            background-color: #242424;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 500px;
+        }
+        button { 
+            margin: 5px; 
+            padding: 10px; 
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        img {
+            width: 30px; /* Ajustez la taille de l'image si nécessaire */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Appareils détectés</h1>
+    <ul id="device-list"></ul>
+
+    <div id="upload-section" style="margin-top: 20px;">
+        <!-- Affichage du nom du fichier -->
+        <span id="fileName">Nom du fichier</span>
+        <br>
+        <progress id="progressBar" value="0" max="100" style="width: 20%;"></progress>
+        <span id="progressText">0%</span>
+    </div>
+    
+    <script>
+        const { ipcRenderer } = require('electron');
+    
+        ipcRenderer.on('update-devices', (event, devices) => {
+            const list = document.getElementById('device-list');
+            list.innerHTML = '';
+    
+            devices.forEach(device => {
+                const li = document.createElement('li');
+                li.textContent = `${device.name} (${device.ip})`;
+    
+                // Bouton d'envoi de message avec une image
+                const btnMessage = document.createElement('button');
+                const imgMessage = document.createElement('img');
+                imgMessage.src = './chat.png';
+                imgMessage.alt = 'Envoyer un message';
+                btnMessage.appendChild(imgMessage);
+                btnMessage.onclick = () => ipcRenderer.send('send-message', device.ip);
+    
+                // Bouton d'envoi de fichier avec une image
+                const btnFile = document.createElement('button');
+                const imgFile = document.createElement('img');
+                imgFile.src = './upload.png';
+                imgFile.alt = 'Envoyer un fichier';
+                btnFile.appendChild(imgFile);
+                btnFile.onclick = () => ipcRenderer.send('send-file', device.ip);
+    
+                li.appendChild(btnMessage);
+                li.appendChild(btnFile);
+                list.appendChild(li);
+            });
+        });
+    
+        ipcRenderer.on('upload-progress', (event, percentage) => {
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            progressBar.value = percentage;
+            progressText.textContent = `${Math.round(percentage)}%`;
+        });
+    
+        // Met à jour l'affichage du nom du fichier envoyé
+        ipcRenderer.on('upload-file-name', (event, fileName) => {
+            const fileNameElement = document.getElementById('fileName');
+            fileNameElement.textContent = fileName;
+        });
+    </script>
+    
+</body>

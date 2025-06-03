@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Interface Reproduction</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #302e2f;
+      display: flex;
+      align-items:center;
+      height: 100vh;
+     
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items:center;
+      width: 90%;
+      margin-left: 40px;
+      background-color: #504f4f;
+      gap: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 10px 20px 20px rgb(31, 31, 31);
+    }
+
+    .group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .icon-bar img
+    {
+      width: 100%;
+    }
+
+    .button {
+      background-color: #706F6F;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-sm {
+      width: 42px;
+      height: 42px;
+    }
+
+    .btn-lg {
+      width: 200px;
+      height: 40px;
+    }
+
+    .separator {
+      height: 90px;
+      width: 10px;
+      border-radius: 5px;
+      background-color: #7e7e7e;
+      color: #7e7e7e;
+    }
+
+    .stretch {
+      width: 200px;
+      height: 40px;
+    }
+
+    .icon-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .icon-bar {
+      width: 42px;
+      height: 42px;
+      background-color: #ffffff00;
+      border-radius: 10px;
+    }
+
+    .right-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .left
+    {
+      width: 80%;
+    }
+
+    .infos
+    {
+      width: 300px;
+      height: 90vh;
+      background-color: #504f4f;
+      right: 0px;
+      border-radius: 20px 0px 0px 20px;
+      color: #fff;
+      padding: 15px;
+      box-shadow: 10px 20px 20px rgb(31, 31, 31);
+      text-align: center;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1 style="margin-left: 30%; color: #fff;">AIDE AUX COMMANDES</h1>
+  <div class="container">
+    <!-- Groupe gauche -->
+    <div class="group">
+  
+      <button class="button btn-sm" data-info="<p>Génère un carré comme vu ci-dessous :</p><img src='./assets/carré1.png' style='width: 150px; border-radius: 15px;'> <p>Vous pouvez en modifier les variables grâce au panneau d'édition :</p><img src='./assets/settings .png' style='width: 200px; border-radius: 15px;'>" >
+        <img src="./assets/square.svg" alt="">
+      </button>
+      
+      <button class="button btn-sm" data-info="<p>Génère un cercle comme vu ci-dessous :</p><img src='./assets/cercle1.png' style='width: 150px; border-radius: 15px;'> <p>Vous pouvez en modifier les variables grâce au panneau d'édition :</p><img src='./assets/settings cercle.png' style='width: 200px; border-radius: 15px;'>" >
+        <img src="./assets/circle.svg" alt="" >
+      </button>
+      <button class="button btn-sm" data-info="<p>Génère un octogone comme vu ci-dessous :</p><img src='./assets/octogone1.png' style='width: 150px; border-radius: 15px;'> <p>Vous pouvez en modifier les variables grâce au panneau d'édition :</p><img src='./assets/settings octogone.png' style='width: 200px; border-radius: 15px;'>" >
+        <img src="./assets/octogone.svg" alt="" >
+      </button>
+      <button class="button btn-sm" data-info="<p>Génère un lien comme vu ci-dessous :</p><img src='./assets/line.png' style='width: 150px; border-radius: 15px; margin-bottom : 50px;'><img src='./assets/lines explications.svg' style='width: 250px; border-radius: 15px;'>" >
+        <img src="./assets/line.svg" alt="" >
+      </button>
+      <button class="button btn-lg">5</button>
+    </div>
+
+    <div class="separator">.</div>
+
+    <!-- Groupe central -->
+    <div class="group">
+      <button class="button stretch">6</button>
+      <button class="button btn-sm">7</button>
+      <button class="button btn-sm">8</button>
+      <button class="button btn-sm">9</button>
+      <button class="button btn-sm">10</button>
+    </div>
+
+    <div class="separator">.</div>
+
+    <!-- Groupe icônes -->
+    <div class="icon-group">
+      <div class="icon-bar"><img src="./assets/left.svg" alt="">11</div>
+      <div class="icon-bar"><img src="./assets/mid.svg" alt="">12</div>
+      <div class="icon-bar"><img src="./assets/right.svg" alt="">13</div>
+    </div>
+
+    <div class="separator">.</div>
+
+    <!-- Groupe droite -->
+    <div class="right-group">
+      <button class="button btn-sm" data-info="<p><img src='./assets/aimant.svg' style='width: 100px; border-radius: 0px;'> <p> aimant activé : les formes alignent leur centre sur les points d'encrages visibles (cadrillage blanc).</p><img src='./assets/aimant off.svg' style='width: 100px; border-radius: 15px;'><p> aimant desactivé : déplacement libre des formes.</p>" ><img src="./assets/aimant.svg" alt="" ></button>
+      <button class="button btn-sm">15</button>
+    </div>
+  </div>
+
+
+  </div>
+  <div class="right">
+    <div class="infos" id="infoPanel">
+      Survolez un bouton pour voir les infos ici.
+    </div>
+    
+
+
+  </div>
+  <script>
+    const buttons = document.querySelectorAll('button[data-info]');
+    const infoPanel = document.getElementById('infoPanel');
+  
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        infoPanel.innerHTML = button.getAttribute('data-info');
+      });
+  
+      button.addEventListener('mouseleave', () => {
+        infoPanel.innerHTML = "Survolez un bouton pour voir les infos ici.";
+      });
+    });
+  </script>
+  
+</body>
+</html>
