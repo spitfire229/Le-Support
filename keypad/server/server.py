@@ -3,7 +3,7 @@ import asyncio
 import websockets
 import keyboard
 
-async def handle_client(websocket, path):
+async def handle_client(websocket):  # plus de `path`
     print("Client connecté !")
     try:
         async for message in websocket:
