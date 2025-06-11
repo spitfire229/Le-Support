@@ -3,7 +3,7 @@ let ws;
 
 function connect() {
   // Remplace par l'IP de ton PC
-  ws = new WebSocket("ws://192.168.1.10:8765");
+  ws = new WebSocket("ws://192.168.1.13");
 
   ws.onopen = () => console.log("Connecté au serveur !");
   ws.onclose = () => console.log("Déconnecté !");
