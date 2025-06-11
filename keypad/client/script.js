@@ -1,7 +1,7 @@
 let ws;
 
 function connect() {
-  ws = new WebSocket("ws://192.168.1.13");
+  ws = new WebSocket("ws://192.168.1.13:8765");
 
   ws.onopen = () => {
     console.log("Connecté au serveur !");
