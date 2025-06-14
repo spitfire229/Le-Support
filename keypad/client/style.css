@@ -47,9 +47,9 @@ body {
       background: #444;
       padding: 10px;
       border-radius: 10px;
-      width: fit-content;
+      width: 550px;
       max-width: 90vw;
-      max-height: 90vh;
+      max-height: 80vh;
       min-width: calc(4 * 90px + 3 * 10px); /* 4 colonnes + 3 gaps */
       min-height: calc(3 * 90px + 2 * 10px); /* 3 lignes + 2 gaps */
       resize: both;
