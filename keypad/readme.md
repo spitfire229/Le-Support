@@ -1,9 +1,48 @@
+├── client /
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+└── server /
+    ├── server.py
+    └── env /
+
+index.html
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Clavier Keypad</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="etat">
+    <div id="status-indicator" class="status disconnected"></div>
+    <button onclick="location.reload()" id="resetBtn">connection...</button>
+    
+  </div>
+<div id="grid-container"></div>
+<script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+
+script.js
+ 
 document.addEventListener("DOMContentLoaded", () => {
   // WebSocket
   const indicator = document.getElementById("status-indicator");
   const resetBtn = document.getElementById('resetBtn');
 
-  const ws = new WebSocket("wss://192.168.1.13:8765");
+  const ws = new WebSocket("ws://192.168.1.13:8765");
 
   ws.onopen = () => {
     console.log("Connecté!");
@@ -182,3 +221,180 @@ document.addEventListener("DOMContentLoaded", () => {
   renderKeys();
 
 });
+
+
+
+style.css
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.keypad button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* centrage vertical */
+      background: #222;
+      color: #eee;
+      font-family: sans-serif;
+      height: 100vh;
+      margin: 0;
+      background-image: url('./fond.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .etat
+    {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+
+    #resetBtn {
+      margin: 10px;
+      padding: 5px 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 90px);
+      gap: 10px;
+      justify-content: center;
+      background: #444;
+      padding: 10px;
+      border-radius: 10px;
+      width: 550px;
+      max-width: 90vw;
+      max-height: 80vh;
+      min-width: calc(4 * 90px + 3 * 10px); /* 4 colonnes + 3 gaps */
+      min-height: calc(3 * 90px + 2 * 10px); /* 3 lignes + 2 gaps */
+      resize: both;
+      overflow: auto;
+    }
+
+    .key {
+      width: 90px;
+      height: 90px;
+      background: #666;
+      color: #fff;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s;
+      z-index: 1;
+    }
+
+    .key:hover {
+      background: #888;
+    }
+
+    .dragging {
+      position: absolute;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.9;
+      background: #aaa;
+    }
+
+#resetBtn {
+  transition: all 0.5s ease;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: #ff7b00;
+  color: black;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  max-height: 40px;
+}
+
+#resetBtn.shrink {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0;
+  color: transparent;
+}
+#resetBtn.connected {
+  background-color: #4caf50; /* vert */
+}
+#resetBtn.disconnected {
+  background-color: #f44336; /* rouge */
+}
+#resetBtn.error {
+  background-color: #ff9800; /* orange */
+}
+
+
+#resetBtn.shrink {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0;
+  color: transparent;
+  transition: all 1.5s ease;
+}
+
+/* Couleurs selon statut */
+#resetBtn.connected {
+  background-color: #4caf50; /* vert */
+}
+
+#resetBtn.disconnected {
+  background-color: #f44336; /* rouge */
+}
+
+#resetBtn.error {
+  background-color: #ff9800; /* orange */
+}
+
+
+server.py
+
+# server/server.py
+import asyncio
+import websockets
+import keyboard
+
+async def handle_client(websocket):  # plus de `path`
+    print("Client connecté !")
+    try:
+        async for message in websocket:
+            print(f"Reçu : {message}")
+            # Envoie la touche reçue au clavier
+            if len(message) == 1:
+                keyboard.press_and_release(message)
+            elif message == "enter":
+                keyboard.press_and_release("enter")
+            elif message == "backspace":
+                keyboard.press_and_release("backspace")
+            else:
+                print(f"Touche non prise en charge : {message}")
+    except websockets.exceptions.ConnectionClosed:
+        print("Client déconnecté.")
+
+async def main():
+    async with websockets.serve(handle_client, "0.0.0.0", 8765):
+        print("Serveur en attente sur ws://0.0.0.0:8765 ...")
+        await asyncio.Future()  # Attend indéfiniment
+
+if __name__ == "__main__":
+    asyncio.run(main())

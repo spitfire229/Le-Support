@@ -1,29 +1,33 @@
-# server/server.py
 import asyncio
+import ssl
 import websockets
-import keyboard
 
-async def handle_client(websocket):  # plus de `path`
-    print("Client connecté !")
+# Configuration SSL
+ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+ssl_context.load_cert_chain(certfile="cert.pem", keyfile="key.pem")
+
+# Handler pour les connexions WebSocket
+async def echo(websocket, path):
+    print("Client connecté")
     try:
         async for message in websocket:
-            print(f"Reçu : {message}")
-            # Envoie la touche reçue au clavier
-            if len(message) == 1:
-                keyboard.press_and_release(message)
-            elif message == "enter":
-                keyboard.press_and_release("enter")
-            elif message == "backspace":
-                keyboard.press_and_release("backspace")
-            else:
-                print(f"Touche non prise en charge : {message}")
-    except websockets.exceptions.ConnectionClosed:
-        print("Client déconnecté.")
+            print(f"Message reçu : {message}")
+            await websocket.send(f"Echo: {message}")
+    except websockets.exceptions.ConnectionClosedOK:
+        print("Client déconnecté proprement")
+    except Exception as e:
+        print(f"Erreur : {e}")
 
+# Lancement du serveur WebSocket sécurisé
 async def main():
-    async with websockets.serve(handle_client, "0.0.0.0", 8765):
-        print("Serveur en attente sur ws://0.0.0.0:8765 ...")
-        await asyncio.Future()  # Attend indéfiniment
+    async with websockets.serve(
+        echo,
+        host="0.0.0.0",
+        port=8765,
+        ssl=ssl_context,
+    ):
+        print("Serveur WebSocket sécurisé démarré sur wss://localhost:8765")
+        await asyncio.Future()  # Run forever
 
 if __name__ == "__main__":
     asyncio.run(main())
