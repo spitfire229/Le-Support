@@ -20,6 +20,8 @@ document.querySelectorAll('#buttonsMode button').forEach(btn => {
   });
 });
 
+
+
 // Trackpad
 let lastX = null;
 let lastY = null;
@@ -163,3 +165,5 @@ editKeypadBtn.addEventListener('click', () => {
 });
 
 loadKeypadButtons();
+
+

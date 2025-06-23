@@ -8,8 +8,36 @@
     display: none;
  }
 
+@font-face {
+  font-family: 'Heavitas';
+  src: url('/font/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fulldozer';
+  src: url('/font/Fulldozer.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Gobold';
+  src: url('/font/Gobold\ Blocky\ Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bakery';
+  src: url('/font/Bakery.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+.heavitas
+{
+    font-family: 'heavitas', sans-serif;
+}
 
 /*
 --                                          _
@@ -39,7 +67,7 @@ body {
    font-size: medium;
     height: 100vh;
     scroll-behavior: smooth;
-    background-color: #242424 ;
+    background-color: #2a2a2a ;
     color: #fff;
     transition: all 0.5s ease;
     display: block;
@@ -60,8 +88,8 @@ body {
 .ghost
 {
     position: absolute;
-    margin-top: 5%;
-    margin-left: 3%;
+    margin-top: 10%;
+    margin-left: 2%;
 }
 
 h1
@@ -161,11 +189,12 @@ margin-left: 20%;
 }
 .lancement
 {
-    width: 50%;
-    margin-left: -65%;
-    margin-top: 20%;
+    width: 15%;
+    margin-left: -46%;
+    margin-top: 6%;
     position: absolute;
     top: 0; 
+    opacity: 50%;
     
 }
 .profil
@@ -238,7 +267,7 @@ align-items: center;
 
 .enter
 {
-    width: 60%;
+    width: 80%;
     margin-top: 5%;
     transition: 0.5s;
 }
@@ -358,12 +387,14 @@ border-radius: 20px;
     text-align: left;
     padding-top: 10px;
     transition: 0.5s;
-    border-radius: 10px;
-    
+    border-radius: 20px 20px 0px 0px;
+    background-color: #5d5d5d;
+    transition: 0.5s;
 }
 .bottom:hover
 {
     background-color: #464646;
+    transform: scale(90%);
 }
 
 
@@ -437,8 +468,9 @@ boutton {
     position: fixed;
     width: 20%;
     height: 100vh;
-    font-size: medium;
+    font-size: 90%;
     top: 0;
+    font-family: 'heavitas', sans-serif;
 }
 .container
 {
@@ -579,7 +611,14 @@ width: 120px;
 }
 
 
+.charon 
+{
+    width: 30%;
+    margin-left: 20%;
+    border-radius: 20px;
+    border: #535353 2px solid;
 
+}
 
 
 

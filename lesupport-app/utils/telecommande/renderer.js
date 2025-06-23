@@ -4,3 +4,8 @@ window.electronAPI.handleCommand((_event, command) => {
     // Exécute l'action de lecture
   }
 });
+const { ipcRenderer } = require('electron');
+
+document.getElementById('telecommande-btn').addEventListener('click', () => {
+  ipcRenderer.send('open-telecommande');
+});

@@ -1,13 +1,14 @@
-addon/
-├── main.js         ← process principal Electron
-├── preload.js      ← communication entre main et renderer
-├── renderer.js     ← logique frontend de l'app
-├── telecommande/   ← interface téléphone
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-├── package.json
-└── env / 
+utils/
+  ├── telecommande /  
+    ├── main.js         ← process principal Electron
+    ├── preload.js      ← communication entre main et renderer
+    ├── renderer.js     ← logique frontend de l'app
+    ├── telecommande/   ← interface téléphone
+    │   ├── index.html
+    │   ├── script.js
+    │   └── style.css
+    ├── package.json
+    └── env / 
 
 main.js : 
 
@@ -47,6 +48,54 @@ function createWindow() {
 if (mainWindow) {
   mainWindow.webContents.send('telecommande-command', msg.toString());
 }
+
+function createKeypadButton(text, command) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.dataset.command = command;
+
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = '×';
+  removeBtn.classList.add('keypad-remove');
+  removeBtn.title = 'Supprimer';
+
+  removeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    button.remove(); // supprime le bouton entier
+  });
+
+  button.appendChild(removeBtn);
+  return button;
+}
+
+// Lorsqu'une commande est sélectionnée
+document.querySelectorAll('#commandList li').forEach(item => {
+  item.addEventListener('click', () => {
+    const commandText = item.textContent;
+    const command = item.getAttribute('data-command');
+
+    const newButton = createKeypadButton(commandText, command);
+    document.getElementById('keypadGrid').appendChild(newButton);
+
+    document.getElementById('commandList').classList.add('hidden');
+  });
+});
+
+// Pour les boutons existants : ajout du bouton de suppression
+document.querySelectorAll('#keypadGrid button').forEach(button => {
+  if (!button.querySelector('.keypad-remove')) {
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = '×';
+    removeBtn.classList.add('keypad-remove');
+    removeBtn.title = 'Supprimer';
+    removeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      button.remove();
+    });
+    button.appendChild(removeBtn);
+  }
+});
+
 
 
 
@@ -132,6 +181,7 @@ server.listen(3000, async () => {
     console.error('Erreur génération QR code :', err);
   }
 });
+
 
 
 index.html : 

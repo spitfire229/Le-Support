@@ -13,6 +13,8 @@ const path = require('path');
 const versionFilePath = path.join(__dirname, 'version.json'); // Fichier local de version
 const updateUrl = "https://lesupport.me/lesupport.app/update.json"; // URL du fichier update.json
 
+
+
 // Fonction pour lire la version actuelle du programme
 function getCurrentVersion() {
     if (fs.existsSync(versionFilePath)) {
