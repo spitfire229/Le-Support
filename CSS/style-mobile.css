@@ -7,6 +7,36 @@
 .hidden {
     display: none;
  }
+ @font-face {
+  font-family: 'Heavitas';
+  src: url('/font/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fulldozer';
+  src: url('/font/Fulldozer.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gobold';
+  src: url('/font/Gobold\ Blocky\ Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bakery';
+  src: url('/font/Bakery.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.heavitas
+{
+    font-family: 'heavitas', sans-serif;
+}
 
 /*
 --                                          _
