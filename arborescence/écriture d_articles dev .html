@@ -664,36 +664,7 @@ function loadFromLocalStorage() {
     }
 }
 
-// Load content from localStorage when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    var userId = localStorage.getItem('userId'); // Retrieve the user ID from localStorage
-    console.log('User ID from localStorage:', userId); // Debug: Log the retrieved user ID
-
-    // Check if the user ID is valid
-    if (!userId) {
-        // Redirect to login page if user ID is invalid
-        window.location.href = 'login.html';
-        return;
-    }
-
-    isValidUserId(userId).then(isValid => {
-        if (!isValid) {
-            // Redirect to login page if user ID is invalid
-            window.location.href = 'login.html';
-            return;
-        }
-
-        // If the user ID is valid, proceed with loading the content
-        loadFromLocalStorage();
-
-        // Save content to localStorage whenever the editor or title changes
-        document.getElementById('title').addEventListener('input', saveToLocalStorage);
-        document.getElementById('editor').addEventListener('input', saveToLocalStorage);
-    }).catch(error => {
-        console.error('Erreur:', error);
-        // Optionally show an error message or redirect
-    });
-});
+// Load
 
 function copyToClipboard() {
             const editor = document.getElementById('editor');

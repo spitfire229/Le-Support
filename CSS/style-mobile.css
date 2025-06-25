@@ -57,7 +57,16 @@
     opacity: calc(0%);
     z-index: calc(-50);
 }
-
+.lancement
+{
+    width: 15%;
+    margin-left: -46%;
+    margin-top: 6%;
+    position: absolute;
+    top: 0; 
+    opacity: 50%;
+    
+}
 
 body {
     margin: 0;
