@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>espace personel</title>
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <link rel="stylesheet" href="../CSS/perso.CSS">
+    <link rel="stylesheet" href="../CSS/frise chonologique.css">
+    <link rel="icon" href="./img/s.png" />
+    
+</head>
+<style>
+
+.banniere
+    {
+        background-image: url(../img/banniere\ le\ support.png);
+        background-size: cover; /* Resize the background image to be fully visible */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Don't repeat the background image */
+        width: 80%; /* Full width of the parent container */
+        height: 100px; /* Adjust height automatically to keep the aspect ratio */
+        text-align: left;
+
+        margin-bottom: 5%;
+        padding-top: 1%;
+        padding-bottom: 2%;
+
+        border-radius: 0px 0px 500px 0px;
+        
+    }
+    .espace_travail
+    {
+        width: 80%;
+        height: auto;
+        background-color: #3B3B3B;
+        color: #fff;
+        margin-left: 10%;
+        padding: 25px;
+        border-radius: 25px;
+    }
+    .grid-top
+    {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(1, 100px);
+        gap: 5px; 
+    }
+    .grid-top button
+    {
+        width: 80px;
+        height: 80px;
+        border: none;
+        border-radius: 10px;
+        background-color: #6C6C6C;
+        transition: 0.5s;
+    }
+    
+    .container3 button
+    {
+        
+       
+        border: none;
+        border-radius: 10px;
+        background-color: #6C6C6C;
+        transition: 0.5s;
+    }
+    .grid-top button:hover,
+    .container3 button:hover
+    {
+        transform: scale(105%);
+        background-color: #480000;
+        
+    }
+    .grid-top button img
+    {
+        width: 65px;
+    }
+    .body-container3
+{            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+       
+        margin-bottom: 2%;}
+
+
+
+        .grid-mid-left
+        {
+            width: 100%;
+        }
+            .container3 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr 1fr ;
+            grid-template-areas:
+                "box3 box2 box1 box5 box5"
+                "box4 box4 box1 box5 box5";
+            gap: 10px;
+            width: 90%;
+            height: 80%;
+        }
+        .box {
+            position: relative;
+            border: 2px solid rgb(167, 0, 0);
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+            border-radius: 25px;
+        }
+       
+        .box a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+        }
+        .box1 { grid-area: box1;overflow: hidden; background-image: url('../img/excalidraw.png');}
+        .box2 { grid-area: box2;overflow: hidden; background-image: url('../img/legifrance.jpg');}
+        .box3 { grid-area: box3;overflow: hidden; background-image: url('../img/ecrire article.png');}
+        .box4 { grid-area: box4;overflow: hidden; background-image: url('../img/blog tb.png');}
+        .box5 { grid-area: box5;overflow: hidden; background-image: url('../img/BU\ site.png');}
+        .box6 { grid-area: box6; overflow: hidden;  background-image: url('./img/');}
+        #monElement, #element2 {
+            display: none;
+        }
+        .box img
+        {
+           width: 100%;
+           scale: 115%;
+        }
+        .services
+        {
+            width: 80%;
+            background-color: #6C6C6C;
+            margin-left: 10%;
+            border-radius: 25px;
+            padding: 3%;
+            text-align: center;
+        }
+        .services img
+        {
+            width: 30%;
+            margin: 3%;
+            background-color: #3B3B3B;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        
+.container5 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+margin-left: 5%;
+    margin-top: 20px;
+}
+
+#searchInput, .filters select {
+    width: 25%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    background-color: #464646;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #464646;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #ff7300;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background: #ff7300;
+}
+.exam
+{
+width: 80%;
+border: 1px solid #fff;
+margin-left: 5%;
+padding: 5%;
+border-radius: 25px;
+}
+
+.star {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+        }
+        
+.favoris
+{
+    background-color: #464646;
+    border: 1px solid #6d6d6d;
+    border-radius: 10px; 
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    
+}
+.favoris img 
+{
+    width: 24px;
+
+}
+    </style>
+</head>
+<body>
+    <div class="banniere">
+        <h1 style="text-align: left;">Bienvenue <span id="usernameDisplay"></span>!</h1>
+        <h2 class="marged5">heureux de vous revoir.</h2>
+    </div>
+    <div class="espace_travail">
+        <h3>votre espace de travail</h3>
+        <p>outils :</p>
+        <div class="grid-top">
+            <a href="profils.html">
+                <button>
+                    <img src="../img/profil.svg" alt="">
+                </button>
+            </a>
+            <a href="">
+                <button>
+                    <img src="../img/cooperation ET.svg" alt="">
+                </button>
+            </a>
+            <button id="monBouton">
+                <img src="../img/calendrier.svg" alt="">
+            </button>
+            <a href="https://portail.parisnanterre.fr/page-student/">
+                <button>
+                    <img src="../img/logo nanterre.svg" alt="">
+                </button>
+            </a>
+            <a href="../arborescence/login.html">
+                <button>
+                    <img src="../img/login.svg" alt="">
+                </button>
+            </a>
+            <a href="">
+                <button>
+                    <img src="../img/creer profil auteur .svg" alt="">
+                </button>
+            </a>
+        </div>
+        <div class="back" id="monElement">
+            <div class="timeline-container">
+                <div class="heads">
+                    <div class="year">Année 2024/2025</div>
+                    <div id="current-date-display"></div>
+                    <div id="days-to-next-event"></div>
+                </div>
+                <div class="months">
+                    <div class="month" style="left: calc(0% - 2%);">Jan</div>
+                    <div class="month" style="left: calc(8.33% - 2%);">Fév</div>
+                    <div class="month" style="left: calc(16.66% - 2%);">Mar</div>
+                    <div class="month" style="left: calc(25% - 2%);">Avr</div>
+                    <div class="month" style="left: calc(33.33% - 2%);">Mai</div>
+                    <div class="month" style="left: calc(41.66% - 2%);">Juin</div>
+                    <div class="month" style="left: calc(50% - 2%);">Juil</div>
+                    <div class="month" style="left: calc(58.33% - 2%);">Aoû</div>
+                    <div class="month" style="left: calc(66.66% - 2%);">Sep</div>
+                    <div class="month" style="left: calc(75% - 2%);">Oct</div>
+                    <div class="month" style="left: calc(83.33% - 2%);">Nov</div>
+                    <div class="month" style="left: calc(91.66% - 2%);">Déc</div>
+                </div>
+                <div class="timeline">
+                    <div class="current-date" id="current-date"></div>
+                    <div class="key-event" data-date="2024-09-08" style="left: calc(75% - 5px);">
+                        <span>pré-rentrée</span>
+                        <span>8/15 sep</span>
+                    </div>
+                    <div class="key-event" data-date="2025-01-06" style="left: calc(02% - 5px);">
+                        <span>exams 1er sem</span>
+                        <span>6/19 janv</span>
+                    </div>
+                    <div class="key-event" data-date="2025-08-20" style="left: calc(39% - 5px);">
+                        <span>exams 2eme sem</span>
+                        <span>16/29 mai</span>
+                    </div>
+                    <div class="key-event" data-date="2025-11-25" style="left: calc(51% - 5px);">
+                        <span>rattrapages</span>
+                        <span>16/29 juin</span>
+                    </div>
+                    <div class="icon" style="left: calc(95% - 12px);"></div>
+                    <div class="icon2" style="left: calc(60% - 12px);"></div>
+                    <div class="icon3" style="left: calc(47% - 12px);"></div>
+                    <div class="icon4" style="left: calc(37% - 12px);"></div>
+                    <div class="icon5" style="left: calc(92% - 12px);"></div>
+                    <div class="icon6" style="left: calc(76% - 12px);"></div>
+                    <div class="icon7" style="left: calc(1.5% - 12px);"></div>
+                    <div class="cursor" style="left: calc(51% - 5px);"></div>
+                    <div class="cursor" style="left: calc(39% - 5px);"></div>
+                    <div class="cursor" style="left: calc(75% - 3px);"></div>
+                    <div class="cursor" style="left: calc(02% - 5px);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-mid-left">
+            <div class="body-container3">
+                <div class="container3">
+                    <button class="box box1" onclick="window.location.href='https://excalidraw.com/';"></button>
+                    <button class="box box2" onclick="window.location.href='https://legifrance.gouv.fr/';"></button>
+                    <button class="box box3" onclick="window.location.href='../arborescence/écriture d_articles .html';"></button>
+                    <button class="box box4" onclick="window.location.href='../arborescence/selection auteur.html';"></button>
+                    <button class="box box5" onclick="window.location.href='https://bu.parisnanterre.fr/';"></button>
+                </div>
+            </div>
+            <div class="exam">
+                <p>2 mois avant chaque examen, une section speciale de revision apparaitra ici</p>
+            </div>
+        </div>
+        <img style="width: 20%; margin-left: 40%;" id="bouton2" src="../img/services.png" alt="">
+        <div class="services" id="element2">
+            <a href="./schema.html"><img src="../img/schema.png" alt=""></a>
+            <a href="./auteurs.html"><img src="../img/logo blogs.png" alt=""></a>
+            <a href="./methodologie.html"><img src="../img/logo methodo.png" alt=""></a>
+            <a href="./sources.html"><img src="../img/source.png" alt=""></a>
+            <a href="./jurisprudences.html"><img src="../img/jurisprudence.png" alt=""></a>
+            <a href="./QCM.html"><img src="../img/logo QCM.png" alt=""></a>
+            <a href="./maximes latines .html"><img src="../img/maximes latines.png" alt=""></a>
+            <a href="./lexique.html"><img src="../img/logo lexique.png" alt=""></a>
+            <a href="./publications.html"><img src="../img/logo publications.png" alt=""></a>
+            <a href="./base de D.html"><img src="../img/logo base de données.png" alt=""></a>
+            <a href="./citations.html"><img src="../img/logo citations.png" alt=""></a>
+            <a href=""><img src="../img/biographie.png" alt=""></a>
+        </div>
+    </div>
+    <div class="container5">
+        <h1>Document Search</h1>
+        <input type="text" id="searchInput" placeholder="rechercher par mot clef">
+        <div class="filters">
+            <select id="yearFilter">
+                <option value="">toutes années</option>
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+                <option value="L3">L3</option>
+                <option value="M1">M1</option>
+                <option value="M2">M2</option>
+            </select>
+            <select id="subjectFilter">
+                <option value="">toutes matieres</option>
+                <option value="Droit Civil">Droit Civil</option>
+                <option value="Droit Pénal">Droit Pénal</option>
+            </select>
+            <select id="typeFilter">
+                <option value="">tout types de documents</option>
+                <option value="ouvrages">Ouvrages</option>
+                <option value="cours">Cours</option>
+                <option value="schemas">Schémas</option>
+                <option value="podcast">podcast</option>
+            </select>
+            <button class="favoris" id="showSavedButton"> <img src="../img/star on.svg" alt="">favoris</button>
+        </div>
+        <div id="results"></div>
+    </div>
+
+    <footer class="footer">
+    
+        <ul>
+            <li><a href="../index.html"><img class="footer-ico" src="../img/footer accueil.png" alt=""></a></li>
+            <li><a href="../arborescence/CGU.html"><img class="footer-ico" src="../img/footer CGU.png" alt=""></a></li>
+            <li><a href="../arborescence/signaler.html"><img class="footer-ico"src="../img/footer erreur.png" alt=""></a></li>
+        </ul>
+       
+        <img class="footer-logo" src="../img/logo 4.0.png" alt="Description de l'image"> 
+        <p>©2024 lesupport.me</p>
+    <img class="footer-fond" src="../img/footer nanterre.png" alt="">
+    </footer>
+
+    <script src="../JS/ALL-get_ID.js"></script>
+    <script>
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Ajout des écouteurs d'événements
+    document.getElementById('searchInput').addEventListener('input', filterDocuments);
+    document.getElementById('yearFilter').addEventListener('change', filterDocuments);
+    document.getElementById('subjectFilter').addEventListener('change', filterDocuments);
+    document.getElementById('typeFilter').addEventListener('change', filterDocuments);
+    document.getElementById('showSavedButton').addEventListener('click', showSavedDocuments);
+
+    let documents = {};
+
+    // Récupération des documents JSON
+    fetch('../Json/big mama.json')
+        .then(response => response.json())
+        .then(data => {
+            documents = data;
+            displayDocuments(documents);
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+
+    function filterDocuments() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const year = document.getElementById('yearFilter').value;
+        const subject = document.getElementById('subjectFilter').value;
+        const type = document.getElementById('typeFilter').value;
+
+        const filteredDocuments = {};
+
+        for (const category in documents) {
+            if (type && category !== type) continue;
+
+            for (const level in documents[category]) {
+                if (year && level !== year) continue;
+
+                const filteredDocs = documents[category][level].filter(doc => {
+                    return (!subject || doc.matiere === subject) &&
+                           (doc.title.toLowerCase().includes(query) || doc.matiere.toLowerCase().includes(query));
+                });
+
+                if (filteredDocs.length > 0) {
+                    if (!filteredDocuments[category]) {
+                        filteredDocuments[category] = {};
+                    }
+                    filteredDocuments[category][level] = filteredDocs;
+                }
+            }
+        }
+
+        displayDocuments(filteredDocuments);
+    }
+
+    function displayDocuments(documents) {
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = '';
+
+        for (const category in documents) {
+            for (const level in documents[category]) {
+                documents[category][level].forEach(doc => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    
+                    const img = document.createElement('img');
+                    img.src = doc.img_src;
+                    card.appendChild(img);
+                    
+                    const title = document.createElement('h3');
+                    title.textContent = doc.title;
+                    card.appendChild(title);
+                    
+                    const matiere = document.createElement('p');
+                    matiere.textContent = `Matière: ${doc.matiere}`;
+                    card.appendChild(matiere);
+                    
+                    const levelText = document.createElement('p');
+                    levelText.textContent = `Niveau: ${level}`;
+                    card.appendChild(levelText);
+                    
+                    const categoryText = document.createElement('p');
+                    categoryText.textContent = `Type: ${category}`;
+                    card.appendChild(categoryText);
+
+                    const star = document.createElement('img');
+                    star.classList.add('star');
+                    star.src = localStorage.getItem(doc.url) === 'true' ? '../img/star on.svg' : '../img/star off.svg';
+                    star.addEventListener('click', () => toggleStar(star, doc.url));
+                    card.appendChild(star);
+
+                    const link = document.createElement('a');
+                    link.href = doc.url;
+                    link.textContent = 'ouvrir le contenu';
+                    card.appendChild(link);
+                    
+                    resultsContainer.appendChild(card);
+                });
+            }
+        }
+    }
+
+    function toggleStar(star, url) {
+        const isStarred = localStorage.getItem(url) === 'true';
+        localStorage.setItem(url, !isStarred);
+        star.src = !isStarred ? '../img/star on.svg' : '../img/star off.svg';
+    }
+
+    function showSavedDocuments() {
+        const savedDocuments = {};
+
+        for (const category in documents) {
+            for (const level in documents[category]) {
+                const savedDocs = documents[category][level].filter(doc => localStorage.getItem(doc.url) === 'true');
+
+                if (savedDocs.length > 0) {
+                    if (!savedDocuments[category]) {
+                        savedDocuments[category] = {};
+                    }
+                    savedDocuments[category][level] = savedDocs;
+                }
+            }
+        }
+
+        displayDocuments(savedDocuments);
+    }
+
+    // Gestion de l'affichage des éléments
+    document.getElementById("monBouton").addEventListener("click", function() {
+        var element = document.getElementById("monElement");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    });
+
+    document.getElementById("bouton2").addEventListener("click", function() {
+        var element = document.getElementById("element2");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    });
+});
+
+
+
+
+
+    </script>
+</body>
+</html>

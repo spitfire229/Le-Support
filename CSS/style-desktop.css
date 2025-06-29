@@ -616,18 +616,25 @@ width: 120px;
 .charon 
 {
     width: 30%;
-    margin-left: 20%;
+    margin-left: 35%;
     border-radius: 20px;
     border: #535353 2px solid;
 
 }
 
 
+.bash
+{
+width: 90%;
+height: auto;
 
-
-
-
-
+margin-left: 5%;
+border-radius: 20px;
+background-color: #2a2a2a;
+padding: 15px;
+color: #b1b1b1;
+border: #525252 2px solid;
+}
 
 
 

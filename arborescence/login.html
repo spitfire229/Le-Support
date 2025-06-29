@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+  	<script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="icon" href="../img/icon.png" />
+	
+  <style>
+
+body{
+			background: #891000;
+			transition: all .5s;
+			align-items: center;
+			justify-content: center;
+		}
+a:hover,
+a:focus,
+a:active 
+		{
+        text-decoration: none;
+        color: inherit;
+	    }
+
+.body1
+		{
+		background: #891000;
+		transition: all .5s;
+		padding: 1px;
+      	min-height: 100vh;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+		}
+		.veen{
+			width: 70%;
+			margin: 100px auto;
+			background: rgba(46, 0, 0, 0.5);
+			min-height: 400px;
+			display:table;
+			position: relative;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			border-radius: 15px;
+		}
+		.veen > div {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: #fff;
+            border-radius: 15px;
+		}
+		.veen button{
+			background: transparent;
+			
+			display: inline-block;
+			padding: 10px 30px;
+			border: 3px solid #fff;
+			border-radius: 50px;
+			background-clip: padding-box;
+			position: relative;
+			color: #FFF;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			transition: all .25s;
+		}
+		.veen button.dark{
+			border-color: #7c0000;
+			
+		}
+		.veen .move button.dark{
+			border-color: #7c0000;
+			
+		}
+		.veen .splits p{
+			font-size: 18px;
+		}
+		.veen button:active{
+			box-shadow: none;			
+		}
+		.veen button:focus{
+			outline: none;			
+		}
+		.veen > .wrapper {
+			position: absolute;
+			width: 40%;
+			height: 120%;
+			top: -10%;
+			left: 5%;
+			background: #242424;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			transition: all .5s;
+			color: #ffffff;
+			overflow: hidden;
+            border-radius: 15px;
+		}
+		.veen .wrapper > form{
+			padding: 15px 30px 30px;
+			width: 100%;
+			transition: all .5s;
+			background: #242424;
+			width: 100%; 
+		}
+		.veen .wrapper > form:focus{
+		outline: none;
+		}
+		.veen .wrapper #login{
+			padding-top: 20%;
+      visibility: visible;
+		}
+		.veen .wrapper #register{
+			transform: translateY(-80%) translateX(100%);
+      visibility: hidden;
+		}
+		.veen .wrapper.move #register{
+			transform: translateY(-80%) translateX(0%);
+      visibility: visible;
+		}
+		.veen .wrapper.move #login{
+			transform: translateX(-100%);
+      visibility: hidden;
+		}
+		.veen .wrapper > form > div {
+			position: relative;
+			margin-bottom: 15px;
+		}
+		.veen .wrapper label{
+			position: absolute;
+			top: -7px;
+			font-size: 12px;
+			white-space: nowrap;
+			background: #242424;
+			text-align: left;
+			left: 15px;
+			padding: 0 5px;
+			color: #ffffff;
+			pointer-events: none;
+		}
+		.veen .wrapper h3{
+			margin-bottom: 25px;
+		}
+		.veen .wrapper input{
+			height: 40px;
+			padding: 5px 15px;
+			width: 100%;
+			border: solid 1px #ffffff;
+		}
+.veen .wrapper input{
+			height: 40px;
+			padding: 5px 15px;
+			width: 100%;
+			border: solid 1px #999;
+            background-color: #242424;
+		}
+		.veen .wrapper input:focus{
+			outline: none;
+			border-color: #ff4931;
+		}
+		.veen > .wrapper.move{
+			left: 45%;
+		}
+		.veen > .wrapper.move input:focus{
+			border-color: #ff0000;
+		
+		}
+		@media (max-width: 767px){
+			.veen{
+				padding: 5px;
+				margin: 0;
+				width: 100%;
+				display: block;
+			}
+			.veen > .wrapper{
+				position: relative;
+				height: auto;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			.veen > div{
+				display: inline-block;
+			}
+			.splits{
+				width: 50%;
+				background: #fff;
+				float: left;
+                
+			}
+			.splits button{
+				width: 100%;
+				border-radius: 0;
+				background: #505050; 
+				border: 0;
+				opacity: .7;
+			}
+			.splits button.active{
+				opacity: 1;
+			}
+			.splits button.active{
+				
+				background: #242424;
+				border-radius: 15px;
+			}
+			.splits.rgstr-btn button.active{
+				background: #e06822;
+				border-radius: 15px;
+			}
+			.splits p{
+				display: none;
+			}
+			.veen > .wrapper.move{
+				left: 0%;
+			}
+		}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+  box-shadow: inset 0 0 0 50px #fff
+}
+
+.logo
+{
+    width: 40%;
+    margin-left: 30%;
+}
+.button
+{
+	display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #7c000000;
+	border: 3px solid #7c0000;
+    
+    border-radius: 100px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.formulaire
+
+{
+	margin-top: 10px;
+}
+.site-link{
+padding: 5px 15px;
+	position: fixed;
+	z-index: 99999;
+	background: #fff;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	right: 30px;
+	bottom: 30px;
+	border-radius: 10px;
+}
+.site-link img{
+	width: 30px;
+	height: 30px;
+}
+  </style>
+<body>
+  
+    <img class="logo" src="./img/support 2.0.png" alt="">
+
+    <div class="body1">
+        <div class="veen">
+            <div class="login-btn splits">
+                <p>deja inscrit?</p>
+                <button class="active">Se connecter</button>
+            </div>
+            <div class="rgstr-btn splits">
+                <p>Pas encore de compte?</p>
+                <button>s'inscrire</button>
+            </div>
+            <div class="wrapper">
+                <h2>Connexion</h2>
+                <form id="loginForm">
+                    <div>
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username"><br>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password"><br><br>
+                    </div>
+                    <button class="dark" type="submit">connexion</button>
+                </form>
+
+                <form id="register" method="POST" onsubmit="sendMail(event)">
+                    <h3>S'inscrire</h3>
+                    <div>
+                        <label for="name">Nom:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                    </div>
+                    <div>
+                        <label for="identifiant">Identifiant:</label><br>
+                        <input type="text" id="identifiant1" name="identifiant" required><br>
+                    </div>
+                    <div>
+                        <label for="password">Mot de passe:</label><br>
+                        <input type="password" id="password1" name="password" required><br>
+                    </div>
+                    <button class="dark" type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+// Fonction pour générer un identifiant aléatoire
+function generateRandomID() {
+    return "S-" + Math.random().toString(36).substr(2, 6).toUpperCase(); // Identifiant du format: S-XXXXXX
+}
+
+// Fonction pour vérifier si l'ID existe déjà dans la liste
+function idExists(newID, users) {
+    return users.some(user => user.userID === newID);
+}
+
+async function sendMail(event) {
+    // Empêcher le rechargement de la page
+    event.preventDefault();
+
+    // Charger le fichier JSON contenant les utilisateurs
+    let users = [];
+    try {
+        const response = await fetch('../Json/user_data.json'); // Remplacez par le chemin réel vers votre fichier JSON
+        users = await response.json();
+        users = users.authors; // Adapter en fonction de la structure du JSON
+    } catch (error) {
+        console.error("Erreur lors du chargement du fichier JSON:", error);
+        return;
+    }
+
+    // Récupérer les valeurs du formulaire
+    var name = document.getElementById('name').value;
+    var password = document.getElementById('password1').value;
+	var identifiant = document.getElementById('identifiant1').value;
+
+    // Générer un identifiant unique
+    var ID;
+    do {
+        ID = generateRandomID();
+    } while (idExists(ID, users)); // Répéter tant que l'ID existe déjà
+
+    // Construire l'URL mailto
+    var subject = "Nouvelle inscription";
+    var body = "Nom: " + name + "\n" +
+               "Identifiant: " + identifiant + "\n" +
+               "Mot de passe: " + password + 
+			   "ID: " + ID + "\n" +"\n\n\n" +
+               "À l'attention de nos chers usagers : " + "\n" +
+               "Le processus d'enregistrement peut connaître certains délais de réponse. Un mail de confirmation vous sera envoyé dès l'activation de votre compte.\n\n\n";
+
+    // Encodage de l'URL pour éviter les erreurs
+    var mailto_link = "mailto:lesuppetudiant@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+    // Ouvrir le client de messagerie
+    window.location.href = mailto_link;
+}
+
+    </script>
+
+
+<script src="../JS/login- verification indentifiants connexion.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -24,10 +24,37 @@
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5138217448665937"
     crossorigin="anonymous"></script>
-    <style>
+<style>
+  .popuping {
+    position: fixed;
+    top: 20px;
+    right: -400px; /* Départ hors de l’écran */
+    background-color: #ff3b3b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 9999;
+    animation: slideIn 0.7s ease forwards, shake 0.6s 1s;
+    text-align: center;
+  }
 
+  @keyframes slideIn {
+    to {
+      right: 20px;
+    }
+  }
 
-    </style>
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+  }
+</style>
 
 </head>
 
@@ -57,7 +84,11 @@
 <div class="bricolage-section">
 <img class="mobile cache2" src="../img/cache2.png" alt="" id="toggleButton">
 
-
+<div id="popuping" class="popuping" style="display: none;">
+  ⚠️⚠️⚠️ Prière de vous connecter avec votre adresse mail de la fac ⚠️⚠️⚠️
+  <br> (********@PARISNANTERRE.FR)
+  <br>Sans quoi votre connexion aux cours sera bloquée
+</div>
 
 <section id="contentSection">
 
@@ -103,11 +134,11 @@
             
                                     <img class= "année " src= "../img/licence 1.png " > 
                                     <br> <br> <br>    
-                                    <div class="message">
+                                   <!-- <div class="message">
                                         lesupport se voit contraint de limiter l'accès de ses cours aux élèves de la faculté.  
                                        <p > Je vous invite à vous connecter via votre adresse mail de la fac afin de les consulter
                                         (********@PARISNANTERRE.FR)</p>
-                                    </div>
+                                    </div>-->
             
              <div class= "debug1 heavitas">
               
@@ -168,11 +199,11 @@
                                     <br> <br> <br>
             
                                     <br> <br> <br>    
-                                    <div class="message">
+                                    <!-- <div class="message">
                                         lesupport se voit contraint de limiter l'accès de ses cours aux élèves de la faculté.  
                                        <p class="rouge"> Je vous invite à vous connecter via votre adresse mail de la fac afin de les consulter
                                         (********@PARISNANTERRE.FR)</p>
-                                    </div>
+                                    </div> -->
             
             
                                      <h2>troisiéme semestre</h2>
@@ -244,7 +275,7 @@
     <div style="margin-bottom: 1rem;">
       <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
       <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
-      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">rapporter une erreur</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
     </div>
 
     <!-- Bas de page -->
@@ -283,6 +314,15 @@
 
 <script src="../JS/index- pop up.js">
 
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const popup = document.getElementById("popuping");
+      popup.style.display = "block";
+    }, 1000); // Affichage après 1 seconde
+  });
 </script>
 
 </html>
