@@ -8,7 +8,7 @@ iframe {
     scrollbar-width: none;
 }
  body {
-    background-color: #242424;
+    background-color: #2A2A2A;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ iframe {
  .sidebar-right {
     width: 70px;
     height: 100vh;
-    background-color: #1e1e1e;
+    background-color: #242424;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +32,12 @@ iframe {
 
  .mid-bar {
     flex-grow: 1;
-    background-color: #302e2e;
+    background-color: #2A2A2A;
     display: flex;
     border: none;
     margin: none;
     justify-content: center;
+    margin: 0;
     align-items: center;
 }
 
@@ -160,7 +161,7 @@ background-color: #984b4b;
 
  .div-background {
     width: 200%;               /* 95% de la largeur de la div conteneuse */
-    height: 95%;              /* 95% de la hauteur de la div conteneuse */
+    height: 100%;              /* 95% de la hauteur de la div conteneuse */
     background-image: url('../img/accueil.png'); /* Remplacez par le chemin de votre image */
     background-position: center center; /* Centre l'image en hauteur et largeur */
     background-size: cover;  /* L'image couvre toute la div tout en respectant ses proportions */
