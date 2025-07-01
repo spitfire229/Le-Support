@@ -1,0 +1,16 @@
+{
+  "titre": "Présentation de l'application",
+  "version": "1.3.2",
+  "description": "Cette application permet de gérer vos projets de manière intuitive et rapide.",
+  "fonctionnalités": [
+    "Ajout et suppression de projets",
+    "Synchronisation en ligne",
+    "Interface personnalisable",
+    "Mode hors-ligne"
+  ],
+  "auteur": {
+    "nom": "Charles Kremer",
+    "site": "https://lesupport.me"
+  },
+  "mise_a_jour": "2025-06-28"
+}

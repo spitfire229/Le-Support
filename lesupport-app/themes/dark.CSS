@@ -4,7 +4,7 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
-    overflow: auto; 
+    overflow: hidden; 
     scrollbar-width: none;
 }
  body {
@@ -15,6 +15,7 @@ iframe {
     display: flex;
     height: 100vh;
     font-family: Arial, sans-serif;
+    overflow: hidden;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -494,7 +495,7 @@ background-color: #984b4b;
     border: 1px solid #ccc;
     z-index: 9999;
     font-size: 14px;
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
 }
 .suggestion:hover {
@@ -539,6 +540,7 @@ background-color: #984b4b;
     padding: 10px;
     height: 200px;
     overflow-y: auto;
+    
     font-size: 14px;
 }
 
@@ -567,8 +569,8 @@ background-color: #984b4b;
   bottom: 20px;
   right: 20px;
   width: 300px;
-  max-height: 300px;
-  background-color: #414141;
+  max-height: 500px;
+  background-color: #383838;
   border: 0px solid #474747;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -581,7 +583,7 @@ background-color: #984b4b;
 
 /* En-tête avec bouton fermer */
 #charon-header {
-  background-color: #422b2b;
+  background-color: #650000;
   color: white;
   padding: 10px;
   font-weight: bold;
@@ -619,8 +621,8 @@ background-color: #984b4b;
 /* Champ de saisie */
 #charon-input {
   border: none;
-  border-top: 1px solid #323232;
-  background-color: #333;
+  border-top: 1px solid #2A2A2A;
+  background-color: #242424;
   color: #fff;
   padding: 10px;
   font-size: 14px;
@@ -653,9 +655,11 @@ background-color: #984b4b;
 }
 /* Animation légère à l’apparition */
 #charon {
-  position: relative;
-  margin-left: 2300px;
-  margin-top: 50px;
+  position: absolute;
+
+  bottom: 60px;
+  left: 150vh;
+;
 
 }
 

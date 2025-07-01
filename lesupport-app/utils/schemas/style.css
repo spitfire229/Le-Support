@@ -241,6 +241,9 @@ input {
 }
 
 .dropdown-panel {
+  width: 50%;
+  height: 50vh;
+  margin-left: 25%;
   position: absolute;
   top: 25px;
   left: 0;

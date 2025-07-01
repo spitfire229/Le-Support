@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesupport </title>
 
+    <style>
+      #drawer {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Caché par défaut */
+  width: 500px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#drawer.open {
+  right: 0;
+}
+
+#closeDrawer {
+  float: right;
+  font-size: 24px;
+  margin: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#drawerContent {
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+    </style>
 
 </head>
 
@@ -16,11 +49,11 @@
     <div class="sidebar-right">
         <button class="icon" onclick="changeIframe('https://lesupport.me')"><img class="icon-img" src="./img/lesupport.png" alt=""></button>
         
-
-
         <button class="icon pop-up-btn" data-popup-id="popup1">
             <img src="./img/logo nanterre.png" alt="Docs">
         </button>
+
+
         <div id="popup1" class="popup">
             <a href="https://portail.parisnanterre.fr/page-student/"><button class="icon"><img src="./img/ent nanterre.svg" alt="Sheets"></button></a>
             <a href="https://coursenligne.parisnanterre.fr/"><button class="icon"><img src="./img/CEL.svg" alt="Sheets"></button></a>
@@ -30,6 +63,8 @@
         <button class="icon pop-up-btn" data-popup-id="popup2">
             <img src="./img/suite google.png" alt="Docs">
         </button>
+
+
         <div id="popup2" class="popup">
             <a href="https://docs.google.com/document/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggdoc.svg" alt="Docs"></button></a>
             <a href="https://docs.google.com/spreadsheets/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggsheet.svg" alt="Sheets"></button></a>
@@ -39,10 +74,10 @@
             <a href="https://mail.google.com/mail/u/0/"><button class="icon pop_up_icon"><img src="./img/ggmail.svg" alt="Sheets"></button></a>
         </div>
         
-
         <button class="icon pop-up-btn" data-popup-id="popup4">
             <img src="./img/logo marteau.png" alt="Docs">
         </button>
+
         <div id="popup4" class="popup">
             <a href="https://www-dalloz-fr.faraway.parisnanterre.fr/etudiants"><button class="icon pop_up_icon"><img src="./img/logo dalloz.png" alt="Docs"></button></a>
             <a href="https://signin.lexisnexis.com/lnaccess/app/signin?back=https://www-lexis360intelligence-fr.faraway.parisnanterre.fr/legan-callback&aci=lint"><button class="icon pop_up_icon"><img src="./img/logo lexis.png" alt="Docs"></button></a>
@@ -52,36 +87,25 @@
         <button class="icon pop-up-btn" data-popup-id="popup3">
             <img src="./img/logo mapper.png" alt="Docs">
         </button>
+
         <div id="popup3" class="popup">
             <p>A très bientôt pour de nouveaux programmes</p>
         </div>
         
+<button class="icon" onclick="changeIframe('./utils/schemas/index.html')"><img class="icon-img" src="./img/LOGO dedale.svg" alt=""></button>
 
-        <button class="icon" id="schema-button">
-            <img src="./img/LOGO dedale.svg" alt="Hermes">
-        </button>
+
         <div id="popup4" class="popup">
             <p>A très bientôt pour de nouveaux programmes</p>
         </div>
-        
-        
-        
 
-
-
-
-
-
-
-
-
-        <!-- Bas de la sidebar droite -->
-<div class="bottom-buttons">
-    <div class="separator"></div>
-    <button class="icon"><img src="./img/notif.png" alt=""></button>
-    <button class="icon" id="charon-btn"><img src="./img/LOGO charon.svg" alt=""></button>
-    <button class="icon"><img class="parametres" src="./img/paramettre.png" alt=""></button>
-</div>
+    <!-- Bas de la sidebar droite -->
+    <div class="bottom-buttons">
+        <div class="separator"></div>
+        <button id="openDrawer">Afficher les infos</button>
+        <button class="icon" id="charon-btn"><img src="./img/LOGO charon.svg" alt=""></button>
+        <button class="icon"><img class="parametres" src="./img/paramettre.png" alt=""></button>
+    </div>
 
 
 
@@ -108,7 +132,7 @@
 
    
   
-<!-- Suggestions, corrigé -->
+
 
 
 
@@ -117,7 +141,7 @@
 
 <!-- Charger transformers.js -->
 <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.8.0/dist/transformers.min.js"></script>
-<script src="./addon/charon.js"></script>
+
 
 
     </div>
@@ -245,25 +269,19 @@
 </div>
 
 
-<div class="mid-bar">
-    <div class="div-background">
-        <iframe id="content-frame" style="width:100%; height:100%; border:none;"></iframe>
+    <div class="mid-bar">
+        <div class="div-background">
+            <iframe id="content-frame" style="width:100%; height:100%; border:none; overflow:hidden; border:none;"></iframe>
+        </div>
     </div>
+    </div>
+
+    
+
+<div id="drawer">
+  <button id="closeDrawer">×</button>
+  <div id="drawerContent">Chargement...</div>
 </div>
-
-
-    </div>
-
-    <div class="sidebar-left-notif" id="notif-page">
-        <button id="reload-notifications" data-i18n="notif_reload">Recharger les notifications</button>
-<h4 data-i18n="notif_console">notifications</h4>
-
-        
-        <pre id="notif-output"></pre>
-        
-    </div>
-
-
 
 
     <script src="renderer.js"></script>
