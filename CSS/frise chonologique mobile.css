@@ -1,0 +1,226 @@
+.back{
+background-color: #650000;
+width: 95%;
+margin-left: 2%;
+border-radius: 20px;
+padding-bottom: 2%;
+padding-top: 2%;
+margin-bottom: 2%;
+overflow: hidden;
+font-size: smaller;
+}
+.timeline-container {
+    width: 90%;
+    margin-left: 5%;
+    
+    position: relative;
+    color: white;
+    
+    
+    
+    
+    
+}
+
+.heads{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-size: smaller;
+    
+    margin-bottom: 50px;
+    border-radius: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #7d0000;
+    padding: 1%;
+}
+ 
+.year {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#current-date-display, #days-to-next-event {
+    margin: 5px 0;
+}
+
+.months {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -10px;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+.timeline {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, 
+        #333 0%,       
+        #333 2%,      
+        #ff0000 2%,   
+        #ff0000 7%,   
+        #333 7%,
+        #333 37%,
+        #ff00a6 37%,
+        #ff00a6 38%,
+        #ff0000 39%,
+        #ff0000 43%,
+        #333 43%,
+        #333 47%,
+        #ff00a6 47%,
+        #ff00a6 50%,
+        #ff0000 51%,
+        #ff0000 54%,
+        #333 54%,
+        #333 60%,
+        #ffae00 60%,
+        #ffae00 68%,
+        #333 65%,   
+        #333 75%,  
+        #ff6a00 75%,   
+        #ff6a00 79%,   
+        #333 79%,   
+        #333 92%,
+        #ff00a6 92%,   
+        #ff00a6 94%,
+        #333 94%,
+        #333 97%,
+        #ffae00 97%,      
+        #ffae00 100%     
+    );
+    position: relative;
+}
+
+.current-date {
+    position: absolute;
+    top: -8px;
+    width: 2px;
+    height: 20px;
+    background-color: #ff0000;
+    border: 2px solid #ffd0d0;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+
+/* Styles pour les mois */
+.months {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -30px; /* Ajustement de la position des mois */
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Styles pour les icônes */
+.icon {
+    position: absolute;
+    z-index: 5;
+    top: -0px; /* Ajustement de la position des icônes */
+    width: 100px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/fermeture\ admin.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+.icon2 {
+    position: absolute;
+    top: -0px; /* Ajustement de la position des icônes */
+    width: 100px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/fermeture\ admin.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+.icon3 {
+    position: absolute;
+    top: -25px; /* Ajustement de la position des icônes */
+    width: 45px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/semaine\ de\ revision.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+.icon4 {
+    position: absolute;
+    top: -25px; /* Ajustement de la position des icônes */
+    width: 45px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/semaine\ de\ revision.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+.icon5 {
+    position: absolute;
+    top: -25px; /* Ajustement de la position des icônes */
+    width: 45px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/semaine\ de\ revision.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+.icon6 {
+    position: absolute;
+    top: -25px; /* Ajustement de la position des icônes */
+    width: 45px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/2024.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+.icon7 {
+    position: absolute;
+    top: -25px; /* Ajustement de la position des icônes */
+    width: 45px; /* Largeur de l'icône */
+    height: 30px; /* Hauteur de l'icône */
+    background-image: url('../img/2025.png'); /* Chemin de l'icône */
+    background-size:contain; /* Ajustement de la taille de l'icône */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'icône */
+    background-position: center; /* Centrer l'icône */
+}
+
+
+/* Styles pour les événements */
+.key-event {
+    position: absolute;
+    top: 10px; /* Ajustement de la position verticale */
+    background-color: rgb(255, 98, 0);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    font-size: 0.5vh;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Styles pour les dates des événements */
+.key-event span {
+    display: block;
+    font-size: 10px; /* Ajustement de la taille de la police */
+}
+
+/* Styles pour les curseurs */
+.cursor {
+    position: absolute;
+    top: -2px;
+    width: 4px;
+    height: 20px;
+    background-color: rgb(255, 98, 0);
+    border-radius: 20px;
+}

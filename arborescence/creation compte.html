@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.png" />
+    <title>creation de profils</title>
+    <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <link rel="stylesheet" href="../CSS/perso.css">
+    <style>
+        body {
+
+font-family: Arial, sans-serif;
+background-color: #1e1e1e;
+color: #fff;
+text-decoration: none;
+scroll-behavior: smooth;
+
+}
+
+
+.logo
+{
+width: 40%;
+margin-left: 30%;
+}
+
+.center
+{
+text-align: center;
+}
+.PDP
+{
+width: 100%;
+border-radius: 25px;
+border: 5px solid #7c0000;
+}
+.garde
+{
+display: flex;
+justify-content:space-around; 
+}
+.pp
+{
+
+width: 20%;
+
+
+
+}
+.bio
+{
+width: 50%;
+grid-template-columns: 1fr 1fr;
+background-color: #343333;
+padding-left: 5%;
+padding-right: 5%;
+border-radius: 40px;
+
+
+}
+
+
+.contribution
+{
+
+font-size: larger;
+}
+
+.reseau
+{
+width: 40px;
+}
+.grid
+{       
+width: 70%;
+margin-top: 0;
+margin-bottom: 25px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: 1fr 1fr ;
+grid-template-rows: 25px 25px 25px  ;
+text-align: left;
+
+
+}
+.marged
+{
+
+width: 60%;
+margin-left: 25%;
+display: flex;
+
+}
+.link2
+{
+width: 100%;
+
+
+
+
+border-radius: 15px;
+
+display: flex; /* Active Flexbox */
+align-items: center; /* Centre les éléments verticalement */
+justify-content: center;
+
+}
+
+.important
+{
+width: 60%;
+margin-left: 15%;
+padding: 50px;
+padding-top: 25px;
+border-radius: 25px;
+background-color: #790000;
+border: 10px solid rgb(60, 0, 0); 
+
+
+}
+
+.contribution
+{
+margin-left: 15%;
+}
+.link
+{
+width: 80%;
+margin-left: 20%;
+
+}
+.lien
+{
+text-align: center;
+margin: 5%;
+}
+
+.lien img
+{
+width: 50px;
+height: 50px;
+border-radius: 10px;
+
+}
+
+
+
+input, select, textarea, button {
+outline: none; /* Supprime le contour par défaut lors du focus */
+box-shadow: none; /* Supprime les ombres de focus par défaut */
+}
+
+/* Styles spécifiques pour les états focus, active et hover */
+input:focus, select:focus, button:focus {
+outline: none; /* Supprime le contour lors du focus */
+box-shadow: none; /* Supprime les ombres lors du focus */
+color: #fff;
+background-color: #343333;
+border: none;
+}
+
+input:active, select:active, button:active {
+outline: none; /* Supprime le contour lors de l'état actif */
+box-shadow: none; /* Supprime les ombres lors de l'état actif */
+color: #fff;
+background-color: #343333;
+
+}
+
+input:hover, select:hover, button:hover {
+outline: none; /* Supprime le contour lors du survol */
+box-shadow: none; /* Supprime les ombres lors du survol */
+color: #fff;
+background-color: #343333;
+
+}
+
+
+
+form input[type="text" i] 
+{
+    appearance: none;         
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('arrow-down.svg') no-repeat right center; /* Ajoute une flèche personnalisée */
+    background-color: #57575700;  /* Couleur de fond */
+    border: 5px solid rgb(255, 255, 255);           /* Taille de bordure uniforme */
+    border-width: 0px 0px 1px 0px;
+    padding: 10px;              /* Espacement interne */
+    font-size: 16px;            /* Taille de la police */
+    height: 1px;   
+    color: #fff;       
+}
+input[type="submit" i]
+{
+background-color: #690000;
+color: #fff;
+border: none;
+width: 150px;
+height: 50px;
+border-radius: 15px;
+transition: 0.5s;
+}
+input[type="submit" i]:hover
+{
+background-color: rgb(202, 0, 0);
+color: #fff;
+border: none;
+width: 150px;
+height: 50px;
+border-radius: 15px;
+}
+
+form select {
+appearance: none;           /* Supprime l'apparence native */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('./img/arrow-down.svg') no-repeat right center ; /* Ajoute une flèche personnalisée */
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    border: 5px solid rgb(255, 255, 255);           /* Taille de bordure uniforme */
+    border-width: 0px 0px 1px 0px;
+                 /* Espacement interne */
+    font-size: 16px;            /* Taille de la police */
+ 
+    
+   
+
+}
+
+form textarea
+{
+width: 80%;
+height: 150px;
+border-radius: 25px;
+margin: 10px;
+color: #fff;
+padding: 15px;
+background-color: #343333;
+}
+
+form select option:checked {
+color: #000; /* Couleur du texte pour les options sélectionnées */
+background-color: #fff; /* Couleur de fond pour les options sélectionnées */
+}
+
+
+body {
+font-family: Arial, sans-serif;
+}
+
+.image-container {
+position: relative;
+display: inline-block;
+}
+
+.image-container img {
+
+max-width: 300px;
+height: auto;
+display: block;
+}
+
+.popup {
+display: none;
+position: absolute;
+bottom: 100%;
+left: 50%;
+transform: translateX(-50%);
+padding: 10px;
+background-color: rgba(32, 32, 32, 0.8);
+color: #fff;
+border-radius: 5px;
+white-space: nowrap;
+}
+
+.image-container:hover .popup {
+display: block;
+}
+
+.text-image-container {
+display: flex;
+align-items: center;
+}
+
+.inline-text {
+margin-right: 10px; /* Espace entre le texte et l'image */
+}
+
+.inline-image {
+width: 20px; /* Vous pouvez ajuster la largeur selon vos besoins */
+height: auto;
+}
+
+
+div[style] {
+display: none;
+opacity: 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <img class="logo" src="../img/name.png" alt="">
+    <h2 class="center">qui de mieux que vous pour parler de vous?</h2>
+    <p class="center">Le formulaire qui suit comprend les informations relatives à votre compte. <br> Il est porté à l'attention de nos usagers que ces derniers peuvent à tout moment <br> demander la modification ou la suppression de leurs informations personnelles. <br></p>
+    
+    <form id="userForm">
+        <div class="important">
+            <div class="text-image-container">
+                <h3 class="inline-text">identifiants ce connexion :</h3>
+                <div class="image-container">
+                    <img class="inline-image" src="../img/info.png" alt="Description de l'image">
+                    <div class="popup">Ces identifiants vous permettront de vous connecter directement à votre compte via la page d’accueil.</div>
+                </div>
+            </div>
+            <label for="username">username :<span class="light-red">*</span></label>
+            <input type="text" id="username" name="username" required>
+            <label style="margin-left: 15%" for="password">password :<span class="light-red">*</span></label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <h1 class="center" id="utilisateur"><label for="fullName">Nom complet :<span class="light-red">*</span></label>
+        <input type="text" id="fullName" name="fullName" required><br></h1>
+
+        <div class="garde">
+            <div class="pp">
+                <img class="PDP" id="userImage" src="../img/PP/profil femme crea.png" alt="Image de l'utilisateur">
+                <div class="statu createur">
+                    <p>
+                        <label for="homme">Homme :</label>
+                        <input type="radio" id="pictureHomme" name="gender" value="../img/PP/profil homme.png"> <br>
+                        <label for="femme">Femme :</label>
+                        <input type="radio" id="pictureFemme" name="gender" value="../img/PP/profil femme.png">
+                    </p>
+                </div>
+            </div>
+
+            <div class="bio">
+                <h3>biographie :</h3>
+                <div class="grid">
+                    <p>Statut :<span class="light-red">*</span></p>
+                    <p id="status">
+                        <select id="grade" name="grade" required>
+                            <option value="" disabled selected></option>
+                            <option value="élève"> élève</option>
+                            <option value="professeur"> professeur</option>
+                            <option value="chargé de TD"> chargé de TD</option>
+                            <option value="professionel du droit"> professionel du droit</option>
+                            <option value="support technique"> support technique</option>
+                        </select>
+                    </p>
+                    <p>Etudes :<span class="light-red">*</span></p>
+                    <p><input type="text" id="studies" name="studies" required placeholder="ex: Droit, Sociologie etc..."></p>
+                    <p>Niveau d'étude : <span class="light-red">*</span></p>
+                    <p id="education_level">
+                        <label for="proposition"></label>
+                        <select id="educationLevel" name="educationLevel">
+                            <option value="" disabled selected></option>
+                            <option value="licence 1"> licence 1</option>
+                            <option value="licence 2"> licence 2</option>
+                            <option value="licence 3"> licence 3</option>
+                            <option value="master 1"> master 1</option>
+                            <option value="master 2"> master 2</option>
+                            <option value="doctorat"> doctorat</option>
+                        </select>
+                    </p>
+                    <p>Université : <span class="light-red">*</span></p>
+                    <p><input type="text" id="university" name="university" required></p>
+                </div>
+                <h3>informations complémentaires :<span class="light-red">*</span></h3>
+                <p id="additional_info">
+                    <label for="additionalInfo"></label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50" placeholder="courte biographie"></textarea>
+                </p>
+            </div>
+        </div>
+
+        <h2>contact</h2>
+        <div class="link2">
+            <div class="lien">
+                <img src="../img/logo insta.png" alt="">
+                <label for="instagramLink">Lien Instagram :</label>
+                <input type="text" id="instagramLink" name="instagramLink" placeholder="https://www.instagram.com/...">
+            </div>
+            <div class="lien">
+                <img src="../img/logo linkedin.png" alt="">
+                <label for="linkedinLink">Lien LinkedIn :</label>
+                <input type="text" id="linkedinLink" name="linkedinLink" placeholder="https://www.linkedin.com/...">
+            </div>
+            <div class="lien">
+                <img src="../img/mail.png" alt="">
+                <label for="mailLink">Adresse e-mail :</label>
+                <input type="email" id="mailLink" name="mailLink" placeholder="exemple@exemple.com">
+            </div>
+        </div>
+
+        <h2>contribution <span class="light-red">*</span></h2>
+        <div class="contribution">
+            <p><label for="contribution"></label>
+            <textarea id="contribution" name="contribution" rows="4" cols="50" placeholder="votre contribution au sein du site / liste de documents partagés / aide apportée / lns hypertexte etc..."></textarea></p>
+        </div>
+
+        <p class="center">
+            <label for="CGU">j'ai lue et accepté les <a class="orange trans-white" href="../arborescence/CGU.html">Conditions Générales d'Utilisation</a></label>
+            <input type="checkbox" id="CGU" name="CGU" value="valide" required><br>
+            <label for="infos-perso">j'ai pris connaissance des informations relatives au traitement de mes informations personnelles</label>
+            <input type="checkbox" id="infos-perso" name="infos-perso" value="valide" required><br><br>
+            <input type="submit" value="Envoyer">
+        </p>
+    </form>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+            function generateUniqueId() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let uniqueId = 'S-';
+                for (let i = 0; i < 6; i++) {
+                    uniqueId += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                return uniqueId;
+            }
+
+            let userId = generateUniqueId();
+
+            var user = {
+                "id": userId,
+                "utilisateur": document.getElementById('fullName').value,
+                "username": document.getElementById('username').value,
+                "password": document.getElementById('password').value,
+                "grade": document.getElementById('grade').value,
+                "status": document.getElementById('educationLevel').value,
+                "university": document.getElementById('university').value,
+                "mail": document.getElementById('mailLink').value,
+                "studies": document.getElementById('studies').value,
+                "gender": document.querySelector('input[name="gender"]:checked').value,
+                "bio": document.getElementById('additionalInfo').value,
+                "linkedin": document.getElementById('linkedinLink').value,
+                "insta": document.getElementById('instagramLink').value,
+                "contribution": document.getElementById('contribution').value
+            };
+
+            var mailtoLink = `mailto:lesuppetudiant@gmail.com?subject=Nouvelle création de profil&body=${encodeURIComponent(
+                `-ID: ${user.id}
+-Username: ${user.username}
+-Mot de passe: ${user.password}
+-Nom complet: ${user.utilisateur}
+-Statut: ${user.grade}
+-Niveau d'études: ${user.status}
+-Université: ${user.university}
+-Adresse e-mail: ${user.mail}
+-Etudes: ${user.studies}
+-Genre: ${user.gender}
+-Biographie: ${user.bio}
+-LinkedIn: ${user.linkedin}
+-Instagram: ${user.insta}
+-Contribution: ${user.contribution}`
+            )}`;
+
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>

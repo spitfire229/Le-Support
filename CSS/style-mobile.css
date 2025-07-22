@@ -1,0 +1,1241 @@
+
+ /*
+ * {
+    cursor: url(cursor-x-y.png) 25 0, default;
+   }
+*/        
+.hidden {
+    display: none;
+ }
+ @font-face {
+  font-family: 'Heavitas';
+  src: url('/font/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fulldozer';
+  src: url('/font/Fulldozer.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gobold';
+  src: url('/font/Gobold\ Blocky\ Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bakery';
+  src: url('/font/Bakery.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.heavitas
+{
+    font-family: 'heavitas', sans-serif;
+}
+
+/*
+--                                          _
+--                                         | |
+--    __ _   ___  _ __    ___  _ __   __ _ | |
+--   / _` | / _ \| '_ \  / _ \| '__| / _` || |
+--  | (_| ||  __/| | | ||  __/| |   | (_| || |
+--   \__, | \___||_| |_| \___||_|    \__,_||_|
+--    __/ |
+--   |___/
+*/
+
+
+.desktop
+{
+    width: 5%;
+    position: absolute;
+    opacity: calc(0%);
+    z-index: calc(-50);
+}
+.lancement
+{
+    width: 15%;
+    margin-left: -46%;
+    margin-top: 6%;
+    position: absolute;
+    top: 0; 
+    opacity: 50%;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    height: 90vh;
+    background-color: #1e1e1e;
+    color: #fff;
+    scroll-behavior: smooth;
+    
+}
+
+
+/*
+--   _             _  _                            _                _
+--  | |           | |(_)                          | |              | |
+--  | |__    __ _ | | _  ___   ___  ___           | |_   ___ __  __| |_   ___
+--  | '_ \  / _` || || |/ __| / _ \/ __|          | __| / _ \\ \/ /| __| / _ \
+--  | |_) || (_| || || |\__ \|  __/\__ \          | |_ |  __/ >  < | |_ |  __/
+--  |_.__/  \__,_||_||_||___/ \___||___/           \__| \___|/_/\_\ \__| \___|
+--                                        ______
+--                                       |______|
+*/
+.ghost
+{
+    position: absolute;
+    opacity: 0%;
+    background-color: #3b0800b6;
+    margin-top: 25%;
+    padding: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 15px;
+}
+.ghost h2
+{
+margin: 0;
+}
+
+h2 {
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    }
+
+p
+{
+color: #ffffff;
+
+}
+a
+{
+    color: #fff ;
+    font-size: larger;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #ff4f34;
+    font-size: larger;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+}
+
+.annoncea
+{
+    color: #f6291b;
+    text-decoration: none;
+} 
+.annoncea:hover
+{
+    color: #ffffff;
+} 
+
+.orange
+{
+    color:#ff4f34;
+}
+
+
+
+
+
+
+
+
+
+/*    
+--   _
+--  (_)
+--   _  _ __ ___    __ _   __ _   ___  ___
+--  | || '_ ` _ \  / _` | / _` | / _ \/ __|
+--  | || | | | | || (_| || (_| ||  __/\__ \
+--  |_||_| |_| |_| \__,_| \__, | \___||___/
+--                         __/ |
+--                        |___/
+*/
+
+.login
+        {
+            width: 80%;
+            margin: 10%;
+            margin-left: 25%;
+            
+        }
+.parvis-tel
+{
+    width: 100%;
+    
+}
+.contact
+{
+    width: 80%;
+    margin: 10%;
+}
+
+.fiche
+{
+    width: 30%;
+    align-items: center;
+}
+        .retour
+        {
+            width: 20%;
+
+            position: absolute;
+        }
+        .logo
+        {
+        width: 60%;
+        height: fit-content;
+        margin-left: 20%;
+        }
+        .fleche-patch
+        {
+            width: 15%;
+        }
+        .test 
+        {
+            width: 100vh;
+            height: 100%;
+            opacity: 50%;
+            position: fixed;
+            z-index: 10;
+        }
+        .test1
+        {
+            width: auto;
+            height: 30vh;
+            position: absolute;
+            margin-left: 85%;
+            margin-top: 35vh;
+            opacity: 60%;
+            position: fixed;
+            z-index: 11;
+        }
+        .cache2
+        {            
+        width: 35px;
+        margin-right: 85%;
+        margin-top: 20px;
+        
+        position: fixed;
+        top: 0;
+        z-index: calc(50);
+        float: right;
+        
+        }
+        .cache
+        {
+           
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: calc(45);
+        }
+        .logobar
+        {
+        width: 90%;
+        z-index: calc(145);
+        margin-top: 50px;
+        }
+        .log
+        {
+            height: 100%;
+        opacity: calc(0%);
+            position: fixed;
+            z-index: calc(-10);
+            
+        }
+        button img {
+            width: 70px; 
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .disclaimer
+        {
+            margin-bottom: 50px;
+            width: 80%;
+            margin-left: 10%;
+        }
+        .disclaimer-schemas
+        {
+            margin-bottom: 50px;
+            width: 100%;
+            margin-left: 0%;
+        }
+        .logoindex
+        {
+            width: 100%;
+        }        
+        .assist
+        {
+        align-items: center;
+         width: 80%;
+         margin-left: 10%;
+         margin-top: 10%;
+         transition: 0.5s;
+        }
+        .assist:hover
+        {
+            transform: scale(120%);
+            transition: 0.5s;
+        }
+        .enter
+        {
+            width: 50%;
+            transition: 0.5s;
+            margin-top: 5%;
+        }
+        .enter:hover
+        {
+        transform: scale(115%);
+        transition: 0.5s;
+        }
+        .assos
+        {
+        width: 100%;
+        border-radius: 10px;
+        }
+        .gear
+        {
+            position: absolute;
+            width: 35px;
+            margin-left: 75px;
+            margin-top: 16px;
+            transition: 0.5s;
+        }
+
+        .gear:hover
+        {
+            transform: rotate(180deg)
+        }
+        .s{
+            width: 60%;
+            margin-left: 20%;
+            position: absolute;
+            z-index: -50;
+            opacity: 30%;
+            
+        
+        }
+        .lancement
+        {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 40%;
+            position: absolute;
+            z-index: 11;
+            top: 0; 
+            
+        }
+        .année
+        {
+            width: 50%;
+            margin-left: 25%;
+        }
+.debug1
+{
+    margin-bottom: 400px;
+}
+.profil
+{
+    width: 80%;
+    margin-top: 10%;
+    border-radius: 100%;
+}
+.remerciement 
+{
+    width: 100%; 
+    box-shadow: 0px 0px 24px rgb(0, 0, 0);
+    position: absolute; 
+    top: 0;
+}
+/*
+--   _____   _____ __      __
+--  |  __ \ |_   _|\ \    / /
+--  | |  | |  | |   \ \  / /
+--  | |  | |  | |    \ \/ /
+--  | |__| | _| |_    \  /
+--  |_____/ |_____|    \/
+
+*/
+.conteneur {
+    width: 100%;
+}
+.cassecouille
+{
+    width: 100%;
+    margin-bottom: 15px;
+
+      
+}
+.column {
+    width: 22%; /* Chaque colonne prend 25% de la largeur */
+    height: auto; /* Hauteur de chaque colonne, à ajuster selon vos besoins */
+    background-color: rgb(50, 50, 50);
+    align-items: center;
+    float: left; /* Permet d'aligner les colonnes côte à côte */
+    border-radius: 5px;
+    margin: 1%;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 60%;
+}
+
+.partenaires
+{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #505050;
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.partenaires:hover
+{
+    transform: scale(90%);
+}
+
+form input[type="text" i] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(arrow-down.svg) no-repeat right center;
+    background-color: #575757;
+    border: 5px solid rgb(71, 71, 71);
+    border-width: 0px 0px 1px 0px;
+    padding: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+    height: 1px;
+    color: #fff;
+}
+
+
+
+
+
+.author-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.author-card {
+    font-size: smaller;
+    width: 25%;
+    background-color: #4c0000;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer; /* Ajout d'un curseur indiquant que les cartes sont cliquables */
+    transition: 0.2s;
+}
+.author-card:hover {
+    box-shadow: 10px 10px 30px rgb(19, 0, 0);
+}
+
+.author-card img {
+    max-width: 80%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.author-card p {
+    margin: 0;
+}
+
+
+
+.body-container3
+    {   
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        margin-bottom: 2%;
+    }
+
+
+.sep-blanche
+{
+    width: 100%;
+    height: 7px;
+    background-color: #fff;
+    margin-top: -5px;
+    color: #242424;
+    margin-bottom: 50px;
+}
+ 
+        boutton {
+            display:flex;
+    
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            padding: 10px;
+            background-color: #ff4f34;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.5s;
+            float: left;
+            width: 80px;
+            height: 140px;
+            
+          }
+
+
+        button:hover 
+        {
+            background-color: #fd9898;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        button {
+            display:flex;
+            
+            flex-direction: column;
+            align-items: center;
+            margin: 1%;
+            padding: 10px;
+            background-color: #ff4f34;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.5s;
+            float: left;
+            width: 30%;
+            height: 165px;
+            font-size: 1.5vh;
+            
+          }
+        button img
+        {
+            width: 80%;
+        }
+
+        #sidebar
+        {
+            background-color: #242424;
+            position: fixed;
+            width: 80%;
+            height: 100vh;
+            font-size: smaller;
+            top: 0;
+            z-index: 20;
+        }
+        #sidebar h2
+        {
+            margin-top: 25%;
+        }
+        .container
+        {
+            background-color: #353535;
+            width: 90%;
+            height: auto;
+            margin-top: 5px;
+            margin-left: 5%;
+            display: inline-block;
+            border-radius: 15px;
+        }
+        .container-schemas
+        {
+            align-items: center;
+            margin: 5%;
+        }
+        .annonce
+        {
+            width: auto;
+            height: 650px;
+            background-image: url('../img/pres-tel.png');
+            background-size: cover; 
+            background-position: center;
+            margin: 5%;
+            border-radius: 20px;
+            padding-bottom: 1%;
+            padding-top: 5px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: 90%;
+            
+        }    
+        .annonce p 
+{
+    margin-left: 5%;
+    font-size: 85%;
+}
+.fond
+{
+    background-color: #3a3a3ab6;
+    padding: 2%;
+    border-radius: 25px;
+    
+}    
+        .scrollable-section 
+        {
+        height: 95%; 
+        overflow: auto;
+        border: 3px solid #ff4f34; 
+        padding: 10px;
+        border-radius: 40px 0px 20px 0px;
+        }
+        
+        .scrollable-section::-webkit-scrollbar 
+        {
+        width: 120px; 
+        }
+        .assos1
+        {
+            padding-top: 15px;
+        }
+        .Scontainer
+        {
+            text-align: center;
+        }
+        
+.bottom
+{
+    width: 100%;
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+    
+}
+.bottom-right:hover, .bottom-left:hover
+{
+background-color: #303030;
+
+border-radius: 15px 15px 0px 0px;
+}
+.bottom-left
+{
+    margin:0;
+    width: 49%;
+    float: left;
+   
+    align-items: center;
+    
+}
+.bottom-right
+{
+    width: 49%;
+    float: right;
+    
+    align-items: center;
+    
+}
+.methodo
+{
+font-size: smaller;
+}
+
+
+
+/* suppresseur de filigrane hebergeur ( important )*/
+       
+
+
+/*
+--                                                                                                        
+--                                            ..:::--------::..                                           
+--                                      .:-=+*******************+==-.                                     
+--                                  :-+*******************************+=:.                                
+--                              .-=***************************************+-.                             
+--                           .-+*********************************************+-.                          
+--                         .=***************************************************+:                        
+--                       :+*******************************************************+-                      
+--                     :+************************************************************-                    
+--                   .+***************************************************************+:                  
+--                  =*******************************************************************=.                
+--                :+**********************************************************************-               
+--               -***************************+=:..     ..:-+****=-=************************=              
+--              =**************************=.  .-==+++==-:   ..   .*************************+.            
+--            .+*************************+.  -+************=:      =**************************:           
+--           .+*************************=  .+****************+-    .***************************:          
+--          .+*************************+   +*******************+.   =***************************:         
+--          +**************************.  -**********************-  .****************************.        
+--         =**************************+   +***********************=  =***************************+        
+--        :***************************-   *************************= .****************************=       
+--       .****************************:   **************************= =****************************:      
+--       =****************************-   +**************************=+****************************+      
+--      .*****************************=   :*********************************************************-     
+--      =*****************************+    =*********************************************************     
+--     .*******************************-    =********************************************************-    
+--     -********************************:    :+******************************************************+    
+--     +*********************************:     :=*****************************************************.   
+--    .***********************************=.      :-+*************************************************:   
+--    :*************************************=.        :-=+********************************************-   
+--    -***************************************+-.         .:-+****************************************=   
+--    -******************************************+=:.         .-+*************************************+   
+--    =**********************************************+=-.        .=***********************************+   
+--    =***************************************************=-.      .=*********************************+   
+--    -******************************************************+-.     -********************************+   
+--    -*********************************************************=.    -*******************************=   
+--    :***********************************************************-    +******************************-   
+--    .************************************************************:   :******************************:   
+--     +***********************************************************+    ******************************.   
+--     -************************************************************.   *****************************+    
+--     .****************************= =*****************************.   *****************************:    
+--      =****************************. =****************************.  .*****************************     
+--      .****************************=  -***************************   :****************************-     
+--       =****************************.  :*************************=   =***************************+      
+--       .****************************=   .+***********************.  :****************************:      
+--        :****************************.    :+********************:  .****************************=       
+--         =***************************=      :+****************+.  :****************************+        
+--          +***************************.       .-=**********+=:  .=****************************+.        
+--           +**************************= .-+*+=-:. ..:::::.   .-+******************************.         
+--           .+**************************=*********+==--:---=+*********************************.          
+--             +*****************************************************************************+.           
+--              =***************************************************************************+.            
+--               -*************************************************************************=              
+--                .+**********************************************************************:               
+--                  -*******************************************************************=.                
+--                   .=***************************************************************+:                  
+--                     :+***********************************************************+:                    
+--                       :=*******************************************************+:                      
+--                         .-***************************************************=:                        
+--                            :=*********************************************+-.                          
+--                               :=+**************************************=-.                             
+--                                  .-=+******************************=-:                                 
+--                                      .:-==+*****************++=-:.                                     
+--                                             ..:::::--::::..                                            
+--     
+--                                    _         _      _         _               _____                                    _
+--                                   (_)       | |    | |    _  | |             / ____|                                  | |
+--    ___   ___   _ __   _   _  _ __  _   __ _ | |__  | |_  (_) | |       ___  | (___   _   _  _ __   _ __    ___   _ __ | |_     _ __ ___    ___
+--   / __| / _ \ | '_ \ | | | || '__|| | / _` || '_ \ | __|     | |      / _ \  \___ \ | | | || '_ \ | '_ \  / _ \ | '__|| __|   | '_ ` _ \  / _ \
+--  | (__ | (_) || |_) || |_| || |   | || (_| || | | || |_   _  | |____ |  __/  ____) || |_| || |_) || |_) || (_) || |   | |_  _ | | | | | ||  __/
+--   \___| \___/ | .__/  \__, ||_|   |_| \__, ||_| |_| \__| (_) |______| \___| |_____/  \__,_|| .__/ | .__/  \___/ |_|    \__|(_)|_| |_| |_| \___|
+--               | |      __/ |           __/ |                                               | |    | |
+-- 
+--   ______  __                  __                        __  __
+--  |      ||  |--..---.-..----.|  |.-----..-----.        |  |/  |.----..-----..--------..-----..----.
+--  |   ---||     ||  _  ||   _||  ||  -__||__ --|        |     < |   _||  -__||        ||  -__||   _|
+--  |______||__|__||___._||__|  |__||_____||_____|        |__|\__||__|  |_____||__|__|__||_____||__|
+--                                                
+*/
+
+.container {
+    width: 90%;
+    margin: 10px auto;
+    background: #242424;
+    padding: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+  
+}
+.sep
+{
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    background-color: #6e6e6e;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.container-signaler {
+    width: 80%;
+    margin: 10% auto;
+    background: #242424;
+    padding: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+}
+.sep {
+    width: 80%;
+    height: 2px;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    background-color: #6e6e6e;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Colonne pour empiler les éléments verticalement */
+    gap: 1px; /* Espacement entre chaque élément */
+}
+
+.checkbox-group label {
+    display: block;
+    margin-left: 0px;
+    margin-bottom: 0px; /* Espace entre les labels */
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+    background-color: #555555;
+}
+
+.form-group button {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    background-color: #ff0b0b;
+    color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #ff2600;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* Ajouté pour permettre aux labels de revenir à la ligne */
+    gap: 10px; /* Ajustez selon vos besoins */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espace entre les labels */
+}
+
+
+
+.conteneur
+{
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 15px;
+  display:flow-root;
+}
+.conteneur img
+{
+  width: 100%;
+  
+}
+.conteneur a
+{
+    color: currentColor; /* Fait en sorte que la couleur du texte reste inchangée */
+    cursor: default; /* Supprime le curseur de pointeur */
+    text-decoration: none;
+}
+.conteneur div
+{
+  width: 100%;
+  height: auto;
+  margin: 2%;
+  background-color: #8f0000;
+  border-radius: 10px;
+}
+
+
+
+.table-des-matieres
+{
+    color: rgb(255, 255, 255);
+    background-color: #5a0000;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    padding: 3%;
+    padding-top: 1%;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.table-des-matieres a
+{
+    margin-left: 10%;
+}
+.table-des-matieres a:hover
+{
+    color: #ff7777;
+    
+    transition: 0.5s;
+}
+
+.cours
+{
+    color: black;
+    background-color: #ffffff;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0%;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+
+.cours p
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    color: rgb(0, 0, 0);
+}
+.cours h1
+{
+    margin-left: 0%;
+    color: rgb(105, 0, 0);
+}
+.cours h2
+{
+    margin-left: 5%;
+    color: rgb(207, 0, 0);
+}
+.cours h3
+{
+    margin-left: 7%;
+    color: rgb(0, 0, 0);
+}
+.plan
+{
+    background-color: #ffffff;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 25px;
+    border: 2px solid #610000 ;
+}
+
+.titre
+{
+    color: #ff0000;
+    font-weight: bold;
+    margin-left: -3%;
+}
+.T-sous-titre
+{
+    margin-left: 200px;
+    color: #fa9696;
+    font-size: large;
+    transition: 0.5s;
+}
+.T-sous-titre:hover
+{
+    color: #4a0c0c;
+    transition: 0.5s;
+    font-size: large;
+}
+
+
+.popup {
+    display: none; /* Cacher la pop-up par défaut */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80%;
+    background-color: #414141;
+    border: 1px solid #888;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Bouton de fermeture */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+#toggleButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#menu {
+position: absolute;
+top: 0;
+left: -200px; /* cacher le menu en dehors de la vue */
+width: 200px;
+height: 100%;
+background-color: #333;
+transition: left 0.5s; /* ajouter une transition fluide */
+padding: 20px;
+box-sizing: border-box;
+}
+
+#menu.open {
+left: 0; /* afficher le menu */
+}
+
+#menu img {
+width: 100%;
+display: block;
+margin-bottom: 10px;
+}
+
+    .container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "box1 box5 "
+        "box1 box6"
+        "box2 box3"
+        "box4 box4";
+    gap: 10px;
+    width: 80%;
+    height: 80%;
+}
+.box {
+    position: relative;
+    border: 2px solid rgb(167, 0, 0);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+.box:hover {
+    transform: scale(0.95);
+}
+.box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.box1 { grid-area: box1; background-image: url('../img/annonces.png'); }
+.box2 { grid-area: box2; background-image: url('../img/BU\ site.png'); }
+.box3 { grid-area: box3; background-image: url('../img//signaler\ TB.png'); }
+.box4 { grid-area: box4; background-image: url('../img/blog\ tb.png'); }
+.box5 { grid-area: box5; background-image: url('../img/cooperation\ TB.png'); }
+.box6 { grid-area: box6; background-image: url('../img/hist\ patch.png'); }
+
+
+
+
+.table-container {
+    font-size: 55%;
+    max-width: 85%;
+    margin: 0 auto;
+    background: #5f5f5f;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #242424;
+    color: #fff;
+}
+
+th, td {
+    padding: 1px;
+    text-align: left;
+    border-bottom: 1px solid #525252;
+}
+
+
+
+th {
+    width: 100px;
+    background-color: #494949;
+}
+
+tr:nth-child(even) {
+    background-color: #494949;
+}
+.ordered-img
+{
+    width: 15px;
+}
+.mobile-maximes
+{
+    font-size: 50%;
+}
+p
+{
+    margin-left: 12%;
+}
+.strong
+{
+    color: rgb(255, 102, 255);
+    margin-left: -2%;
+}
+.sep
+{
+  align-items: center;
+            width: 60%;
+            height: 2px;
+            background-color: #ff5c5c;
+            margin-top: 15px;
+            margin-left: 20%;
+            position: absolute;
+
+}
+.lettre
+            {
+                color: rgb(255, 102, 255);
+
+                text-align: center;
+                margin-left: 16px;
+                display: inline-block;
+                transition: 0.2s;
+                border-radius: 10px;
+                padding-bottom: 10px;
+            }
+            .lettre:hover
+            {
+                
+                color: #c60000;
+               transform: scale(120%);
+            }
+            .container
+            {
+              margin-top: 15px;
+              
+            }
+            .lat
+            {
+                color: #FFF;
+                font-style: italic;
+                margin-left: 15%;
+
+            }
+            .signi 
+            {
+                color: #FFF;
+                margin-left: 20%;
+            }
+
+            .legende
+            {
+                width: 60%;
+                margin-left: 20%;
+            }
+            
+            .wordStyle 
+            {
+                font-weight: bold;
+                color: #c60000;
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-top: 25px;
+            }
+            .seenStyle
+            {
+                font-weight: bold;
+                color: #2ec600;
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-top: 25px;
+            }
+ 
+
+        
+            .wordStyleDefinition
+            {font-style: italic;
+                color: #ffffff;
+            margin-left: 20%;
+            margin-right: 15%;
+            }
+
+            .seenStyleDefinition
+            {font-style: italic;
+                color: #cdffbe;
+            margin-left: 20%;
+            margin-right: 15%;
+            }
+            .disclaimer {
+                background-color: #660000;
+                color: white;
+                border-radius: 20px;
+                padding: 20px 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                position: relative;
+                width: 80%;
+                margin-top: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+                
+            }
+    
+            .disclaimer h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.2em;
+                margin: 0 0 10px 0;
+                text-transform: uppercase;
+            }
+    
+            .disclaimer p {
+                font-size: 1rem;
+                margin: 0;
+            }
+    
+            .warning {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+                color: #ffc107;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+            .message {
+                background: linear-gradient(to right, #b02900, #330000);
+                color: white;
+                border-radius: 30px;
+                padding: 20px 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                font-size: 1rem;
+                font-weight: bold;
+                width: 60%;
+                margin-left: 15%;
+                max-width: 800px;
+            }
+            .selected
+            {
+                color: #ff3c00;
+            }
+    

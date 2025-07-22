@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur d'Articles</title>
+    <link rel="icon" href="../img/s.png" />
+    
+
+    <style>
+
+        .resizable {
+            position: relative;
+            display: inline-block;
+        }
+        .resizable img {
+            max-width: 100%;
+            display: block;
+        }
+        .resize-handle {
+            width: 10px;
+            height: 10px;
+            background: #3b3b3b;
+            border: 1px solid #ddd;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            cursor: se-resize;
+        }
+        #errorMessage {
+            color: red;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #690000;
+            color: #fff;
+            border: none;
+           height: 25px;
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: rgb(202, 0, 0);
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #3d3d3d;
+            
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20px, 3fr));
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+            gap: 1px;
+        }
+        .color-swatch {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 0px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content button {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dropdown-content button:hover {
+            background-color: #393939;
+        }
+        .table-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+        .table-options input {
+            width: 100%;
+            padding: 5px;
+        }
+        .table
+        {
+            border: 2px solid #fff;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+/* CSS RESET !!! */
+a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+/* Styles personnalisés */
+body {
+    
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: medium;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #1e1e1e;
+    color: #fff;
+    transition: all 0.5s ease;
+    display: block;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    
+    background: #424242;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 0px;
+    
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #404040;
+    background-color: #272727;
+    border-radius: 8px;
+    color: #fff;
+}
+
+form input[type="submit"] {
+    background-color: #690000;
+    color: #fff;
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(202, 0, 0);
+}
+
+#toolbar {
+    margin-bottom: 10px;
+}
+
+#toolbar button {
+  
+    padding: 5px;
+   padding-left: 10px;
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    background: #515151;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow: hidden;
+    
+    padding-block: 0px;
+}
+
+#toolbar button:hover {
+    background-color: #946565;
+}
+
+#editor {
+    width: 70%;margin-left: 10%;
+    height:  100vh;
+    min-height: 300px;
+    font-size: large;
+    border: none;
+    margin-top: 15%;
+    padding: 5%;
+    padding-top: 10%;
+    border-radius: 15px;
+    background-color: #555555;
+    color: #ffffff;
+    margin-bottom: 100px;
+    overflow-y: auto;
+}
+
+
+#editor:focus, #title:focus {
+    outline: none;
+}
+::selection {
+  background-color: #c94949; 
+  color: #ffffff;
+}
+#imageUrlInput {
+    margin-top: 10px;
+}
+#urlError {
+    color: red;
+    display: none;
+}
+.dropdown-content {
+    display: none;
+    margin-top: -5px;
+    width: 200px;
+    position: absolute;
+    background-color: #3d3d3d;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: calc(100% + 5px); /* Pour placer le dropdown en dessous du bouton */
+    left: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.color-container {
+    padding: 10px; /* Espacement autour des couleurs */
+    background-color: #2a2a2a; /* Couleur de fond pour ressembler à Microsoft Word */
+    border: 1px solid #444; /* Bordure pour l'encadré */
+    border-radius: 10px; /* Arrondir les coins de l'encadré */
+}
+
+.dropdown-content-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Ajuster selon le nombre de colonnes souhaité */
+    gap: 5px; /* Espacement entre les pastilles */
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.logo
+{
+    width: 15%;
+    top: 10px;
+    margin-left: 80%;
+    margin-bottom: 15px;
+    position: fixed;
+    z-index: 50;
+}
+
+
+
+::-moz-selection {
+  background-color: #FFD700;
+  color: #000000;
+}
+
+.top
+{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    padding-left: 3%;
+    background-color: #3d3d3d;
+    padding-bottom: 2%;
+    margin-left: -2%;
+    
+}
+.text
+{
+    margin-top: 10%;
+}
+#title
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 25%;
+    background-color: #555555;
+}
+table
+{
+border: 1px solid #fff;
+}
+::placeholder {
+    color: #cacaca; /* Couleur grise par exemple */
+}
+.icon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.misspelled {
+        background-color: yellow;
+        cursor: pointer;
+    }
+
+    .suggestion-box {
+        position: absolute;
+        background-color: white;
+        border: 1px solid black;
+        z-index: 1000;
+    }
+
+    .suggestion-item {
+        padding: 5px;
+    }
+
+    .suggestion-item:hover {
+        background-color: lightgray;
+    }
+    </style>
+</head>
+<body>
+    <img class="logo" src="../img/editor.svg" alt="">
+    <div class="top">
+      <form id="articleForm">
+        <div>
+          <input type="text" id="title" name="title" placeholder="TITRE DU DOCUMENT" required>
+          <button style="  padding: 7px; border-radius: 5px; background-color: #51515100; border: none;" type="button"  onclick="undo()"><img width="25px" src="../img/undo.svg" alt=""></button>
+          <button style=" padding: 7px; border-radius: 5px; background-color: #51515100; border: none;" type="button"  onclick="redo()"><img width="25px" src="../img/redo.svg" alt=""></button>
+          
+          <span style="color: #6b6b6b;">sauvegarde automatique ...</span>  
+       
+        </div>
+        <div>
+          <div id="toolbar">
+            <div class="dropdown">
+              <button type="button" class="button"><img width="65px" src="../img/titres.svg" alt=""></button>
+              <div class="dropdown-content">
+                <button type="button" onclick="execCmd('formatBlock', '<h1>')"><img width="75px" src="../img/titre1.svg" alt=""></button>
+                <button type="button" onclick="execCmd('formatBlock', '<h2>')"><img width="65px" src="../img/titre2.svg" alt=""></button>
+                <button type="button" onclick="execCmd('formatBlock', '<h3>')"><img width="55px" src="../img/titre3.svg" alt=""></button>
+                    
+              </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="button"><img width="60px" src="../img/polices.svg" alt=""></button>
+                <div class="dropdown-content">
+                    <button type="button" onclick="changeFont('Arial')">Arial</button>
+                    <button type="button" onclick="changeFont('Courier New')">Courier New</button>
+                    <button type="button" onclick="changeFont('Georgia')">Georgia</button>
+                    <button type="button" onclick="changeFont('Times New Roman')">Times New Roman</button>
+                    <button type="button" onclick="changeFont('Verdana')">Verdana</button>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button style="width: 35px; height: 35px; padding: 0;" type="button" class="button"><img width="25px" src="../img/colo text.svg" alt=""></button>
+                <div class="dropdown-content color-container">
+                  <div class="dropdown-content-grid">
+                    <button type="button" class="color-swatch" style="background-color: #FF0000; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#FF0000')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FF4D00; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#FF4D00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FF8000; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#FF8000')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FFBF00; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#FFBF00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FFFF00; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#FFFF00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #80FF00; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#00FFFF')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #40BF00; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#80FF00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #00BF80; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#00BF80')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #00BFFF; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#00BFFF')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #0040FF; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#0040FF')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #8800e9; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#8800e9')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #fd009c; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#fd009c')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #ffffff; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#ffffff')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #808080; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#808080')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #000000; width: 25px; height: 25px;" onclick="execCmd('foreColor', '#000000')"></button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="dropdown">
+                <button style="width: 35px; height: 35px; padding: 0;" type="button" class="button"><img width="25px" src="../img/colo back.svg" alt=""></button>
+                <div class="dropdown-content color-container">
+                  <div class="dropdown-content-grid">
+                    <button type="button" class="color-swatch" style="background-color: #FF0000; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#FF0000')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FF4D00; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#FF4D00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FF8000; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#FF8000')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FFBF00; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#FFBF00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #FFFF00; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#FFFF00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #80FF00; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#00FFFF')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #40BF00; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#80FF00')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #00BF80; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#00BF80')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #00BFFF; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#00BFFF')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #0040FF; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#0040FF')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #8800e9; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#8800e9')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #fd009c; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#fd009c')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #ffffff; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#ffffff')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #808080; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#808080')"></button>
+                    <button type="button" class="color-swatch" style="background-color: #000000; width: 25px; height: 25px;" onclick="execCmd('hiliteColor', '#000000')"></button>
+                  </div>
+                </div>
+              </div>
+              
+            <button type="button" onclick="execCmd('bold')"><span class="icon"><img width="14x" src="../img/gras.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('italic')"><span class="icon"><img width="8px" src="../img/italic.png" alt=""></span></button>
+            <button type="button" onclick="execCmd('underline')"><span class="icon"><img width="12px" src="../img/underline.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('strikeThrough')"><span class="icon"><span class="icon"><img width="14px" src="../img/nutty.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('justifyLeft')"><span class="icon"><img width="20px" src="../img/left.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('justifyCenter')"><span class="icon"><img width="20px" src="../img/center.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('justifyRight')"><span class="icon"><img width="20px" src="../img/right.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('justifyFull')"><span class="icon"><img width="20px" src="../img/meme taille.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('insertUnorderedList')"><span class="icon"><img width="20px" src="../img/unordered.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('insertOrderedList')"><span class="icon"><img width="20px" src="../img/ordered.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('indent')"><span class="icon"><img width="35px" src="../img/tab.svg" alt=""></span></button>
+            <button type="button" onclick="execCmd('outdent')"><span class="icon"><img width="35px" src="../img/anti tab.svg" alt=""></span></button>
+            <div class="dropdown">
+              <button type="button" class="button"><img width="25px" style="margin-right: 5px;" src="../img/table.svg" alt=""></button>
+              <div class="dropdown-content">
+                <div class="table-options">
+                  <input type="number" id="rowInput" placeholder="Nombre de lignes">
+                  <input type="number" id="columnInput" placeholder="Nombre de colonnes">
+                  <button type="button" onclick="createTable()">Insérer le tableau</button>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <button type="button" onclick="addImage()"><img width="25px" style="margin-right: 5px;" src="../img/image.svg" alt=""></button>
+            <button type="button" onclick="createLink()"><img style="margin-right: 5px;" width="20px" src="../img/link.svg" alt=""></button>
+          </div>
+        </div>
+
+        
+
+
+<div class="toolbar">
+        <button style=" float: left; margin-right: 5px; width: auto; background-color: #515151; border-radius: 10px; border: none;" type="button" onclick="copyToClipboard()">
+            <span class="icon"><img width="100px" src="../img/copie.png" alt="Copier"></span>
+           
+        </button>
+        
+        <button style=" float: left; margin-right: 5px; width: auto; background-color: #515151; border-radius: 10px; border: none;" type="button" onclick="copyRawHTML()">
+            <span class="icon"><img width="100px" src="../img/copie html.png" alt="Copier le HTML brut"></span>
+           
+        </button>
+        
+        <button style=" float: left; margin-right: 5px; width: auto; background-color: #515151; border-radius: 10px; border: none;" type="button" onclick="copyEscapedText()"><span class="icon">
+            <img width="100px" src="../img/copie JS.png" alt="Copier avec \"></span> </button>
+</div>
+
+
+
+
+
+
+
+
+        <button style=" float: right; margin-right: 50px; width: 135px; background-color: #42424200; border: none;" type="button" onclick="sendEmail()">
+            <img style="width: 100%;" src="../img/envoyer.png" alt="">
+        </button>
+        <button style=" float: right; margin-right: 5px; width: 135px; background-color: #42424200; border: none;" type="button" onclick="clearLocalStorage()">
+            <img style="width: 100%;" src="../img/reinitialiser doc.png" alt="">
+        </button>
+      </form>
+    </div>
+    
+    <div id="editor" contenteditable="true">
+      <div class="text"></div>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+
+
+
+function changeFont(font) {
+            const selection = document.getSelection();
+            const range = selection.getRangeAt(0);
+
+            if (selection.toString() !== '') {
+                // Crée un nouvel élément span avec la police sélectionnée
+                const span = document.createElement('span');
+                span.style.fontFamily = font;
+
+                // Enveloppe le texte sélectionné avec le nouveau span
+                range.surroundContents(span);
+                
+                // Supprime les anciens styles de police dans la sélection
+                const content = span.innerHTML;
+                span.innerHTML = content.replace(/font-family:[^;]+;/g, `font-family: ${font};`);
+            } else {
+                // Si aucun texte n'est sélectionné, applique la police à tout l'éditeur
+                document.getElementById('editor').style.fontFamily = font;
+            }
+        }
+
+        function undo() {
+            document.execCommand('undo');
+        }
+
+        function redo() {
+            document.execCommand('redo');
+        }
+
+
+function changeFont(font) {
+            const editor = document.getElementById('editor');
+            
+            if (document.getSelection().toString() === '') {
+                // Si aucun texte n'est sélectionné, appliquer la police à l'ensemble de l'éditeur
+                editor.style.fontFamily = font;
+            } else {
+                // Si du texte est sélectionné, appliquer la police au texte sélectionné
+                const range = document.getSelection().getRangeAt(0);
+                const span = document.createElement('span');
+                span.style.fontFamily = font;
+                range.surroundContents(span);
+            }
+        }
+        function changeFont(font) {
+            const selection = document.getSelection();
+            const range = selection.getRangeAt(0);
+
+            // Check if there is a selection
+            if (selection.toString() !== '') {
+                // Create a new span element with the selected font
+                const span = document.createElement('span');
+                span.style.fontFamily = font;
+
+                // Surround the selected text with the new span
+                range.surroundContents(span);
+                
+                // Remove any existing font styles within the selection
+                const content = span.innerHTML;
+                span.innerHTML = content.replace(/font-family:[^;]+;/g, `font-family: ${font};`);
+            } else {
+                // If no text is selected, apply the font to the entire editor
+                document.getElementById('editor').style.fontFamily = font;
+            }
+        }
+        
+// Function to clear editor content and title from localStorage
+function clearLocalStorage() {
+    localStorage.removeItem('documentTitle');
+    localStorage.removeItem('documentContent');
+    document.getElementById('title').value = '';
+    document.getElementById('editor').innerHTML = '';
+}
+
+function isValidUserId(userId) {
+    return fetch('../Json/user_data.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Fetched user data:', data); // Debug: Log the fetched data
+            const validUser = data.authors.find(author => author.userID === userId); // Corrected to userID
+            console.log('Valid user:', validUser); // Debug: Log the found user
+            return !!validUser;
+        });
+}
+
+function sendEmail() {
+    var title = document.getElementById('title').value;
+    var content = document.getElementById('editor').innerHTML;
+    var userId = localStorage.getItem('userId'); // Retrieve the user ID from localStorage
+
+    // Create the JSON content with the specified format
+    var jsonContent = JSON.stringify({ 
+      title: title, 
+      content: content, 
+      userId: userId 
+    }, null, 2);
+
+    var mailtoLink = "mailto:lesuppetudiant@gmail.com"
+                    + "?subject=" + encodeURIComponent(title)
+                    + "&body=" + encodeURIComponent(jsonContent);
+
+    var tempLink = document.createElement('a');
+    tempLink.href = mailtoLink;
+    tempLink.click();
+}
+
+
+function execCmd(command, value = null) {
+    document.execCommand(command, false, value);
+}
+
+function addImage() {
+    const url = prompt('Entrez l\'URL de l\'image');
+    if (url) {
+        execCmd('insertImage', url);
+    }
+}
+
+function createLink() {
+    const url = prompt('Entrez l\'URL du lien');
+    if (url) {
+        execCmd('createLink', url);
+    }
+}
+
+function createTable() {
+    const rows = document.getElementById('rowInput').value;
+    const cols = document.getElementById('columnInput').value;
+    if (rows > 0 && cols > 0) {
+        let table = '<table>';
+        for (let i = 0; i < rows; i++) {
+            table += '<tr>';
+            for (let j = 0; j < cols; j++) {
+                table += '<td> </td>';
+            }
+            table += '</tr>';
+        }
+        table += '</table>';
+        document.getElementById('editor').innerHTML += table;
+    } else {
+        alert('Nombre de lignes et de colonnes doivent être supérieurs à zéro');
+    }
+}
+
+// Function to save editor content and title to localStorage
+function saveToLocalStorage() {
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('editor').innerHTML;
+    localStorage.setItem('documentTitle', title);
+    localStorage.setItem('documentContent', content);
+}
+
+// Function to load editor content and title from localStorage
+function loadFromLocalStorage() {
+    const savedTitle = localStorage.getItem('documentTitle');
+    const savedContent = localStorage.getItem('documentContent');
+    if (savedTitle) {
+        document.getElementById('title').value = savedTitle;
+    }
+    if (savedContent) {
+        document.getElementById('editor').innerHTML = savedContent;
+    }
+}
+
+// Load
+
+function copyToClipboard() {
+            const editor = document.getElementById('editor');
+            const textToCopy = editor.innerHTML;
+
+            // Créez un élément textarea temporaire pour sélectionner et copier le texte
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            alert("Texte copié dans le presse-papiers !");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function addLineBreaksToHTML(html) {
+    // Ajouter un saut de ligne après chaque balise HTML fermante
+    return html.replace(/>/g, '>\n');
+}
+
+function copyToClipboard() {
+    const editor = document.getElementById('editor');
+    const textToCopy = editor.innerText; // Copie le texte simple
+
+    // Créer un textarea temporaire pour copier le texte
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = textToCopy;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+
+    alert("Texte copié dans le presse-papiers !");
+}
+
+function copyRawHTML() {
+    const editor = document.getElementById('editor');
+    let htmlToCopy = editor.innerHTML; // Copie le HTML brut
+
+    // Ajouter les sauts de ligne après chaque balise HTML
+    htmlToCopy = addLineBreaksToHTML(htmlToCopy);
+
+    // Créer un textarea temporaire pour copier le HTML
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = htmlToCopy;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+
+    alert("HTML avec sauts de ligne copié dans le presse-papiers !");
+}
+
+
+
+function copyEscapedText() {
+    const editor = document.getElementById('editor');
+    let textToCopy = editor.innerHTML;
+
+    // Ajouter un backslash devant chaque double quote
+    textToCopy = textToCopy.replace(/"/g, '\\"');
+
+    // Créez un élément textarea temporaire pour sélectionner et copier le texte modifié
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = textToCopy;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+
+    alert("Texte copié avec \\ devant chaque \" !");
+}
+
+      </script>
+    </body>
+    </html>

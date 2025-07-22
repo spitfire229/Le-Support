@@ -1,0 +1,411 @@
+{
+  "jurisprudences": [
+      {
+          "name": "Arrêt Blanco",
+          "court": "Tribunal des Conflits",
+          "date": "8 février 1873",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Une jeune fille, Agnès, est blessée par des wagonnets détachés.",
+          "summary": "Établissement du principe de la responsabilité de l'État pour les dommages causés par les services publics. C'est un arrêt fondateur du droit administratif français."
+      },
+      {
+          "name": "Arrêt Amical des Annamites de Paris",
+          "court": "Conseil d'État, Assemblée",
+          "date": "11 juillet 1956",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Un acte administratif est annulé pour avoir enfreint la liberté.",
+          "summary": "Reconnaissance de la liberté d'association comme un principe à valeur constitutionnelle, marquant la première mention d'un PFRLR."
+      },
+      {
+          "name": "Arrêt Koné",
+          "court": "Conseil d'État, Assemblée",
+          "date": "3 juillet 1996",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Un ressortissant malien est jugé coupable d’avoir réalisé des transferts de fonds en dehors du pays.",
+          "summary": "Le Conseil d'État consacre un PFRLR interdisant l'extradition d'un étranger pour des motifs politiques."
+      },
+      {
+          "name": "Arrêt Nicolo",
+          "court": "Conseil d'État",
+          "date": "20 octobre 1989",
+          "file": "../PDF/FICHE REVISION ARRET nicolo.pdf",
+          "dwld" : "../img/dwld fiche d'arret.svg",
+          "facts": "Une réunion a lieu entre des citoyens de la France métropolitaine et d'outre-mer à l'occasion des élections.",
+          "summary": "Le Conseil d'État accepte de contrôler la conformité des lois nationales aux traités internationaux, renforçant la suprématie des traités sur les lois internes."
+      
+        },
+      {
+          "name": "Arrêt Jamart",
+          "court": "Conseil d'État",
+          "date": "7 février 1936",
+          "file": "../PDF/FICHE REVISION ARRET Jamart.pdf",
+          "dwld" : "../img/dwld fiche d'arret.svg",
+          "facts": "Un ministre interdit à un médecin l'accès à des centres de réforme.",
+          "summary": "Les ministres disposent d'un pouvoir réglementaire pour l'organisation de leurs services, même en l'absence de texte."
+      },
+      {
+          "name": "Arrêt Dame Lamotte",
+          "court": "Conseil d'État",
+          "date": "17 février 1950",
+          "file": "../PDF/FICHE REVISION ARRET dame Lamotte.pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Un préfet accorde la concession de terres.",
+          "summary": "Établissement d'un principe général du droit selon lequel tout acte administratif est susceptible de recours pour excès de pouvoir."
+      },
+      {
+          "name": "Arrêt Dehaene",
+          "court": "Conseil d'État",
+          "date": "7 juillet 1950",
+          "file": "../PDF/FICHE REVISION ARRET dehaene.pdf",
+          "dwld" : "../img/dwld fiche d'arret.svg",
+          "facts": "Un chef de bureau est suspendu pour avoir participé à une grève interdite aux agents d’autorité.",
+          "summary": "Reconnaissance du droit de grève pour les agents publics, tout en permettant au gouvernement de limiter ce droit pour assurer l'ordre public."
+      },
+      {
+          "name": "Arrêt Arrighi",
+          "court": "Conseil d'État",
+          "date": "6 novembre 1936",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Un règlement vise à mettre certains agents publics en retraite d’office pour des raisons budgétaires.",
+          "summary": "Le Conseil d'État se déclare incompétent pour contrôler la constitutionnalité des lois, établissant la théorie de la loi écran."
+      },
+      {
+          "name": "Arrêt Quintin",
+          "court": "Conseil d'État",
+          "date": "17 mai 1991",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Un citoyen demande un certificat d'urbanisme pour construire des maisons d'habitation.",
+          "summary": "Application de la théorie de l'écran transparent, permettant le contrôle de constitutionnalité des actes administratifs pris sur le fondement d'une loi à portée générale."
+      },
+      {
+          "name": "Arrêt Dame veuve Trompier-Gravier",
+          "court": "Conseil d'État, Section",
+          "date": "5 mai 1944",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Une femme distribue des journaux dans les rues.",
+          "summary": "Première application des principes généraux du droit concernant les droits de la défense."
+      },
+      {
+          "name": "Arrêt Société KPMG et autres",
+          "court": "Conseil d'État",
+          "date": "24 mars 2006",
+          "file": "../PDF/FICHE REVISION ARRET Société KPMG et autres.pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Consécration du principe général de sécurité juridique, permettant des dérogations pour des raisons d'ordre public."
+      },
+      {
+          "name": "Arrêt Commune de Morsang-sur-Orge",
+          "court": "Conseil d'État, Assemblée",
+          "date": "27 octobre 1995",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Des nains sont lancés pour attirer des clients dans des discothèques.",
+          "summary": "Reconnaissance de la dignité humaine comme composante de l'ordre public, permettant l'interdiction de pratiques dégradantes comme le lancer de nain."
+      },
+      {
+          "name": "Arrêt Benjamin",
+          "court": "Conseil d'État",
+          "date": "19 mai 1933",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Mise en place du principe de proportionnalité dans le cadre des mesures de police, conciliant ordre public et liberté de réunion."
+      },
+      {
+          "name": "Arrêt Barel",
+          "court": "Conseil d'État",
+          "date": "28 mai 1954",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Consécration du principe d'égalité d'accès aux emplois publics, interdisant toute discrimination fondée sur les opinions politiques ou religieuses."
+      },
+      {
+          "name": "Arrêt Rubin de Servens",
+          "court": "Conseil d'État",
+          "date": "2 mars 1962",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le Conseil d'État refuse de contrôler les actes de gouvernement pris en application de l'article 16 de la Constitution."
+      },
+      {
+          "name": "Arrêt Labonne",
+          "court": "Conseil d'État",
+          "date": "8 août 1919",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Reconnaissance du pouvoir de police générale du Président de la République en l'absence de disposition législative contraire."
+      },
+      {
+          "name": "Arrêt Association France Nature Environnement",
+          "court": "Conseil d'État",
+          "date": "10 janvier 2001",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Les directives européennes peuvent être invoquées à l'encontre d'actes réglementaires pris après l'expiration du délai de transposition."
+      },
+      {
+          "name": "Arrêt Ponard",
+          "court": "Conseil d'État",
+          "date": "14 novembre 1958",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "L'administration est tenue de ne pas appliquer un texte réglementaire lorsqu'il est jugé illégal."
+      },
+      {
+          "name": "Arrêt Société du Journal l'Aurore",
+          "court": "Conseil d'État, Assemblée",
+          "date": "25 juin 1948",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Établissement du principe général du droit de non-rétroactivité des actes administratifs."
+      },
+      {
+          "name": "Arrêt Société des concerts du conservatoire",
+          "court": "Conseil d'État, Section",
+          "date": "9 mars 1951",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Consécration du principe d'égalité des usagers devant le service public."
+      },
+      {
+          "name": "Arrêt Conseil de la concurrence",
+          "court": "Conseil Constitutionnel",
+          "date": "23 janvier 1987",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le Conseil Constitutionnel affirme la compétence de l'ordre administratif pour annuler et réformer les actes administratifs."
+      },
+      {
+          "name": "Arrêt Rothschild",
+          "court": "Conseil d'État",
+          "date": "6 décembre 1855",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "La responsabilité de l'État est engagée uniquement en cas de faute, selon un droit exorbitant du droit commun."
+      },
+      {
+          "name": "Arrêt Didier",
+          "court": "Conseil d'État",
+          "date": "3 décembre 1999",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le principe d'impartialité du juge est un principe général du droit, impliquant l'applicabilité de l'article 6 de la CEDH."
+      },
+      {
+          "name": "Arrêt SARL du Parc d'Activité de Blotzheim",
+          "court": "Conseil d'État, Assemblée",
+          "date": "18 décembre 1998",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le Conseil d'État accepte de contrôler la procédure de ratification ou d'approbation des traités."
+      },
+      {
+          "name": "Arrêt Aggoun",
+          "court": "Conseil d'État, Assemblée",
+          "date": "5 mars 2003",
+          "file": "../PDF/FICHE REVISION ARRET aggoun.pdf",
+          "dwld" : "../img/dwld fiche d'arret.svg",
+          "facts": "Un ressortissant algérien voit sa demande de titre de séjour rejetée par le préfet.",
+          "summary": "Le juge administratif peut contrôler la procédure de ratification des traités lorsque leur irrégularité est soulevée par une partie."
+      },
+      {
+          "name": "Arrêt Gisti",
+          "court": "Conseil d'État, Assemblée",
+          "date": "8 décembre 1978",
+          "file": "../PDF/FICHE REVISION ARRET GISTI .pdf",
+          "dwld" : "../img/dwld fiche d'arret.svg",
+          "facts": "Un décret est annulé parce qu'il conditionnait le regroupement familial à l’engagement de ne pas travailler en France.",
+          "summary": "Les conventions internationales ont une autorité supérieure à celle des lois, permettant ainsi leur invocabilité par les particuliers."
+      },
+      {
+          "name": "Arrêt Sarran",
+          "court": "Conseil d'État, Assemblée",
+          "date": "30 octobre 1998",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "La suprématie conférée aux engagements internationaux ne s'applique pas dans l'ordre interne aux dispositions constitutionnelles."
+      },
+      {
+          "name": "Arrêt Commune d'Annecy",
+          "court": "Conseil d'État, Assemblée",
+          "date": "3 octobre 2008",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "Le Conseil d'État annule un décret pour ne pas avoir respecté la Charte de l’Environnement.",
+          "summary": "Reconnaissance de la valeur constitutionnelle de la Charte de l'environnement, permettant son application directe par le juge administratif."
+      },
+      {
+          "name": "Arrêt Arcelor",
+          "court": "Conseil d'État, Assemblée",
+          "date": "8 février 2007",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le juge administratif, lorsqu'il est confronté à un acte de transposition d'une directive, peut vérifier la constitutionnalité de la directive européenne."
+      },
+      {
+          "name": "Arrêt Canal, Robin et Godot",
+          "court": "Conseil d'État, Assemblée",
+          "date": "19 octobre 1962",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Annulation d'une ordonnance prise en application de l'article 11 de la Constitution, créant une juridiction d'exception sans possibilité de recours."
+      },
+      {
+          "name": "Arrêt D'Aillières",
+          "court": "Conseil d'État, Section",
+          "date": "7 février 1947",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le recours en cassation est ouvert même sans texte, pour tous les contentieux administratifs."
+      },
+      {
+          "name": "Arrêt Huglo",
+          "court": "Conseil d'État, Assemblée",
+          "date": "2 juillet 1982",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le caractère exécutoire des actes administratifs est une règle fondamentale du droit public."
+      },
+      {
+          "name": "Arrêt Prince Napoléon",
+          "court": "Conseil d'État",
+          "date": "19 février 1875",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Abandon du mobile politique comme critère d'identification des actes de gouvernement, ouvrant la voie à leur justiciabilité."
+      },
+      {
+          "name": "Arrêt Association AC!",
+          "court": "Conseil d'État, Assemblée",
+          "date": "11 mai 2004",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le Conseil d'État accepte d'adapter dans le temps les effets de ses décisions, pouvant déroger au principe de l'effet rétroactif de l'annulation."
+      },
+      {
+          "name": "Arrêt Ternon",
+          "court": "Conseil d'État, Assemblée",
+          "date": "26 octobre 2001",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "L'administration dispose d'un délai de quatre mois pour retirer une décision individuelle explicite créatrice de droits."
+      },
+      {
+          "name": "Arrêt Société Tropic Travaux Signalisation",
+          "court": "Conseil d'État, Assemblée",
+          "date": "16 juillet 2007",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Élargissement du recours contentieux pour les tiers aux contrats administratifs, ouvrant la voie à une nouvelle catégorie de contentieux."
+      },
+      {
+          "name": "Arrêt Czabaj",
+          "court": "Conseil d'État, Assemblée",
+          "date": "13 juillet 2016",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le Conseil d'État fixe un délai raisonnable d'un an pour contester une décision administrative notifiée sans mention des voies et délais de recours."
+      },
+      {
+          "name": "Arrêt Société Fairvesta International GMBH",
+          "court": "Conseil d'État, Assemblée",
+          "date": "21 mars 2016",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Les actes de droit souple, tels que les communiqués de presse des autorités de régulation, sont susceptibles de recours pour excès de pouvoir."
+      },
+      {
+          "name": "Arrêt Société GDF Suez",
+          "court": "Conseil d'État, Assemblée",
+          "date": "19 juillet 2019",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Les lignes directrices adoptées par les autorités de régulation peuvent faire l'objet d'un recours devant le juge administratif."
+      },
+      {
+          "name": "Arrêt Hardouin",
+          "court": "Conseil d'État, Assemblée",
+          "date": "17 février 1995",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Les sanctions disciplinaires infligées aux militaires sont susceptibles de recours lorsqu'elles ont un impact direct sur leur carrière."
+      },
+      {
+          "name": "Arrêt Commune de Béziers",
+          "court": "Conseil d'État, Assemblée",
+          "date": "28 décembre 2009",
+          "file": "../PDF/FICHE REVISION ARRET .pdf",
+          "dwld" : "../img/no dwld fiche d'arret.svg",
+          "facts": "",
+          "summary": "Le Conseil d'État favorise la stabilité des relations contractuelles en limitant les cas de nullité des contrats administratifs."
+      },
+      {
+        "name": "Arrêt Association des Américains accidentels",
+        "court": "Conseil d'État, Assemblée",
+        "date": "****",
+        "file": "../PDF/FICHE REVISION ARRET Association des Américains accidentels.pdf",
+        "dwld" : "../img/dwld fiche d'arret.svg",
+        "facts": "",
+        "summary": "***"
+    }
+    ,
+      {
+        "name": "Arrêt mme Sadlon",
+        "court": "Conseil d'État, Assemblée",
+        "date": "****",
+        "file": "../PDF/FICHE REVISION ARRET Mme Sadlon.pdf",
+        "dwld" : "../img/dwld fiche d'arret.svg",
+        "facts": "",
+        "summary": "***"
+    },
+    {
+      "name": "Arrêt Commune de Grande-Synthe et autres",
+      "court": "Conseil d'État, Assemblée",
+      "date": "****",
+      "file": "../PDF/FICHE REVISION ARRET Commune de Grande-Synthe et autres.pdf",
+      "dwld" : "../img/dwld fiche d'arret.svg",
+      "facts": "",
+      "summary": "***"
+  },
+    {
+      "name": "Arrêt Conseil national des barreaux",
+      "court": "Conseil d'État, Assemblée",
+      "date": "****",
+      "file": "../PDF/FICHE REVISION ARRET Conseil national des barreaux.pdf",
+      "dwld" : "../img/dwld fiche d'arret.svg",
+      "facts": "",
+      "summary": "***"
+  }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+    "authors": [
+      {
+        "userID": "S-225CCK",
+        "username": "x",
+        "password": "x",
+        "grade": "createur",
+        "status": "étudiant",
+        "studies": "droit",
+        "education_level": "licence 1",
+        "university": "Paris Nanterre",
+        "additional_info": "Actuellement en Licence 1 de Droit au sein de l’Université Paris X, je suis passionné par le droit et d'art. Je porte donc les deux casquettes, celle d'étudiant et celle de graphiste digital.",
+        "instagram_link": "https://www.instagram.com/charl3s_kremer/",
+        "linkedin_link": "https://www.linkedin.com/in/charles-kremer-918454234/",
+        "contribution": "- creation, developpement, maintenance et mise a jour des services Le Support",
+        "picture": "../img/PP/PDP charleskremer.jpg",
+        "year": "licence 2",
+        "contact": "charlesjonathankremer@gmail.com",
+        "topics": {
+          "Les notations à la fac": "<p>Cet article s’adresse aux nouveaux élèves à Nanterre et vise à démystifier le système de notation au sein de l'Université Paris Nanterre et des facultées de droits francaises de maniere plus générale.</p><h3>Passage en L2</h3><p>Le passage en année supérieure est conditionné par l’obtention d’une moyenne égale ou supérieure à<span class=\"orange\"> 10/20</span>.<br> Si vous n’atteignez pas cette moyenne, il est possible de redoubler l'année ou de tenter de valider les matières lors de la session de rattrapage.</p><h3>Les systèmes de compensation</h3><p>Il peut s'avérer ardu d’obtenir la moyenne dans toutes les matières, surtout en L1. <br> À Nanterre, un système de compensation est mis en place pour aider les étudiants à progresser malgré des résultats inégaux.<br><br><span class=\"light-red\"> Les mineures (ici identifiées en rouge sur le relevé de notes)</span> se compensent entre elles et uniquement entre elles. <br>Cela signifie que si vous avez une note légèrement inférieure à la moyenne dans une mineure, elle peut être compensée par une note supérieure à la moyenne dans une autre mineure. <br><br> <span class=\"light-orange\">Les majeures (ici en orange)</span>, quant à elles, se compensent entre elles mais peuvent également compenser les mineures.<br> Par exemple, une note élevée dans une majeure peut compenser une note faible dans une mineure, ce qui peut vous permettre d’atteindre la moyenne générale de 10/20 nécessaire pour passer en L2.</p><img class=\"center60\" style=\" border-radius: 20px; margin: 2% 10% 2% 25%;\" src=\"../img/explication notes.png\" alt=\"\"><h3>Majoration</h3><p>Après chaque session d’examen, le jury d’examen se réunit pour étudier le cas des élèves dont les copies sont proches de la moyenne. Si un élève s’est fait remarquer en bien par son engagement, sa participation en cours, ou ses efforts, le jury peut octroyer les quelques centièmes de point qui séparent ce dernier de la moyenne. Cette majoration est toutefois exceptionnelle et ne doit pas être considérée comme acquise. Elle dépend de l’appréciation du jury et des efforts démontrés par l’étudiant tout au long de l’année.</p><h3>Les rattrapages</h3><p>Les étudiants qui n'ont pas validé certaines matières lors des premières sessions d'examen peuvent passer des épreuves de rattrapage. Ces rattrapages se déroulent en mai. Les notes obtenues aux rattrapages remplacent les notes initiales, permettant ainsi aux étudiants d'améliorer leur moyenne et d'augmenter leurs chances de passer en année supérieure.</p><h3>ECTS et Diplômes</h3><p>Le système européen de transfert et d’accumulation de crédits (ECTS) est également en vigueur à Nanterre. Chaque matière est affectée d’un certain nombre de crédits ECTS, et un total de 60 crédits est requis pour valider une année universitaire (visible sur votre contrat pédagogique). Les crédits ECTS permettent une reconnaissance des études à travers les universités européennes, facilitant ainsi la mobilité internationale des étudiants. En comprenant bien le système de notation et de compensation, vous serez mieux préparés à naviguer votre première année à l’Université Paris Nanterre et à maximiser vos chances de succès académique. Bonne chance!</p>",
+          "topic2": "<h1>Sujet 4</h1><p>Contenu pour le sujet 4 de l'auteur 2</p>",
+          "topic3": "<h1>Sujet 5</h1><p>Contenu pour le sujet 5 de l'auteur 2</p>",
+          "topic4": "<h1>Sujet 6</h1><p>Contenu pour le sujet 6 de l'auteur 2</p>"
+        }
+      },
+      {
+        "userID": "S-CLI3J4",
+        "username": "Ilias",
+        "password": "lesupport.me",
+        "grade": "createur",
+        "status": "étudiant",
+        "studies": "droit",
+        "education_level": "licence 1",
+        "university": "Paris Nanterre",
+        "additional_info": "Actuellement en Licence 1 de Droit au sein de l’Université Paris X, je suis passionné par le droit et d'art. Je porte donc les deux casquettes, celle d'étudiant et celle de graphiste digital.",
+        "instagram_link": "https://www.instagram.com/charl3s_kremer/",
+        "linkedin_link": "https://www.linkedin.com/in/charles-kremer-918454234/",
+        "contribution": "- creation, developpement, maintenance et mise a jour des services Le Support",
+        "picture": "../img/PP/PDP charleskremer.jpg",
+        "year": "licence 2",
+        "contact": "charlesjonathankremer@gmail.com",
+        "topics": {
+          "Les notations à la fac": "<p>Cet article s’adresse aux nouveaux élèves à Nanterre et vise à démystifier le système de notation au sein de l'Université Paris Nanterre et des facultées de droits francaises de maniere plus générale.</p><h3>Passage en L2</h3><p>Le passage en année supérieure est conditionné par l’obtention d’une moyenne égale ou supérieure à<span class=\"orange\"> 10/20</span>.<br> Si vous n’atteignez pas cette moyenne, il est possible de redoubler l'année ou de tenter de valider les matières lors de la session de rattrapage.</p><h3>Les systèmes de compensation</h3><p>Il peut s'avérer ardu d’obtenir la moyenne dans toutes les matières, surtout en L1. <br> À Nanterre, un système de compensation est mis en place pour aider les étudiants à progresser malgré des résultats inégaux.<br><br><span class=\"light-red\"> Les mineures (ici identifiées en rouge sur le relevé de notes)</span> se compensent entre elles et uniquement entre elles. <br>Cela signifie que si vous avez une note légèrement inférieure à la moyenne dans une mineure, elle peut être compensée par une note supérieure à la moyenne dans une autre mineure. <br><br> <span class=\"light-orange\">Les majeures (ici en orange)</span>, quant à elles, se compensent entre elles mais peuvent également compenser les mineures.<br> Par exemple, une note élevée dans une majeure peut compenser une note faible dans une mineure, ce qui peut vous permettre d’atteindre la moyenne générale de 10/20 nécessaire pour passer en L2.</p><img class=\"center60\" style=\" border-radius: 20px; margin: 2% 10% 2% 25%;\" src=\"../img/explication notes.png\" alt=\"\"><h3>Majoration</h3><p>Après chaque session d’examen, le jury d’examen se réunit pour étudier le cas des élèves dont les copies sont proches de la moyenne. Si un élève s’est fait remarquer en bien par son engagement, sa participation en cours, ou ses efforts, le jury peut octroyer les quelques centièmes de point qui séparent ce dernier de la moyenne. Cette majoration est toutefois exceptionnelle et ne doit pas être considérée comme acquise. Elle dépend de l’appréciation du jury et des efforts démontrés par l’étudiant tout au long de l’année.</p><h3>Les rattrapages</h3><p>Les étudiants qui n'ont pas validé certaines matières lors des premières sessions d'examen peuvent passer des épreuves de rattrapage. Ces rattrapages se déroulent en mai. Les notes obtenues aux rattrapages remplacent les notes initiales, permettant ainsi aux étudiants d'améliorer leur moyenne et d'augmenter leurs chances de passer en année supérieure.</p><h3>ECTS et Diplômes</h3><p>Le système européen de transfert et d’accumulation de crédits (ECTS) est également en vigueur à Nanterre. Chaque matière est affectée d’un certain nombre de crédits ECTS, et un total de 60 crédits est requis pour valider une année universitaire (visible sur votre contrat pédagogique). Les crédits ECTS permettent une reconnaissance des études à travers les universités européennes, facilitant ainsi la mobilité internationale des étudiants. En comprenant bien le système de notation et de compensation, vous serez mieux préparés à naviguer votre première année à l’Université Paris Nanterre et à maximiser vos chances de succès académique. Bonne chance!</p>",
+          "topic2": "<h1>Sujet 4</h1><p>Contenu pour le sujet 4 de l'auteur 2</p>",
+          "topic3": "<h1>Sujet 5</h1><p>Contenu pour le sujet 5 de l'auteur 2</p>",
+          "topic4": "<h1>Sujet 6</h1><p>Contenu pour le sujet 6 de l'auteur 2</p>"
+        }
+      }
+    ]
+  }
+  

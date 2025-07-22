@@ -1,0 +1,611 @@
+[
+  {
+    "id": 1,
+    "nom": "Jean Carbonnier",
+    "image": "../img/grandes_figures/carbonnier.jpeg",
+    "periode": "1908 - 2003",
+    "faits" : "Un Pilier de la Sociologie Juridique et du Droit Civil Français",
+    "histoire": "Jean Carbonnier est un juriste français, considéré comme l'un des plus grands théoriciens du droit civil du XXe siècle. Il a marqué la doctrine juridique par une approche sociologique du droit, mettant en avant le concept de 'droit souple'. Son influence a été déterminante dans plusieurs réformes majeures du droit civil en France, notamment en matière de droit de la famille et de protection de l'enfance.",
+    "etudes": "Jean Carbonnier étudie à la Faculté de droit de Bordeaux, où il obtient son doctorat en 1930. Il réussit l'agrégation de droit privé et de sciences criminelles en 1937 et enseigne dans plusieurs universités, notamment à Poitiers et à la Sorbonne.",
+    "ecrits": [
+      "Flexible Droit (1969) : un ouvrage fondamental où il explore la souplesse du droit et son interaction avec la société.<br>",
+      "Droit civil (en plusieurs volumes) : un manuel de référence pour les étudiants et praticiens du droit.<br>",
+      "Essais sur les lois (1995) : réflexion sur la loi et son application.<br>",
+      "Sociologie juridique : étude de l'impact du droit sur la société et vice versa.<br>"
+    ],
+    "faits_marquants": [
+      "Réformateur du droit de la famille : il joue un rôle clé dans les réformes des années 1960 et 1970, notamment la reconnaissance de l'égalité entre les époux, la réforme du divorce (1975) et la modernisation de l'autorité parentale.",
+      "Développement du concept de 'droit souple' : il oppose ce concept au droit rigide, mettant en avant l'idée que le droit ne doit pas être figé mais s'adapter aux évolutions sociales.",
+      "Influence majeure sur la sociologie du droit : il est l'un des premiers juristes français à intégrer une approche sociologique dans l'analyse juridique.",
+      "Membre de l'Académie des sciences morales et politiques : il est reconnu pour son apport intellectuel au droit et aux sciences humaines."
+    ]
+  }, 
+  {
+  "id": 2,
+  "nom": "René Savatier",
+  "image": "../img/grandes_figures/savatier.jpeg",
+  "periode": "1892 - 1984",
+  "faits": "Grand civiliste et théoricien du droit, spécialiste du droit des obligations et du droit de la responsabilité.",
+  "histoire": "René Savatier est un juriste français renommé pour ses travaux en droit civil, en particulier en droit des obligations et en droit de la responsabilité. Il a marqué la doctrine par ses réflexions novatrices et son approche pragmatique du droit, influençant ainsi la jurisprudence et la législation française.",
+  "etudes": "Il étudie à la Faculté de droit de Poitiers, où il obtient son doctorat. Agrégé de droit privé, il devient professeur et enseigne dans plusieurs universités, notamment à Poitiers et à Paris.",
+  "ecrits": [
+      "Traité de la responsabilité civile en droit français (1951) : un ouvrage de référence sur la responsabilité délictuelle et contractuelle.<br>",
+      "L'évolution du droit civil contemporain (1947) : une analyse des grandes tendances du droit civil au XXe siècle.<br>",
+      "Le droit économique (1966) : un ouvrage pionnier sur l'influence de l'économie sur le droit.<br>",
+      "Nombreux articles et chroniques dans des revues juridiques.<br>"
+  ],
+  "faits_marquants": [
+      "Spécialiste du droit des obligations et de la responsabilité civile : il a contribué à l'évolution de ces matières en apportant une réflexion sur la réparation des dommages et la notion de faute.",
+      "Précurseur du droit économique : il a analysé les interactions entre le droit et l'économie, anticipant des évolutions majeures du droit des affaires.",
+      "Influence sur la réforme du droit civil : ses travaux ont nourri la réflexion législative et jurisprudentielle sur la responsabilité et les contrats.",
+      "Membre de l'Académie des sciences morales et politiques : reconnaissance de son apport intellectuel au droit français."
+  ]
+},
+{
+  "id": 3,
+  "nom": "Georges Vedel",
+  "image": "../img/grandes_figures/J_Vedel.jpeg",
+  "periode": "1910 - 2002",
+  "faits": "Constitutionnaliste influent, académicien et professeur de droit public.",
+  "histoire": "Georges Vedel est un juriste français considéré comme l'un des plus grands constitutionnalistes du XXe siècle. Il a joué un rôle clé dans la modernisation du droit public en France et a fortement influencé l'évolution du droit constitutionnel et administratif.",
+  "etudes": "Après des études à la Faculté de droit de Toulouse, il devient agrégé de droit public en 1936. Il enseigne ensuite dans plusieurs grandes universités, dont Paris et l'Institut d'études politiques.",
+  "ecrits": [
+      "Manuel élémentaire de droit constitutionnel (1949) : un ouvrage de référence pour les étudiants et praticiens du droit public.<br>",
+      "Droit administratif (en plusieurs éditions) : un traité fondamental sur l'organisation et le fonctionnement de l'administration publique.<br>",
+      "Publications et discours sur le Conseil constitutionnel et l'État de droit.<br>"
+  ],
+  "faits_marquants": [
+      "Rénovateur du droit constitutionnel français : il a contribué à moderniser l'enseignement du droit public et à adapter la discipline aux évolutions politiques.",
+      "Membre du Conseil constitutionnel (1980-1989) : il a marqué cette institution par ses avis éclairés sur la protection des droits fondamentaux et l'équilibre des pouvoirs.",
+      "Élu à l'Académie française en 1998 : reconnaissance de son influence intellectuelle et juridique.",
+      "Défenseur de la construction européenne : il a plaidé pour une intégration juridique et institutionnelle renforcée au sein de l'Union européenne."
+  ]
+},
+
+{
+  "id": 4,
+  "nom": "Philippe de Beaumanoir",
+  "image": "../img/grandes_figures/P_de_Beaumanoir.jpg",
+  "periode": "1250 - 1296",
+  "faits": "Juriste médiéval français, auteur des 'Coutumes de Beauvaisis', référence majeure du droit coutumier français.",
+  "histoire": "Philippe de Beaumanoir est un juriste français du XIIIe siècle, célèbre pour son œuvre majeure, les 'Coutumes de Beauvaisis'. Il a contribué à la structuration et à la formalisation du droit coutumier en France, offrant un témoignage essentiel sur la justice et la société médiévale. Son travail a influencé le développement du droit français avant la codification officielle.",
+  "etudes": "Issu d'une famille noble, il reçoit une formation juridique approfondie, probablement à l'Université d'Orléans, où il étudie le droit romain et le droit coutumier.",
+  "ecrits": [
+      "'Les Coutumes de Beauvaisis' (vers 1283) : un recueil de règles juridiques et de pratiques judiciaires en usage dans le comté de Clermont-en-Beauvaisis.<br>",
+      "Travaux sur l'organisation de la justice seigneuriale et royale, visant à structurer et rationaliser le droit médiéval.<br>"
+  ],
+  "faits_marquants": [
+      "Rédaction des 'Coutumes de Beauvaisis' : ouvrage fondamental qui fixe les usages du droit coutumier et influence le droit français jusqu'à l'époque moderne.",
+      "Défenseur d'une justice équitable : il prône une justice accessible et structurée, distinguant notamment la justice seigneuriale de la justice royale.",
+      "Précurseur de la codification juridique : son œuvre marque une étape importante dans la mise en ordre du droit coutumier avant les ordonnances royales du XVIe siècle.",
+      "Influence durable sur la doctrine juridique : son traité est encore étudié aujourd’hui pour comprendre l’évolution du droit médiéval et ses interactions avec le droit romain."
+  ]
+},
+{
+  "id": 5,
+  "nom": "Charles Dumoulin",
+  "image": "../img/grandes_figures/dumoulin.jpg",
+  "periode": "1500 - 1566",
+  "faits": "Grand juriste humaniste français, spécialiste du droit coutumier et défenseur de la supériorité du droit national sur le droit romain.",
+  "histoire": "Charles Dumoulin (ou Molinaeus) est l'un des plus grands juristes français du XVIe siècle. Il s'est distingué par ses travaux en droit coutumier et son opposition à l'application trop stricte du droit romain en France. Il a défendu l'idée d'un droit national autonome, adapté aux réalités locales et indépendant des influences étrangères. Son œuvre a marqué la transition entre le droit médiéval et le droit moderne.",
+  "etudes": "Il étudie le droit à Paris et à Orléans, où il acquiert une solide formation en droit romain et en droit coutumier. Son approche critique et novatrice le conduit à devenir l’un des plus influents juristes de son époque.",
+  "ecrits": [
+      "'Commentaire sur la Coutume de Paris' (1539) : un ouvrage fondamental sur le droit coutumier, influençant la jurisprudence française.<br>",
+      "'Commentaire sur l'Édit du Roi touchant les Donations' (1553) : analyse des règles successorales et des libéralités en droit français.<br>",
+      "'Consilia' : recueil d’avis juridiques sur des questions complexes de droit civil et de droit canonique.<br>",
+      "'Tractatus commeriorum et usurarum' : un traité sur le commerce et l’usure, où il critique les pratiques économiques injustes.<br>"
+  ],
+  "faits_marquants": [
+      "Défenseur du droit coutumier français : il plaide pour l'autonomie des coutumes locales face au droit romain, contribuant ainsi à l'affirmation du droit national.",
+      "Opposition à l'Inquisition et aux abus ecclésiastiques : il prône une séparation plus nette entre le droit civil et le droit canonique.",
+      "Influence sur la codification du droit en France : ses travaux préfigurent la centralisation et l’unification du droit français, qui aboutiront sous l’Ancien Régime.",
+      "Persécutions et exils : en raison de ses idées réformistes, il est contraint de fuir la France à plusieurs reprises et exerce à l’étranger, notamment à Bâle et à Strasbourg."
+  ]
+},
+{
+  "id": 6,
+  "nom": "Jean Bodin",
+  "image": "../img/grandes_figures/Jean Bodin.jpg",
+  "periode": "1530 - 1596",
+  "faits": "Philosophe du droit et théoricien de la souveraineté, auteur des 'Six Livres de la République'.",
+  "histoire": "Jean Bodin est un juriste, philosophe et économiste français du XVIe siècle, célèbre pour ses théories sur la souveraineté et l'État. Il est considéré comme l’un des fondateurs de la pensée politique moderne. Défenseur d’un pouvoir centralisé fort, il a influencé durablement la théorie du droit public et du gouvernement. Son œuvre, notamment 'Les Six Livres de la République', reste une référence dans l’histoire du droit et des institutions politiques.",
+  "etudes": "Il étudie le droit à l'Université de Toulouse, où il se forme au droit romain et au droit coutumier. Il devient avocat au Parlement de Paris et enseigne le droit public.",
+  "ecrits": [
+      "'Les Six Livres de la République' (1576) : œuvre majeure où il théorise le concept moderne de souveraineté et définit les bases de l'État moderne.<br>",
+      "'Démonomanie des sorciers' (1580) : un traité sur la sorcellerie et les superstitions, révélateur des croyances de son époque.<br>",
+      "'Paradoxes de M. de Malestroit' (1568) : un ouvrage économique où il analyse les causes de l'inflation et propose des solutions monétaires.<br>",
+      "'Colloquium heptaplomeres' (œuvre posthume) : un dialogue philosophique explorant la tolérance religieuse et le relativisme.<br>"
+  ],
+  "faits_marquants": [
+      "Définition du concept de souveraineté : il établit que l'État doit avoir une autorité suprême, indivisible et permanente, un principe fondamental du droit public moderne.",
+      "Penseur influent de l’absolutisme : ses théories inspireront les monarchies européennes et les futurs théoriciens de l'État, comme Hobbes et Rousseau.",
+      "Réflexions économiques avancées : il est l’un des premiers à analyser les causes de l'inflation et à poser les bases de la pensée mercantiliste.",
+      "Engagement dans les guerres de Religion : bien que catholique, il prône une certaine tolérance religieuse et critique les guerres confessionnelles qui déchirent la France."
+  ]
+},
+{
+  "id": 7,
+  "nom": "Jean Domat",
+  "image": "../img/grandes_figures/Domat.jpg",
+  "periode": "1625 - 1696",
+  "faits": "Juriste français, auteur des 'Lois civiles dans leur ordre naturel', précurseur du Code civil.",
+  "histoire": "Jean Domat est un juriste français du XVIIe siècle, connu pour son œuvre monumentale visant à rationaliser et structurer le droit français. Il fut l’un des premiers à chercher une organisation systématique du droit civil inspirée du droit romain, tout en y intégrant des principes chrétiens et monarchiques. Son travail a influencé directement la rédaction du Code civil napoléonien.",
+  "etudes": "Il étudie le droit à l’Université de Bourges, où il se spécialise dans le droit romain et le droit coutumier français. Après ses études, il devient magistrat à Clermont-Ferrand, avant d’être protégé par Louis XIV, qui soutient ses travaux juridiques.",
+  "ecrits": [
+      "'Lois civiles dans leur ordre naturel' (1689) : une œuvre majeure visant à systématiser le droit civil en s'inspirant du droit romain.",
+      "'Les Principes du droit public' (posthume) : un traité abordant la relation entre droit public et monarchie absolue.",
+      "Divers commentaires sur le droit romain et la jurisprudence française."
+  ],
+  "faits_marquants": [
+      "Précurseur du Code civil : son œuvre a posé les bases de la codification du droit civil sous Napoléon en 1804.",
+      "Systématisation du droit civil : il propose un classement des règles juridiques selon un ordre logique et naturel.",
+      "Vision chrétienne du droit : il intègre dans son œuvre une dimension morale et religieuse, voyant le droit comme l’expression de la volonté divine.",
+      "Protection par Louis XIV : son travail est reconnu et soutenu par le roi, qui l’encourage à poursuivre son œuvre juridique."
+  ]
+},
+{
+  "id": 8,
+  "nom": "Montesquieu",
+  "image": "../img/grandes_figures/Charles_Montesquieu.jpg",
+  "periode": "1689 - 1755",
+  "faits": "Philosophe et juriste français, auteur de 'De l'esprit des lois', une œuvre fondamentale pour la séparation des pouvoirs et le droit constitutionnel.",
+  "histoire": "Montesquieu, de son vrai nom Charles-Louis de Secondat, est un philosophe et juriste français du XVIIIe siècle, considéré comme l'un des grands penseurs des Lumières. Il est surtout connu pour son ouvrage 'De l'esprit des lois', où il théorise la séparation des pouvoirs, principe fondamental qui influencera les révolutions américaine et française, ainsi que le développement du droit constitutionnel moderne.",
+  "etudes": "Montesquieu étudie le droit à l'Université de Bordeaux et devient avocat. Il hérite ensuite de la charge de président du Parlement de Bordeaux, un poste qui lui permet de développer ses réflexions sur le droit et la politique.",
+  "ecrits": [
+      "'De l'esprit des lois' (1748) : œuvre majeure dans laquelle Montesquieu propose sa célèbre théorie de la séparation des pouvoirs, essentielle pour la construction des systèmes politiques modernes.<br>",
+      "'Les Lettres persanes' (1721) : une satire de la société française et des institutions de son époque, sous forme de correspondances fictives entre persans.<br>",
+      "'Considérations sur les causes de la grandeur des Romains et de leur décadence' (1734) : une analyse historique et politique de la Rome antique, influençant la pensée politique européenne.<br>"
+  ],
+  "faits_marquants": [
+      "Théorisation de la séparation des pouvoirs : Montesquieu est l'un des premiers à formuler la notion de séparation des pouvoirs, inspirant directement la Constitution des États-Unis et les premières réformes constitutionnelles en France.",
+      "Influence sur le droit constitutionnel moderne : ses idées sur la structure de l'État et le contrôle des pouvoirs ont marqué l'histoire du droit public et continuent de guider les démocraties modernes.",
+      "Critique des despotismes et des inégalités sociales : Montesquieu défend l'idée que le droit doit être adapté aux différents contextes culturels et sociaux, prônant des réformes légales dans le but de réduire les inégalités.",
+      "Réflexions sur la liberté politique : dans ses écrits, il établit les bases d'une réflexion sur la liberté individuelle et la gouvernance, vision qui influencera les penseurs révolutionnaires du XVIIIe siècle."
+  ]
+},
+{
+  "id": 9,
+  "nom": "Robert-Joseph Pothier",
+  "image": "../img/grandes_figures/pothier.jpg",
+  "periode": "1699 - 1772",
+  "faits": "Juriste et auteur d’ouvrages fondamentaux sur le droit civil, il est l’un des grands réformateurs du droit privé en France.",
+  "histoire": "Robert-Joseph Pothier est un juriste français du XVIIIe siècle, reconnu pour ses travaux en droit civil, notamment en matière de contrats, de biens et de successions. Son œuvre a profondément influencé la codification du droit civil en France, en particulier dans l'élaboration du Code civil napoléonien. Ses réflexions sur les contrats et les obligations restent des références incontournables dans la doctrine du droit civil.",
+  "etudes": "Il étudie à l’Université de Poitiers, puis obtient une grande réputation comme professeur de droit. Il devient avocat au Parlement de Paris et reçoit des honneurs pour sa contribution à la réflexion juridique.",
+  "ecrits": [
+      "'Traité des obligations' (1751) : un ouvrage central sur les principes des obligations, un des fondements du droit civil français.",
+      "'Droit des biens' (1761) : traité qui aborde la nature et la gestion des biens, fondamental dans l'étude du droit privé.",
+      "'Traité des successions' (1765) : une analyse détaillée des règles successorales, toujours pertinente dans l’enseignement du droit des successions.",
+      "'Méthode pour étudier le droit' (1760) : un guide pédagogique influent qui a marqué la formation des juristes du XVIIIe siècle."
+  ],
+  "faits_marquants": [
+      "Réformateur du droit des obligations : ses théories sur la formation et l'exécution des contrats ont structuré la pratique juridique en France, et ont été intégrées dans le Code civil.",
+      "Influence sur la codification du droit : son travail est l'une des pierres angulaires de la réforme juridique qui aboutira au Code civil de 1804.",
+      "Expert en droit privé : il a écrit des traités sur le droit des biens, des contrats et des successions, qui sont restés des références incontournables pour les juristes français.",
+      "Professeur émérite et conseiller : Pothier a formé de nombreux juristes, et son influence dans les milieux académiques et judiciaires a été considérable."
+  ]
+},
+{
+  "id": 10,
+  "nom": "Jean-Étienne-Marie Portalis",
+  "image": "../img/grandes_figures/portalis.jpg",
+  "periode": "1746 - 1807",
+  "faits": "L'un des principaux rédacteurs du Code civil, il a joué un rôle clé dans la codification du droit français.",
+  "histoire": "Jean-Étienne-Marie Portalis est un juriste et homme politique français, l'un des principaux rédacteurs du Code civil napoléonien. Son travail a été essentiel dans la transformation du droit français en un système cohérent et accessible. À la fois philosophe et juriste, Portalis a intégré des principes éclairés dans le Code civil tout en tenant compte des traditions juridiques françaises. Il a ainsi contribué à moderniser et à simplifier le droit privé, consolidant ainsi la base juridique de l'État moderne.",
+  "etudes": "Portalis étudie le droit à l'Université d'Aix-en-Provence et devient avocat. Après une carrière dans la magistrature, il se distingue par ses écrits et son engagement dans la réforme juridique. Il est également membre du Conseil d'État et de l'Académie des sciences morales et politiques.",
+  "ecrits": [
+      "'Discours préliminaire du Code civil' (1804) : un texte fondamental dans lequel Portalis explique les principes du Code civil, notamment la protection des droits individuels et l'égalité devant la loi.<br>",
+      "'Les Éléments du droit civil' (1795) : ouvrage dans lequel il établit les bases théoriques de sa vision du droit civil, en lien avec la philosophie des Lumières.<br>",
+      "'Traité des obligations' (1780) : une réflexion approfondie sur le droit des obligations et des contrats, un domaine où il a exercé une grande influence.<br>",
+      "'De l’esprit du droit français' (1789) : un texte qui propose une vision du droit français fondée sur l’équité, la liberté et la justice.<br>"
+  ],
+  "faits_marquants": [
+      "Rédacteur principal du Code civil : Portalis a joué un rôle essentiel dans la rédaction du Code civil napoléonien, en particulier dans les domaines du droit des contrats, des biens et des personnes.",
+      "Vision libérale et éclairée du droit : inspiré par les principes des Lumières, Portalis a défendu un droit fondé sur la raison, l'équité et la justice, tout en respectant les traditions juridiques françaises.",
+      "Influence sur la codification du droit européen : son travail sur le Code civil a influencé les systèmes juridiques de nombreux pays européens et est encore aujourd'hui un modèle pour les codes civils modernes.",
+      "Carrière politique et intellectuelle : en plus de son rôle dans la codification du droit, Portalis a été une figure politique influente sous le Consulat et l'Empire, et a participé à la rédaction de la Constitution de l'an VIII."
+  ]
+},
+{
+  "id": 11,
+  "nom": "René Cassin",
+  "image": "../img/grandes_figures/cassin.jpg",
+  "periode": "1887 - 1976",
+  "faits": "Père de la Déclaration universelle des droits de l'homme, lauréat du prix Nobel de la paix.",
+  "histoire": "René Cassin est un juriste, diplomate et homme politique français, célèbre pour son rôle majeur dans la rédaction de la Déclaration universelle des droits de l'homme adoptée par l'Assemblée générale des Nations Unies en 1948. Son travail a marqué l'histoire du droit international et des droits de l'homme. Cassin a consacré sa carrière à la défense de la dignité humaine, à la lutte contre l'injustice et à l'établissement d'une législation internationale garantissant les droits fondamentaux pour tous.",
+  "etudes": "Cassin est diplômé de l'École normale supérieure et obtient une agrégation en droit. Après des études à la faculté de droit de Paris, il devient professeur de droit et avocat. Sa carrière prend un tournant majeur lorsqu’il se consacre à la défense des droits de l'homme et à l’élaboration de textes internationaux.",
+  "ecrits": [
+      "'Le Droit des gens et la paix' (1929) : une réflexion sur le droit international et les conditions de la paix mondiale, dans laquelle Cassin met en avant la nécessité d'un cadre juridique pour garantir la paix.<br>",
+      "'La Déclaration universelle des droits de l'homme' (1948) : le texte phare dans lequel il a joué un rôle essentiel en tant que rapporteur principal, un document central pour la protection des droits humains dans le monde.<br>",
+      "'Cours de droit international' (1937) : un ouvrage détaillant les principes du droit international public, une référence dans son domaine.<br>",
+      "'Les droits de l'homme et la paix' (1953) : une analyse du rôle des droits de l'homme dans la préservation de la paix et de la justice internationale.<br>"
+  ],
+  "faits_marquants": [
+      "Rédacteur principal de la Déclaration universelle des droits de l'homme : Cassin a joué un rôle central dans la rédaction de ce texte fondamental adopté par l'ONU en 1948, définissant les droits humains universels.",
+      "Lauréat du prix Nobel de la paix : en 1968, il reçoit le prix Nobel de la paix pour ses efforts en faveur des droits de l'homme et de la paix internationale.",
+      "Pionnier du droit international des droits de l'homme : ses travaux ont été essentiels pour le développement du droit international moderne, notamment dans la reconnaissance des droits individuels au niveau mondial.",
+      "Carrière diplomatique : Cassin a également été ambassadeur de France et a participé activement à la reconstruction de l'Europe après la Seconde Guerre mondiale, tout en soutenant les principes de justice et d'égalité."
+  ]
+},
+{
+  "id": 12,
+  "nom": "Raymond Saleilles",
+  "image": "../img/grandes_figures/saleilles.jpg",
+  "periode": "1855 - 1912",
+  "faits": "Pionnier du droit social et fondateur de la sociologie du droit.",
+  "histoire": "Raymond Saleilles est un juriste et professeur français, considéré comme l'un des fondateurs de la sociologie du droit. Son œuvre a profondément influencé la façon dont le droit est perçu comme un produit social, reflétant les valeurs et les besoins de la société. Il a également joué un rôle clé dans le développement du droit social en France, en particulier dans le domaine du droit de la famille et du droit du travail. Saleilles a contribué à la transformation du droit civil et a été un défenseur de la modernisation du système juridique.",
+  "etudes": "Saleilles fait ses études à l'Université de Paris, où il devient agrégé de droit. Il devient ensuite professeur à la Faculté de droit de Paris et exerce une grande influence sur les générations de juristes qui suivent.",
+  "ecrits": [
+      "'Le droit et la sociologie' (1894) : une œuvre fondamentale où Saleilles analyse l’interaction entre le droit et les faits sociaux, posant les bases de la sociologie juridique.<br>",
+      "'La responsabilité civile' (1893) : un ouvrage sur la théorie de la responsabilité, dans lequel il traite des fondements et des principes de la responsabilité civile en droit français.<br>",
+      "'L’Évolution du droit privé' (1904) : un travail sur l’évolution historique du droit privé et sa relation avec la société moderne.<br>",
+      "'Introduction à l’étude du droit' (1907) : un ouvrage pédagogique qui introduit les bases du droit tout en mettant l’accent sur sa dimension sociale.<br>"
+  ],
+  "faits_marquants": [
+      "Fondateur de la sociologie du droit : Saleilles est l'un des premiers à considérer le droit non seulement comme un ensemble de règles juridiques, mais aussi comme un phénomène social qui évolue avec la société.",
+      "Pionnier du droit social : ses travaux sur la responsabilité civile et les réformes du droit de la famille et du travail ont eu un impact durable sur les systèmes juridiques modernes.",
+      "Réformateur du droit de la famille : il a soutenu des réformes importantes dans le domaine du droit de la famille, en particulier concernant les droits des femmes et des enfants.",
+      "Professeur influent : il a formé de nombreux juristes et théoriciens du droit, qui ont continué à développer ses idées sur la sociologie et le droit social."
+  ]
+},
+{
+  "id": 13,
+  "nom": "François Gény",
+  "image": "../img/grandes_figures/geny.jpg",
+  "periode": "1861 - 1959",
+  "faits": "Théoricien du droit et auteur de la méthode scientifique du droit, influent dans la pensée juridique moderne.",
+  "histoire": "François Gény est un juriste français reconnu pour ses travaux sur la méthode scientifique en droit. Il a profondément transformé la manière dont les juristes abordent le droit en introduisant une analyse plus pragmatique et scientifique. Son ouvrage majeur, 'Méthode d'interprétation et sources en droit privé positif', a redéfini l'approche du droit en plaçant l’accent sur la recherche de solutions pratiques aux problèmes juridiques, tout en s’appuyant sur une méthodologie rigoureuse. Son influence a été déterminante dans l’évolution de la pensée juridique contemporaine, particulièrement dans le domaine du droit privé.",
+  "etudes": "Gény étudie à l’Université de Nancy, puis devient professeur à la Faculté de droit de Paris. Son enseignement et ses recherches ont façonné une nouvelle génération de juristes qui privilégient une approche pragmatique et scientifique du droit.",
+  "ecrits": [
+      "'Méthode d'interprétation et sources en droit privé positif' (1899) : son ouvrage le plus célèbre, dans lequel il établit une méthode scientifique d’interprétation du droit, mettant en avant l’importance des faits et de la réalité sociale dans la pratique juridique.<br>",
+      "'Traité de la preuve en droit civil' (1912) : une réflexion sur les principes de la preuve et leur application dans le droit civil, influençant la pratique judiciaire en France.<br>",
+      "'Le droit privé et l’évolution de la société' (1927) : un ouvrage sur l’évolution du droit privé en réponse aux transformations sociales et économiques du XXe siècle.<br>",
+      "'Les sources du droit' (1946) : un texte sur les différentes sources du droit et la manière dont elles doivent être utilisées par les juges pour rendre des décisions.<br>"
+  ],
+  "faits_marquants": [
+      "Théoricien de la méthode scientifique du droit : Gény est l'un des premiers à aborder le droit avec une méthode scientifique, cherchant à interpréter les normes en fonction de leur contexte social et pratique.",
+      "Réformateur du droit privé : ses réflexions sur l’application du droit privé ont conduit à une approche plus souple et adaptable du droit, qui continue d'influencer la pratique judiciaire.",
+      "Influence sur la jurisprudence moderne : ses travaux ont eu un impact profond sur la jurisprudence contemporaine, en particulier dans l’élaboration des principes de preuve et d’interprétation des textes juridiques.",
+      "Pionnier de l’interprétation des normes : il a proposé que le juge ne se limite pas à une application rigide des textes, mais tienne compte des réalités sociales et des évolutions de la société dans ses décisions."
+  ]
+},
+{
+  "id": 14,
+  "nom": "Jeanne Chauvin",
+  "image": "../img/grandes_figures/chauvin.jpg",
+  "periode": "1862 - 1926",
+  "faits": "Première femme avocate en France, militante pour les droits des femmes et l’accès des femmes aux professions juridiques.",
+  "histoire": "Jeanne Chauvin est une juriste française connue pour avoir été la première femme à prêter serment en tant qu’avocate en France en 1900, après un long combat juridique et politique. Brillante universitaire, elle obtient son doctorat en droit en 1892 avec une thèse remarquée sur l’inégalité entre les sexes dans le droit. Militante engagée pour les droits des femmes, elle a contribué à faire évoluer la législation française pour permettre aux femmes d’exercer des professions juridiques et accéder aux carrières de la magistrature et du barreau.",
+  "etudes": "Jeanne Chauvin étudie le droit à l’Université de Paris et devient la deuxième femme en France à obtenir un doctorat en droit. Elle défend une thèse intitulée 'L’égalité de l’homme et de la femme en droit' qui illustre son engagement en faveur des droits des femmes.",
+  "ecrits": [
+      "'L’égalité de l’homme et de la femme en droit' (1892) : sa thèse de doctorat, où elle critique les discriminations juridiques envers les femmes et défend l’égalité des sexes.",
+      "'Les professions accessibles aux femmes' (1901) : un ouvrage analysant les obstacles législatifs à la présence des femmes dans les professions intellectuelles, en particulier dans le domaine du droit.",
+      "'Le suffrage des femmes' (1906) : une étude où elle plaide pour le droit de vote des femmes, encore interdit à son époque.",
+      "'Le rôle de la femme dans l’évolution du droit' (1910) : un essai sur la contribution des femmes à la construction du système juridique français et européen."
+  ],
+  "faits_marquants": [
+      "Première femme avocate en France : bien qu’elle ait obtenu son doctorat en 1892, elle doit attendre une loi en 1900 pour pouvoir prêter serment et exercer officiellement la profession d’avocate.",
+      "Militante pour les droits des femmes : elle a activement défendu l’accès des femmes aux professions juridiques et à la vie politique.",
+      "Engagement dans les réformes législatives : elle participe aux débats parlementaires pour faire modifier la loi et permettre aux femmes d'accéder au barreau et aux carrières juridiques.",
+      "Modèle pour les générations suivantes : son combat a ouvert la voie à l’émancipation des femmes dans les métiers du droit et au-delà, influençant durablement la place des femmes dans la société française."
+  ]
+},
+{
+  "id": 15,
+  "nom": "Léon Duguit",
+  "image": "../img/grandes_figures/duguit.jpg",
+  "periode": "1859 - 1928",
+  "faits": "Théoricien du service public, figure clé du droit public français, critique de la souveraineté étatique traditionnelle.",
+  "histoire": "Léon Duguit est un juriste français, professeur de droit public et théoricien de l'État. Il est connu pour sa doctrine du 'service public', qui rompt avec la conception traditionnelle de l’État souverain et met en avant le rôle social du droit. Il rejette la notion de souveraineté étatique absolue et propose une approche plus fonctionnelle du droit public, où l'État est soumis aux mêmes obligations que les individus et doit garantir l’intérêt général à travers la gestion des services publics. Ses travaux ont profondément influencé l'évolution du droit administratif en France et en Europe.",
+  "etudes": "Léon Duguit étudie le droit à l'Université de Bordeaux, où il devient ensuite professeur. Il enseigne le droit public et marque durablement la doctrine juridique par ses analyses sur l’État et le service public.",
+  "ecrits": [
+      "'L'État, le droit objectif et la loi positive' (1901) : une critique du concept classique de souveraineté et une affirmation du rôle social du droit.",
+      "'Traité de droit constitutionnel' (1911) : un ouvrage fondamental où Duguit développe ses idées sur la limitation des pouvoirs publics et l'importance du service public.",
+      "'Les transformations du droit public' (1913) : une analyse de l'évolution du droit public et de la place croissante du service public dans l'organisation étatique.",
+      "'Le droit social, le droit individuel et la transformation de l'État' (1919) : une étude sur l'interdépendance entre l’État et la société, illustrant sa conception du droit comme un outil au service du bien commun."
+  ],
+  "faits_marquants": [
+      "Théoricien du service public : Duguit développe une conception où l’État ne détient pas un pouvoir absolu mais doit justifier son autorité par l’accomplissement de missions d’intérêt général.",
+      "Opposant à la théorie de la souveraineté absolue : il critique la doctrine traditionnelle de l'État souverain et propose une vision plus pragmatique du droit public.",
+      "Influence majeure sur le droit administratif : ses travaux ont contribué à moderniser la doctrine du droit public en mettant l'accent sur les obligations de l'État envers les citoyens.",
+      "Réformateur de la pensée juridique : en intégrant des considérations sociologiques dans l’analyse du droit, il marque une rupture avec la doctrine positiviste dominante de son époque."
+  ]
+},
+{
+  "id": 16,
+  "nom": "Guy Carcassonne",
+  "image": "../img/grandes_figures/carcassonne.jpg",
+  "periode": "1951 - 2013",
+  "faits": "Constitutionnaliste influent, conseiller du gouvernement, défenseur d’une démocratie parlementaire moderne.",
+  "histoire": "Guy Carcassonne est un juriste français spécialiste du droit constitutionnel. Professeur de droit public, il est reconnu pour ses analyses claires et accessibles des institutions françaises. Il a été un conseiller influent auprès de plusieurs gouvernements et a participé à de nombreuses réformes constitutionnelles. Défenseur d’un renforcement du rôle du Parlement et d’un meilleur équilibre des pouvoirs, il a marqué le débat public par ses propositions de modernisation de la Ve République. Son approche pragmatique et pédagogique du droit en a fait l’un des constitutionnalistes les plus médiatisés de son époque.",
+  "etudes": "Guy Carcassonne étudie le droit à l’Université Paris Nanterre, où il devient professeur de droit public. Il enseigne également à l’Institut d'études politiques de Paris (Sciences Po) et publie de nombreux travaux sur le droit constitutionnel.",
+  "ecrits": [
+      "'La Constitution' (première édition 1992, plusieurs rééditions) : un ouvrage de référence expliquant simplement les principes de la Constitution française.",
+      "'Démocratie représentative et démocratie directe' (2006) : une analyse sur les évolutions démocratiques et la place des citoyens dans le processus décisionnel.",
+      "'Les révisions constitutionnelles sous la Ve République' (2010) : une étude des changements apportés à la Constitution française depuis 1958.",
+      "'Chroniques constitutionnelles' (publication posthume, 2014) : un recueil de ses analyses et commentaires sur l'évolution du droit constitutionnel en France."
+  ],
+  "faits_marquants": [
+      "Conseiller du gouvernement : il participe à plusieurs réformes constitutionnelles sous différentes présidences.",
+      "Défenseur du rôle du Parlement : il plaide pour un renforcement du contrôle parlementaire sur l’exécutif.",
+      "Pédagogue du droit constitutionnel : ses explications accessibles ont contribué à mieux faire comprendre le droit et les institutions au grand public.",
+      "Influence sur la modernisation de la Ve République : il soutient des réformes pour améliorer la séparation des pouvoirs et renforcer la démocratie représentative."
+  ]
+},
+{
+  "id": 17,
+  "nom": "Alain Supiot",
+  "image": "../img/grandes_figures/supiot.jpg",
+  "periode": "Né en 1951",
+  "faits": "Spécialiste du droit du travail, théoricien de l’État social et de la gouvernance par les nombres.",
+  "histoire": "Alain Supiot est un juriste français, spécialiste du droit du travail et des transformations de l’État social. Professeur émérite au Collège de France, il a marqué la pensée juridique par ses analyses sur les mutations du travail et la dérive de la gouvernance par les nombres. Il s'intéresse particulièrement aux effets de la mondialisation et du néolibéralisme sur les cadres juridiques et sociaux, mettant en garde contre une déshumanisation du droit. Son œuvre explore la nécessité de repenser les institutions en fonction des principes fondamentaux de justice sociale et de dignité humaine.",
+  "etudes": "Alain Supiot a étudié le droit à l'Université de Bordeaux, où il a ensuite enseigné avant de devenir professeur à l’Université de Nantes. Il a dirigé l’Institut d’études avancées de Nantes et a été élu professeur au Collège de France en 2012.",
+  "ecrits": [
+      "'Homo juridicus : essai sur la fonction anthropologique du droit' (2005) : une réflexion sur le droit comme fondement des sociétés humaines, au-delà des simples règles économiques.",
+      "'La gouvernance par les nombres' (2015) : une critique du recours excessif aux indicateurs quantitatifs dans la gestion des institutions et des États.",
+      "'Le travail n’est pas une marchandise' (1999) : une analyse des transformations du droit du travail face à la mondialisation.",
+      "'L’esprit de Philadelphie : la justice sociale face au marché total' (2010) : un plaidoyer pour une refonte de l’État social en réponse aux dérives du néolibéralisme."
+  ],
+  "faits_marquants": [
+      "Théoricien du droit du travail : il analyse l’évolution du travail et son impact sur la protection sociale et les institutions juridiques.",
+      "Critique de la 'gouvernance par les nombres' : il dénonce la tendance des États et entreprises à réduire les décisions politiques et sociales à de simples calculs statistiques.",
+      "Professeur au Collège de France : reconnaissance majeure de son influence intellectuelle et scientifique.",
+      "Engagement pour une refonte de l’État social : il milite pour un droit garantissant la justice sociale face aux logiques purement marchandes."
+  ]
+},
+{
+  "id": 18,
+  "nom": "Valéry Giscard d'Estaing",
+  "image": "../img/grandes_figures/giscard.jpg",
+  "periode": "1926 - 2020",
+  "faits": "Président de la République française (1974-1981), réformateur du droit et des institutions, acteur clé de la construction européenne.",
+  "histoire": "Valéry Giscard d’Estaing, homme d’État et intellectuel, a marqué la France par ses réformes sociétales et institutionnelles. Élu président de la République en 1974 à 48 ans, il incarne une volonté de modernisation de la société française. Il réforme le droit du divorce, abaisse la majorité légale à 18 ans et légalise l’interruption volontaire de grossesse (IVG). Européen convaincu, il joue un rôle majeur dans la mise en place du Conseil européen et dans l’élaboration du projet de Constitution pour l’Europe. Son passage à la présidence est caractérisé par un effort de libéralisation politique et sociale, mais aussi par la montée du chômage et des difficultés économiques.",
+  "etudes": "Il étudie à l’École polytechnique et à l’École nationale d’administration (ENA), avant d’intégrer la haute fonction publique et d’entrer en politique.",
+  "ecrits": [
+      "'Démocratie française' (1976) : un essai dans lequel il expose sa vision du pouvoir et des institutions.",
+      "'Le pouvoir et la vie' (deux tomes, 1988 et 1991) : mémoires politiques où il revient sur son mandat présidentiel et ses réformes.",
+      "'Europa' (2014) : un roman politique inspiré de son engagement européen.",
+      "'Le coup d'État permanent européen' (2003) : une analyse critique des institutions européennes et de leur évolution."
+  ],
+  "faits_marquants": [
+      "Président réformateur : il fait adopter des lois marquantes, comme la légalisation de l'IVG (1975) portée par Simone Veil, l'abaissement de la majorité à 18 ans et la réforme du divorce par consentement mutuel.",
+      "Renforcement du rôle du Conseil constitutionnel : il modernise le fonctionnement des institutions et approfondit l’État de droit.",
+      "Père fondateur de l’Europe moderne : il joue un rôle central dans la création du Conseil européen et préside la Convention sur l’avenir de l’Europe, qui aboutira au projet de Constitution européenne.",
+      "Modernisation de la communication politique : il rompt avec le style gaullien et met en place une relation plus directe avec les citoyens, notamment par des interventions télévisées et des débats ouverts."
+  ]
+},
+{
+  "id": 19,
+  "nom": "Laurence Burgorgue-Larsen",
+  "image": "../img/grandes_figures/burgorgue-larsen.jpg",
+  "periode": "Née en 1967",
+  "faits": "Spécialiste du droit constitutionnel, du droit européen et des droits fondamentaux.",
+  "histoire": "Laurence Burgorgue-Larsen est une juriste française, professeure de droit public et spécialiste du droit constitutionnel comparé et des droits fondamentaux. Elle a consacré une grande partie de ses travaux à l’étude des cours supranationales, notamment la Cour européenne des droits de l’homme (CEDH) et la Cour interaméricaine des droits de l’homme. Elle est reconnue pour ses recherches sur le dialogue entre les juridictions et l’évolution des protections des libertés fondamentales en Europe et en Amérique latine. Elle intervient régulièrement dans les débats académiques et institutionnels sur les enjeux liés aux droits de l’homme et à la justice constitutionnelle.",
+  "etudes": "Elle a étudié le droit à l'Université Paris 1 Panthéon-Sorbonne, où elle est aujourd’hui professeure et directrice du Centre de droit européen.",
+  "ecrits": [
+      "'Les grandes décisions de la Cour européenne des droits de l’homme' (avec Anne Levade, 2010) : un ouvrage de référence sur la jurisprudence de la CEDH.",
+      "'La Cour interaméricaine des droits de l’homme' (2011) : une étude approfondie sur l’évolution du système interaméricain de protection des droits de l’homme.",
+      "'Droit constitutionnel comparé' (2016) : un manuel analysant les différentes traditions constitutionnelles à travers le monde.",
+      "'L’Europe des droits fondamentaux' (2021) : un essai sur les défis et mutations du droit européen des droits de l’homme."
+  ],
+  "faits_marquants": [
+      "Spécialiste du droit comparé : elle analyse les convergences et divergences entre les systèmes constitutionnels européens et américains.",
+      "Experte des cours supranationales : elle étudie le rôle et l’influence de la CEDH et de la Cour interaméricaine des droits de l’homme.",
+      "Professeure à la Sorbonne : elle forme des générations d’étudiants au droit constitutionnel et européen.",
+      "Intervenante dans le débat public : elle participe régulièrement aux réflexions sur l’évolution du droit des libertés fondamentales en Europe."
+  ]
+},
+{
+  "id": 20,
+  "nom": "Emmanuelle Jouannet",
+  "image": "../img/grandes_figures/jouannet.jpg",
+  "periode": "Née en 1965",
+  "faits": "Spécialiste du droit international, de la théorie du droit et de la justice globale.",
+  "histoire": "Emmanuelle Jouannet est une juriste française, professeure de droit international public et spécialiste de la philosophie du droit. Ses travaux portent sur l’histoire et la théorie du droit international, notamment sur l’évolution du droit international classique vers un droit international plus axé sur la justice sociale et les droits de l’homme. Elle s’intéresse également aux rapports entre le droit et la mondialisation ainsi qu’aux nouvelles formes de régulation internationale. Elle est reconnue pour son approche critique et historique du droit international, mettant en lumière les tensions entre souveraineté étatique et justice universelle.",
+  "etudes": "Elle a étudié le droit à l’Université Paris 1 Panthéon-Sorbonne, où elle est aujourd’hui professeure de droit international public.",
+  "ecrits": [
+      "'Le droit international libéral-providence' (2011) : une analyse du passage du droit international classique à un droit international orienté vers la justice sociale.",
+      "'Qu’est-ce qu’une société internationale juste ?' (2013) : un essai interrogeant les fondements éthiques et politiques du droit international contemporain.",
+      "'Histoire du droit international' (2021) : une étude approfondie de l’évolution historique du droit international et de ses transformations.",
+      "'Droit international et colonialisme' (2012) : une réflexion sur les liens entre l’expansion coloniale et la construction du droit international moderne."
+  ],
+  "faits_marquants": [
+      "Spécialiste de la théorie du droit international : elle analyse les évolutions du droit international et ses fondements philosophiques.",
+      "Approche critique et historique : elle étudie les transformations du droit international à travers une perspective historique et sociopolitique.",
+      "Professeure à la Sorbonne : elle enseigne le droit international et forme de nombreux étudiants aux enjeux contemporains de la justice globale.",
+      "Réflexion sur la justice globale : elle propose des pistes pour un droit international plus équitable et plus soucieux des inégalités mondiales."
+  ]
+},
+{
+  "id": 22,
+  "nom": "Marcel Waline",
+  "image": "../img/grandes_figures/Waline.jpg",
+  "periode": "1900 - 1982",
+  "faits": "Spécialiste du droit administratif, réformateur du contentieux administratif et auteur d’un manuel de référence.",
+  "histoire": "Marcel Waline était un juriste français, professeur de droit public et l’un des plus grands spécialistes du droit administratif du XXe siècle. Il a joué un rôle fondamental dans l’évolution du contentieux administratif en France, notamment en défendant l’extension du contrôle juridictionnel sur l’administration. Son approche critique du pouvoir discrétionnaire de l’administration et son plaidoyer pour une meilleure protection des droits des citoyens face à l’État ont marqué la doctrine juridique. Il a également contribué aux débats sur la réforme du Conseil d’État et du droit public français.",
+  "etudes": "Il a étudié le droit à l’Université de Paris et a enseigné à l’Université de Paris et à l’Institut d’études politiques de Paris.",
+  "ecrits": [
+      "'Droit administratif français' (1946) : un manuel de référence qui a marqué plusieurs générations d’étudiants.",
+      "'Études de droit public' (1950) : une série d’analyses sur l’évolution du droit administratif et constitutionnel.",
+      "'Le Conseil d’État' (1955) : une étude approfondie sur le rôle et les décisions du Conseil d’État.",
+      "'Les grands arrêts de la jurisprudence administrative' (collaboration avec d’autres juristes) : une œuvre majeure regroupant les décisions fondamentales du droit administratif."
+  ],
+  "faits_marquants": [
+      "Théoricien du contrôle juridictionnel : il milite pour un encadrement plus strict du pouvoir de l’administration par le juge.",
+      "Réformateur du contentieux administratif : il contribue à moderniser l’approche du Conseil d’État en matière de protection des libertés individuelles.",
+      "Auteur d’un manuel de référence : son 'Droit administratif français' devient une lecture incontournable pour les étudiants et praticiens.",
+      "Engagement dans le débat juridique : il participe activement aux réflexions sur l’évolution du droit public en France."
+  ]
+},
+{
+    "id": 23,
+    "nom": "Jacques Ghestin",
+    "image": "../img/grandes_figures/ghestin.jpg",
+    "periode": "Né en 1932",
+    "faits": "Spécialiste du droit des obligations et du droit des contrats, auteur d’ouvrages majeurs en droit privé.",
+    "histoire": "Jacques Ghestin est un juriste français, professeur émérite à l’Université Paris 1 Panthéon-Sorbonne, connu pour ses travaux approfondis en droit des obligations. Il a joué un rôle fondamental dans la modernisation et l’analyse doctrinale du droit des contrats, de la responsabilité civile et du régime des obligations. Ses ouvrages sont considérés comme des références incontournables pour les étudiants et les praticiens du droit. Il a également participé aux réflexions sur la réforme du droit des contrats en France.",
+    "etudes": "Il a étudié le droit à l’Université de Paris et est devenu professeur de droit privé à l’Université Paris 1 Panthéon-Sorbonne.",
+    "ecrits": [
+        "'Traité de droit civil – Les obligations' (en plusieurs tomes, sous sa direction) : une œuvre monumentale sur le droit des obligations.",
+        "'La formation du contrat' (1993) : une analyse détaillée du processus contractuel en droit civil.",
+        "'Cause et contrat' (2006) : une étude approfondie sur la notion de cause en droit des contrats.",
+        "'Les grands arrêts de la jurisprudence en droit des obligations' (collaboration) : un ouvrage de référence pour comprendre l’évolution du droit des obligations à travers la jurisprudence."
+    ],
+    "faits_marquants": [
+        "Référence en droit des obligations : ses travaux ont influencé l’enseignement et la compréhension du droit des contrats et de la responsabilité civile.",
+        "Auteur d’un traité fondamental : son 'Traité de droit civil' est une référence incontournable pour les étudiants et les professionnels du droit.",
+        "Contribution à la réforme du droit des contrats : il a participé aux réflexions qui ont conduit à l’ordonnance de 2016 sur la réforme du droit des obligations.",
+        "Professeur influent : il a formé plusieurs générations de juristes et marqué l’évolution de la doctrine juridique en France."
+    ]
+}
+,
+{
+  "id": 24,
+  "nom": "Philippe Malaurie",
+  "image": "../img/grandes_figures/malaurie.jpg",
+  "periode": "1925 - 2020",
+  "faits": "Spécialiste du droit civil, auteur de nombreux ouvrages de référence et défenseur d’un droit humaniste.",
+  "histoire": "Philippe Malaurie était un juriste français, professeur émérite de droit privé et l’un des plus grands spécialistes du droit civil. Son œuvre doctrinale a profondément marqué l’enseignement et la compréhension du droit des obligations, du droit des contrats et du droit des biens. Il est connu pour sa vision humaniste du droit, s’opposant à une approche trop techniciste et défendant un droit plus proche de la réalité sociale. Son engagement pour un droit civil accessible et clair se reflète dans ses manuels, largement utilisés par les étudiants et praticiens.",
+  "etudes": "Il a étudié le droit à l’Université de Paris et a été professeur de droit privé à l’Université Paris 2 Panthéon-Assas.",
+  "ecrits": [
+      "'Droit des obligations' (avec Laurent Aynès et Philippe Stoffel-Munck) : un manuel de référence sur le droit des contrats, de la responsabilité civile et du régime général des obligations.",
+      "'Les régimes matrimoniaux' : un ouvrage clé sur le droit des relations patrimoniales entre époux.",
+      "'Droit des successions et des libéralités' : une étude approfondie du droit des transmissions de patrimoine.",
+      "'Anthologie du droit des contrats' : une approche historique et philosophique du droit des contrats."
+  ],
+  "faits_marquants": [
+      "Référence en droit civil : ses ouvrages sont incontournables pour les étudiants et les praticiens du droit.",
+      "Défenseur d’un droit humaniste : il a toujours prôné un droit accessible et adapté aux réalités humaines.",
+      "Contribution à la réforme du droit des obligations : il a participé aux débats qui ont abouti à la réforme du droit des contrats en 2016.",
+      "Professeur influent : il a marqué des générations d’étudiants à l’Université Paris 2 Panthéon-Assas et ailleurs."
+  ]
+}
+,
+{
+  "id": 25,
+  "nom": "François Terré",
+  "image": "../img/grandes_figures/terré.jpeg",
+  "periode": "Né en 1930",
+  "faits": "Spécialiste du droit civil, de la théorie du droit et de la réforme du droit des obligations.",
+  "histoire": "François Terré est un juriste français, professeur émérite de droit privé et membre de l'Académie des sciences morales et politiques. Il est reconnu comme l'un des plus grands spécialistes du droit des obligations et de la philosophie du droit. Son travail a fortement influencé la doctrine et la réforme du droit des contrats en France. Il a également mené une réflexion approfondie sur la nature et l’évolution du droit, combinant approche technique et réflexion philosophique.",
+  "etudes": "Il a étudié le droit à l’Université de Paris et a enseigné à l’Université Paris 2 Panthéon-Assas.",
+  "ecrits": [
+      "'Introduction générale au droit' : un ouvrage fondamental pour comprendre la théorie du droit et ses fondements philosophiques.",
+      "'Droit civil - Les obligations' (avec Philippe Simler et Yves Lequette) : un manuel de référence sur le droit des obligations.",
+      "'Les grands arrêts de la jurisprudence civile' (collaboration) : une compilation et analyse des décisions majeures en droit civil.",
+      "'La science juridique' : une réflexion sur la nature du droit et sa place dans la société."
+  ],
+  "faits_marquants": [
+      "Référence en droit des obligations : il a contribué à la doctrine et à l'enseignement du droit des contrats et de la responsabilité civile.",
+      "Membre de l’Académie des sciences morales et politiques : reconnaissance de son apport intellectuel au droit.",
+      "Acteur de la réforme du droit des contrats : il a participé aux travaux ayant conduit à l’ordonnance de 2016 sur la réforme du droit des obligations.",
+      "Philosophe du droit : il a développé une réflexion sur l’évolution et la nature du droit, influençant la pensée juridique contemporaine."
+  ]
+}
+,
+{
+  "id": 26,
+  "nom": "Geneviève Viney",
+  "image": "../img/grandes_figures/viney.jpg",
+  "periode": "Née en 1940",
+  "faits": "Spécialiste du droit des obligations et de la responsabilité civile, professeure émérite et auteure d’ouvrages de référence.",
+  "histoire": "Geneviève Viney est une juriste française, professeure émérite de droit privé à l’Université Paris 1 Panthéon-Sorbonne et l’une des plus grandes spécialistes du droit des obligations. Ses travaux sur la responsabilité civile et l’évolution du droit des contrats ont profondément influencé la doctrine juridique française. Elle a participé aux réflexions sur la modernisation du droit des obligations, notamment la réforme de 2016. Son approche se distingue par une analyse rigoureuse des évolutions jurisprudentielles et une ouverture aux influences du droit comparé.",
+  "etudes": "Elle a étudié le droit à l’Université de Paris et a enseigné dans plusieurs grandes universités, notamment Paris 1 Panthéon-Sorbonne.",
+  "ecrits": [
+      "'Traité de droit civil - Les obligations' (avec Patrice Jourdain) : un ouvrage majeur sur le droit des obligations et la responsabilité civile.",
+      "'Introduction au droit' : un manuel de référence sur les principes fondamentaux du droit privé.",
+      "'Droit de la responsabilité et des contrats' (en plusieurs volumes) : une analyse approfondie du droit de la responsabilité civile.",
+      "'Les grands arrêts de la responsabilité civile' (collaboration) : une compilation des décisions majeures en matière de responsabilité."
+  ],
+  "faits_marquants": [
+      "Référence en droit de la responsabilité civile : ses travaux sont incontournables pour comprendre les évolutions du droit des obligations.",
+      "Actrice de la réforme du droit des contrats : elle a contribué aux réflexions ayant abouti à l’ordonnance de 2016 sur la modernisation du droit des obligations.",
+      "Professeure influente : elle a marqué plusieurs générations de juristes à Paris 1 Panthéon-Sorbonne.",
+      "Ouverture au droit comparé : ses analyses intègrent des perspectives internationales pour enrichir la réflexion sur le droit français."
+  ]
+}
+,
+{
+  "id": 27,
+  "nom": "Louis Favoreu",
+  "image": "../img/grandes_figures/favoreu.jpg",
+  "periode": "1936 - 2004",
+  "faits": "Spécialiste du droit constitutionnel et du contentieux constitutionnel, pionnier de l’étude du Conseil constitutionnel.",
+  "histoire": "Louis Favoreu était un juriste français, professeur de droit public et l’un des plus grands spécialistes du droit constitutionnel. Il a marqué la doctrine juridique en développant une analyse approfondie du rôle du Conseil constitutionnel et en contribuant à l’essor du contrôle de constitutionnalité en France. Partisan d’un 'gouvernement des juges' modéré, il a souligné l’importance croissante du juge constitutionnel dans l’équilibre des pouvoirs. Il a aussi dirigé des recherches influentes sur le droit public comparé et l’État de droit.",
+  "etudes": "Il a étudié le droit à l’Université d’Aix-Marseille et y a enseigné en tant que professeur de droit public.",
+  "ecrits": [
+      "'Droit constitutionnel' (avec Loïc Philip et d’autres collaborateurs) : un manuel de référence en droit constitutionnel.",
+      "'Les grandes décisions du Conseil constitutionnel' (collaboration) : une analyse des principales décisions ayant façonné le contentieux constitutionnel français.",
+      "'Conseil constitutionnel et démocratie' : une étude sur l’évolution du rôle du juge constitutionnel dans la démocratie moderne.",
+      "'Droit constitutionnel et institutions politiques' : un ouvrage fondamental pour comprendre les régimes politiques et les institutions."
+  ],
+  "faits_marquants": [
+      "Spécialiste du contentieux constitutionnel : il a contribué à la reconnaissance du Conseil constitutionnel comme un acteur majeur de l’État de droit.",
+      "Théoricien du 'gouvernement des juges' : il a analysé l’influence croissante du juge constitutionnel dans l’équilibre des pouvoirs.",
+      "Professeur influent : il a formé plusieurs générations de constitutionnalistes et inspiré les recherches en droit public.",
+      "Ouverture au droit comparé : il a étudié les modèles étrangers de justice constitutionnelle pour éclairer le développement du droit français."
+  ]
+}
+,
+{
+  "id": 28,
+  "nom": "Didier Maus",
+  "image": "../img/grandes_figures/maus.jpeg",
+  "periode": "Né en 1950",
+  "faits": "Spécialiste du droit constitutionnel, expert en contentieux constitutionnel et ancien conseiller d’État.",
+  "histoire": "Didier Maus est un juriste français reconnu pour ses travaux en droit constitutionnel et en contentieux constitutionnel. Professeur de droit public et conseiller d’État honoraire, il a joué un rôle clé dans l’analyse et la modernisation des institutions politiques françaises. Il est également un expert en droit comparé et en justice constitutionnelle, ayant contribué aux réflexions sur la réforme du Conseil constitutionnel et sur l’évolution du contrôle de constitutionnalité en France. Ancien président de l'Association internationale de droit constitutionnel, il a largement participé aux débats sur la démocratie et l'État de droit.",
+  "etudes": "Il a étudié le droit à l'Université de Paris et est diplômé de l'Institut d'Études Politiques de Paris (Sciences Po).",
+  "ecrits": [
+      "'Droit constitutionnel français' : une analyse approfondie du droit constitutionnel et des institutions françaises.",
+      "'Les grandes décisions du Conseil constitutionnel' (collaboration) : un commentaire des décisions majeures ayant façonné le droit constitutionnel.",
+      "'Le Conseil constitutionnel et la Ve République' : une réflexion sur le rôle et l’évolution du Conseil constitutionnel.",
+      "'Droit constitutionnel comparé' : une étude des systèmes constitutionnels à travers le monde."
+  ],
+  "faits_marquants": [
+      "Expert du contentieux constitutionnel : il a contribué aux réflexions sur le rôle du Conseil constitutionnel et son contrôle de constitutionnalité.",
+      "Président de l'Association internationale de droit constitutionnel : il a participé à la promotion des études constitutionnelles au niveau international.",
+      "Conseiller d’État honoraire : il a exercé des fonctions de haut niveau dans l’administration publique et le Conseil d’État.",
+      "Professeur influent : il a formé plusieurs générations de juristes en droit public et en droit constitutionnel comparé."
+  ]
+}
+,
+{
+  "id": 29,
+  "nom": "Olivier Beaud",
+  "image": "../img/grandes_figures/beaud.jpeg",
+  "periode": "Né en 1960",
+  "faits": "Spécialiste du droit constitutionnel, de la théorie de l'État et du droit public comparé.",
+  "histoire": "Olivier Beaud est un juriste français, professeur de droit public et théoricien du droit constitutionnel. Il est reconnu pour ses analyses critiques du droit public français et ses études sur la souveraineté, l’État et la théorie des pouvoirs. Il s’est intéressé à l’évolution du constitutionnalisme en France et en Allemagne, développant une approche comparative et philosophique du droit public. Ses travaux ont marqué la doctrine par leur approche rigoureuse et leur souci d’inscrire le droit constitutionnel dans une réflexion plus large sur la démocratie et l’État de droit.",
+  "etudes": "Il a étudié le droit à l’Université de Paris et à l’Université Panthéon-Assas, où il enseigne actuellement.",
+  "ecrits": [
+      "'La puissance de l'État' : une étude approfondie sur la souveraineté et le rôle de l’État dans le droit public.",
+      "'Théorie de la République' : un ouvrage clé sur l’organisation des pouvoirs et la tradition républicaine en France.",
+      "'Le droit et la guerre' : une réflexion sur les rapports entre droit, guerre et souveraineté.",
+      "'Les derniers jours des dictateurs' : une analyse des fins de régime autoritaires sous un angle juridique et historique."
+  ],
+  "faits_marquants": [
+      "Référence en théorie constitutionnelle : ses analyses sur l’État et la souveraineté ont influencé la doctrine juridique.",
+      "Spécialiste du droit public comparé : il a étudié les modèles constitutionnels français et étrangers, notamment allemands.",
+      "Professeur influent : il enseigne à l'Université Panthéon-Assas et a formé de nombreux étudiants en droit constitutionnel.",
+      "Approche critique du droit public : il remet en question certaines évolutions contemporaines du droit constitutionnel et du rôle de l’État."
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+]

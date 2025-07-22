@@ -1,0 +1,1256 @@
+
+ /*
+ * {
+    cursor: url(cursor-x-y.png) 25 0, default;
+   }
+*/        
+.hidden {
+    display: none;
+ }
+
+@font-face {
+  font-family: 'Heavitas';
+  src: url('/font/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fulldozer';
+  src: url('/font/Fulldozer.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gobold';
+  src: url('/font/Gobold\ Blocky\ Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bakery';
+  src: url('/font/Bakery.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.heavitas
+{
+    font-family: 'heavitas', sans-serif;
+}
+
+/*
+--                                          _
+--                                         | |
+--    __ _   ___  _ __    ___  _ __   __ _ | |
+--   / _` | / _ \| '_ \  / _ \| '__| / _` || |
+--  | (_| ||  __/| | | ||  __/| |   | (_| || |
+--   \__, | \___||_| |_| \___||_|    \__,_||_|
+--    __/ |
+--   |___/
+*/
+
+
+.mobile
+{
+    width: 0%;
+    position: absolute;
+    opacity: calc(0%);
+    z-index: calc(-50);
+} 
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: medium;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #2a2a2a ;
+    color: #fff;
+    transition: all 0.5s ease;
+    display: block;
+    
+}
+
+/*
+--   _             _  _                            _                _
+--  | |           | |(_)                          | |              | |
+--  | |__    __ _ | | _  ___   ___  ___           | |_   ___ __  __| |_   ___
+--  | '_ \  / _` || || |/ __| / _ \/ __|          | __| / _ \\ \/ /| __| / _ \
+--  | |_) || (_| || || |\__ \|  __/\__ \          | |_ |  __/ >  < | |_ |  __/
+--  |_.__/  \__,_||_||_||___/ \___||___/           \__| \___|/_/\_\ \__| \___|
+--                                        ______
+--                                       |______|
+*/
+
+.ghost
+{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+h1
+{
+    margin-left: 3%;
+}
+h2 {
+    margin-bottom: 10px;
+    margin-left: 5%;
+    }
+
+    a
+    {
+        color: #fff ;
+        
+        text-decoration: none;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+        background: none;
+        border: none;
+    }
+
+    p
+    {
+        display: block;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+    }
+
+    .annoncea
+    {
+        color: #f6291b;
+        text-decoration: none;
+    } 
+    .annoncea:hover
+    {
+        color: #ffffff;
+    } 
+
+    .orange
+    {
+        color:#ff4f34;
+
+    }
+
+    .marged
+    {
+        margin-left: 15%;
+    }
+/*    
+--   _
+--  (_)
+--   _  _ __ ___    __ _   __ _   ___  ___
+--  | || '_ ` _ \  / _` | / _` | / _ \/ __|
+--  | || | | | | || (_| || (_| ||  __/\__ \
+--  |_||_| |_| |_| \__,_| \__, | \___||___/
+--                         __/ |
+--                        |___/
+*/
+.remerciement
+{
+    width: 80%; 
+    box-shadow: 0px 0px 24px rgb(0, 0, 0);
+    position: absolute; 
+    top: 0;
+}
+.login
+        {
+width: 60%;
+margin-left: 20%;
+
+
+        }
+        .logo
+        {
+        width: 60%;
+        height: fit-content;
+        margin-left: 20%;
+        }
+        .contact
+        {
+            width: 60%;
+            margin: 10%;
+        }
+.parvis
+{
+    width: 100%;
+    top: 0; 
+
+}
+
+
+.lancement
+{
+    width: 15%;
+    margin-left: -46%;
+    margin-top: 6%;
+    position: absolute;
+    top: 0; 
+    opacity: 50%;
+    
+}
+.profil
+{
+    width: 80%;
+    margin-top: 10%;
+    border-radius: 100%;
+}
+.fiche
+{
+    width: 17%;
+    transition: 0.5s;
+    margin: 1%;
+}
+.fiche:hover
+{
+    transform: scale(110%);
+}
+.retour
+        {
+            width: 10%;
+            position: absolute;
+        }
+        .logo
+        {
+            width: 40%;
+            height: fit-content;
+            margin-left: 30%;
+           
+        }
+.log
+{
+    height: 100%;
+   
+    position: fixed;
+    z-index: 1;
+    
+}
+.debug1 button img {
+    width: 100px; /* Ajustez la taille de l'image selon vos besoins */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.disclaimer
+{
+    margin-bottom: 50px;
+    width: 80%;
+    margin-left: 10%;
+}
+.logoindex
+{
+width: 100%;
+}
+
+
+.assist
+{
+align-items: center;
+ width: 80%;
+ margin-left: 10%;
+ margin-top: 5%;
+ transition: 0.5s;
+}
+.assist:hover
+{
+    transform: scale(120%);
+    transition: 0.5s;
+}
+
+.enter
+{
+    width: 80%;
+    margin-top: 5%;
+    transition: 0.5s;
+}
+.enter:hover
+{
+transform: scale(115%);
+transition: 0.5s;
+}
+.assos
+{
+width: 100%;
+border-radius: 20px;
+}
+.assos1
+{
+    padding-top: 15px;
+}
+
+.gear
+{
+    position: absolute;
+    width: 35px;
+    margin-left: 75px;
+    margin-top: 16px;
+    transition: 0.5s;
+}
+
+.gear:hover
+{
+    transform: rotate(180deg)
+}
+.s{
+    width: 35%;
+    margin-left: 20%;
+    position: absolute;
+    z-index: -50;
+    opacity: 30%;
+    
+
+}
+.année
+{
+    width: 20%;
+    margin-left: 40%;
+}
+
+
+/*
+--   _____   _____ __      __
+--  |  __ \ |_   _|\ \    / /
+--  | |  | |  | |   \ \  / /
+--  | |  | |  | |    \ \/ /
+--  | |__| | _| |_    \  /
+--  |_____/ |_____|    \/
+
+*/
+.author-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.author-card {
+    width: 15%;
+    background-color: #4c0000;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer; /* Ajout d'un curseur indiquant que les cartes sont cliquables */
+    transition: 0.2s;
+}
+.author-card:hover {
+    box-shadow: 10px 10px 30px rgb(19, 0, 0);
+}
+
+.author-card img {
+    max-width: 80%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.body-container3
+{            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+       
+        margin-bottom: 2%;}
+
+
+.statu
+{
+    width: 80%;
+    border: 2px solid rgb(131, 131, 131);
+    margin: 15px;
+    border-radius: 25px;
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+}
+
+
+
+
+
+
+.bottom
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    padding-top: 10px;
+    transition: 0.5s;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #5d5d5d;
+    transition: 0.5s;
+}
+.bottom:hover
+{
+    background-color: #464646;
+    transform: scale(90%);
+}
+
+
+.content {
+  width: 0;
+  height: 100%;
+  background-color: lightblue; /* Couleur de fond de votre contenu */
+  transition: width 0.3s ease;
+}
+.sep-blanche
+{
+    width: 100%;
+    height: 7px;
+    background-color: #fff;
+    margin-top: -5px;
+    color: #242424;
+    margin-bottom: 50px;
+}
+
+boutton {
+    display:flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ff4f34;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s;
+    float: left;
+    width: 180px;
+    height: 210px;
+    
+}
+.debug1 button {
+    display:flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    padding: 10px;
+    background-color: #ff4f34;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    float: left;
+    width: 20%;
+    height: 210px;
+    
+  }
+
+  .debug1 button:hover {
+    background-color: #fd9898;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.debug1 .button img
+{
+    width: 80px;
+}
+
+#sidebar
+{
+    background-color: #242424;
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    font-size: 90%;
+    top: 0;
+    font-family: 'heavitas', sans-serif;
+}
+.container
+{
+    
+        background-color: #353535;
+        width: 40%;
+        height: 150px;
+        margin: 20px;
+        display: inline-block;
+        border-radius: 15px;
+    
+    
+}
+
+.container-schemas
+{
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+    margin: 5%;
+}
+.annonce
+{
+    width: 80%;
+    height: 450px;
+    background-image: url('../img/pres.png');
+    background-size: cover; 
+    background-position: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 90%;
+    border-radius: 30px;
+    
+}
+.annonce p 
+{
+    margin-left: 5%;
+    font-size: 105%;
+}
+.fond
+{
+    background-color: #3a3a3ab6;
+    padding: 2%;
+    border-radius: 25px;
+    
+}
+.scrollable-section {
+    height: 95%; 
+    overflow: auto; 
+    border: 3px solid #ff4f34;
+    padding: 10px; 
+    border-radius: 40px 0px 20px 0px;
+}
+
+.scrollable-section::-webkit-scrollbar {
+width: 120px; 
+}
+.conteneur {
+    width: 100%;
+}
+.column {
+    width: 22.5%; /* Chaque colonne prend 25% de la largeur */
+    height: auto; /* Hauteur de chaque colonne, à ajuster selon vos besoins */
+    background-color: rgb(50, 50, 50);
+    align-items: center;
+    float: left; /* Permet d'aligner les colonnes côte à côte */
+    border-radius: 15px;
+    margin: 1%;
+    text-align: center;
+}
+.clear {
+    clear: both; /* S'assure que la hauteur de la container s'ajuste en fonction des colonnes */
+}
+.partenaires
+{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #505050;
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.partenaires:hover
+{
+    transform: scale(90%);
+}
+
+
+.marge
+        {
+            margin-left: 20%;
+        }
+        .cassecouille
+        {
+            width: 100%;
+             height: 200px;
+        
+              
+        }
+        
+
+
+
+
+
+
+
+
+/*animations*/
+
+.anim {
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 33%;
+    width: 15%; /* Ajustez la largeur selon votre besoin */
+    height: 10%; /* Ajustez la hauteur selon votre besoin *
+    animation: monterDescendre 1s infinite alternate; /* Animation pendant 2 secondes, en boucle */
+}
+
+@keyframes monterDescendre {
+    0% {
+        top: 50px; /* Position initiale en haut */
+    }
+    100% {
+        top: 0px; /* Position finale en bas */
+    }
+}
+
+ .anim img{
+    position: absolute;
+    width: 100%;
+   
+}
+
+
+.charon 
+{
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 20px;
+    border: #535353 2px solid;
+
+}
+
+
+.bash
+{
+width: 90%;
+height: auto;
+
+margin-left: 5%;
+border-radius: 20px;
+background-color: #2a2a2a;
+padding: 15px;
+color: #b1b1b1;
+border: #525252 2px solid;
+}
+
+
+
+
+
+
+
+
+
+
+/* suppresseur de filigrane hebergeur ( important )*/
+       
+
+
+/*
+--                                                                                                        
+--                                            ..:::--------::..                                           
+--                                      .:-=+*******************+==-.                                     
+--                                  :-+*******************************+=:.                                
+--                              .-=***************************************+-.                             
+--                           .-+*********************************************+-.                          
+--                         .=***************************************************+:                        
+--                       :+*******************************************************+-                      
+--                     :+************************************************************-                    
+--                   .+***************************************************************+:                  
+--                  =*******************************************************************=.                
+--                :+**********************************************************************-               
+--               -***************************+=:..     ..:-+****=-=************************=              
+--              =**************************=.  .-==+++==-:   ..   .*************************+.            
+--            .+*************************+.  -+************=:      =**************************:           
+--           .+*************************=  .+****************+-    .***************************:          
+--          .+*************************+   +*******************+.   =***************************:         
+--          +**************************.  -**********************-  .****************************.        
+--         =**************************+   +***********************=  =***************************+        
+--        :***************************-   *************************= .****************************=       
+--       .****************************:   **************************= =****************************:      
+--       =****************************-   +**************************=+****************************+      
+--      .*****************************=   :*********************************************************-     
+--      =*****************************+    =*********************************************************     
+--     .*******************************-    =********************************************************-    
+--     -********************************:    :+******************************************************+    
+--     +*********************************:     :=*****************************************************.   
+--    .***********************************=.      :-+*************************************************:   
+--    :*************************************=.        :-=+********************************************-   
+--    -***************************************+-.         .:-+****************************************=   
+--    -******************************************+=:.         .-+*************************************+   
+--    =**********************************************+=-.        .=***********************************+   
+--    =***************************************************=-.      .=*********************************+   
+--    -******************************************************+-.     -********************************+   
+--    -*********************************************************=.    -*******************************=   
+--    :***********************************************************-    +******************************-   
+--    .************************************************************:   :******************************:   
+--     +***********************************************************+    ******************************.   
+--     -************************************************************.   *****************************+    
+--     .****************************= =*****************************.   *****************************:    
+--      =****************************. =****************************.  .*****************************     
+--      .****************************=  -***************************   :****************************-     
+--       =****************************.  :*************************=   =***************************+      
+--       .****************************=   .+***********************.  :****************************:      
+--        :****************************.    :+********************:  .****************************=       
+--         =***************************=      :+****************+.  :****************************+        
+--          +***************************.       .-=**********+=:  .=****************************+.        
+--           +**************************= .-+*+=-:. ..:::::.   .-+******************************.         
+--           .+**************************=*********+==--:---=+*********************************.          
+--             +*****************************************************************************+.           
+--              =***************************************************************************+.            
+--               -*************************************************************************=              
+--                .+**********************************************************************:               
+--                  -*******************************************************************=.                
+--                   .=***************************************************************+:                  
+--                     :+***********************************************************+:                    
+--                       :=*******************************************************+:                      
+--                         .-***************************************************=:                        
+--                            :=*********************************************+-.                          
+--                               :=+**************************************=-.                             
+--                                  .-=+******************************=-:                                 
+--                                      .:-==+*****************++=-:.                                     
+--                                             ..:::::--::::..                                            
+--     
+--                                    _         _      _         _               _____                                    _
+--                                   (_)       | |    | |    _  | |             / ____|                                  | |
+--    ___   ___   _ __   _   _  _ __  _   __ _ | |__  | |_  (_) | |       ___  | (___   _   _  _ __   _ __    ___   _ __ | |_     _ __ ___    ___
+--   / __| / _ \ | '_ \ | | | || '__|| | / _` || '_ \ | __|     | |      / _ \  \___ \ | | | || '_ \ | '_ \  / _ \ | '__|| __|   | '_ ` _ \  / _ \
+--  | (__ | (_) || |_) || |_| || |   | || (_| || | | || |_   _  | |____ |  __/  ____) || |_| || |_) || |_) || (_) || |   | |_  _ | | | | | ||  __/
+--   \___| \___/ | .__/  \__, ||_|   |_| \__, ||_| |_| \__| (_) |______| \___| |_____/  \__,_|| .__/ | .__/  \___/ |_|    \__|(_)|_| |_| |_| \___|
+--               | |      __/ |           __/ |                                               | |    | |
+-- 
+--   ______  __                  __                        __  __
+--  |      ||  |--..---.-..----.|  |.-----..-----.        |  |/  |.----..-----..--------..-----..----.
+--  |   ---||     ||  _  ||   _||  ||  -__||__ --|        |     < |   _||  -__||        ||  -__||   _|
+--  |______||__|__||___._||__|  |__||_____||_____|        |__|\__||__|  |_____||__|__|__||_____||__|
+--                                                
+*/
+
+
+
+
+
+
+.podcast
+{
+    background-color:#585858;
+    width: 150px;
+    height: auto;
+    margin: 15px;
+    float: left;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;  
+    text-align: center;
+    transition: 0.5s;
+}
+    .podcast:hover
+{
+    background-color:#3b3636;
+    transition: 0.5s;
+}
+.podcast img
+{
+    width: 150px;
+    border-radius: 15px;
+}
+.bouton2
+        {
+            width: 150px;
+            height: 30px;
+            background-color: #ff2b1c;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 8%;
+            margin-top: 5px;
+            transition: 0.5s;
+        }
+        .bouton2:hover
+        {
+            transform: scale(115%);
+            transition: 0.5s;
+            background-color: #580000;
+        }
+
+
+
+
+
+
+        
+        .sep
+        {
+            width: 80%;
+            height: 2px;
+            margin-left: 10%;
+            margin-top: 20px;
+            margin-bottom: 35px;
+            background-color: #6e6e6e;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #d1d1d1;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #3f3f3f;
+            border-radius: 5px;
+            background-color: #555555;
+        }
+
+        .form-group button {
+            width: 100%;
+            
+            padding: 10px;
+            background-color: #ff0b0b;
+            color: rgb(230, 230, 230);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #ff2600;
+        }
+
+        .checkbox-group {
+            display: flex;
+            width: 100%;
+            gap: 20%;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .conteneur
+        {
+          width: 80%;
+          margin-left: 10%;
+          display: flex;
+        }
+        .conteneur img
+        {
+          width: 100%;
+          
+        }
+        .conteneur a
+        {
+            color: currentColor; /* Fait en sorte que la couleur du texte reste inchangée */
+            cursor: default; /* Supprime le curseur de pointeur */
+            text-decoration: none;
+        }
+        .conteneur div
+        {
+          width: 22%;
+          height: auto;
+          margin: 2%;
+          background-color: #8f0000;
+          border-radius: 25px;
+        }
+        
+        .container-signaler
+        {
+            width: 60%;
+            margin-top: 50px;
+            margin-left: 20%;
+            background: #242424;
+            padding: 20px;
+            padding-right: 20px;
+            border-radius: 25px;
+        }
+
+        .popup {
+            display: none; /* Cacher la pop-up par défaut */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            background-color: #414141;
+            border: 1px solid #888;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        /* Bouton de fermeture */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+        }
+
+        #toggleButton {
+          position: fixed;
+          top: 0;
+          right: 0;
+          cursor: pointer;
+        }
+
+        #menu {
+      position: absolute;
+      top: 0;
+      left: -200px; /* cacher le menu en dehors de la vue */
+      width: 200px;
+      height: 100%;
+      background-color: #333;
+      transition: left 0.5s; /* ajouter une transition fluide */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+  
+    #menu.open {
+      left: 0; /* afficher le menu */
+    }
+  
+    #menu img {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+            .container3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+            grid-template-areas:
+                "box1 box2 box3 box5"
+                "box1 box4 box4 box6";
+            gap: 10px;
+            width: 80%;
+            height: 80%;
+        }
+        .box {
+            position: relative;
+            border: 2px solid rgb(167, 0, 0);
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+            border-radius: 10px;
+        }
+        .box:hover {
+            transform: scale(0.95);
+        }
+        .box a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+        .box1 { grid-area: box1; background-image: url('../img/annonces.png'); }
+        .box2 { grid-area: box2; background-image: url('../img/BU\ site.png'); }
+        .box3 { grid-area: box3; background-image: url('../img//signaler\ TB.png'); }
+        .box4 { grid-area: box4; background-image: url('../img/blog\ tb.png'); }
+        .box5 { grid-area: box5; background-image: url('../img/cooperation\ TB.png'); }
+        .box6 { grid-area: box6; background-image: url('../img/hist\ patch.png'); }
+        
+
+
+
+        .table-container {
+            font-size: 100%;
+            max-width: 85%;
+            margin: 0 auto;
+            background: #5f5f5f;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+           
+        }
+
+        thead {
+            background-color: #242424;
+            color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            background-color: #444444;
+            border-bottom: 1px solid #525252;
+        }
+
+      
+
+        th {
+            
+            background-color: #494949;
+        }
+
+        tr:nth-child(even) {
+            background-color: #494949;
+        }
+        .ordered-img
+{
+    width: 25px;
+}
+p
+{
+    margin-left: 12%;
+}
+.strong
+{
+    color: rgb(255, 102, 255);
+    margin-left: -2%;
+}
+.sep
+{
+  align-items: center;
+            width: 60%;
+            height: 2px;
+            background-color: #ff5c5c;
+            margin-top: 15px;
+            margin-left: 20%;
+            position: absolute;
+
+}
+.lettre
+            {
+                color: rgb(255, 102, 255);
+
+                text-align: center;
+                margin-left: 16px;
+                display: inline-block;
+                transition: 0.2s;
+                border-radius: 10px;
+                padding-bottom: 10px;
+            }
+            .lettre:hover
+            {
+                
+                color: #c60000;
+               transform: scale(120%);
+            }
+            .container
+            {
+              margin-top: 15px;
+              
+            }
+            .lat
+            {
+                color: #FFF;
+                font-style: italic;
+                margin-left: 15%;
+
+            }
+            .signi 
+            {
+                color: #FFF;
+                margin-left: 20%;
+            }
+
+            .legende
+            {
+                width: 60%;
+                margin-left: 20%;
+            }
+            
+            .wordStyle 
+            {
+                font-weight: bold;
+                color: #c60000;
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-top: 25px;
+            }
+            .seenStyle
+            {
+                font-weight: bold;
+                color: #2ec600;
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-top: 25px;
+            }
+ 
+
+        
+            .wordStyleDefinition
+            {font-style: italic;
+                color: #ffffff;
+            margin-left: 20%;
+            margin-right: 15%;
+            }
+
+            .seenStyleDefinition
+            {font-style: italic;
+                color: #cdffbe;
+            margin-left: 20%;
+            margin-right: 15%;
+            }
+            .mobile-maximes
+            {
+                font-size: 100%;
+            }
+
+            .table-des-matieres
+            {
+                color: rgb(255, 255, 255);
+                background-color: #5a0000;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 5%;
+                padding: 3%;
+                border-radius: 35px;
+                transition: 0.5s;
+            }
+            .table-des-matieres a
+            {
+                margin-left: 10%;
+            }
+            .table-des-matieres a:hover
+            {
+                color: #ff7777;
+                
+                transition: 0.5s;
+            }
+    
+            .cours
+            {
+                color: black;
+                background-color: #ffffff;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 0%;
+                padding: 3%;
+                border-radius: 35px;
+            }
+            
+    
+           .cours p
+            {
+                margin-left: 10%;
+                margin-right: 10%;
+                color: rgb(0, 0, 0);
+            }
+            .cours h1
+            {
+                margin-left: 0%;
+                color: rgb(105, 0, 0);
+            }
+            .cours h2
+            {
+                margin-left: 5%;
+                color: rgb(207, 0, 0);
+            }
+            .cours h3
+            {
+                margin-left: 7%;
+                color: rgb(0, 0, 0);
+            }
+            .plan
+            {
+                background-color: #ffffff;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                border-radius: 25px;
+                border: 2px solid #610000 ;
+            }
+    
+            .titre
+            {
+                color: #ff0000;
+                font-weight: bold;
+                margin-left: -3%;
+            }
+            .T-sous-titre
+            {
+                margin-left: 200px;
+                color: #fa9696;
+                font-size: large;
+                transition: 0.5s;
+            }
+            .T-sous-titre:hover
+            {
+                color: #4a0c0c;
+                transition: 0.5s;
+                font-size: large;
+            }
+            .disclaimer {
+                background-color: #660000;
+                color: white;
+                border-radius: 20px;
+                padding: 20px 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                position: relative;
+                width: 80%;
+                margin-top: 15px;
+                margin-left: 5%;
+                margin-right: 5%;
+                
+            }
+    
+            .disclaimer h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.2em;
+                margin: 0 0 10px 0;
+                text-transform: uppercase;
+            }
+    
+            .disclaimer p {
+                font-size: 1rem;
+                margin: 0;
+            }
+    
+            .warning {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+                color: #ffc107;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+            .message {
+                background: linear-gradient(to right, #b02900, #330000);
+                color: white;
+                border-radius: 30px;
+                padding: 20px 40px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                font-size: 1rem;
+                width: 60%;
+                margin-left: 15%;
+                max-width: 800px;
+            }
+            .selected
+            {
+                color: #ff3c00;
+            }
+    

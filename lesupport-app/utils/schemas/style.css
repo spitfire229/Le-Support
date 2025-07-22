@@ -1,0 +1,263 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  background-color: #302e2f;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+#canvas {
+    position: relative;
+    width: 30000px;
+    height: 30000px;
+    background-image: url('./assets/back\ schemas.svg'); /* Image en fond */
+    background-size: cover; /* Ou contain, selon l'effet voulu */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#ccc 1px, transparent 0);
+    background-size: 40px 40px;
+    pointer-events: none; /* Cela permet de ne pas interférer avec les clics */
+  }
+  
+
+.shape {
+  position: absolute;
+  cursor: move;
+  border: 2px solid #cb3232d9;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.octagon {
+  background: white;
+  clip-path: polygon(
+    30% 0%, 70% 0%,
+    100% 30%, 100% 70%,
+    70% 100%, 30% 100%,
+    0% 70%, 0% 30%
+  );
+}
+
+.resize-handle {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 76, 76, 0.534);
+  position: absolute;
+  border-radius: 2px;
+  border: none;
+  box-sizing: border-box;
+  cursor: nwse-resize;
+  z-index: 10;
+}
+
+.handle-bottom-right {
+  right: -5px;
+  bottom: -5px;
+}
+
+#toolbar {
+  position: fixed;
+  top: 10px;
+  width: 90%;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction:row;
+  gap: 10px;
+}
+
+
+#edit-panel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #504f4f;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  margin-top: 150px;
+  border-radius: 10px;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  z-index: 0;
+}
+
+label {
+  font-size: 12px;
+}
+
+input {
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  .container {
+    display: flex;
+    position: fixed;
+    align-items:center;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #504f4f;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    z-index: 1000;
+  }
+
+  .group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .icon-bar img
+  {
+    width: 100%;
+  }
+
+  .button {
+    background-color: #706F6F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn-sm {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btn-lg {
+    width: 200px;
+    height: 35px;
+  }
+  .btn-lg2 {
+    width: 60px;
+    height: 25px;
+    position: fixed;
+    z-index: 1;
+  }
+
+.btn-adp {
+  width: auto;
+  height: 25px;
+  z-index: 100000;
+}
+.btn-adp img
+{
+  width: 150px;
+}
+
+
+  .separator {
+    height: 90px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: #7e7e7e;
+    color: #7e7e7e;
+  }
+
+  .stretch {
+    width: 200px;
+    height: 35px;
+  }
+
+  .icon-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .icon-bar {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff00;
+    border-radius: 10px;
+  }
+
+  .right-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+
+
+
+.anchor-point {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.139);
+  border: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+    pointer-events: none; /* empêche tout clic ou drag sur eux */
+  
+  
+  cursor: crosshair;
+}
+
+
+
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-panel {
+  width: 50%;
+  height: 50vh;
+  margin-left: 25%;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: rgb(91, 91, 91);
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-panel .button {
+  width: 100%;
+}

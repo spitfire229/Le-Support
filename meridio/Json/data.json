@@ -1,0 +1,47 @@
+{
+    "events": [
+      {
+        "title": "event1",
+        "date": "2024-12-15",
+        "location": "insérer lieu ",
+        "image": "../img/comming soon.svg",
+        "description": "insérer description "
+      },
+      {
+        "title": "event2",
+        "date": "2024-12-20",
+        "location": "insérer lieu",
+        "image": "../img/comming soon.svg",
+        "description": "insérer description "
+      }
+    ],
+    
+      "news": [
+        {
+          "title": "Actualité 1",
+          "date": "2024-12-05",
+          "description": "Description de l'actualité 1.",
+          "link": "#"
+        },
+        {
+          "title": "Actualité 2",
+          "date": "2024-12-10",
+          "description": "Description de l'actualité 2.",
+          "link": "#"
+        },
+        {
+          "title": "Actualité 3",
+          "date": "2024-12-10",
+          "description": "Description de l'actualité 2.",
+          "link": "#"
+        },
+        {
+          "title": "Actualité 4",
+          "date": "2024-12-15",
+          "description": "Description de l'actualité 3.",
+          "link": "#"
+        }
+      
+    ]
+  }
+  

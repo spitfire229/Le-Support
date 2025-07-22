@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selection auteur</title>
+    <link rel="icon" href="../img/s.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="../CSS/perso.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <img class="logo" src="../img/logo blogs.png" alt="">
+   <div class="center80">
+    <section class="author-container" id="author-container">
+            <!-- Contenu des auteurs sera ajouté dynamiquement ici -->
+       
+        <div class="author-card" onclick='window.location.href="../"'>
+        <img src="../img/creation auteur.png" alt="">
+        <p>devenir auteur</p>
+        </div>
+       
+    </section>
+
+</div>
+<footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('../Json/auteurs.json')
+                .then(response => response.json())
+                .then(data => {
+                    const authors = data.authors;
+                    const authorContainer = document.getElementById('author-container');
+
+                    authors.forEach((author, index) => {
+                        // Création de la carte d'auteur
+                        const authorCard = document.createElement('div');
+                        authorCard.classList.add('author-card');
+
+                        // Ajout de l'image de l'auteur
+                        const authorImg = document.createElement('img');
+                        authorImg.src = author.image;
+                        authorImg.alt = `${author.name}'s photo`;
+                        authorCard.appendChild(authorImg);
+
+                        // Ajout du nom de l'auteur
+                        const authorName = document.createElement('p');
+                        authorName.textContent = author.name;
+                        authorCard.appendChild(authorName);
+
+                        // Ajout du nombre d'articles (vous pouvez adapter selon votre besoin)
+                        const articleCount = document.createElement('p');
+                        articleCount.textContent = `articles : ${Object.keys(author.topics).length}`;
+                        authorCard.appendChild(articleCount);
+
+                        // Ajout d'un événement de clic pour sélectionner l'auteur
+                        authorCard.addEventListener('click', function() {
+                            localStorage.setItem('selectedAuthorIndex', index.toString());
+                            window.location.href = '../arborescence/auteurs.html';
+                        });
+
+                        // Ajout de la carte d'auteur à la section
+                        authorContainer.appendChild(authorCard);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

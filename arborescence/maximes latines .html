@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LE SUPPORT - maximes latines</title>
+  <link rel="icon" href="../img/icon.png" />
+  <link rel="stylesheet" href="../CSS/footer.CSS">
+  <link rel="stylesheet" href="../CSS/perso.css">
+  <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+  <style>
+
+
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+.logo
+{
+    width: 40%;
+    margin-left: 30%;
+}
+h1
+{
+    margin-left: 5%;
+}
+h2
+{
+    margin-left: 7%;
+    color: rgb(255, 55, 65)
+}
+
+
+
+             </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRFK7PDSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BRFK7PDSFQ');
+</script>
+
+
+<body>
+    <a href="../index.html"><img class="retour" style="width: 10%; position: absolute;" src="../img/retour.png" alt=""></a>
+    <img class="logo" src="../img/maximes latines.png" alt="">
+
+
+<img class="legende" src="../img/legende.png" alt="">
+    
+
+    <div class="mobile-maximes" id="wordList"></div>
+
+
+
+
+<footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<script>
+
+// Chargement du fichier JSON (exemple avec une variable)
+const wordsData = [
+    {"word": "dura lex, sed lex ", "definition": "la loi est dure, mais c’est la loi", "styleType": "seenstyle"},
+    {"word": "bab intestat ", "definition": "transmission des biens d’un défunt sans testament (ou lorsque le testament est nul ou caduc), selon les règles fixées par le législateur", "styleType": "wordstyle"},
+    {"word": "abusus", "definition": "mot latin décrivant l’attribut du droit de propriété qui permet à son titulaire de disposer du bien, en le détruisant ou en le transmettant", "styleType": "seenstyle"},
+    {"word": "actio personalis moritur cum persona ", "definition": " l’action personnelle s’éteint avec la personne concernée", "styleType": "wordstyle"},
+    {"word": "ad probationem", "definition": "à titre de preuve", "styleType": "wordstyle"},
+    {"word": "ad validitatem", "definition": "à titre de validité", "styleType": "wordstyle"},
+    {"word": "æquum est ut cujus participavit lucrum, participet et damnun ", "definition": " il est juste que celui qui a participé au gain participe aussi à la perte", "styleType": "wordstyle"},
+    {"word": " bis de eadem re agere non licet", "definition": " il ne convient pas d’intenter deux fois une action sur la même affaire", "styleType": "wordstyle"},
+    {"word": "bonus dolus ", "definition": "« le bon dol » est un petit mensonge, une exagération qui ne peut conduire à la nullité du contrat pour vice du consentement", "styleType": "wordstyle"},
+    {"word": "confessio est regina probatio", "definition": " la confession (l’aveu) est la reine des preuves", "styleType": "wordstyle"},
+    {"word": "contra legem ", "definition": "à l’encontre de la loi", "styleType": "wordstyle"},
+    {"word": "cui bono", "definition": "à qui le crime profite-t-il ? (expression tirée de l’affaire Sextus Roscius)", "styleType": "wordstyle"},
+    {"word": "de facto ", "definition": "de fait", "styleType": "seenstyle"},
+    {"word": "de lege lata ", "definition": "en vertu de la loi en vigueur", "styleType": "wordstyle"},
+    {"word": "da mi factum d'abo tibi jus", "definition": "raconte moi le fait et je te dirais le Droit", "styleType": "wordstyle"},
+    {"word": "erga omnes", "definition": " à l’égard de tous ; marque l’opposabilité absolue de certains droits, même à l’égard des tiers", "styleType": "wordstyle"},
+    {"word": "exequatur ", "definition": "procédure visant à donner dans un état force exécutoire à un jugement rendu à l’étranger", "styleType": "wordstyle"},
+    {"word": "fructus", "definition": "mot latin décrivant l’attribut du droit de propriété qui permet à son titulaire de percevoir les revenus du bien", "styleType": "seenstyle"},
+    {"word": "in abstracto", "definition": "par opposition à in concreto, apprécié abstraitement, par référence à un modèle idéel", "styleType": "seenstyle"},
+    {"word": "in bonis ", "definition": "débiteur en pleine jouissance de ses droits et biens (littéralement « dans ses biens ») par opposition à un débiteur en liquidation judiciaire dont les biens ont été saisis (terme utilisé uniquement pour une personne morale)", "styleType": "wordstyle"},
+    {"word": "in concreto", "definition": " par opposition à in abstracto, à chacun son équité, apprécié selon les faits, concrètement ", "styleType": "seenstyle"},
+    {"word": "in casu ", "definition": " dans le cas d’espèce, dans le cas présent", "styleType": "wordstyle"},
+    {"word": "in dubio pro libertate ", "definition": "dans le doute, faveur à la liberté", "styleType": "wordstyle"},
+    {"word": "infans conceptus (pro nato habetur quoties de commodis ejus agitur )", "definition": "l’enfant conçu est tenu pour déjà né lorsqu’il s’agit de ses avantages (forme courte : « infans conceptus »)", "styleType": "seenstyle"},
+    {"word": "inter partes", "definition": "entre les parties ; cela marque l’effet relatif des contrats qui n’ont d’autorité, en principe qu’entre les parties à l’acte (comparer avec erga omnes)", "styleType": "seenstyle"},
+    {"word": "jus cogens", "definition": "norme impérative de droit international public général ; l’État français est l’un des rares à ne pas reconnaître la normativité du jus cogens", "styleType": "wordstyle"},
+    {"word": "locus regit actum", "definition": "loi du lieu de l'acte", "styleType": "wordstyle"},
+    {"word": "lex specialis derogat legi generali ", "definition": "une loi spéciale déroge à une loi générale", "styleType": "wordstyle"},
+    {"word": "major pars trahit ad se minorem ", "definition": "la partie la plus importante d’une procédure attire à elle la plus petite (théorie de la connexité)", "styleType": "wordstyle"},
+    {"word": "mutata lex non perit ", "definition": " le droit qui n'évolue pas meurt", "styleType": "wordstyle"},
+    {"word": "necessitas cogit legem", "definition": "besoin ou nécessité n’ont loi ; (Loysel) : à l’origine de l’expression nécessité fait loi", "styleType": "wordstyle"},
+    {"word": "nemo censetur ignorare legem", "definition": "« nul n’est censé ignorer la loi », on ne peut invoquer en défense le fait que l’on ne connaissait pas une norme", "styleType": "wordstyle"},
+    {"word": "nemo dat quod non habet ", "definition": "personne ne peut donner ce qu’il n’a pas", "styleType": "wordstyle"},
+    {"word": "Nemo judex in causa sua ", "definition": " personne ne juge sa propre cause", "styleType": "wordstyle"},
+    {"word": "nemo plus juris ad alium transferre potest quam ipse habet", "definition": " personne ne peut transférer à autrui plus de droits qu’il n’en a lui-même", "styleType": "wordstyle"},
+    {"word": "non bis in idem / ne bis idem ", "definition": "pas deux fois pour la même chose : on ne peut pas être jugé une seconde fois pour les mêmes faits", "styleType": "seenstyle"},
+    {"word": "obiter dictum", "definition": " (littéralement « soi dit en passant » en latin) : commentaires ou raisonnement d’un juge qui n’est pas nécessaire à la décision prise", "styleType": "wordstyle"},
+    {"word": "pacta sunt servanda ", "definition": "respect de la parole donnée ou force obligatoire des conventions (art. 1103 du code civil)", "styleType": "wordstyle"},
+    {"word": "pretium doloris", "definition": " littéralement « le prix de la douleur » — indemnisation des souffrances", "styleType": "seenstyle"},
+    {"word": "ratio decidendi ", "definition": "expression latine désignant le raisonnement juridique qui a mené un juge à prendre une décision", "styleType": "wordstyle"},
+    {"word": "res communis", "definition": "expression latine qui désigne les choses qui, de par leur nature, ne peuvent être appropriées (par exemple : l’air ambiant) et appartiennent à tous (à comparer avec res nullius)", "styleType": "seenstyle"},
+    {"word": "res nullius", "definition": "expression latine utilisée en droit des biens pour désigner les choses sans maître, c’est-à-dire celle qui n’ont pas de propriétaire mais qui sont néanmoins appropriables", "styleType": "wordstyle"},
+    {"word": "sui generis ", "definition": " « de son propre genre » : situation juridique dont la singularité nécessite de créer des textes spécifiques", "styleType": "wordstyle"},
+    {"word": "testis unus, testis nullus", "definition": "le manque de crédibilité d'un témoignage s'il n'est porté que par un seul témoin sans confirmation d'un autre", "styleType": "wordstyle"},
+    {"word": "usus", "definition": " mot latin décrivant l’attribut du droit de propriété qui permet à son titulaire d’utiliser un bien en jouissant de l’utilité que la chose génère par elle-même", "styleType": "seenstyle"},
+
+];
+
+wordsData.sort((a, b) => a.word.localeCompare(b.word));
+
+const wordListDiv = document.getElementById("wordList");
+wordsData.forEach(item => {
+    const wordElement = document.createElement("div");
+    wordElement.textContent = item.word;
+
+    const definitionElement = document.createElement("div");
+    definitionElement.textContent = item.definition;
+    if (item.styleType === "wordstyle") {
+        wordElement.classList.add("wordStyle");
+        definitionElement.classList.add("wordStyleDefinition");
+    } else if (item.styleType === "seenstyle") {
+        wordElement.classList.add("seenStyle");
+        definitionElement.classList.add("seenStyleDefinition");
+    }
+
+    wordListDiv.appendChild(wordElement);
+    wordListDiv.appendChild(definitionElement);
+});
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

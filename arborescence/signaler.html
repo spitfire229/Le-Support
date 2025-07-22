@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <link rel="stylesheet" href="../CSS/perso.css">
+    <style>
+
+
+    </style>
+    <title>Formulaire</title>
+</head>
+<body>
+    
+    <div class="container-signaler">
+        <img src="../img/signaler une erreur.png" class="center40" alt="">
+        
+            <p class="bold">Merci pour votre retour !</p>
+            <p>
+                Vos commentaires nous aident à améliorer notre site et à offrir une meilleure expérience à tous nos utilisateurs. Nous apprécions votre aide pour signaler les erreurs.
+            </p>
+        <br><br>
+        <form id="errorReportForm">
+            <div class="form-group">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+          
+            <div class="form-group center90">
+                <label>Type d'erreur:</label>
+                <div class="checkbox-group ">
+                    <label><input type="checkbox" name="errorType" value="Bug graphique"> Bug graphique</label>
+                    <label><input type="checkbox" name="errorType" value="Erreur de fond"> Erreur de fond</label>
+                    <label><input type="checkbox" name="errorType" value="Erreur de forme"> Erreur de forme</label>
+                    <label><input type="checkbox" name="errorType" value="Autres erreurs"> Autres erreurs...</label>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="pageUrl">Page où se trouve l'erreur:</label>
+                <select id="pageUrl" name="pageUrl" required>
+                    <option value="Accueil">Accueil </option>
+                    <option value="BDD">Base de données</option>
+                    <option value="Blog">Blog</option>
+                    <option value="citations">citations</option>
+                    <option value="JP">jurisprudence</option>
+                    <option value="lexiques">lexique</option>
+                    <option value="Services">Méthodologie</option>
+                    <option value="maximes-latines">Maximes latines</option>
+                    <option value="publications">Pulications</option>
+                    <option value="schemas">Schemas</option>
+                    <option value="sources">Sources</option>
+                    <option value="QCM">QCM</option>
+                    <option value="autre...">Autre...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="errorDescription">Description de l'erreur:</label>
+                <textarea id="errorDescription" name="errorDescription" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+<footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+      
+    <script>
+
+        document.getElementById('errorReportForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            
+            const pageUrl = document.getElementById('pageUrl').value;
+            const errorDescription = document.getElementById('errorDescription').value;
+
+            // Récupération des valeurs des cases à cocher sélectionnées
+            const errorTypes = Array.from(document.querySelectorAll('input[name="errorType"]:checked'))
+                .map(checkbox => checkbox.value)
+                .join(', ');
+
+            const subject = encodeURIComponent("Signalement d'une erreur sur le site");
+            const body = encodeURIComponent(
+                `Nom: ${name}\nPage: ${pageUrl}\nType d'erreur: ${errorTypes}\n\nDescription de l'erreur:\n${errorDescription}`
+            );
+
+            const mailtoLink = `mailto:lesuppetudiant@gmail.com?subject=${subject}&body=${body}`;
+
+            window.location.href = mailtoLink;
+        });
+
+    </script> 
+</body>
+</html>

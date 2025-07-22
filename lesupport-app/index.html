@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesupport </title>
+
+    <style>
+      #drawer {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Caché par défaut */
+  width: 500px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#drawer.open {
+  right: 0;
+}
+
+#closeDrawer {
+  float: right;
+  font-size: 24px;
+  margin: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#drawerContent {
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+    </style>
+
+</head>
+
+<body>
+<div id="deprime-logo"></div>
+
+
+    
+    <div class="sidebar-right">
+        <button class="icon" onclick="changeIframe('https://lesupport.me')"><img class="icon-img" src="./img/lesupport.png" alt=""></button>
+        
+        <button class="icon pop-up-btn" data-popup-id="popup1">
+            <img src="./img/logo nanterre.png" alt="Docs">
+        </button>
+
+
+        <div id="popup1" class="popup">
+            <a href="https://portail.parisnanterre.fr/page-student/"><button class="icon"><img src="./img/ent nanterre.svg" alt="Sheets"></button></a>
+            <a href="https://coursenligne.parisnanterre.fr/"><button class="icon"><img src="./img/CEL.svg" alt="Sheets"></button></a>
+            <a href="https://myplanning.parisnanterre.fr/direct/myplanning.jsp?ticket=ST-26389-hPV9ioXQQMN-l5mFDUZQjNeCeQM-superman"><button class="icon"><img src="./img/EDT.svg" alt="Sheets"></button></a>
+        </div>
+        
+        <button class="icon pop-up-btn" data-popup-id="popup2">
+            <img src="./img/suite google.png" alt="Docs">
+        </button>
+
+
+        <div id="popup2" class="popup">
+            <a href="https://docs.google.com/document/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggdoc.svg" alt="Docs"></button></a>
+            <a href="https://docs.google.com/spreadsheets/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggsheet.svg" alt="Sheets"></button></a>
+            <a href="https://docs.google.com/presentation/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggslides.svg" alt="Sheets"></button></a>
+            <a href="https://docs.google.com/forms/u/0/?tgif=d"><button class="icon pop_up_icon"><img src="./img/ggforms.svg" alt="Sheets"></button></a>
+            <a href="https://drive.google.com/drive/home"><button class="icon pop_up_icon"><img src="./img/ggdrive.svg" alt="Sheets"></button></a>
+            <a href="https://mail.google.com/mail/u/0/"><button class="icon pop_up_icon"><img src="./img/ggmail.svg" alt="Sheets"></button></a>
+        </div>
+        
+        <button class="icon pop-up-btn" data-popup-id="popup4">
+            <img src="./img/logo marteau.png" alt="Docs">
+        </button>
+
+        <div id="popup4" class="popup">
+            <a href="https://www-dalloz-fr.faraway.parisnanterre.fr/etudiants"><button class="icon pop_up_icon"><img src="./img/logo dalloz.png" alt="Docs"></button></a>
+            <a href="https://signin.lexisnexis.com/lnaccess/app/signin?back=https://www-lexis360intelligence-fr.faraway.parisnanterre.fr/legan-callback&aci=lint"><button class="icon pop_up_icon"><img src="./img/logo lexis.png" alt="Docs"></button></a>
+            <a href="https://www.legifrance.gouv.fr/liste/code?etatTexte=VIGUEUR&etatTexte=VIGUEUR_DIFF"><button class="icon pop_up_icon"><img src="./img/logo code.png" alt="Docs"></button></a>
+        </div>
+
+        <button class="icon pop-up-btn" data-popup-id="popup3">
+            <img src="./img/logo mapper.png" alt="Docs">
+        </button>
+
+        <div id="popup3" class="popup">
+            <p>A très bientôt pour de nouveaux programmes</p>
+        </div>
+        
+<button class="icon" onclick="changeIframe('./utils/schemas/index.html')"><img class="icon-img" src="./img/LOGO dedale.svg" alt=""></button>
+
+
+        <div id="popup4" class="popup">
+            <p>A très bientôt pour de nouveaux programmes</p>
+        </div>
+
+    <!-- Bas de la sidebar droite -->
+    <div class="bottom-buttons">
+        <div class="separator"></div>
+        <button id="openDrawer">Afficher les infos</button>
+        <button class="icon" id="charon-btn"><img src="./img/LOGO charon.svg" alt=""></button>
+        <button class="icon"><img class="parametres" src="./img/paramettre.png" alt=""></button>
+    </div>
+
+
+
+
+
+
+<!-- Popup assistant Charon -->
+<div class="conteneur-charon">
+  <div id="charon">
+    <div id="charon-header">
+      <span  data-i18n="charon_title">Charon</span>
+      <button id="charon-close">✖</button>
+    </div>
+    <div  id="charon-chat"><p class="pres-chat"  data-i18n="charon_intro_1">Bonjour, je suis charon, l'assistant IA du support, un besoin? une question? une recherche? n'hésitez pas à faire appel à moi.</p>
+      <p class="pres-chat" style="color: #ce4848;"  data-i18n="charon_intro_2">je fonctionne grace a des mots clefs ex : schémas / cours etc..<br>si non vous pouvez utiliser les commandes ci-dessous ; )</p>
+      <p class="pres-chat" data-i18n="charon_commands">commandes : <br> /def (ex:droit civil) <br> /art code pénal (ex:121-1) <br> /art code civil (ex:121-1) <br> /art code procedure civile (ex:121-1)<br>/aide <br>/auteur <br>/jurisprudence </p>
+      <p class="pres-chat">_____________________________________________________________</p>
+    </div>
+    <div id="charon-suggestions" style="display: none; position: absolute;"></div>
+    <input id="charon-input" type="text" placeholder="Posez une question à Charon..." data-i18n="charon_placeholder">
+  </div>
+
+
+
+   
+  
+
+
+
+
+
+</div>
+
+<!-- Charger transformers.js -->
+<script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.8.0/dist/transformers.min.js"></script>
+
+
+
+    </div>
+
+
+
+
+        <!-- Page des paramètres (glisse depuis la droite) -->
+<div id="settings-page">
+    <div class="left">
+    <h1 data-i18n="settings">PARAMETTRES</h1>
+
+    <label class="section-label" for="theme" data-i18n="theme">Thème :</label>
+    <select class="select-theme" id="theme">
+        <option class="select-option" value="light" data-i18n="theme_light">Clair</option>
+        <option class="select-option" value="dark" data-i18n="theme_dark">Sombre</option>
+    </select>
+
+    <br> <br> <br>
+
+
+    
+
+
+    
+        <label class="section-label" for="" data-i18n="language">langue</label>
+        <select class="select-theme" id="lang-select">
+            <option class="select-option" value="fr">fr</option>
+            <option class="select-option" value="en">en</option>
+        </select>
+    
+        <div class="section-label" data-i18n="volume">Volume sonore :</div>
+        <input type="range" class="slider">
+    
+        <div style="margin-top: 10px;">
+          <button class="button" data-i18n="credits">CRÉDITS</button>
+          <button class="button" data-i18n="help">AIDE</button>
+        </div>
+<br><br>
+<h2 data-i18n="deprime_mode">mode déprime : </h2>
+<p data-i18n="deprime_desc">Le tester c'est se réconforter.</p>
+        <button class="button" onclick="activerModeDeprime()" ><img style="width: 100%;" src="./img/logo deprime.svg" alt=""></button>
+        <button class="button" id="increase-speed" ><img style="width: 100%;" src="./img/logo defouloir.svg" alt=""></button>
+        <button class="button" id="stop-animation" ><img style="width: 100%;" src="./img/logo reconforté.svg" alt=""></button>
+
+        <button class="button" id="close-settings" data-i18n="close_settings">Fermer</button>
+      </div>
+    
+      <div class="right">
+        <h1 data-i18n="addon_install_title">INSTALLATION ADD ON :</h1>
+        <div class="note" data-i18n="addon_note">* Une fois téléchargé, il vous faudra relancer l’application pour y appliquer les modifications liées aux téléchargements.</div>
+    
+        <div class="addon">
+            <div class="vignette">
+                <img src="./img/LOGO lesupport.svg" alt="">
+            </div>  
+          <h3 data-i18n="addon_lesupport_title">LE SUPPORT WEB :</h3>
+          <p data-i18n="addon_lesupport_desc">Version locale du support, plus besoin de connexion pour accéder aux ressources du site, à présent tout se stock sur votre machine.</p>
+          <button data-i18n="coming_soon">a venir ...</button>
+        
+        </div>
+    
+        <div class="addon">
+            <div class="vignette">
+                <img src="./img/LOGO dedale.svg" alt="">
+            </div>  
+          <h3 data-i18n="addon_dedale_title">LE SUPPORT - MODULE DÉDALE :</h3>
+          <p data-i18n="addon_dedale_desc">Programme léger et polyvalent de création de schémas.</p>
+          <button data-i18n="">a venir ...</button>
+            
+        </div>
+    
+        <div class="addon">
+            <div class="vignette">
+                <img src="./img/LOGO hermes.svg" alt="">
+            </div>  
+          <h3 data-i18n="addon_hermes_title">LE SUPPORT - MODULE HERMES :</h3>
+          <p data-i18n="addon_hermes_desc">Partage local de fichiers lourds ou légers ? Entre appareils sur le même réseau.</p>
+          <button data-i18n="addon_athena_title">a venir ...</button>
+          
+        </div>
+    
+        <div class="addon">
+            <div class="vignette">
+                <img src="./img/LOGO athena.svg" alt="">
+            </div> 
+          <h3 data-i18n="addon_athena_title">LE SUPPORT - MODULE ATHENA :</h3>
+          <p data-i18n="addon_athena_desc">Agent IA d’analyse et de résumé.</p>
+          <button data-i18n="">a venir ...</button>
+         
+        </div>
+    
+        <div class="addon">
+                        <div class="vignette">
+                <img src="./img/LOGO ethos.svg" alt="">
+            </div> 
+          <h3 data-i18n="addon_ethos_title">LE SUPPORT - MODULE ETHOS :</h3>
+          <p data-i18n="addon_ethos_desc">Assistant vocal IA d’aide au travail (recherche d’articles).</p>
+          <button data-i18n="">a venir ...</button>
+          
+        </div>
+    
+        <div class="addon">
+                    <div class="vignette">
+                <img src="./img/LOGO charon.svg" alt="">
+            </div> 
+          <h3 data-i18n="addon_charon_title">LE SUPPORT - MODULE CHARON :</h3>
+          <p data-i18n="addon_charon_desc">Assistant chat intégré à l’application, aide au travail.</p>
+          <button data-i18n="">a venir ...</button>
+         
+        </div>
+
+        <div class="addon">
+                    <div class="vignette">
+                <img src="./img/LOGO notes.svg" alt="">
+            </div> 
+          <h3 data-i18n="addon_notes_title">LE SUPPORT - MODULE NOTES :</h3>
+          <p data-i18n="addon_notes_desc">Assistant chat intégré à l’application, aide au travail.</p>
+          <button data-i18n="">a venir ...</button>
+         
+        </div>
+      </div>
+
+      
+</div>
+
+
+    <div class="mid-bar">
+        <div class="div-background">
+            <iframe id="content-frame" style="width:100%; height:100%; border:none; overflow:hidden; border:none;"></iframe>
+        </div>
+    </div>
+    </div>
+
+    
+
+<div id="drawer">
+  <button id="closeDrawer">×</button>
+  <div id="drawerContent">Chargement...</div>
+</div>
+
+
+    <script src="renderer.js"></script>
+    <script src="./pop_up.js"></script>
+    <!--<script src="./addon/keydown.js"></script>-->
+    <script src="./addon/charon.js"></script>
+    <script src="./addon/deprime.js"></script>
+
+
+    <script>
+let currentLang = 'fr';
+
+document.getElementById("lang-select").addEventListener("change", (e) => {
+  currentLang = e.target.value;
+  applyTranslations(currentLang);
+});
+
+async function applyTranslations(lang) {
+  const response = await fetch("./addon/lang.json");
+  const translations = await response.json();
+
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[lang][key]) {
+      el.setAttribute("placeholder", translations[lang][key]);
+    }
+  });
+}
+
+// Charger la langue au démarrage
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "fr";
+  document.getElementById("lang-select").value = savedLang;
+  applyTranslations(savedLang);
+});
+</script>
+
+
+</body>
+</html>

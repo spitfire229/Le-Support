@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des Examens Blancs</title>
+    <link rel="stylesheet" href="../CSS/perso.css">
+    <link rel="icon" href="../img/icon.png" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #e2e2e2;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            border-right: 1px solid #dd4b39;
+            background-color: #2b2b2b;
+            overflow-y: auto;
+        }
+
+        .content {
+            width: 75%;
+            padding: 20px;
+            background-color: #1c1c1c;
+            overflow-y: auto;
+        }
+
+        .subject-title {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .subject-title:hover .quiz-list {
+            display: block;
+        }
+
+        .subject-title h3 {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #dd4b39;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        .quiz-list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2b2b2b;
+            border: 1px solid #dd4b39;
+            border-radius: 5px;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .quiz-list .exam-title {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .exam-title:hover,
+        .subject-title h3:hover {
+            background-color: #dd4b39;
+        }
+
+        p {
+            color: #ffffff;
+        }
+
+        .red2 {
+            background-color: rgb(255, 0, 0);
+        }
+
+        .orange2 {
+            background-color: rgb(255, 128, 0);
+        }
+
+        .yellow2 {
+            background-color: rgb(255, 255, 0);
+        }
+
+        .light-green2 {
+            background-color: rgb(128, 255, 0);
+        }
+
+        .green2 {
+            background-color: rgb(0, 255, 128);
+        }
+
+        .cyan2 {
+            background-color: rgb(0, 255, 255);
+        }
+
+        .blue2 {
+            background-color: rgb(0, 0, 255);
+        }
+
+        .purple2 {
+            background-color: rgb(127, 0, 255);
+        }
+
+        .magenta2 {
+            background-color: rgb(255, 0, 255);
+        }
+
+        .pink2 {
+            background-color: rgb(255, 0, 127);
+        }
+
+        .red1 {
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+        }
+
+        .orange1 {
+            color: rgb(255, 128, 0);
+            font-weight: bold;
+        }
+
+        .yellow1 {
+            color: rgb(255, 255, 0);
+            font-weight: bold;
+        }
+
+        .light-green1 {
+            color: rgb(128, 255, 0);
+            font-weight: bold;
+        }
+
+        .green1 {
+            color: rgb(0, 255, 128);
+            font-weight: bold;
+        }
+
+        .cyan1 {
+            color: rgb(0, 255, 255);
+            font-weight: bold;
+        }
+
+        .blue1 {
+            color: rgb(0, 0, 255);
+            font-weight: bold;
+        }
+
+        .purple1 {
+            color: rgb(127, 0, 255);
+            font-weight: bold;
+        }
+
+        .magenta1 {
+            color: rgb(255, 0, 255);
+            font-weight: bold;
+        }
+
+        .pink1 {
+            color: rgb(255, 0, 127);
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #dd4b39;
+        }
+
+        .result-container {
+            padding: 20px;
+            border-top: 1px solid #dd4b39;
+            background-color: #2b2b2b;
+        }
+
+        .correct {
+            color: #00ff00;
+        }
+
+        .incorrect {
+            color: #ff0000;
+        }
+
+        #default-message {
+            text-align: center;
+            margin-top: 20px;
+            color: #bbbbbb;
+        }
+        .signal
+        {
+            width: 10%;
+            position: fixed;
+            top: 90%;
+            left: 85%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="./signaler.html"><img class="signal" src="../img/signaler une erreur.png" alt=""></a>
+    <div class="main-content">
+        <div class="sidebar" id="sidebar">
+            <h2>Choisir le type de document</h2>
+            
+            <!-- Les menus des matières seront ajoutés ici dynamiquement -->
+        </div>
+        <div class="content">
+            <div id="examContent">
+                <div id="default-message">
+                    <img src="../img/qcm.png" width="50%">
+                    <h2>Bienvenue</h2>
+                    <p>Sélectionnez un quizz pour commencer.</p>
+                    
+                </div>
+                <div id="quiz-title"></div>
+                <div id="quiz-container"></div>
+                <button onclick="checkAnswers()">Vérifier les réponses</button>
+                <div id="result"></div>
+                <div class="result-container" id="detailedResult">
+                    <h2>Résultats détaillés</h2>
+                    <ul id="detailedResultList"></ul>
+                </div>
+            </div><footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+        </div>
+    </div>
+
+    
+    <script>
+        let currentQuizIndex = null;
+        let currentSubject = null;
+        let quizData = {};
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('../Json/quizz.json')
+                .then(response => response.json())
+                .then(data => {
+                    quizData = data;
+                    populateSubjects();
+                });
+        });
+
+        function populateSubjects() {
+            let sidebar = document.getElementById('sidebar');
+            Object.keys(quizData).forEach(subject => {
+                let subjectDiv = document.createElement('div');
+                subjectDiv.className = 'subject-title';
+                let subjectTitle = document.createElement('h3');
+                subjectTitle.textContent = subject;
+
+                let quizList = document.createElement('div');
+                quizList.className = 'quiz-list';
+
+                quizData[subject].forEach((quiz, index) => {
+                    let quizItem = document.createElement('div');
+                    quizItem.className = 'exam-title';
+                    quizItem.textContent = quiz.title;
+                    quizItem.onclick = () => loadQuiz(subject, index);
+                    quizList.appendChild(quizItem);
+                });
+
+                subjectDiv.appendChild(subjectTitle);
+                subjectDiv.appendChild(quizList);
+                sidebar.appendChild(subjectDiv);
+            });
+        }
+
+        function loadQuiz(subject, quizIndex) {
+            currentSubject = subject;
+            currentQuizIndex = quizIndex;
+            let quiz = quizData[subject][quizIndex];
+            let quizTitle = document.getElementById('quiz-title');
+            let quizContainer = document.getElementById('quiz-container');
+            let defaultMessage = document.getElementById('default-message');
+            defaultMessage.style.display = 'none';
+            quizTitle.innerHTML = `<h2>${quiz.title}</h2>`;
+            quizContainer.innerHTML = '';
+            quiz.questions.forEach((quizItem, index) => {
+                let questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.innerHTML = `<p>${quizItem.question}</p>`;
+
+                let optionsList = document.createElement('ul');
+                optionsList.className = 'options';
+                quizItem.options.forEach(option => {
+                    let optionItem = document.createElement('li');
+                    optionItem.innerHTML = `<label>
+                                                <input type="radio" name="question${index}" value="${option}">
+                                                ${option}
+                                            </label>`;
+                    optionsList.appendChild(optionItem);
+                });
+
+                questionDiv.appendChild(optionsList);
+                quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        function checkAnswers() {
+            if (currentQuizIndex === null) {
+                alert('Veuillez sélectionner un quiz.');
+                return;
+            }
+
+            let quiz = quizData[currentSubject][currentQuizIndex];
+            let correctAnswers = 0;
+            let detailedResultList = document.getElementById('detailedResultList');
+            detailedResultList.innerHTML = '';
+
+            quiz.questions.forEach((quizItem, index) => {
+                let selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                let resultItem = document.createElement('li');
+                if (selectedOption && selectedOption.value === quizItem.answer) {
+                    correctAnswers++;
+                    resultItem.className = 'correct';
+                    resultItem.innerText = `Question: ${quizItem.question} - Correct`;
+                } else {
+                    resultItem.className = 'incorrect';
+                    resultItem.innerText = `Question: ${quizItem.question} - Incorrect. La réponse correcte est ${quizItem.answer}`;
+                }
+                detailedResultList.appendChild(resultItem);
+            });
+
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>Vous avez ${correctAnswers} réponses correctes sur ${quiz.questions.length}.</p>`;
+        }
+    </script>
+</body>
+
+</html>

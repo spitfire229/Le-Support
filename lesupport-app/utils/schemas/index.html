@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Plan de travail avec connexions</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
+  
+</head>
+<body>
+  
+  
+  <div class="group">
+    <div class="dropdown-wrapper">
+      <button id="toggle-panel" class="button btn-lg2"><img src="./assets/fichier.svg" alt="menu"></button>
+      <div id="dropdown-panel" class="dropdown-panel">
+
+        
+        
+        <button  class="button btn-adp" onclick="loadSchema()"><img src="./assets/charger.svg" alt="menu"></button>
+        <input type="file" id="file-input" style="display: none;" accept=".json" />
+        <button class="button btn-adp" onclick="saveSchema()"><img src="./assets/save.svg" alt="menu"></button>
+        <button class="button btn-adp" onclick="exportSchemaAsPNG()">📸 Export PNG</button>
+
+
+      </div>
+    </div>
+  </div><a href="./help.html">
+  <button class="button btn-lg2" style="right: 15px;"><img src="./assets/aide.svg" alt="menu"></button>
+  </a>
+  <div class="container">
+    <!-- Groupe gauche -->
+    <div class="group">
+      <button class="button btn-sm" onclick="createShape('square', event)"> <img src="./assets/square.svg" alt=""></button>
+      <button class="button btn-sm" onclick="createShape('circle', event)"><img src="./assets/circle.svg" alt=""></button>
+      <button class="button btn-sm" onclick="createShape('octagon', event)"><img src="./assets/octogone.svg" alt=""></button>
+      <button class="button btn-sm" onclick="activateLinkMode()"><img src="./assets/line.svg" alt=""></button>
+      <button class="button btn-sm" onclick="activateLinkMode()"><img src="./assets/text.svg" alt=""></button>
+      <button class="button btn-lg"><img src="./assets/frise.svg" alt=""></button>
+    </div>
+
+    <div class="separator">.</div>
+
+    <!-- Groupe central -->
+    <div class="group">
+
+
+      <button class="button stretch">6</button>
+      <button class="button btn-sm"><img src="./assets/underline.svg" alt=""></button>
+      <button class="button btn-sm"><img src="./assets/bold.svg" alt=""></button>
+      <button class="button btn-sm"><img src="./assets/italic.svg" alt=""></button>
+      <button class="button btn-sm">10</button>
+    </div>
+
+    <div class="separator">.</div>
+
+    <!-- Groupe icônes -->
+    <div class="icon-group">
+      <div class="icon-bar"><img src="./assets/left.svg" alt="">11</div>
+      <div class="icon-bar"><img src="./assets/mid.svg" alt="">12</div>
+      <div class="icon-bar"><img src="./assets/right.svg" alt="">13</div>
+    </div>
+
+    <div class="separator">.</div>
+
+    <!-- Groupe droite -->
+    <div class="right-group">
+      <button class="button btn-sm" onclick="toggleSnap()"><img id="snap-icon" src="./assets/aimant off.svg" alt=""></button>
+      <button class="button btn-sm" onclick="saveSchema()">💾</button>
+
+    </div>
+  </div>
+
+  <div id="edit-panel">
+    <label>Largeur: <input id="input-width" type="number"></label>
+    <label>Hauteur: <input id="input-height" type="number"></label>
+    <label>Couleur bordure: <input id="input-border-color" type="color"></label>
+    <label>Couleur fond: <input id="input-bg-color" type="color"></label>
+    <label>Épaisseur bordure (px): <input id="input-border-width" type="number"></label>
+    <label>Border Radius (%): <input id="input-border-radius" type="number"></label>
+    <button onclick="applyChanges()">Appliquer</button>
+    <button onclick="setAsDefault()">Définir comme modèle</button>
+    <button onclick="deleteShape()">Supprimer</button>
+  </div>
+
+  <svg id="connections" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:5;"></svg>
+  <div id="canvas">
+    <div class="grid"></div> 
+  </div>
+
+  <script src="./script.js"></script>
+
+  <script>
+    const toggleButton = document.getElementById("toggle-panel");
+const dropdownPanel = document.getElementById("dropdown-panel");
+
+toggleButton.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdownPanel.style.display = dropdownPanel.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", () => {
+  dropdownPanel.style.display = "none";
+});
+
+dropdownPanel.addEventListener("click", (e) => {
+  e.stopPropagation(); // Empêche la fermeture si on clique dans le panel
+});
+
+  </script>
+<script src="./export.js" type="module"></script>
+
+
+
+
+  
+</body>
+</html>

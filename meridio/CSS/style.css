@@ -1,0 +1,264 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+.about
+{
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+a
+{
+    color: #333;
+    text-decoration: none;
+}
+
+header {
+    background-color: #ffffff59;
+    color: white;
+    padding: 10px 10px;
+
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+nav a:hover {
+    background-color: #575757;
+}
+section {
+    padding: 20px;
+}
+.hero {
+    width: 100%;
+    height: 400px;
+
+    padding: 0;
+    background: url('../img/banniere.png') no-repeat center center/cover;
+}
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+.hero p {
+    font-size: 1.5em;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+.card:hover
+{
+    transform: scale(107%);
+    background-color: #c8c8c8;
+}
+.card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.center50
+{
+    width: 50%;
+    margin-left: 25%;
+}
+.center
+{
+    text-align: center;
+}
+.event
+{
+    background-color: rgb(225, 222, 222);
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+}
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+#news {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  
+  .info
+{
+    color: rgb(182, 0, 0);
+}
+
+.button-container {
+    text-align: center;
+}
+
+.animated-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1E3D8B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.animated-button:hover {
+    background-color: #714673;
+    border-radius: 5px;
+    transform: scale(110%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.487);
+}
+
+/* Bordure animée */
+.animated-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 1s ease;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+}
+
+.animated-button:hover::before {
+    border-color: #B33B40;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.flyer
+{
+    width: 35px;
+    position: absolute;
+    padding: 7px;
+}
+
+/* Conteneur principal du carousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Conteneur des cartes */
+  .carousel-wrapper {
+    width: 100%;
+  }
+  
+  /* Piste du carousel contenant toutes les cartes */
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+  }
+  
+  /* Cartes individuelles */
+  .card {
+    flex: 0 0 calc(100% / 3); /* Diviser la largeur pour afficher 3 cartes */
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Style pour les boutons de navigation */
+  .carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-btn-left {
+    left: 10px;
+  }
+  
+  .carousel-btn-right {
+    right: 10px;
+  }
+  
+  /* Effet hover pour les cartes */
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Adaptation pour les écrans plus petits */
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 0 calc(100% / 2); /* Afficher 2 cartes sur des écrans plus petits */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 0 0 100%; /* Afficher 1 carte à la fois sur les écrans très petits */
+    }
+  }
+  

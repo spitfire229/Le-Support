@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE SUPPORT - schemas</title>
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .excalidraw {
+            position: relative;
+            width: 100%;
+            height: 190%;
+            border: 8px solid #ff4f34;
+            margin-top: 100px;
+        }
+
+        .ptndebalisedemerde {
+            width: 90%;
+            height: 300px;
+            position: relative; 
+            margin-left: 5%;
+            top: 0;
+            left: 0;
+        }
+
+        .separation {
+            color: #ff4f34;
+            margin-left: 12%;
+            width: 75%;
+            height: 0px;
+            margin-top: 50px;
+            border: 2px solid #ff4f34;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 15px;
+            margin-top: 1px;
+            text-decoration: none;
+        }
+
+        .schema {
+            width: 100%;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .schema:hover {
+            transition: 0.3s;
+            transform: scale(110%);
+        }
+
+        .container {
+            margin: 2%;
+            width: 28%;
+            float: left;
+            text-align: center;
+            margin-left: 25px;
+            transition: 0.5s;
+        }
+
+        .bouton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 6%;
+            padding: 10px;
+            background-color: #ff4f34;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.5s;
+            text-decoration: none;
+            width: 80%;
+            height: 20px;
+        }
+
+        .bouton:hover {
+            background-color: #ff8673;
+        }
+
+        .title {
+            font-size: 200%;
+            text-align: center;
+            color: #ff1b1b;
+        }
+
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .annotation7 {
+            position: absolute;
+            margin-top: 3%;
+            margin-left: 12%;
+            width: 15%;
+            z-index: 100;
+            float: left;
+        }
+
+        .annonce {
+            text-align: center;
+        }
+
+        .logo {
+            width: 40%;
+            margin-left: 30%;
+        }
+
+        .retour {
+            width: 10%;
+            position: absolute;
+        }
+
+        .disclaimer {
+            margin-top: 50px;
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .under {
+            margin-top: -10;
+            padding: auto;
+            display: flex;
+            text-align: center;
+            width: 100%;  
+            margin-top: -35px;
+            padding-top: 10px;
+            background-color: rgb(56, 56, 56);
+            border-radius: 0px 0px 30px 30px;
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        .under img {
+            width: 35px; 
+            height: 35px;
+            border-radius: 100%;
+            margin: 5px;
+            margin-left: 25px;
+        }
+
+        .under a {
+            color: #ec2525;
+        }
+
+        .under a:hover {
+            color: #ff9898;
+        }
+
+        .button {
+            align-items: center;
+            margin-left: 25px;
+            padding: 10px;
+            background-color: #ff4f34;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.5s;
+            text-decoration: none;
+            width: auto;
+            height: 20px;
+            transform: scale(80%);
+            transition: 0.5s;
+        }
+
+        .button:hover {
+            transform: scale(90%);
+        }
+
+        div[style] {
+            display: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="../img/schema.png" alt="" >
+    <div class="disclaimer">
+        <h1>Disclaimer</h1>
+        <p>Le contenu de ces documents n'est pas directement validé par les professeurs et ne résulte que de prises de notes.</p>
+    </div>
+
+    <h3 class="title">Droit administratif</h3>
+    <div class="centreur">
+        <div id="schemas-container"></div>
+    </div>
+    <footer class="footer">
+    
+        <ul>
+            <li><a href="../index.html"><img class="footer-ico" src="../img/footer accueil.png" alt=""></a></li>
+            <li><a href="../arborescence/CGU.html"><img class="footer-ico" src="../img/footer CGU.png" alt=""></a></li>
+            <li><a href="../arborescence/signaler.html"><img class="footer-ico"src="../img/footer erreur.png" alt=""></a></li>
+        </ul>
+       
+        <img class="footer-logo" src="../img/logo 4.0.png" alt="Description de l'image"> 
+        <p>©2024 lesupport.me</p>
+    <img class="footer-fond" src="../img/footer nanterre.png" alt="">
+    </footer>
+    <script>
+        fetch('../Json/big mama.json')
+            .then(response => response.json())
+            .then(data => {
+                const schemas = data.schemas.L1;
+                const penalSchemas = schemas.filter(schema => schema.matiere === "admin");
+                const container = document.getElementById('schemas-container');
+                container.innerHTML = '';
+
+                penalSchemas.forEach(schema => {
+                    const schemaElement = `
+                        <div class="container">
+                            <h1>${schema.title}</h1>
+                            <div class="image-container">
+                                <img class="schema clickable-image" src="${schema.img_src}" alt="${schema.title}">
+                            </div>
+                            <br>
+                            <div class="under"> 
+                                <img src="${schema.presenter_img}" alt="">
+                                <p>présenté par<a href=""> ${schema.presenter}</a></p>
+                                <a href="${schema.excalidraw_url}"><div class="button">ouvrir</div></a>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += schemaElement;
+                });
+
+                // Add event listeners to the images for full-screen functionality
+                document.querySelectorAll('.clickable-image').forEach(img => {
+                    img.addEventListener('click', function() {
+                        openFullscreen(this);
+                    });
+                });
+            })
+            .catch(error => console.error('Error fetching the JSON file:', error));
+
+        // Function to open image in full-screen mode
+        function openFullscreen(img) {
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.className = 'fullscreen';
+            fullscreenDiv.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+            
+            fullscreenDiv.addEventListener('click', function() {
+                document.body.removeChild(fullscreenDiv);
+            });
+
+            document.body.appendChild(fullscreenDiv);
+        }
+    </script>
+</body>
+</html>

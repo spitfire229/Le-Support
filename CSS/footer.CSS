@@ -1,0 +1,90 @@
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+.footer-link img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 0.3rem;
+  object-fit: contain;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+.footer-middle .logo-circle {
+  width: 70px;
+  height: 70px;
+  background: #a60000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.footer-middle .brand-name {
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+}
+
+.footer-middle p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-bottom img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  opacity: 0.05;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-top {
+    gap: 1.5rem;
+  }
+
+  .footer-link span {
+    font-size: 0.75rem;
+  }
+
+  .footer-middle .brand-name {
+    font-size: 1rem;
+  }
+
+  .footer-middle .logo-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la Figure</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #c80000;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #c80000;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #da0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #570000;
+        }
+
+        .logo
+        {
+        width: 30%;
+        height: fit-content;
+        margin-left: 35%;
+        }
+    </style>
+</head>
+<body>        
+    <br>
+        <img class="logo" src="../img/logo grands auteurs.png" alt="">
+    <div class="container">
+
+        <div id="figure-details"></div>
+        <a href="./Grandes Figures du Droit.html">Retour à la liste</a>
+    </div>
+<footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+    <script>
+        // Récupérer l'ID de la figure depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const figureId = urlParams.get('id');
+
+        // Charger les données JSON
+        fetch('../Json/figures.json')
+            .then(response => response.json())
+            .then(data => {
+                const figure = data.find(f => f.id == figureId);
+                if (figure) {
+                    const detailsContainer = document.getElementById('figure-details');
+                    detailsContainer.innerHTML = `
+                        <img src="${figure.image}" alt="${figure.nom}">
+                        <div class="section">
+                            <h2>Nom</h2>
+                            <p>${figure.nom}</p>
+                        </div>
+                        <div class="section">
+                            <h2>Période</h2>
+                            <p>${figure.periode}</p>
+                        </div>
+                        <div class="section">
+                            <h2>Histoire</h2>
+                            <p>${figure.histoire}</p>
+                        </div>
+                        <div class="section">
+                            <h2>Études</h2>
+                            <p>${figure.etudes}</p>
+                        </div>
+                        <div class="section">
+                            <h2>Écrits</h2>
+                            <p>${figure.ecrits}</p>
+                        </div>
+                        <div class="section">
+                            <h2>Faits Marquants</h2>
+                            <p>${figure.faits_marquants}</p>
+                        </div>
+                    `;
+                } else {
+                    document.getElementById('figure-details').innerHTML = "<p>Figure introuvable.</p>";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur lors du chargement des données :", error);
+                document.getElementById('figure-details').innerHTML = "<p>Erreur lors du chargement des données.</p>";
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,662 @@
+{
+  "ouvrages": {
+      "L1": [
+          {
+              "title": "CODE CIVIL",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-universitaires-professionnels/code-civil-2024-annote_9782247228034",
+              "img_src": "../img/CC.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-69PXNG"
+          },
+          {
+              "title": "CODE PENAL",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-universitaires-professionnels/code-penal-2023-annote_9782247220175",
+              "img_src": "../img/CP.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-LTZLXB"
+          },
+          {
+              "title": "CODE DE L'AVOCAT",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-professionnels/code-avocat-2024-annote-commente_9782247232116",
+              "img_src": "../img/CODEA.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-OEMZN9"
+          },
+          {
+              "title": "LEXIQUE DES TERMES JURIDIQUES",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/lexiques/lexique-termes-juridiques-2022-2023_9782247220915",
+              "img_src": "../img/LTJ.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-H8UOYR"
+          },
+          {
+              "title": "DROIT CONSTITUTIONNEL <br> Michel Troper",
+              "url": "https://www-labase-lextenso-fr.faraway.parisnanterre.fr/droit-constitutionnel-2",
+              "img_src": "../img/troper droit constit.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-GKU7HM"
+          },
+          {
+              "title": "RELATIONS INTERNATIONALES <br> Jean Jacque Roche",
+              "url": "https://www-labase-lextenso-fr.faraway.parisnanterre.fr/relations-internationales-0",
+              "img_src": "../img/relations internationales JJ roche.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-NH5OCC"
+          },
+          {
+              "title": "INTRODUCTION AU DROIT EUROPEEN <br> Carlos Santulli",
+              "url": "https://www-labase-lextenso-fr.faraway.parisnanterre.fr/introduction-au-droit-europeen-0",
+              "img_src": "../img/intro au droit euro.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-LGLZ37"
+          }
+      ]
+  },
+  "cours": {
+      "L1": [
+          {
+              "title": "RAISONNEMENT JURIDIQUE 1",
+              "url": "https://docs.google.com/document/d/1hbaJR7Rm6DOqXa3NRNp4hduYJTJj3d331aAQvwE9HsI/edit?usp=sharing",
+              "img_src": "../img/dox.png",
+              "matiere": "raisonnement juridique",
+              "item_ID": "IID-62BC0M"
+          },
+          {
+              "title": "HISTOIRE DES SOURCES",
+              "url": "https://docs.google.com/document/d/14M9B6PvFkjRSN0upkrQgx2chRnPtBjxTnojxzKDCbcU/edit?usp=sharing",
+              "img_src": "../img/dox.png",
+              "matiere": "histoire des sources",
+              "item_ID": "IID-Q8X6UX"
+          },
+          {
+              "title": "RELATIONS INTERNATIONALES",
+              "url": "https://docs.google.com/document/d/1BMN64pxsYKa6ovV5M_qNpFw-7UDlfy5-bb-pR2CerfQ/edit?usp=sharing",
+              "img_src": "../img/dox.png",
+              "matiere": "relations internationales",
+              "item_ID": "IID-1ZNENY"
+          },
+          {
+              "title": "DROIT CONSTIT",
+              "url": "https://docs.google.com/document/d/1XsW_n7vJHyYu6C9XAimwfJI-DDU2HRjC/edit?usp=sharing&ouid=101408285475937232101&rtpof=true&sd=true",
+              "img_src": "../img/dox.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-OMO6EB"
+          },
+          {
+              "title": "SCIENCE POLITIQUE",
+              "url": "https://docs.google.com/document/d/1jylSom8k5WJqZSavXOpFM1ujxoAEmSIoV8pk4AsPV-g/edit?usp=sharing",
+              "img_src": "../img/dox.png",
+              "matiere": "science politique",
+              "item_ID": "IID-2BVJJ2"
+          },
+          {
+              "title": "COMMON LAW",
+              "url": "https://docs.google.com/document/d/1Voccb",
+              "img_src": "../img/hs.png",
+              "matiere": "common law",
+              "item_ID": "IID-NZMZC0"
+          },
+          {
+              "title": "DROIT CONSTIT S2",
+              "url": "https://docs.google.com/document/d/1JItMdI45fJobbQkBv96onWKFBJoNWvTqxSkNsihh2Lc/edit?usp=drivesdk",
+              "img_src": "../img/dox.png",
+              "matiere": "Droit conqtitutionnel",
+              "item_ID": "IID-LBZ3A6"
+          },
+          {
+              "title": "DROIT PENAL",
+              "url": "https://docs.google.com/document/d/1cBtdEdMwgcOORhqGrhmcHn1eZDYQm2U0lfsK6ZUAKJ0/edit?usp=drivesdk",
+              "img_src": "../img/dox.png",
+              "matiere": "droit Pénal",
+              "item_ID": "IID-BS9V2R"
+          },
+          {
+              "title": "MUTATION DE L'ETAT",
+              "url": "https://docs.google.com/document/d/1hbaJR7Rm6DOqXa3NRNp4hduYJTJj3d331aAQvwE9HsI/edit?usp=sharing",
+              "img_src": "../img/refusé.png",
+              "matiere": "mutation de l'état",
+              "item_ID": "IID-1CM95W"
+          },
+          {
+              "title": "DROIT CIVIL",
+              "url": "https://docs.google.com/document/d/1XsW_n7vJHyYu6C9XAimwfJI-DDU2HRjC/edit?usp=sharing&ouid=101408285475937232101&rtpof=tg",
+              "img_src": "../img/refusé.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-O2Z99K"
+          }
+      ]
+  },
+  "schemas": {
+      "L1": [
+          {
+              "title": "application de la loi penal de fond dans le temps",
+              "img_src": "../img/schemas/application de la loi penal de fond dans le temps.png",
+              "url": "../img/schemas/application de la loi penal de fond dans le temps.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=qpyzkAaOljWJL8dZ9u5U4,h7fGpj_AELf8D9ivE22ucg",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-MEFS5S"
+          },
+          {
+              "title": "application de la loi pénale dans l'espace",
+              "img_src": "../img/schemas/application de la loi pénale dans l_espace.png",
+              "url": "../img/schemas/application de la loi pénale dans l_espace.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=Qsq73dHTmboVHDmT14YdS,5Vhxi9-gPfw4c1WSpGUttQ",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-5A6IF9"
+          },
+          { 
+              "title": "la tentative",
+              "img_src": "../img/schemas/la tentative.png",
+              "url": "../img/schemas/la tentative.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=as-ConGP1Mg8cv2sjOf5t,7X5Tu0s2RA6ZiV-BEunUTg",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-8R6PH2"
+          },
+          {
+              "title": "la tentative II",
+              "img_src": "../img/schemas/la tentative II.png",
+              "url": "../img/schemas/la tentative II.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=nW7Wsq0prri4T8V5N3zAH,K1eKkCNtViVjqH5_diVclg",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-0MSGBF"
+          },
+          {
+              "title": "peines",
+              "img_src": "../img/schemas/peines.png",
+              "url": "../img/schemas/peines.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-MPJJJ3"
+          },
+          {
+              "title": "hierarchie des infractions",
+              "img_src": "../img/schemas/hierarchie des infractions  types.png",
+              "url": "../img/schemas/hierarchie des infractions  types.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-6LI01I"
+          },
+          {
+              "title": "naissance du droit pénal moderne",
+              "img_src": "../img/schemas/droit pénal (1).png",
+              "url": "../img/schemas/droit pénal (1).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elas Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-6WBRH9"
+          },
+          {
+              "title": "la peine",
+              "img_src": "../img/schemas/droit pénal (2).png",
+              "url": "../img/schemas/droit pénal (2).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-OK2T27"
+          },
+          {
+              "title": "l'incrimination",
+              "img_src": "../img/schemas/droit pénal (3).png",
+              "url": "../img/schemas/droit pénal (3).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-43JRW4"
+          },
+          {
+              "title": "interpretation du texte pénal",
+              "img_src": "../img/schemas/droit pénal (4).png",
+              "url": "../img/schemas/droit pénal (4).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-E15T3K"
+          },
+          {
+              "title": "application de la loi pénale dans le temps",
+              "img_src": "../img/schemas/droit pénal (5).png",
+              "url": "../img/schemas/droit pénal (5).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-KULWHX"
+          },
+          {
+              "title": "application de la loi pénale dans l'espace",
+              "img_src": "../img/schemas/droit pénal (6).png",
+              "url": "../img/schemas/droit pénal (6).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-UTFUE2"
+          },
+          {
+              "title": "la consomation de l'infraction",
+              "img_src": "../img/schemas/droit pénal (7).png",
+              "url": "../img/schemas/droit pénal (7).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-DEORQD"
+          },
+          {
+              "title": "la tentative",
+              "img_src": "../img/schemas/droit pénal (8).png",
+              "url": "../img/schemas/droit pénal (8).png",
+              "presenter_img": "../img/PP/profil femme.png",
+              "presenter": "elsa Lesage",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-Y67D96"
+          },
+          {
+              "title": "application de la loi pénale dans l'espace",
+              "img_src": "../img/schemas/CHAP I et II HDS.png",
+              "url": "../img/schemas/CHAP I et II HDS.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "histoire des sources",
+              "item_ID": "IID-8FZJGC"
+          },
+          {
+              "title": "responsabilité des produits défectueux",
+              "img_src": "../img/schemas/régime de responsabilité des produits défectueux.png",
+              "url": "../img/schemas/régime de responsabilité des produits défectueux.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-O29HLQ"
+          },
+          {
+              "title": "éxoneration produits defectueux",
+              "img_src": "../img/schemas/exoneration produits defectueux.png",
+              "url": "../img/schemas/exoneration produits defectueux.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-8YX8L3"
+          },
+          {
+              "title": "responsabilité du fait d'autruit (l'enfant)",
+              "img_src": "../img/schemas/responsabilité du fait d_autruit .png",
+              "url": "../img/schemas/responsabilité du fait d_autruit .png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-OOV3I3"
+          },
+          {
+              "title": "responsabilité du fait d'autruit (l'enfant) - suite",
+              "img_src": "../img/schemas/suite responsabilité enfant.png",
+              "url": "../img/schemas/suite responsabilité enfant.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-WB70VQ"
+          },
+          {
+              "title": "responsabilité du commettant",
+              "img_src": "../img/schemas/responsabilité du fait d_autruit commettant.png",
+              "url": "../img/schemas/responsabilité du fait d_autruit commettant.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-560G1R"
+          },
+          {
+              "title": "responsabilité du commettant - suite",
+              "img_src": "../img/schemas/responsabilité du fait d_autruit commettant suite.png",
+              "url": "../img/schemas/responsabilité du fait d_autruit commettant suite.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-6MZQIA"
+          },
+          {
+              "title": "causes d'éxonération",
+              "img_src": "../img/schemas/causes d_exoneration de responsabilité.png",
+              "url": "../img/schemas/causes d_exoneration de responsabilité.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-WC1WHS"
+          },
+          {
+              "title": "causes d'éxonération des produits défectueux",
+              "img_src": "../img/schemas/exoneration produits defectueux.png",
+              "url": "../img/schemas/exoneration produits defectueux.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-EJOB0V"
+          },
+          {
+              "title": "obligation in solidum",
+              "img_src": "../img/schemas/obligation in solidum.png",
+              "url": "../img/schemas/obligation in solidum.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-J2IDS8"
+          },
+          {
+              "title": "infos génériques",
+              "img_src": "../img/schemas/truc.png",
+              "url": "../img/schemas/truc.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-21UPBQ"
+          },
+          {
+              "title": "responsabilité du fait d'autruit (commettant) - suite",
+              "img_src": "../img/schemas/1243 et 44.png",
+              "url": "../img/schemas/1243 et 44.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit civil",
+              "item_ID": "IID-LN3O5D"
+          },
+          {
+              "title": "RESUME droit constit",
+              "img_src": "../img/schemas/droit constit.png",
+              "url": "../img/schemas/droit constit.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=e4DJUy2VzMJVjzxtGI2Ug,VmQfWR6ldPH9InCiD1vhxA",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-XN5PB4"
+          },
+          {
+              "title": "la 2eme republique",
+              "img_src": "../img/schemas/assemblée nationale constitutante.png",
+              "url": "../img/schemas/assemblée nationale constitutante.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=6yQwePQibwX0_1j0U0Q-X,ZS84TVi1GjlxzCZ9OJcpnQ",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-2769LM"
+          },
+          {
+              "title": "la convention nationale",
+              "img_src": "../img/schemas/convention nationale.png",
+              "url": "../img/schemas/convention nationale.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=6yQwePQibwX0_1j0U0Q-X,ZS84TVi1GjlxzCZ9OJcpnQ",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-6FAQTM"
+          },
+          {
+              "title": "le consulat",
+              "img_src": "../img/schemas/consulat.png",
+              "url": "../img/schemas/consulat.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/aucun rendu.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-987L1B"
+          },
+          {
+              "title": "la restauration",
+              "img_src": "../img/schemas/restauration.png",
+              "url": "../img/schemas/restauration.png",
+              "presenter_img": "../img/PP/PDP charleskremer.jpg",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-AAXRKO"
+          },
+          {
+            "title": "cheminement du proces",
+            "img_src": "../img/schemas/cheminement du proces.png",
+            "url": "../img/schemas/cheminement du proces.png",
+            "presenter_img": "../img/PP/PDP charleskremer.jpg",
+            "presenter": "charles Kremer",
+            "excalidraw_url": "https://excalidraw.com/#json=pMibYg0Blf1pDdTtgiRrZ,ynVhgE29aV8x2YhYuDizTw",
+            "open_src": "../img/aucun rendu.png",
+            "matiere": "droit civil",
+            "item_ID": "IID-9875MB"
+        },
+        {
+            "title": "la fin de vie de l’acte administratif unilatéral annulation retrait et abrogation",
+            "img_src": "../img/schemas/la fin de vie de l’acte administratif unilatéral annulation retrait et abrogation.png",
+            "url": "../img/schemas/cheminement du proces.png",
+            "presenter_img": "../img/PP/PDP charleskremer.jpg",
+            "presenter": "charles Kremer",
+            "excalidraw_url": "https://excalidraw.com/#json=6Rkmeyx-uGHa5yTP5LV8N,6teWrBGKElxfbMk7UC5lbw",
+            "open_src": "../img/aucun rendu.png",
+            "matiere": "admin",
+            "item_ID": "IID-987GDH"
+        }
+        ,
+        {
+            "title": "work in progress...",
+            "img_src": "../img/schemas/progress.png",
+            "url": "../img/schemas/progress.png",
+            "presenter_img": "../img/icon.png",
+            "presenter": "Le Support",
+            "excalidraw_url": "",
+            "open_src": "../img/aucun rendu.png",
+            "matiere": "admin",
+            "item_ID": "IID-987GDH"
+        }
+        ,
+        {
+            "title": "work in progress...",
+            "img_src": "../img/schemas/progress.png",
+            "url": "../img/schemas/progress.png",
+            "presenter_img": "../img/icon.png",
+            "presenter": "Le Support",
+            "excalidraw_url": "",
+            "open_src": "../img/aucun rendu.png",
+            "matiere": "admin",
+            "item_ID": "IID-987GDH"
+        }
+      ],
+      "L2": [
+          {
+              "title": "application de la loi penal de fond dans le temps",
+              "img_src": "../img/schemas/application de la loi penal de fond dans le temps.png",
+              "presenter_img": "../img/PP/charles kremer.png",
+              "presenter": "charles Kremer",
+              "excalidraw_url": "https://excalidraw.com/#json=qpyzkAaOljWJL8dZ9u5U4,h7fGpj_AELf8D9ivE22ucg",
+              "open_src": "../img/ouvrir.png",
+              "matiere": "Droit Pénal",
+              "item_ID": "IID-097MH9"
+          }
+      ]
+  },
+  "podcasts": {
+      "L1": [
+          {
+              "title": "Olivier Duhamel <br>PASSION CONSTITUTION",
+              "url": "https://www.youtube.com/watch?v=95FnKiKpTOk",
+              "url_1": "https://www.youtube.com/watch?v=95FnKiKpTOk",
+              "source_url_1": "youtube",
+              "url_2": "https://www.europe1.fr/emissions/passionconstitution-olivier-duhamel-raconte-la-naissance-de-la-ve-republique",
+              "source_url_2": "europe1",
+              "img_src": "../img/podcast constit.png",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-OBWHDC"
+          },
+          {
+              "title": "Henri guillemin <br>la Revolution Française",
+              "url": "https://www.youtube.com/watch?v=wBAwPvyELTA",
+              "url_1": "https://www.youtube.com/watch?v=wBAwPvyELTA",
+              "source_url_1": "youtube",
+              "url_2": "https://www.rts.ch/archives/dossiers/henri-guillemin/11967548-la-revolution-francaise.html",
+              "source_url_2": "la RTS",
+              "img_src": "../img/H guillemin.png",
+              "matiere": "histoire des sources",
+              "item_ID": "IID-3QNUVU"
+          },
+          {
+              "title": "J.L Alperain OBITER-DICTUM <br> le code civil",
+              "url": "https://soundcloud.com/obiterdictum-podcast/ep-14-jean-louis-halperin-le-code-civil-entre-mythe-et-realite",
+              "url_1": "https://soundcloud.com/obiterdictum-podcast/ep-14-jean-louis-halperin-le-code-civil-entre-mythe-et-realite",
+              "source_url_1": "soundcloud",
+              "url_2": "",
+              "source_url_2": "",
+              "img_src": "../img/obiter.png",
+              "matiere": "histoire des sources",
+              "item_ID": "IID-P6SQ6N"
+          }
+      ]
+  },
+  "films": {
+      "L1": [
+          {
+              "title": "CODE CIVIL",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-universitaires-professionnels/code-civil-2024-annote_9782247228034",
+              "img_src": "../img/CC.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-2JSMTL"
+          }
+      ]
+  },
+  "articles": {
+      "L1": [
+          {
+              "title": "CODE CIVIL",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-universitaires-professionnels/code-civil-2024-annote_9782247228034",
+              "img_src": "../img/CC.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-44KGN6"
+          }
+      ]
+  },
+  "ytb_videos": {
+      "L1": [
+          {
+              "title": "la naissance de la Veme république",
+              "img_src": "../img/Quatre-vingt-neuf-NED-2023.jpg",
+              "url": "https://www.youtube.com/embed/T6J4sXprHWU?si=nyTkT2V3L3-pOYIl4",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-1X9TUJ"
+          },
+          {
+              "title": "QUAND L'HISTOIRE FAIT DATE",
+              "img_src": "../img/Quatre-vingt-neuf-NED-2023.jpg",
+              "url": "//www.youtube.com/embed/3U2hJsbv-Io?si=wu-k57c4NEDWr_-c",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-B00T87"
+          }
+      ]
+  },
+  "livre": {
+      "L1": [
+          {
+              "title": "Quatre-vingt-neuf",
+              "auteur": "GEORGE LEFEBVRE",
+              "bio": "Paru en 1939, le Quatre-vingt-neuf de Georges Lefebvre ne se contente pas de raconter, dans un style élégant et simple, la première année de la Grande Révolution. Aboutissement de toute une vie de recherches consacrée à l'histoire sociale de la Révolution française, le livre, devenu un classique incontournable sur le sujet, présente au lecteur une analyse sociologique qui permet de saisir la dynamique de l'année 1789...",
+              "url": "https://www.fnac.com/a17769999/Georges-Lefebvre-Quatre-vingt-neuf-NED-2023",
+              "source_url_1": "la FNAC",
+              "img_src": "../img/Quatre-vingt-neuf-NED-2023.jpg",
+              "matiere": "histoire des sources",
+              "item_ID": "IID-EDJF3F"
+          },
+          {
+              "title": "la naissance de la Veme république",
+              "img_src": "../img/Quatre-vingt-neuf-NED-2023.jpg",
+              "url": "https://www.youtube.com/embed/T6J4sXprHWU?si=nyTkT2V3L3-pOYIl4",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-RXHZB6"
+          }
+      ]
+  },
+  "PDF": {
+      "L1": [
+          {
+              "title": "PDF : livret de methodologie",
+              "url": "../PDF/Methode-Livret-2016V2final.pdf",
+              "name": "Methode-Livret-2016V2final.pdf",
+              "img_src": "../img/logo PDF download.svg",
+              "matiere": "droit constitutionnel",
+              "item_ID": "IID-TR9T9I"
+          },
+          {
+            "title": "PDF : calendrier 2024/2025",
+            "url": "../PDF/202405-UPN-calendrier-univ-v02f",
+            "name": "202405-UPN-calendrier-univ-v02",
+            "img_src": "../img/logo PDF download.svg",
+            "matiere": "droit constitutionnel",
+            "item_ID": "IID-DF9T1I"
+        }
+        
+      ]
+  },
+  "blog": {
+      "L1": [
+          {
+              "title": "CODE CIVIL",
+              "url": "https://bibliotheque-lefebvre-dalloz-fr.faraway.parisnanterre.fr/ouvrage/codes-dalloz-universitaires-professionnels/code-civil-2024-annote_9782247228034",
+              "img_src": "../img/CC.jpg",
+              "matiere": "Droit Civil",
+              "item_ID": "IID-H0ZSVP"
+          }
+      ]
+  }
+}

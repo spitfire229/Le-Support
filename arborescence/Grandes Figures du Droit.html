@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="../img/s.png" />
+  <link rel="stylesheet" href="../CSS/footer.CSS">
+  <link rel="stylesheet" href="../CSS/perso.css">
+    <title>Figures du Droit</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Noir foncé */
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ca0000; /* Orange */
+        }
+
+        /* Liste de figures */
+        #figures-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .figure-card {
+            background-color: #2b2b2b; /* Gris foncé */
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .figure-card:hover {
+            transform: scale(1.05);
+        }
+
+        .figure-card img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour uniformiser les images */
+    border-radius: 10px;
+    object-fit: cover; /* S'assure que l'image remplit bien la boîte sans se déformer */
+}
+
+
+        .figure-card h2 {
+            margin: 10px 0;
+            color: #f5f5f5;
+        }
+
+        .figure-card p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+
+        .figure-card a {
+text-decoration: none;
+        }
+
+        .logo
+        {
+        width: 50%;
+        height: fit-content;
+        margin-left: 25%;
+        }
+
+    </style>
+</head>
+<body>
+    <br><br>
+    <img class="logo" src="../img/logo grands auteurs.png" alt="">
+    <div id="figures-list"></div>
+ <footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+    <script>
+        // Charger les données depuis le fichier JSON
+        fetch('../Json/figures.json')
+            .then(response => response.json())
+            .then(data => {
+                const listContainer = document.getElementById('figures-list');
+                data.forEach(figure => {
+                    // Créer une carte pour chaque figure
+                    const figureCard = document.createElement('div');
+                    figureCard.classList.add('figure-card');
+                    figureCard.innerHTML = `
+                        <a href="biographie.html?id=${figure.id}">
+                            <img src="${figure.image}" alt="${figure.nom}">
+                        <h2>${figure.nom}</h2>
+                        <p>Période : ${figure.periode}</p>
+                        <p>${figure.faits}</p>
+                        </a>
+                    `;
+                    listContainer.appendChild(figureCard);
+                });
+            })
+            .catch(error => {
+                console.error("Erreur lors du chargement des figures :", error);
+                document.getElementById('figures-list').innerHTML = "<p>Impossible de charger les figures.</p>";
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+%!Adobe-FontList 1.22
+%Locale:0x40c
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:BakeryRegular
+FamilyName:Bakery
+StyleName:Regular
+FullName:Bakery
+MenuName:Bakery
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Le-Support - renaissane\Font\Bakery.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:101788
+FileModTime:1750703615
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Bakery
+NameArray:0,Win,1,Bakery
+NameArray:0,Win,16,Bakery
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FULLDOZER-ExtraBold
+FamilyName:FULLDOZER
+StyleName:Extra Bold
+FullName:FULLDOZER Extra Bold
+MenuName:FULLDOZER Extra
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:E:\Le-Support - renaissane\Font\Fulldozer.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:149932
+FileModTime:1750703366
+WeightClass:800
+WidthClass:7
+AngleClass:0
+NameArray:0,Mac,4,FULLDOZER Extra Bold
+NameArray:0,Win,1,FULLDOZER Extra
+NameArray:0,Win,16,FULLDOZER
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GoboldBlocky
+FamilyName:Gobold Blocky
+StyleName:Regular
+FullName:Gobold Blocky
+MenuName:Gobold Blocky
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Le-Support - renaissane\Font\Gobold Blocky Regular.otf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:25916
+FileModTime:1750703500
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Gobold Blocky
+NameArray:0,Win,1,Gobold Blocky
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Heavitas
+FamilyName:Heavitas
+StyleName:Regular
+FullName:Heavitas
+MenuName:Heavitas
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Le-Support - renaissane\Font\Heavitas.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:122632
+FileModTime:1750702983
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Heavitas
+NameArray:0,Mac,4,Heavitas
+NameArray:0,Win,1,Heavitas
+%EndFont
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurisprudence - Droit administratif</title>
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <link rel="stylesheet" href="../CSS/perso.css">
+    <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    <style>
+        /* styles.css */
+
+    </style>
+</head>
+<body>
+    <img class="center40" src="../img/jurisprudence.png" alt="">
+    <br><br>
+    <div style="display: flex;">
+
+    
+    <img src="../img/icon loupe.svg" style="width: 32px; padding: 0px; margin-bottom: 25px; border-radius: 5px;  margin-left: 8%; margin-right: 5px;" alt="">
+    <input type="text" id="searchInput" placeholder="Rechercher par nom ou date..." style=" width: 50%; padding: 10px; margin-bottom: 25px; border-radius: 5px;">
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th >Arrêt</th>
+                    <th>Date</th>
+                    <th>court</th>
+                    <th>faits</th>
+                    <th>Principes Dégagés</th>
+                    
+                    <th><img class="ordered-img" src="../img/ordre alpha.png" alt=""></th>
+                </tr>
+            </thead>
+            <tbody id="jurisprudence-table-body">
+                <!-- Les données seront insérées ici -->
+            </tbody>
+        </table>
+    </div>
+<footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const headers = document.querySelectorAll('th');
+    const searchInput = document.getElementById('searchInput');
+
+    // Fonction pour charger les données JSON
+    function loadData() {
+        return fetch('../Json/JP.json')
+            .then(response => response.json())
+            .then(data => data.jurisprudences);
+    }
+
+    // Fonction pour trier les données JSON par le champ 'name'
+    function sortData(data, ascending) {
+        return data.sort((a, b) => {
+            const nameA = a.name.toLowerCase();
+            const nameB = b.name.toLowerCase();
+            return ascending ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        });
+    }
+
+    // Fonction pour mettre à jour le tableau HTML avec les données triées
+// Fonction pour mettre à jour le tableau HTML avec les données triées
+function updateTable(data) {
+    const tableBody = document.querySelector('tbody');
+    tableBody.innerHTML = '';
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.date}</td>
+            <td>${item.court}</td>
+            <td>${item.facts}</td>
+            <td>${item.summary}</td>
+            <td>
+                <a href="${item.file}" download>
+                    <img src="${item.dwld}" alt="Télécharger" style="width: 50px; cursor: pointer;">
+                </a>
+            </td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+
+    // Fonction pour filtrer les données selon le texte de recherche
+    function filterData(data, query) {
+        query = query.toLowerCase();
+        return data.filter(item => {
+            return item.name.toLowerCase().includes(query) || item.date.toLowerCase().includes(query);
+        });
+    }
+
+    // Charger et afficher les données dès le chargement de la page
+    loadData().then(data => {
+        updateTable(data);
+
+        // Ajouter un événement pour filtrer les résultats au fur et à mesure que l'utilisateur tape
+        searchInput.addEventListener('input', function () {
+            const filteredData = filterData(data, searchInput.value);
+            updateTable(filteredData);
+        });
+    });
+
+    headers.forEach(header => {
+        header.addEventListener('click', function () {
+            const index = Array.from(header.parentElement.children).indexOf(header);
+            const ascending = header.classList.contains('asc');
+            loadData().then(data => {
+                const sortedData = sortData(data, !ascending);
+                updateTable(sortedData);
+                header.classList.toggle('asc', !ascending);
+                header.classList.toggle('desc', ascending);
+            });
+        });
+    });
+});
+
+
+    </script>
+</body>
+</html>

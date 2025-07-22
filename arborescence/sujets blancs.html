@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des Examens Blancs</title>
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../CSS/footer.CSS">
+    <link rel="stylesheet" href="../CSS/perso.css">
+    <link rel="stylesheet" href="../CSS/style-desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="../CSS/style-mobile.css" media="screen and (max-width: 767px)">
+    
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #e2e2e2;
+            margin: 0;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            border-right: 1px solid #dd4b39;
+            background-color: #2b2b2b;
+        }
+        .content {
+            width: 75%;
+            padding: 20px;
+            background-color: #1c1c1c;
+            overflow-y: auto;
+        }
+        .exam-title, .subject-title {
+            cursor: pointer;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #dd4b39;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            color: #bbbbbb;
+            text-align: center;
+        }
+        .exam-title:hover, .subject-title:hover {
+            background-color: #dd4b39;
+        }
+p
+{
+    color: #ffffff;
+}
+
+        
+a
+{
+    color: #ffb7ad;
+}a:hover
+{
+    color: #dd4b39;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img class="center90" src="../img/logo sujets blancs.png" alt="">
+        <h2>Nos matières : </h2>
+        
+        <div id="examList"></div>
+    </div>
+    <div class="content">
+        <div class="center90">
+        <div id="examContent">
+            <img class="center50" src="../img/logo sujets blancs.png" alt="">
+            <h2>Contenu de l'examen</h2>
+            
+            <p>Sélectionnez un document pour afficher son contenu.</p>
+            <h3>cette page est en developpement, de nouveaux sujets arrivent tres prochainement</h3>
+            <img class="center30" src="../img/no format tel.png" alt="">
+
+<footer style="background-color: #3a0707; margin-top: 50px; color: white; padding: 2rem 1rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+
+    <!-- Logo -->
+    <div style="margin-bottom: 1rem;">
+      <img src="../img/logo 4.0.png" alt="Logo Le Support" style="height: 140px;" />
+    </div>
+
+    <!-- Nom du site -->
+    <h2 style="margin-bottom: 0.5rem; margin-left: 0px;">Le Support</h2>
+    <p style="color: #ffffff; margin-bottom: 1rem; margin-left: 0px;">La plateforme dédiée aux étudiants.</p>
+
+    <!-- Liens -->
+    <div style="margin-bottom: 1rem;">
+      <a href="../index.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">accueil</a>
+      <a href="./CGU.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">CGU</a>
+      <a href="./signaler.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">signaler une erreur</a>
+    </div>
+
+    <!-- Bas de page -->
+    <div style="font-size: 0.9rem; color: #666;">
+      &copy; 2025 <a href="https://lesupport.me" style="color: #666; text-decoration: none;">lesupport.me</a> – Tous droits réservés.
+    </div>
+  </div>
+</footer>
+              
+        </div>
+        </div>
+    </div>
+
+    <script>
+        
+        fetch('../Json/exams blancs.json')
+            .then(response => response.json())
+            .then(data => {
+                const examList = document.getElementById('examList');
+                const examContent = document.getElementById('examContent');
+
+                data.forEach(subject => {
+                    const subjectTitle = document.createElement('div');
+                    subjectTitle.className = 'subject-title';
+                    subjectTitle.textContent = subject.title;
+                    subjectTitle.onclick = () => {
+                        examContent.innerHTML = `<h2>${subject.title}</h2>`;
+                        subject.exams.forEach(exam => {
+                            const examDiv = document.createElement('div');
+                            examDiv.className = 'exam-title';
+                            examDiv.textContent = exam.title;
+                            examDiv.onclick = () => {
+                                examContent.innerHTML = exam.content;
+                            };
+                            examContent.appendChild(examDiv);
+                        });
+                    };
+                    examList.appendChild(subjectTitle);
+                });
+            })
+            .catch(error => {
+                console.error('Erreur de chargement du fichier JSON:', error);
+            });
+    </script> 
+</body>
+</html>
