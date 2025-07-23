@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Me Contacter</title>
+  <link rel="stylesheet" href="ton-style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .contact-wrapper {
+      width: 90%;
+      max-width: 1000px;
+      margin: 60px auto;
+      background-color: #353535;
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .contact-wrapper h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ff4f34;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-card {
+      background-color: #2a2a2a;
+      padding: 25px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .contact-card:hover {
+      background-color: #3a3a3a;
+      transform: scale(1.05);
+    }
+
+    .contact-card i {
+      font-size: 2.5rem;
+      color: #ff4f34;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .contact-card a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-card a:hover {
+      color: #ffb6a3;
+    }
+
+    @media (max-width: 600px) {
+      .contact-wrapper {
+        padding: 25px;
+      }
+
+      .contact-card i {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-wrapper">
+    <h1>Me Contacter</h1>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <a href="mailto:ton.email@example.com">ton.email@example.com</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <h3>LinkedIn</h3>
+        <a href="https://linkedin.com/in/tonprofil" target="_blank">linkedin.com/in/tonprofil</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+        <a href="https://github.com/tonpseudo" target="_blank">github.com/tonpseudo</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-twitter"></i>
+        <h3>Twitter</h3>
+        <a href="https://twitter.com/tonpseudo" target="_blank">@tonpseudo</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

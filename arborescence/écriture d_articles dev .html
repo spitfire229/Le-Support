@@ -359,6 +359,9 @@ border: 1px solid #fff;
           <span style="color: #6b6b6b;">sauvegarde automatique ...</span>  
        
         </div>
+        <input type="file" id="pdfUpload" accept="application/pdf" style="display:none;" onchange="handlePDFUpload(event)">
+<button onclick="document.getElementById('pdfUpload').click()">📄 Importer un PDF</button>
+
         <div>
           <div id="toolbar">
             <div class="dropdown">
@@ -369,6 +372,7 @@ border: 1px solid #fff;
                 <button type="button" onclick="execCmd('formatBlock', '<h3>')"><img width="55px" src="../img/titre3.svg" alt=""></button>
                     
               </div>
+              
             </div>
             <div class="dropdown">
                 <button type="button" class="button"><img width="60px" src="../img/polices.svg" alt=""></button>
@@ -752,5 +756,316 @@ function copyEscapedText() {
 }
 
       </script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+      <script>
+async function handlePDFUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async function () {
+        const typedArray = new Uint8Array(reader.result);
+        const pdf = await pdfjsLib.getDocument(typedArray).promise;
+
+        let finalHTML = "";
+
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            const page = await pdf.getPage(pageNum);
+            const textContent = await page.getTextContent();
+            let items = textContent.items;
+
+            // Trier du haut vers le bas
+            items.sort((a, b) => b.transform[5] - a.transform[5]);
+
+            // Détection des lignes à y similaire
+            const yThreshold = 2; // plus petit = plus strict
+            let lines = [];
+
+            for (const item of items) {
+                const text = item.str.trim();
+                if (!text) continue;
+
+                const y = item.transform[5];
+                const x = item.transform[4];
+                const fontSize = item.transform[0] * 1.5;
+
+                // Chercher une ligne proche en y
+                let foundLine = null;
+                for (const line of lines) {
+                    if (Math.abs(line.y - y) < yThreshold) {
+                        foundLine = line;
+                        break;
+                    }
+                }
+
+                if (foundLine) {
+                    foundLine.items.push({ text, x, fontSize, item });
+                } else {
+                    lines.push({ y, items: [{ text, x, fontSize, item }] });
+                }
+            }
+
+            // Trier les lignes du haut vers le bas
+            lines.sort((a, b) => b.y - a.y);
+
+            // On analyse s'il y a des lignes alignées : tableau
+            let tableCandidates = [];
+            for (const line of lines) {
+                // Trier les items de gauche à droite
+                line.items.sort((a, b) => a.x - b.x);
+                tableCandidates.push(line);
+            }
+
+            let isTable = false;
+            const columnCounts = tableCandidates.map(l => l.items.length);
+            const mostCommonCount = mode(columnCounts);
+            const tableRows = tableCandidates.filter(l => l.items.length === mostCommonCount && mostCommonCount > 1);
+
+            if (tableRows.length >= 2) {
+                // Générer un tableau HTML
+                isTable = true;
+                finalHTML += `<table border="1" style="border-collapse: collapse; margin-bottom: 1em;">\n`;
+
+                for (const row of tableRows) {
+                    finalHTML += `<tr>`;
+                    for (const cell of row.items) {
+                        const style = `font-size: ${cell.fontSize}px; font-family: sans-serif; padding: 4px;`;
+                        finalHTML += `<td style="${style}">${cell.text}</td>`;
+                    }
+                    finalHTML += `</tr>\n`;
+                }
+
+                finalHTML += `</table>\n`;
+            }
+
+            // Traiter les lignes restantes comme du texte normal
+            let lastY = null;
+            let lastFontSize = null;
+            let currentParagraph = "";
+            const paragraphYThreshold = 5;
+            const fontSizeThreshold = 1.5;
+
+            for (const line of lines) {
+                if (tableRows.includes(line)) continue; // déjà dans un tableau
+
+                for (const word of line.items) {
+                    const { text, fontSize, item } = word;
+                    const y = item.transform[5];
+                    const style = `font-size: ${fontSize}px; font-family: sans-serif;`;
+
+                    const isNewParagraph =
+                        (lastY !== null && Math.abs(lastY - y) > paragraphYThreshold &&
+                            Math.abs(fontSize - lastFontSize) >= fontSizeThreshold) ||
+                        (lastFontSize !== null && Math.abs(fontSize - lastFontSize) >= fontSizeThreshold + 2);
+
+                    if (isNewParagraph && currentParagraph.trim() !== "") {
+                        finalHTML += `<p>${currentParagraph.trim()}</p>\n`;
+                        currentParagraph = "";
+                    }
+
+                    currentParagraph += `<span style="${style}">${text}</span> `;
+                    lastY = y;
+                    lastFontSize = fontSize;
+                }
+            }
+
+            if (currentParagraph.trim() !== "") {
+                finalHTML += `<p>${currentParagraph.trim()}</p>\n`;
+            }
+        }
+
+        document.getElementById("editor").innerHTML += finalHTML;
+    };
+
+    reader.readAsArrayBuffer(file);
+}
+
+// Fonction utilitaire pour trouver la valeur la plus fréquente
+function mode(array) {
+    const freq = {};
+    array.forEach(val => freq[val] = (freq[val] || 0) + 1);
+    return Object.keys(freq).reduce((a, b) => freq[a] > freq[b] ? a : b);
+}
+
+function groupItemsByLine(items, yThreshold = 2) {
+    const lines = [];
+
+    for (const item of items) {
+        const y = item.transform[5];
+        const x = item.transform[4];
+        const fontSize = item.transform[0] * 1.5;
+        const text = item.str.trim();
+        if (!text) continue;
+
+        let matchedLine = lines.find(line => Math.abs(line.y - y) <= yThreshold);
+        if (!matchedLine) {
+            matchedLine = { y, items: [] };
+            lines.push(matchedLine);
+        }
+        matchedLine.items.push({ text, x, y, fontSize, raw: item });
+    }
+
+    // Trier du haut vers le bas
+    lines.sort((a, b) => b.y - a.y);
+    lines.forEach(line => line.items.sort((a, b) => a.x - b.x));
+
+    return lines;
+}
+
+function detectTableBlocks(lines) {
+    const tableBlocks = [];
+    let i = 0;
+
+    while (i < lines.length - 2) {
+        const count1 = lines[i].items.length;
+        const count2 = lines[i + 1].items.length;
+        const count3 = lines[i + 2].items.length;
+
+        if (count1 === count2 && count2 === count3 && count1 > 1) {
+            const block = [lines[i], lines[i + 1], lines[i + 2]];
+            i += 3;
+            while (i < lines.length && lines[i].items.length === count1) {
+                block.push(lines[i]);
+                i++;
+            }
+            tableBlocks.push(block);
+        } else {
+            i++;
+        }
+    }
+
+    return tableBlocks;
+}
+
+function linesToHTML(lines, excludeLines = new Set()) {
+    let html = "";
+    let lastY = null;
+    let lastFontSize = null;
+    let paragraph = "";
+    const paragraphYThreshold = 5;
+    const fontSizeThreshold = 1.5;
+
+    let currentListType = null;
+    let inList = false;
+
+    for (const line of lines) {
+        if (excludeLines.has(line)) continue;
+
+        const firstItem = line.items[0];
+        const text = line.items.map(w => w.text).join(" ");
+        const fontSize = firstItem.fontSize;
+        const y = firstItem.y;
+        const isBulletList = isBullet(text);
+        const isNumberedList = isNumbered(text);
+        const isListItem = isBulletList || isNumberedList;
+
+        const style = `font-size: ${fontSize}px; font-family: sans-serif;`;
+
+        if (isListItem) {
+            if (!inList) {
+                // Démarrer une nouvelle liste
+                currentListType = isNumberedList ? "ol" : "ul";
+                html += `<${currentListType} style="margin-bottom: 1em;">\n`;
+                inList = true;
+            }
+
+            const textWithoutPrefix = text.replace(/^[-•‣*] ?/, "").replace(/^[0-9]+\.\s*/, "");
+            html += `<li style="${style}">${textWithoutPrefix}</li>\n`;
+        } else {
+            if (inList) {
+                // Fermer la liste
+                html += `</${currentListType}>\n`;
+                inList = false;
+                currentListType = null;
+            }
+
+            const isNewParagraph =
+                (lastY !== null && Math.abs(lastY - y) > paragraphYThreshold &&
+                    Math.abs(fontSize - lastFontSize) >= fontSizeThreshold) ||
+                (lastFontSize !== null && Math.abs(fontSize - lastFontSize) >= fontSizeThreshold + 2);
+
+            if (isNewParagraph && paragraph.trim() !== "") {
+                html += `<p>${paragraph.trim()}</p>\n`;
+                paragraph = "";
+            }
+
+            for (const word of line.items) {
+                const wordStyle = `font-size: ${word.fontSize}px; font-family: sans-serif;`;
+                paragraph += `<span style="${wordStyle}">${word.text}</span> `;
+                lastY = word.y;
+                lastFontSize = word.fontSize;
+            }
+        }
+    }
+
+    if (inList) {
+        html += `</${currentListType}>\n`;
+    }
+
+    if (paragraph.trim() !== "") {
+        html += `<p>${paragraph.trim()}</p>\n`;
+    }
+
+    return html;
+}
+
+
+async function handlePDFUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async function () {
+        const typedArray = new Uint8Array(reader.result);
+        const pdf = await pdfjsLib.getDocument(typedArray).promise;
+
+        let finalHTML = "";
+
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            const page = await pdf.getPage(pageNum);
+            const content = await page.getTextContent();
+            const items = content.items;
+
+            const lines = groupItemsByLine(items);
+            const tableBlocks = detectTableBlocks(lines);
+
+            // Générer le HTML des tableaux
+            const tableLinesSet = new Set();
+            for (const block of tableBlocks) {
+                block.forEach(line => tableLinesSet.add(line));
+
+                finalHTML += `<table border="1" style="border-collapse: collapse; margin-bottom: 1em;">\n`;
+                for (const line of block) {
+                    finalHTML += `<tr>`;
+                    for (const cell of line.items) {
+                        const style = `font-size: ${cell.fontSize}px; font-family: sans-serif; padding: 4px;`;
+                        finalHTML += `<td style="${style}">${cell.text}</td>`;
+                    }
+                    finalHTML += `</tr>\n`;
+                }
+                finalHTML += `</table>\n`;
+            }
+
+            // Ajouter le reste en paragraphes
+            finalHTML += linesToHTML(lines, tableLinesSet);
+        }
+
+        document.getElementById("editor").innerHTML += finalHTML;
+    };
+
+    reader.readAsArrayBuffer(file);
+}
+function isBullet(text) {
+    return /^[-•‣*]/.test(text.trim());
+}
+
+function isNumbered(text) {
+    return /^[0-9]+\./.test(text.trim());
+}
+
+
+      </script>
+
     </body>
     </html>
