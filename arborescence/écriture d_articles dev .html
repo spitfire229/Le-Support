@@ -1066,6 +1066,39 @@ function isNumbered(text) {
 
 
       </script>
+      <script>
+  // Sauvegarder le contenu et le titre automatiquement
+  document.addEventListener('DOMContentLoaded', function () {
+      loadFromLocalStorage();
+
+      // Sauvegarde automatique du titre
+      document.getElementById('title').addEventListener('input', saveToLocalStorage);
+
+      // Sauvegarde automatique du contenu de l'éditeur
+      document.getElementById('editor').addEventListener('input', saveToLocalStorage);
+  });
+
+  function saveToLocalStorage() {
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('editor').innerHTML;
+
+      localStorage.setItem('documentTitle', title);
+      localStorage.setItem('documentContent', content);
+  }
+
+  function loadFromLocalStorage() {
+      const savedTitle = localStorage.getItem('documentTitle');
+      const savedContent = localStorage.getItem('documentContent');
+
+      if (savedTitle !== null) {
+          document.getElementById('title').value = savedTitle;
+      }
+      if (savedContent !== null) {
+          document.getElementById('editor').innerHTML = savedContent;
+      }
+  }
+</script>
+
 
     </body>
     </html>
