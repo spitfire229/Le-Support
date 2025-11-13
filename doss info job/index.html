@@ -285,15 +285,36 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes zoomIn { from { transform: scale(0.9); opacity: 0.6; } to { transform: scale(1); opacity: 1; } }
 
-    @media (max-width: 680px) {
-      header h1 { font-size: 2em; }
-      section { padding: 25px; }
-      section h2 { font-size: 2em; }
-      .canva
-      {
-        font-size: 1.9em;
-      }
-    }
+/* Texte plus gros sur mobile */
+@media (max-width: 680px) {
+  body {
+    font-size: 1.2em; /* base pour tous les textes */
+  }
+
+  p, li, blockquote, .caption, .glados-desc, .glados-sub, .glados-stats span,
+  .gaudi-desc, .gaudi-sub, .gaudi-meta, .gaudi-output, .gaudi-controls label,
+  h1, h2, h3, h4, h5, h6, .btn {
+    font-size: 1.2em !important;
+  }
+
+  header h1 {
+    font-size: 2.4em !important;
+  }
+
+  section h2 {
+    font-size: 2.2em !important;
+  }
+
+  h3 {
+    font-size: 1.6em !important;
+  }
+
+  .btn {
+    font-size: 1.2em !important;
+    padding: 14px 28px !important;
+  }
+}
+
 
 
 
