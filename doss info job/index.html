@@ -294,9 +294,63 @@
         font-size: 1.9em;
       }
     }
+
+
+
+/* ----- MODELES 3D : media associés ----- */
+
+.model-container {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.model-media {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.model-media img, 
+.model-media video {
+  width: 100%;
+  border-radius: 14px;
+  background:#515151;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.45);
+}
+
+/* Images séparées */
+.model-banner {
+  height: auto;
+}
+
+.model-square {
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+}
+
+/* Vidéo en pleine largeur sous la grille */
+.model-video {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.45);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .model-media {
+    grid-template-columns: 1fr;
+  }
+}
+
+
   </style>
 </head>
 <body>
+
+
 
   <header>
     <h1>Portfolio</h1>
@@ -315,7 +369,7 @@ Le secteur du textile, vaste et en constante évolution, offre aujourd’hui de 
 
     <div class="gallery" id="gallery-vade"></div>
 
-    <a href="documents/mon_fichier.pdf" download class="btn">Télécharger le catalogue de marque</a>
+    <a href="./vade.pdf" download class="btn">Télécharger le catalogue de marque</a>
 
   </section>
 
@@ -477,13 +531,78 @@ De plus, le Support se tourne vers ses usagers, en offrant la possibilité d'app
 
 
   </section>
+<section id="3D-section">
+  <h2>Modèles 3D</h2>
 
-  <section id="3D-section">
-    <h2>Modèles 3D</h2>
-      <div class="sketchfab-embed-wrapper" > <iframe title="Drone Life Line Apex" style="width: 100%; height: 800px;" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d9bc4afc938a478d8bd988100aea3a8a/embed"> </iframe></div>
-<div class="sketchfab-embed-wrapper"> <iframe title="gear" style="width: 100%; height: 800px;" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/17263528813c4e199cb3289736fe03fa/embed"> </iframe> </div>
-  
-  </section>
+  <!-- ----- MODEL 1 ----- -->
+   <h3>D.O.C :</h3> <br>
+  <div class="model-container">
+
+    <div class="sketchfab-embed-wrapper">
+      <iframe title="Drone Life Line Apex" style="width: 100%; height: 800px;" frameborder="0"
+        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        src="https://sketchfab.com/models/d9bc4afc938a478d8bd988100aea3a8a/embed">
+      </iframe>
+    </div>
+
+    <!-- Images + vidéo -->
+    <div class="model-media">
+     
+      <img class="model-square" src="./images/3D/drone photo.jpg" alt="image carrée modèle 1">
+    </div>
+
+    <video class="model-video" controls>
+      <source src="./images/3D/drone video.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+
+  <!-- ----- MODEL 2 ----- -->
+
+  <h3>Gear :</h3> <br>
+  <div class="model-container">
+
+    <div class="sketchfab-embed-wrapper">
+      <iframe title="gear" style="width: 100%; height: 800px;" frameborder="0"
+        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        src="https://sketchfab.com/models/17263528813c4e199cb3289736fe03fa/embed">
+      </iframe>
+    </div>
+
+    <div class="model-media">
+      <img class="model-banner" src="./images/3D/gear photo.jpg" alt="bannière modèle 2">
+      <img class="model-banner" src="./images/3D/gear banner.jpg" alt="bannière modèle 2">
+     
+    </div>
+
+    <video class="model-video" controls>
+      <source src="./images/3D/gear video.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+    <h3>Room :</h3> <br>
+  <div class="model-container">
+
+    <div class="sketchfab-embed-wrapper"> <iframe title="Chambre" style="width: 100%; height: 800px;" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2400d374dcd24b529f6af532e49e6513/embed"> </iframe></div>
+
+    <div class="model-media">
+      <img class="model-banner" src="./images/3D/room photo.png" alt="bannière modèle 2">
+      <img class="model-banner" src="./images/3D/room banner.png" alt="bannière modèle 2">
+     
+    </div>
+
+    <video class="model-video" controls>
+      <source src="./images/3D/room video.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+</section>
+
 
 
 
