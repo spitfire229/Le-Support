@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thea Serfaty — Portfolio Média</title>
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #121b2e;
+      --text: #e8edf7;
+      --muted: #97a3b8;
+      --accent: #ffb86b;
+      --radius: 14px;
+      --font: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* ==== GALERIE ==== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    /* ==== SECTION STRATÉGIE ==== */
+    section#strategie {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), rgba(11,18,32,0.8));
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    section#strategie h2 {
+      font-size: 1.6rem;
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    details {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      margin-top: 12px;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p, details ul {
+      margin: 0;
+      padding: 10px 18px 14px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ul {
+      list-style-type: '– ';
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Thea Serfaty</h1>
+    <p>Portfolio visuel & stratégie média</p>
+  </header>
+
+  <!-- === GALERIE AUTOMATIQUE === -->
+  <div class="gallery" id="gallery"></div>
+
+  <!-- === SECTION PROGRAMME POUR AUGMENTER LA VISIBILITÉ === -->
+  <section id="strategie">
+    <h2>Programme pour augmenter la visibilité</h2>
+
+    <details open>
+      <summary>Linktree</summary>
+      <ul>
+        <li>Travailler la forme.</li>
+        <li>Proposition : coder un Linktree propre au média hébergé sur le serveur du site.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Site Web</summary>
+      <ul>
+        <li><a href="https://www.politiquemediatique.fr/notre-m%C3%A9dia" target="_blank">Lien direct</a></li>
+        <li>Mettre en avant les productions (page d’accueil “Nous soutenir” → vitrine).</li>
+        <li>Mettre davantage en avant Thea.</li>
+        <li>Reprise du code source possible, attention à Wix.com.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Réseaux sociaux</summary>
+      <ul>
+        <li>Twitter : être présent régulièrement.</li>
+        <li>Instagram : 2 posts/mois, retravailler la bio pour être compréhensible.</li>
+        <li>YouTube : format podcast, travailler le son et l’image (objectif / contre-jour).</li>
+        <li>Facebook : très propre mais inactif.</li>
+        <li>TikTok : watch-time trop court pour juger.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Contrôle de l’information</summary>
+      <ul>
+        <li>Revendiquer les sous-domaines du site — déjà bien fait.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Idées adjacentes</summary>
+      <ul>
+        <li>Développer la DA : visuels identifiables, animation 2D du logo + sample musical.</li>
+        <li>Raconter l’histoire du média et de la figure de proue.</li>
+        <li>Développer le podcast : Deezer / Spotify + radios locales.</li>
+        <li>Varier les visuels selon les événements de l’année.</li>
+      </ul>
+    </details>
+  </section>
+
+  <footer>
+    <p>Liens : <a href="https://substack.com/@politiquemediatique/notes" target="_blank">Substack — Politique Médiatique</a></p>
+    <p>© 2025 Thea Serfaty — Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Charge automatiquement toutes les images du dossier /assets
+    const gallery = document.getElementById("gallery");
+
+    // Liste des extensions à inclure
+    const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
+
+    // Pour que ce script fonctionne localement ou sur serveur :
+    // ajoutez manuellement la liste de vos images si l’auto-détection n’est pas possible.
+    const images = [
+      "assets/image1.jpg",
+      "assets/image2.png",
+      "assets/image3.webp",
+      "assets/image4.jpeg"
+      // ajoutez toutes vos images ici
+    ];
+
+    images.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "Création — " + src.split("/").pop();
+      gallery.appendChild(img);
+    });
+  </script>
+</body>
+</html>

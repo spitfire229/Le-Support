@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Portfolio</title>
+  <style>
+    /* ---------- RESET ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #242424;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #202020, #151515);
+      text-align: center;
+      padding: 60px 20px 40px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    header h1 {
+      font-size: 2.6em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #bbb;
+      font-size: 1.1em;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      width: 100%;
+      max-width: 1400px;
+      padding: 40px 50px;
+    }
+
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 25px;
+      border-left: 5px solid #f2f2f2;
+      padding-left: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #515151;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+    h3
+    {
+        font-size: x-large;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img { transform: scale(1.05); }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      text-align: center;
+      font-size: 1em;
+      font-weight: 500;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .caption { opacity: 1; }
+
+    /* ---------- FULLSCREEN ---------- */
+    #fullscreen {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+
+    #fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+      animation: zoomIn 0.3s ease;
+    }
+
+    #closeBtn {
+      position: fixed;
+      top: 25px;
+      right: 40px;
+      color: white;
+      font-size: 2.5em;
+      cursor: pointer;
+      user-select: none;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    #closeBtn:hover { transform: scale(1.2); }
+
+
+        .btn {
+            width: 50%;
+            margin-left: 25%;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #727272;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: background 0.3s;
+    text-align: center;
+    margin-top: 50px;
+    }
+    .btn:hover {
+    background-color: #ff7b00;
+    }
+
+
+    /* ----- Glados Section ----- */
+.glados-card {
+  background: linear-gradient(135deg, #444444, #3a3333);
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glados-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.7);
+}
+.glados-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.glados-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #cb7a11, #fc2525);
+  padding: 5px;
+}
+.glados-sub {
+  color: #bbb;
+  font-size: 0.9em;
+  margin-top: 3px;
+}
+.glados-desc {
+  font-size: 0.95em;
+  line-height: 1.6em;
+  color: #e2e2e2;
+  margin-bottom: 20px;
+}
+.glados-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.glados-stats span {
+  font-size: 0.9em;
+  color: #ccc;
+}
+.bar {
+  width: 100%;
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #9e4a00, #fc9825);
+}
+
+/* ----- Gaudi Card ----- */
+.gaudi-card {
+  background: linear-gradient(135deg,#161616,#0f0f0f);
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+}
+.gaudi-header { display:flex; gap:12px; align-items:center; margin-bottom:10px; }
+.gaudi-logo {
+  width:56px; height:56px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:18px; color:#fff;
+  background: linear-gradient(135deg,#d946ef,#06b6d4);
+}
+.gaudi-sub { color:#bbb; margin-top:4px; font-size:0.95em; }
+.gaudi-desc { color:#e6e6e6; line-height:1.5; margin:12px 0; font-size:0.95em; }
+
+.gaudi-controls { display:flex; gap:12px; align-items:center; margin-bottom:10px; color:#d1d1d1; }
+.gaudi-controls input { margin-right:6px; }
+
+#gaudi-input {
+  width:100%; min-height:120px; padding:12px; border-radius:8px; resize:vertical;
+  background:#0b0b0b; border:1px solid #222; color:#f2f2f2; margin-bottom:10px;
+}
+
+.gaudi-actions { display:flex; gap:10px; margin-bottom:12px; }
+.gaudi-actions button {
+  padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.05);
+  background:#272727; color:#fff; cursor:pointer;
+}
+.gaudi-actions button:hover { transform:translateY(-2px); }
+
+.gaudi-output {
+  min-height:80px; padding:14px; border-radius:8px; border:1px dashed rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  color:#eaeaea; white-space:pre-wrap; line-height:1.5;
+}
+
+/* Mise en évidence (synthèse) */
+.gaudi-highlight { background: rgba(102, 126, 234, 0.15); padding:2px 6px; border-radius:6px; color:#eaf2ff; }
+
+/* Stat bars */
+.gaudi-meta { display:flex; flex-direction:column; gap:10px; margin-top:14px; color:#cfcfcf; font-size:0.9em;}
+.gaudi-bar { width:100%; height:8px; background:#252525; border-radius:8px; overflow:hidden; margin-top:6px; }
+.gaudi-fill { height:100%; background:linear-gradient(90deg,#9b5cf6,#06b6d4); }
+
+
+
+      .canva
+      {
+        font-size: 1.2em;
+      }
+
+/* Small responsive tweak */
+@media (max-width:820px) {
+  .gaudi-header { gap:10px; }
+  .gaudi-logo { width:48px; height:48px; font-size:16px; }
+}
+
+
+
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes zoomIn { from { transform: scale(0.9); opacity: 0.6; } to { transform: scale(1); opacity: 1; } }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      section { padding: 25px; }
+      section h2 { font-size: 2em; }
+      .canva
+      {
+        font-size: 1.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portfolio</h1>
+    <p>Petit florilège de mes créations passées. </p>
+  </header>
+
+  <!-- Section 1 -->
+  <section id="vade-section">
+    <h2>Projet Vade</h2>
+    <p>Vade est un projet de marque de vêtements dont l’objectif n’était pas la commercialisation, mais l’apprentissage des différentes étapes de création d’une marque à partir de zéro. <br>
+Le secteur du textile, vaste et en constante évolution, offre aujourd’hui de nombreuses opportunités aux jeunes créateurs. Grâce aux outils désormais accessibles, il est possible de concevoir et développer un projet ambitieux même à petite échelle.</p><br>
+
+<img style="width: 25%; margin-left: 37%;" src="./images/Vade/vade logo.png" alt="">
+
+<br>
+
+    <div class="gallery" id="gallery-vade"></div>
+
+    <a href="documents/mon_fichier.pdf" download class="btn">Télécharger le catalogue de marque</a>
+
+  </section>
+
+  <!-- Section 2 -->
+  <section id="insta-section">
+    <h2>communication merídio :</h2>
+    <div class="gallery" id="gallery-insta"></div>
+  </section>
+
+    <section id="insta-section">
+    <h2>Photos Instagram</h2>
+    <div class="gallery" id="gallery-insta"></div>
+  </section>
+
+  <!-- Fenêtre plein écran -->
+  <div id="fullscreen">
+    <span id="closeBtn">&times;</span>
+    <img id="fullscreenImg" src="">
+  </div>
+
+  <section id="insta-section">
+    <h2>Projets code</h2>
+        <h3>Lesupport.me</h3>
+
+        <img  style="width: 100%; border-radius: 15px;" src="./images/Capture d’écran 2025-11-12 164318.png" alt="">
+
+        <p><br><br>
+            Le Support se veut être un espace d'entraide et d'échanges gratuit entre les étudiants de droit, un espace créé pour les élèves, éloigné du cadre plus strict des services proposés par faculté comme CEL , il met à la disposition de chacun les outils pour réussir ses études de droit et ce au travers de nombreux formats.<br><br>
+
+Schémas, cours, ouvrages, bases de données étudiantes, sujets blancs, QCM, fiches méthodologiques, jurisprudence et autres publications de doctrine attendent d’assister les élèves dans leurs révisions. l'objectif est de proposer une multitude de supports d'apprentissage pour s'adapter au mieux aux attentes des étudiants et à leur manière d'apprendre. <br><br>
+
+De plus, le Support se tourne vers ses usagers, en offrant la possibilité d'apporter individuellement sa pierre à l'édifice et de partager ses ressources au bénéfice de la communauté étudiante. En effet, il est mis à disposition des usagers un mail pour partager et publier des travaux personnels. <br>
+        </p>
+
+<a href="https://lesupport.me/" class="btn">visiter le site</a>
+<a href="/images/livret le support  (2) (1) (1).pdf" download class="btn">Télécharger le catalogue du site</a>
+
+
+<br><br>
+
+
+
+
+    <h3>Glados : développement d'IA spécialisée - IA conversationelle et générative. </h3>
+
+    <div class="glados-card">
+  <div class="glados-header">
+    <img src="images/glados_logo.png" alt="Logo Glados" class="glados-logo">
+    <div>
+      <h4>Glados</h4>
+      <p class="glados-sub">IA locale orientée créativité et invention</p>
+      <br>
+
+      
+  <p class="glados-desc">
+    Glados est une intelligence artificielle en cours de développement, exécutée localement sur ma machine sans recours au cloud.
+    Elle se distingue par sa <strong>créativité</strong> et son <strong>inventivité</strong>, générant des réponses originales et
+    des idées adaptées à mes centres d’intérêt.  
+    Bien qu’encore peu entraînée, elle démontre déjà des performances prometteuses pour un modèle tournant uniquement sur CPU.
+  </p>
+
+  <div class="glados-stats">
+    <div><span>Créativité</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
+    <div><span>Inventivité</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
+    <div><span>Optimisation locale</span><div class="bar"><div class="fill" style="width: 50%;"></div></div></div>
+  </div><br>
+  
+  
+  faiblesses : <br>
+- forte latence de réponse (optimisation a faire) <br>
+- manque de données d'entrainement (besoin de plus de ressources) <br>
+- compréhension limitée des contextes complexes <br>
+<br><br>
+    <p>
+        Malgré ses limitations actuelles, Glados représente une avancée significative dans le développement d'IA spécialisées.
+        Mon objectif est de continuer à l'améliorer en optimisant ses performances et en enrichissant son corpus de connaissances.
+        À terme, je vise à créer une IA capable de m'assister efficacement dans mes projets créatifs et professionnels.
+
+
+        <img src="./images/glados" alt="">
+
+</p><br>
+</div>
+
+
+    </div>
+  </div>
+
+
+    
+    <h3>Gaudi : développement d'IA spécialisée - IA d'analyse de pistes audio / prises de notes</h3>
+
+
+
+<div class="glados-card">
+  <div class="gaudi-header">
+    <div class="gaudi-logo"><img style="width: 80%;" src="./images/gaudi.png" alt=""></div>
+    <div>
+      <h4>Gaudi</h4>
+      <p class="gaudi-sub">IA locale pour la transcription et la structuration de pistes audio</p>
+    </div>
+  </div>
+
+  <p class="gaudi-desc">
+    Gaudi est une intelligence artificielle en développement, conçue pour <strong>analyser des pistes audio</strong> et en extraire des notes claires et structurées.  
+    Elle fonctionne localement sur CPU, sans dépendance à des services externes, et offre deux modes distincts :
+  </p>
+
+  <ul class="gaudi-modes">
+    <li><strong>Synthèse :</strong> supprime les parties superflues, reformate le contenu et met en couleur les éléments clés pour une lecture rapide.</li>
+    <li><strong>Prise de note :</strong> restitue l’intégralité du discours, avec une mise en forme claire mais sans suppression d’informations.</li>
+  </ul>
+
+  <p class="gaudi-desc">
+    Ce projet explore l’usage de modèles linguistiques pour <strong>assister la prise de notes automatique</strong> dans un cadre local et confidentiel, adapté aux environnements d’étude ou de réunion.
+  </p>
+
+  <div class="gaudi-stats">
+    <div><span>Fidélité de transcription</span><div class="bar"><div class="fill" style="width:100%"></div></div></div>
+    <div><span>Clarté du rendu</span><div class="bar"><div class="fill" style="width:60%"></div></div></div>
+    <div><span>Performances locales</span><div class="bar"><div class="fill" style="width:30%"></div></div></div>
+  </div>
+</div>
+
+
+</p><br>
+</div>
+
+
+
+
+
+
+<div class="glados-card">
+  <div class="gaudi-header">
+    
+    <div>
+      <h4>Autres outils</h4>
+      <p class="gaudi-sub">programmes divers développés pour une utilisation personnelle</p>
+      <p>
+        En plus de Glados et Gaudi, j'ai développé plusieurs autres outils d'IA locaux pour des tâches spécifiques :
+        <ul><br>
+            <li><strong>QR code :</strong> un générateur de codes QR personnalisés et personnalisables.</li>
+            <li><strong>archiver :</strong> programme de rangement de dossiers et fichiers.</li>
+            <li><strong>Iris - Meridio :</strong> logiciel d'affichage pour divers événements de Meridio, comparable à une régie TV</li>
+        </ul>
+        <br>
+        Ces programmes visent à automatiser des tâches répétitives et à améliorer ma productivité au quotidien.
+      </p>
+    </div>
+  </div>
+
+  <p class="gaudi-desc">
+
+
+
+</p><br>
+</div>
+
+
+  </section>
+
+  <section id="3D-section">
+    <h2>Modèles 3D</h2>
+      <div class="sketchfab-embed-wrapper" > <iframe title="Drone Life Line Apex" style="width: 100%; height: 800px;" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d9bc4afc938a478d8bd988100aea3a8a/embed"> </iframe></div>
+<div class="sketchfab-embed-wrapper"> <iframe title="gear" style="width: 100%; height: 800px;" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/17263528813c4e199cb3289736fe03fa/embed"> </iframe> </div>
+  
+  </section>
+
+
+
+
+  <!-- Section stratégie et arborescence -->
+  <section id="strategie-section">
+    <h2>Stratégie de communication (ébauche)</h2>
+
+    <p>
+      
+      Objectif : développer une présence cohérente et identifiable autour du média, en valorisant à la fois la 
+      <strong>direction artistique</strong>, la <strong>communication</strong> et la <strong>structure numérique</strong>(interconnectivité des différents médias).
+    </p>
+
+    <br>
+    <h3>Liens des médias</h3>
+    <p>
+     <p>Instagram :<a href="https://www.instagram.com/politiquemediatique/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank" style="color:#ff7b00;">https://www.instagram.com/politiquemediatique/?igshid=OGQ5ZDc2ODk2ZA%3D%3D</a></p>
+      <p>Facebook :<a href="https://www.facebook.com/people/Politique-m%C3%A9diatique/100093181621230/" target="_blank" style="color:#ff7b00;">https://www.facebook.com/people/Politique-m%C3%A9diatique/100093181621230/</a></p>
+      <p>Linkedin :<a href="https://www.linkedin.com/company/politique-mediatique/?originalSubdomain=fr" target="_blank" style="color:#ff7b00;">https://www.linkedin.com/company/politique-mediatique/?originalSubdomain=fr</a></p>
+      <p>twitter :<a href="https://x.com/polmedia_tweet?s=21&t=0gnCTdz-6ZDRRFX1KvW1TQ" target="_blank" style="color:#ff7b00;">https://x.com/polmedia_tweet?s=21&t=0gnCTdz-6ZDRRFX1KvW1TQ</a></p>
+      <p>youtube :<a href="https://www.youtube.com/@politiquemediatique?feature=shared" target="_blank" style="color:#ff7b00;">https://www.youtube.com/@politiquemediatique?feature=shared</a></p>
+      
+      <p>Substack :<a href="https://substack.com/@politiquemediatique/notes" target="_blank" style="color:#ff7b00;">Substack – Politique Médiatique</a></p>
+      <p>Site web :<a href="https://www.politiquemediatique.fr/" target="_blank" style="color:#ff7b00;">https://www.politiquemediatique.fr/</a></p>
+    </p>
+
+    <br>
+    <h3>Concept : une industrie sensible</h3>
+    <p>
+      <em>Faire un média sur un sujet peut connu impose :</em><br>
+      ├───> Soit définir les termes du sujet.<br>
+      └───> Soit adopter une approche graphique suffisamment marquée pour transmettre l’idée.
+    </p>
+
+    <br><br>
+    <h3>Programme pour augmenter la visibilité</h3>
+    <pre class="canva" style="background:#1a1a1a; padding:20px; border-radius:10px; overflow-x:auto;">
+├─ Linktree/
+│   ├─ travailler la forme (via une image de fond ou des tons plus sombres)
+│   └─ propal : coder un Linktree propre au média hébergé sur le site.
+│
+├─ Site web/   # https://www.politiquemediatique.fr/notre-m%C3%A9dia
+│   ├─ mettre en avant les productions → page “Nous soutenir” → rediriger vers page d’étalage
+│   ├─ mettre plus en avant Mme serphaty (figure de proue)
+│   └─ peut-être reprise du code source (difficile sur Wix)
+│
+├─ Réseaux/
+│   ├─ Twitter/ → être présent
+│   │
+│   ├─ Instagram/
+│   │   ├─ 2 posts par mois (propre)
+│   │   └─ interrogation su la Bio, peut etre rendre plus claire la thématique. 
+│   │
+│   ├─ YouTube/
+│   │   ├─ format proche du podcast → possibilité d’extension sur des platformes type Deezer / Spotify
+│   │   ├─ travailler le son (micro cravate = bonne idée)
+│   │   └─ attention à la lumière et à l’image (contre jour, cadrage)
+│   │
+│   ├─ Facebook/
+│   │   └─ très propre, juste à relancer
+│   │
+│   └─ TikTok/ (peu de données → watch-time à évaluer)
+│
+└─ Contrôle de l’information/
+    ├─ claim des sous-domaines web → déjà très bien fait
+    └─ ...
+    </pre>
+
+    <br>
+    <h3>Idées de sujets</h3>
+    <ul>
+      <li>Pourquoi les jeunes boudent-ils les métiers de l’industrie ? → image, salaires, reconversion écologique.</li>
+      <li>Industrie et écologie : contradiction ou complémentarité ? → exploration du “made in durable”.</li>
+      <li>TikTok, Insta, YouTube : les nouvelles vitrines de la fierté industrielle française ? → comment la com’ redonne du souffle à l’industrie.</li>
+      <li>France–Allemagne : duel industriel silencieux → dans l’automobile, la défense, l’énergie.</li>
+      <li>Série “Lève-tôt PM” spéciale secteurs tabous (armement, sextech, surveillance, data, etc.)</li>
+      <br>
+      <p>idee de nouveau format : </p>
+      <li>Décryptage “PM Data” : chiffres clés d’un secteur sensible en 60 secondes.</li>
+
+    </ul>
+
+
+
+
+    <br>
+    <h3>Idées adjacentes</h3>
+    <ul>
+      <li>Développer la direction artistique (visuels identifiables) — déjà très bien fait.</li>
+      <li>Animation 2D du logo (apparition / disparition).</li>
+      <li>Sample musical propre et reconnaissable, synchronisé à l’animation du logo.</li>
+      <li>Édits autour de la figure de proue du média (“la patronne”).</li>
+      <li>Raconter une histoire — retracer le développement du média.</li>
+      <li>Développer le format podcast (Deezer / Spotify / petites radios).</li>
+      <li>Événements visuels selon les fêtes de l’année : variations de logo, posts adaptés.</li>
+    </ul>
+
+    <br>
+    <h3>Idées méta non communes</h3>
+
+    <h4>L’anti-communication</h4>
+    <p>
+      <em>Faire exprès de :</em><br>
+      – Sortir un format brut, non monté.<br>
+      – Publier des erreurs assumées (style “Le Gorafi”).<br>
+      – Montrer les coulisses non préparées.<br><br>
+      🎯 Objectif : humaniser le média, rompre avec le caractère aseptisé des industries.<br>
+      ⚠️ À utiliser en bonus, pas comme sujet central.
+    </p>
+
+    <br>
+    <h4>Dissimulation pédagogique</h4>
+    <p>
+      Cacher le vrai sujet dans un autre média (ex : recette de cuisine, clip musical).<br>
+      Le plus important : soigner la transition sur le fond comme sur la forme.
+    </p>
+
+    <br>
+    <h4>Événements IRL</h4>
+    <p>
+      – Format “change my mind” : préciser que le contradictoire est présent uniquement pour faire vivre le débat, 
+      sans prise de position personnelle.<br>
+      – Inspiré du format TED, avec adaptation au ton du média.
+    </p>
+
+  </section>
+
+
+  <!-- Section Publication Optimale pour PM (intégrée au style du portfolio) -->
+<section id="pm-publication-schedule" style="width:100%;max-width:1400px;padding:40px 50px;color:#f2f2f2;">
+  <h2 style="font-size:1.8em;margin-bottom:25px;border-left:5px solid #f2f2f2;padding-left:15px;text-transform:uppercase;letter-spacing:1px;">Rythme de publication optimal (algorithme)</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:25px;">
+
+    <div class="card">
+      <div class="caption" style="opacity:1;position:relative;background:none;">
+        <h3><span style="color:#69C9D0;">TikTok</span></h3>
+        <p><strong>Fréquence :</strong> 4–7 / semaine (idéal : 1 / jour)</p>
+        <p><strong>Formats :</strong> décryptages courts, face-cam, coulisses</p>
+        <p><em>Astuce :</em> tester 3 formats pendant 3 semaines — analyser les 3 premières heures</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="caption" style="opacity:1;position:relative;background:none;">
+        <h3><span style="color:#0A66C2;">LinkedIn</span></h3>
+        <p><strong>Fréquence :</strong> 3–4 / semaine</p>
+        <p><strong>Formats :</strong> tribunes, analyses de fond, retours d’événements</p>
+        <p><em>Astuce :</em> publier mardi–jeudi matin (8h–10h)</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="caption" style="opacity:1;position:relative;background:none;">
+        <h3><span style="background:linear-gradient(45deg,#f58529,#dd2a7b,#515bd4);-webkit-background-clip:text;color:transparent;">Instagram</span></h3>
+        <p><strong>Fréquence :</strong> 4–5 / semaine (incl. stories)</p>
+        <p><strong>Formats :</strong> 2 Reels, 1 carrousel, stories quotidiennes</p>
+        <p><em>Astuce :</em> recycler les clips TikTok avec sous-titres adaptés</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="caption" style="opacity:1;position:relative;background:none;">
+        <h3><span style="color:#FF0000;">YouTube</span></h3>
+        <p><strong>Fréquence :</strong> Shorts 3–5 / semaine + 2 vidéos longues / mois</p>
+        <p><strong>Formats :</strong> shorts pour attirer, longs formats pour asseoir la crédibilité</p>
+        <p><em>Astuce :</em> teaser les vidéos longues via Shorts et Reels</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="caption" style="opacity:1;position:relative;background:none;">
+        <h3><span style="color:#1DA1F2;">X (Twitter)</span></h3>
+        <p><strong>Fréquence :</strong> 1–2 / jour</p>
+        <p><strong>Formats :</strong> threads, réactions à chaud</p>
+        <p><em>Astuce :</em> 1 thread hebdo “industrie sensible de la semaine”</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="caption" style="opacity:1;position:relative;background:none;">
+        <h3>Règles d’or algorithmiques</h3>
+        <ul>
+          <li><strong>Régularité &gt; quantité</strong> : maintenir un rythme stable.</li>
+          <li><strong>Formats natifs</strong> favorisés (Reels, Shorts).</li>
+          <li><strong>Premières 90 secondes</strong> = cruciales pour la visibilité.</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+<script>
+    /**
+     * Fonction générique pour charger un fichier JSON et afficher son contenu
+     * @param {string} dossier - nom du sous-dossier d'images (ex: "vade")
+     * @param {string} cible - ID de la galerie HTML où insérer les images
+     */
+    function chargerGalerie(dossier, cible) {
+      const jsonPath = `images/${dossier}/images.json`;
+
+      fetch(jsonPath)
+        .then(res => {
+          if (!res.ok) throw new Error(`Impossible de charger ${jsonPath}`);
+          return res.json();
+        })
+        .then(images => {
+          const gallery = document.getElementById(cible);
+
+          images.forEach(name => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const img = document.createElement('img');
+            img.src = `images/${dossier}/${name}`;
+            img.alt = name;
+
+            const caption = document.createElement('div');
+            caption.className = 'caption';
+            caption.textContent = name.split('.')[0];
+
+            card.appendChild(img);
+            card.appendChild(caption);
+            gallery.appendChild(card);
+
+            // Clic pour plein écran
+            card.addEventListener('click', () => {
+              const fullscreen = document.getElementById('fullscreen');
+              const fullscreenImg = document.getElementById('fullscreenImg');
+              fullscreenImg.src = img.src;
+              fullscreen.style.display = 'flex';
+            });
+          });
+        })
+        .catch(err => console.error(err.message));
+    }
+
+    // Charger plusieurs galeries
+    chargerGalerie("vade", "gallery-vade");
+    chargerGalerie("photos_insta", "gallery-insta");
+
+    // Gérer la fermeture du plein écran
+    const fullscreen = document.getElementById('fullscreen');
+    const closeBtn = document.getElementById('closeBtn');
+
+    closeBtn.addEventListener('click', () => fullscreen.style.display = 'none');
+    fullscreen.addEventListener('click', (e) => {
+      if (e.target === fullscreen) fullscreen.style.display = 'none';
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") fullscreen.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
