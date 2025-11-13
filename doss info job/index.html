@@ -285,7 +285,7 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes zoomIn { from { transform: scale(0.9); opacity: 0.6; } to { transform: scale(1); opacity: 1; } }
 
-    @media (max-width: 768px) {
+    @media (max-width: 680px) {
       header h1 { font-size: 2em; }
       section { padding: 25px; }
       section h2 { font-size: 2em; }
@@ -345,8 +345,27 @@
   }
 }
 
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* permet de passer à la ligne si l'écran est petit */
+    justify-content: center; /* centre les images horizontalement */
+    gap: 20px; /* espace entre les images */
+    padding: 10px;
+}
 
-  </style>
+.image-container img {
+    width: 100%;
+    max-width: 700px; /* limite la taille des images */
+    height: auto; /* garde les proportions */
+    border-radius: 8px; /* coins arrondis pour un look plus harmonieux */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* léger ombrage */
+    transition: transform 0.3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* effet zoom au survol */
+}
+</style>
 </head>
 <body>
 
@@ -394,7 +413,7 @@ Le secteur du textile, vaste et en constante évolution, offre aujourd’hui de 
     <h2>Projets code</h2>
         <h3>Lesupport.me</h3>
 
-        <img  style="width: 100%; border-radius: 15px;" src="./images/Capture d’écran 2025-11-12 164318.png" alt="">
+        <img  style="width: 100%; border-radius: 15px; border: #454545 2px solid;" src="./images/support.png"  alt="">
 
         <p><br><br>
             Le Support se veut être un espace d'entraide et d'échanges gratuit entre les étudiants de droit, un espace créé pour les élèves, éloigné du cadre plus strict des services proposés par faculté comme CEL , il met à la disposition de chacun les outils pour réussir ses études de droit et ce au travers de nombreux formats.<br><br>
@@ -403,6 +422,16 @@ Schémas, cours, ouvrages, bases de données étudiantes, sujets blancs, QCM, fi
 
 De plus, le Support se tourne vers ses usagers, en offrant la possibilité d'apporter individuellement sa pierre à l'édifice et de partager ses ressources au bénéfice de la communauté étudiante. En effet, il est mis à disposition des usagers un mail pour partager et publier des travaux personnels. <br>
         </p>
+
+<div class="image-container">
+    <img src="./images/BU paysage.png" alt="">
+    <img src="./images/aerian view.png" alt="">
+    <img src="./images/parvis.png" alt="">
+</div>
+
+
+
+   
 
 <a href="https://lesupport.me/" class="btn">visiter le site</a>
 <a href="/images/livret le support  (2) (1) (1).pdf" download class="btn">Télécharger le catalogue du site</a>
