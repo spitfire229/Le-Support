@@ -603,6 +603,35 @@ De plus, le Support se tourne vers ses usagers, en offrant la possibilité d'app
 
 
 
+<!-- Image plein écran -->
+<div id="fullscreen-view">
+  <img id="fullscreen-img" src="">
+</div>
+
+
+
+
+<script>
+  // Sélection du conteneur
+  const fullscreen = document.getElementById("fullscreen-view");
+  const fullscreenImg = document.getElementById("fullscreen-img");
+
+  // Quand on clique sur une image
+  document.addEventListener("click", function(event) {
+    if (event.target.tagName === "IMG") {
+      fullscreen.style.display = "flex";
+      fullscreenImg.src = event.target.src;
+    }
+  });
+
+  // Quitter le plein écran en cliquant
+  fullscreen.addEventListener("click", function () {
+    fullscreen.style.display = "none";
+    fullscreenImg.src = "";
+  });
+</script>
+
+
 <script>
     /**
      * Fonction générique pour charger un fichier JSON et afficher son contenu
@@ -636,13 +665,7 @@ De plus, le Support se tourne vers ses usagers, en offrant la possibilité d'app
             card.appendChild(caption);
             gallery.appendChild(card);
 
-            // Clic pour plein écran
-            card.addEventListener('click', () => {
-              const fullscreen = document.getElementById('fullscreen');
-              const fullscreenImg = document.getElementById('fullscreenImg');
-              fullscreenImg.src = img.src;
-              fullscreen.style.display = 'flex';
-            });
+            
           });
         })
         .catch(err => console.error(err.message));
@@ -652,17 +675,6 @@ De plus, le Support se tourne vers ses usagers, en offrant la possibilité d'app
     chargerGalerie("vade", "gallery-vade");
     chargerGalerie("photos_insta", "gallery-insta");
 
-    // Gérer la fermeture du plein écran
-    const fullscreen = document.getElementById('fullscreen');
-    const closeBtn = document.getElementById('closeBtn');
-
-    closeBtn.addEventListener('click', () => fullscreen.style.display = 'none');
-    fullscreen.addEventListener('click', (e) => {
-      if (e.target === fullscreen) fullscreen.style.display = 'none';
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === "Escape") fullscreen.style.display = 'none';
-    });
   </script>
 
 </body>

@@ -1,3 +1,27 @@
+    
+    #fullscreen-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(57, 57, 57, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  z-index: 9999;
+}
+
+#fullscreen-view img {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+}
+
+    
+    
+    
     /* ---------- RESET ---------- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -11,6 +35,10 @@
       min-height: 100vh;
     }
     p
+    {
+      font-size: 2em;
+    }
+        li
     {
       font-size: 2em;
     }
