@@ -16,6 +16,12 @@ racine
 │       ├── protocole Hermes/
 
 
+cd "C:\Users\charl\Documents\GitHub\Le-Support\lesupport-app"
+npm install
+npm start
+
+
+
 
 "index.html"
 
