@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+input {
+    background: #222;
+    color: #fff;
+}
+
+button {
+    background: #4caf50;
+    color: #000;
+    font-weight: bold;
+}
+
+#status {
+    margin-top: 15px;
+    font-size: 14px;
+}
