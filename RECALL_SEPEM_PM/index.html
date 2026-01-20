@@ -367,8 +367,9 @@ html, body {
   color:var(--muted);
 }
 .hall-image {
-  touch-action: none;
+  transform-origin: 0 0;
 }
+
 
 </style>
 
@@ -720,8 +721,9 @@ hallImg.addEventListener("pointerleave", removePointer);
 /* ===== Helpers ===== */
 function applyTransform() {
   hallImg.style.transform =
-    `translate(${posX}px, ${posY}px) scale(${scale})`;
+    `scale(${scale}) translate(${posX}px, ${posY}px)`;
 }
+
 
 function resetZoom() {
   scale = 1;
