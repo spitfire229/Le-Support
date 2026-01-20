@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon – Exposants</title>
+
+<style>
+:root {
+  --bg:#0f1115;
+  --card:#171a21;
+  --text:#e6e6e6;
+  --muted:#9aa0b4;
+  --accent:#4da3ff;
+  --border:#262a36;
+}
+
+* { box-sizing:border-box; }
+
+html, body {
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  overflow-x:hidden;
+}
+
+/* 🔝 BARRE DE NAVIGATION */
+.nav {
+  display:flex;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#0c0f14;
+  border-bottom:1px solid var(--border);
+}
+
+.nav button {
+  flex:1;
+  padding:14px 6px;
+  background:none;
+  border:none;
+  color:var(--muted);
+  font-size:.9rem;
+  font-weight:500;
+}
+
+.nav button.active {
+  color:#fff;
+  border-bottom:2px solid var(--accent);
+}
+
+/* 📦 SECTIONS */
+.section {
+  display:none;
+  padding-bottom:20px;
+}
+
+.section.active {
+  display:block;
+}
+
+/* ---- CONTROLS ---- */
+.controls {
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.search {
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:#12151d;
+  color:var(--text);
+}
+
+.filters {
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+}
+
+.filters button {
+  flex-shrink:0;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#1b1f2a;
+  color:var(--muted);
+  font-size:.8rem;
+}
+
+.filters button.active {
+  background:var(--accent);
+  color:#fff;
+}
+
+/* ---- LISTE ---- */
+.container {
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.card {
+  background:var(--card);
+  border-radius:14px;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  box-shadow:0 4px 16px rgba(0,0,0,.35);
+}
+
+.card-header {
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.logo {
+  width:52px;
+  height:52px;
+  background:#fff;
+  border-radius:10px;
+  padding:6px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+.title {
+  font-size:1rem;
+  font-weight:600;
+  word-break:break-word;
+}
+
+.description {
+  font-size:.85rem;
+  color:var(--muted);
+  line-height:1.45;
+  white-space:pre-line;
+}
+
+.meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.badge {
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  font-size:.75rem;
+  color:var(--muted);
+  background:#222736;
+}
+
+.actions a {
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:11px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+}
+
+
+/* === HALLS === */
+.hall-buttons {
+  display:flex;
+  gap:8px;
+  padding:12px;
+  overflow-x:auto;
+}
+
+.hall-buttons button {
+  flex-shrink:0;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#1b1f2a;
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+.hall-buttons button.active {
+  background:var(--accent);
+  color:#fff;
+}
+
+.hall-viewer {
+  position:relative;
+  width:100%;
+  height:calc(100vh - 160px);
+  background:#000;
+  overflow:hidden;
+}
+
+.hall-image-wrapper {
+  width:100%;
+  height: 100%;
+  overflow:hidden;
+  touch-action:none;
+}
+
+.hall-image {
+  width:100%;
+  height:100%;
+  padding: 10px;
+  object-fit:contain;
+  transform-origin:center center;
+  transition:transform .15s ease;
+  cursor:grab;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Boutons Jour */
+.day-buttons{
+  display:flex;
+  gap:8px;
+  padding:12px;
+  overflow-x:auto;
+}
+.day-buttons button{
+  flex-shrink:0;
+  padding:10px 16px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#1b1f2a;
+  color:var(--muted);
+  font-size:.9rem;
+  font-weight:500;
+}
+.day-buttons button.active{
+  background:var(--accent);
+  color:#fff;
+}
+
+/* Session Card */
+.session-card{
+  background:#121622;
+  border-radius:14px;
+  padding:16px;
+  margin:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Heure mise en avant */
+.session-time{
+  font-size:1.2rem;
+  font-weight:700;
+  color:var(--accent);
+}
+
+/* Titre & lieu */
+.session-title{
+  font-size:1rem;
+  font-weight:700;
+  margin:4px 0;
+  color:#fff;
+}
+.session-place{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* Description */
+.session-desc{
+  font-size:.85rem;
+  margin-top:6px;
+  color:#ddd;
+  line-height:1.4;
+}
+
+/* Intervenants */
+.speakers{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.speaker{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  max-width:100%;
+}
+
+.speaker img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.speaker-info{
+  font-size:.75rem;
+  line-height:1.2;
+  color:#fff;
+}
+
+/* Bouton voir session */
+.session-action{
+  margin-top:10px;
+}
+.session-action a{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-size:.85rem;
+  font-weight:500;
+  text-align:center;
+}
+.session-action a:hover{
+  opacity:.9;
+}
+
+.programme-search {
+  padding: 10px 12px;
+  background:#1b1f2a;
+  border-radius:10px;
+  margin:12px;
+}
+
+.programme-search input {
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:none;
+  font-size:.9rem;
+  background:#121622;
+  color:#fff;
+}
+
+.programme-search input::placeholder {
+  color:var(--muted);
+}
+</style>
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔝 NAVIGATION -->
+<div class="nav">
+  <button class="active" data-target="exposants">Exposants</button>
+  <button data-target="halls">Halls</button>
+    <button data-target="programme">programme</button>
+  <button data-target="infos">Infos</button>
+</div>
+
+<!-- 🟦 SECTION EXPOSANTS -->
+<section id="exposants" class="section active">
+
+  <div class="controls">
+    <input id="searchInput" class="search" placeholder="Rechercher un exposant…">
+    <div class="filters" id="hallFilters"></div>
+  </div>
+
+  <div class="container" id="list"></div>
+
+</section>
+
+<!-- 🟩 SECTION HALLS -->
+<section id="halls" class="section">
+
+  <div class="hall-buttons">
+    <button class="active" data-img="hall 3000.png">Hall 3000</button>
+    <button data-img="hall 5000.png">Hall 5000</button>
+    <button data-img="hall 7000.png">Hall 7000</button>
+    <button data-img="halls.png">bâtiment</button>
+  </div>
+
+  <div class="hall-viewer">
+    <div class="hall-image-wrapper">
+      <img id="hallImage" class="hall-image" src="hall 3000.png" alt="Plan du hall">
+    </div>
+  </div>
+
+</section>
+
+<!-- 🟨 SECTION programme-->
+<section id="programme" class="section">
+
+  <div class="day-buttons">
+    <button class="active" data-day="1">Jour 1</button>
+    <button data-day="2">Jour 2</button>
+    <button data-day="3">Jour 3</button>
+  </div>
+<div class="programme-search">
+  <input type="text" id="programmeSearchInput" placeholder="Rechercher une session, un intervenant..." />
+</div>
+
+
+  <div id="programmeList"></div>
+
+</section>
+
+
+
+
+<!-- 🟨 SECTION INFOS -->
+<section id="infos" class="section">
+  <div class="container">
+    <div class="card">
+      <div class="title">Informations pratiques</div>
+      <div class="description">
+        Horaires, accès, contacts, consignes…
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ===== NAVIGATION SECTIONS ===== */
+document.querySelectorAll(".nav button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".nav button")
+      .forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".section")
+      .forEach(s => s.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.target)
+      .classList.add("active");
+  };
+});
+
+/* ===== EXPOSANTS ===== */
+let exposants = [];
+let hallActif = "all";
+
+fetch("exposants.json")
+  .then(r => r.json())
+  .then(data => {
+    exposants = data.sort(trierParStand);
+    creerFiltresHall(exposants);
+    afficher();
+  });
+
+document.getElementById("searchInput").addEventListener("input", afficher);
+
+function trierParStand(a, b) {
+  const sa = (a["fieldtext (3)"] || "");
+  const sb = (b["fieldtext (3)"] || "");
+  if (!sa) return 1;
+  if (!sb) return -1;
+  return sa.localeCompare(sb, "fr", { numeric:true });
+}
+
+function creerFiltresHall(data) {
+  const container = document.getElementById("hallFilters");
+  const halls = [...new Set(data.map(e => e["fieldtext (4)"]))];
+
+  creerBtn("Tous", "all", true);
+  halls.forEach(h => creerBtn(h, h));
+
+  function creerBtn(label, value, actif=false) {
+    const b = document.createElement("button");
+    b.textContent = label;
+    if (actif) b.classList.add("active");
+    b.onclick = () => {
+      hallActif = value;
+      document.querySelectorAll(".filters button")
+        .forEach(x => x.classList.remove("active"));
+      b.classList.add("active");
+      afficher();
+    };
+    container.appendChild(b);
+  }
+}
+
+function afficher() {
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+  const q = document.getElementById("searchInput").value.toLowerCase();
+
+  exposants
+    .filter(e => {
+      const t = `
+        ${e["fieldtext"]}
+        ${e["fieldtext (2)"]}
+        ${e["fieldtext (3)"]}
+        ${e["fieldtext (4)"]}
+      `.toLowerCase();
+      return (hallActif === "all" || e["fieldtext (4)"] === hallActif)
+        && t.includes(q);
+    })
+    .forEach(e => {
+      const c = document.createElement("div");
+      c.className = "card";
+      c.innerHTML = `
+        <div class="card-header">
+          <img class="logo" src="${e["logo-photo src"]}">
+          <div class="title">${e["fieldtext"]}</div>
+        </div>
+        <div class="description">${e["fieldtext (2)"] || ""}</div>
+        <div class="meta">
+          <div class="badge">Stand ${e["fieldtext (3)"]}</div>
+          <div class="badge">${e["fieldtext (4)"]}</div>
+        </div>
+        <div class="actions">
+          <a href="${e["itemcontent href"]}" target="_blank">
+            Voir la fiche exposant
+          </a>
+        </div>`;
+      list.appendChild(c);
+    });
+}
+
+
+
+</script>
+<script>
+/* ===== HALL IMAGES ===== */
+const hallImg = document.getElementById("hallImage");
+let scale = 1;
+let posX = 0;
+let posY = 0;
+let startX = 0;
+let startY = 0;
+let dragging = false;
+
+/* Boutons */
+document.querySelectorAll(".hall-buttons button").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".hall-buttons button")
+      .forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    hallImg.src = btn.dataset.img;
+    resetZoom();
+  };
+});
+
+/* Zoom molette */
+hallImg.addEventListener("wheel", e => {
+  e.preventDefault();
+  scale += e.deltaY * -0.003;
+  scale = Math.min(Math.max(1, scale), 16);
+  applyTransform();
+});
+
+/* Drag */
+hallImg.addEventListener("pointerdown", e => {
+  dragging = true;
+  startX = e.clientX - posX;
+  startY = e.clientY - posY;
+  hallImg.setPointerCapture(e.pointerId);
+});
+
+hallImg.addEventListener("pointermove", e => {
+  if (!dragging) return;
+  posX = e.clientX - startX;
+  posY = e.clientY - startY;
+  applyTransform();
+});
+
+hallImg.addEventListener("pointerup", () => dragging = false);
+hallImg.addEventListener("pointerleave", () => dragging = false);
+
+function applyTransform() {
+  hallImg.style.transform =
+    `translate(${posX}px, ${posY}px) scale(${scale})`;
+}
+
+function resetZoom() {
+  scale = 1;
+  posX = 0;
+  posY = 0;
+  applyTransform();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+const programmeList = document.getElementById("programmeList");
+
+document.querySelectorAll(".day-buttons button").forEach(btn=>{
+  btn.onclick = ()=>{
+    document.querySelectorAll(".day-buttons button")
+      .forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    loadProgramme(btn.dataset.day);
+  };
+});
+
+loadProgramme(1);
+
+function loadProgramme(day){
+  fetch(`programme-j${day}.json`)
+    .then(r=>r.json())
+    .then(data=>{
+      data.sort((a,b)=>a.time.localeCompare(b.time));
+      allSessions = data; // Sauvegarde
+      renderFilteredSessions(""); // Affiche tout au début
+    });
+}
+
+function renderSession(s){
+  const card = document.createElement("div");
+  card.className = "session-card";
+
+  card.innerHTML = `
+    <div class="session-time">${s.time} – ${s["time (2)"]}</div>
+    <div class="session-title">${s["fieldtext (3)"]}</div>
+    <div class="session-place">${s["fieldtext (2)"]}</div>
+    <div class="session-desc">${s["fieldtext (4)"] || ""}</div>
+  `;
+
+  // Intervenants
+  const speakers = document.createElement("div");
+  speakers.className = "speakers";
+
+  if(s["fieldtext (5)"]){
+    speakers.appendChild(createSpeaker(
+      s["userpicture-photo src"],
+      `${s["fieldtext (5)"]} ${s["fieldtext (6)"] || ""}`,
+      s["fieldtext (7)"] || ""
+    ));
+  }
+
+  if(s["fieldtext (8)"]){
+    speakers.appendChild(createSpeaker(
+      s["userpicture-photo src (2)"],
+      `${s["fieldtext (9)"] || ""} ${s["fieldtext (10)"] || ""}`,
+      s["fieldtext (11)"] || ""
+    ));
+  }
+
+  if(speakers.children.length) card.appendChild(speakers);
+
+  // Bouton vers la session
+  if(s["itemcontent href"]){
+    const btnDiv = document.createElement("div");
+    btnDiv.className = "session-action";
+    btnDiv.innerHTML = `<a href="${s["itemcontent href"]}" target="_blank">Voir la session</a>`;
+    card.appendChild(btnDiv);
+  }
+
+  return card;
+}
+
+function renderFilteredSessions(query){
+  programmeList.innerHTML = "";
+  const q = query.toLowerCase();
+  allSessions.forEach(s=>{
+    let text = (s["fieldtext (3)"] + " " + s["fieldtext (4)"] + " " +
+                (s["fieldtext (5)"] || "") + " " + (s["fieldtext (6)"] || "") +
+                " " + (s["fieldtext (9)"] || "") + " " + (s["fieldtext (10)"] || ""))
+                .toLowerCase();
+    if(text.includes(q)){
+      programmeList.appendChild(renderSession(s));
+    }
+  });
+}
+
+// Recherche en temps réel
+const programmeSearchInput = document.getElementById("programmeSearchInput");
+programmeSearchInput.addEventListener("input", e => {
+  renderFilteredSessions(e.target.value);
+});
+
+function setupSearch(inputId, renderFunc){
+  const input = document.getElementById(inputId);
+  input.addEventListener("input", e => {
+    renderFunc(e.target.value);
+  });
+}
+
+// Exemples
+setupSearch("programmeSearchInput", renderFilteredSessions); // pour programme
+
+
+function createSpeaker(img,name,role){
+  const div = document.createElement("div");
+  div.className = "speaker";
+  div.innerHTML = `
+    <img src="${img}">
+    <div class="speaker-info">
+      <strong>${name}</strong><br>${role}
+    </div>`;
+  return div;
+}
+</script>
+
+
+</body>
+</html>
