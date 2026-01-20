@@ -623,7 +623,7 @@ function afficher() {
 </script>
 
 <script>
-/* ===== HALL IMAGES (DESKTOP + MOBILE) ===== */
+/* ===== HALL IMAGES — PINCH ZOOM PROPRE ===== */
 
 const hallImg = document.getElementById("hallImage");
 
@@ -649,11 +649,7 @@ document.querySelectorAll(".hall-buttons button").forEach(btn => {
 /* ===== Zoom molette (desktop) ===== */
 hallImg.addEventListener("wheel", e => {
   e.preventDefault();
-
-  const zoom = e.deltaY * -0.003;
-  const newScale = Math.min(Math.max(scale + zoom, 1), 16);
-
-  scale = newScale;
+  scale = Math.min(Math.max(scale + e.deltaY * -0.003, 1), 16);
   applyTransform();
 });
 
@@ -678,38 +674,38 @@ hallImg.addEventListener("pointermove", e => {
   }
 
   /* ✌️ PINCH — 2 doigts */
-if (pointers.size === 2) {
-  const [p1, p2] = [...pointers.values()];
+  if (pointers.size === 2) {
+    const [p1, p2] = [...pointers.values()];
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    const distance = Math.hypot(dx, dy);
 
-  const dx = p2.x - p1.x;
-  const dy = p2.y - p1.y;
-  const distance = Math.hypot(dx, dy);
+    if (lastDistance) {
+      const zoomFactor = distance / lastDistance;
+      const newScale = Math.min(Math.max(scale * zoomFactor, 1), 16);
 
-  if (lastDistance) {
-    const zoomFactor = distance / lastDistance;
-    const newScale = Math.min(Math.max(scale * zoomFactor, 1), 16);
+      // 🎯 Centre du pinch (écran)
+      const pinchX = (p1.x + p2.x) / 2;
+      const pinchY = (p1.y + p2.y) / 2;
 
-    // 🎯 Centre du pinch en coordonnées écran
-    const pinchX = (p1.x + p2.x) / 2;
-    const pinchY = (p1.y + p2.y) / 2;
+      // 📐 Coordonnées dans l'image
+      const rect = hallImg.getBoundingClientRect();
+      const imageX = (pinchX - rect.left - posX) / scale;
+      const imageY = (pinchY - rect.top - posY) / scale;
 
-    // 📐 Position du pinch dans le repère de l'image
-    const rect = hallImg.getBoundingClientRect();
-    const imageX = (pinchX - rect.left - posX) / scale;
-    const imageY = (pinchY - rect.top - posY) / scale;
+      // 🔄 Appliquer le zoom
+      scale = newScale;
 
-    // 🔄 Appliquer le zoom
-    scale = newScale;
+      // 🔁 Garder le point sous les doigts fixe
+      posX = pinchX - rect.left - imageX * scale;
+      posY = pinchY - rect.top - imageY * scale;
 
-    // 🔁 Recalculer la translation pour garder le pinch fixe
-    posX = pinchX - rect.left - imageX * scale;
-    posY = pinchY - rect.top - imageY * scale;
+      applyTransform();
+    }
 
-    applyTransform();
+    lastDistance = distance;
   }
-
-  lastDistance = distance;
-}
+});
 
 /* ===== Pointer Up / Cancel ===== */
 function removePointer(e) {
@@ -734,6 +730,7 @@ function resetZoom() {
   applyTransform();
 }
 </script>
+
 
 
 
