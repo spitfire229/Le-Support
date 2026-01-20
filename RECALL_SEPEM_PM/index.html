@@ -623,6 +623,8 @@ function afficher() {
 
 <script>
 /* ===== HALL IMAGES — PINCH ZOOM PROPRE ===== */
+const MIN_SCALE = 0.5;   // autorise le dézoom
+const MAX_SCALE = 16;
 
 const hallImg = document.getElementById("hallImage");
 
@@ -648,7 +650,11 @@ document.querySelectorAll(".hall-buttons button").forEach(btn => {
 /* ===== Zoom molette (desktop) ===== */
 hallImg.addEventListener("wheel", e => {
   e.preventDefault();
-  scale = Math.min(Math.max(scale + e.deltaY * -0.003, 1), 16);
+  scale = Math.min(
+    Math.max(scale + e.deltaY * -0.003, MIN_SCALE),
+    MAX_SCALE
+  );
+
   applyTransform();
 });
 
@@ -681,7 +687,10 @@ hallImg.addEventListener("pointermove", e => {
 
     if (lastDistance) {
       const zoomFactor = distance / lastDistance;
-      const newScale = Math.min(Math.max(scale * zoomFactor, 1), 16);
+    const newScale = Math.min(
+      Math.max(scale * zoomFactor, MIN_SCALE),
+      MAX_SCALE
+    );
 
       // 🎯 Centre du pinch (écran)
       const pinchX = (p1.x + p2.x) / 2;
@@ -717,18 +726,32 @@ hallImg.addEventListener("pointercancel", removePointer);
 hallImg.addEventListener("pointerleave", removePointer);
 
 /* ===== Helpers ===== */
+clampPosition();
+applyTransform();
+
 function applyTransform() {
   hallImg.style.transform =
     `translate(${posX}px, ${posY}px) scale(${scale})`;
 }
 
-
 function resetZoom() {
-  scale = 1;
+  scale = MIN_SCALE;
   posX = 0;
   posY = 0;
   applyTransform();
 }
+function clampPosition() {
+  const rect = hallImg.getBoundingClientRect();
+  const wrapper = hallImg.parentElement.getBoundingClientRect();
+
+  const maxX = (rect.width - wrapper.width) / 2;
+  const maxY = (rect.height - wrapper.height) / 2;
+
+  posX = Math.min(Math.max(posX, -maxX), maxX);
+  posY = Math.min(Math.max(posY, -maxY), maxY);
+}
+
+
 </script>
 
 
