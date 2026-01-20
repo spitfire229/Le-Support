@@ -364,6 +364,10 @@ html, body {
 .programme-search input::placeholder {
   color:var(--muted);
 }
+.hall-image {
+  touch-action: none;
+}
+
 </style>
 
 </style>
@@ -433,14 +437,90 @@ html, body {
 <!-- 🟨 SECTION INFOS -->
 <section id="infos" class="section">
   <div class="container">
+
+    <!-- 📍 LIEU -->
     <div class="card">
-      <div class="title">Informations pratiques</div>
+      <div class="title">📍 Lieu</div>
       <div class="description">
-        Horaires, accès, contacts, consignes…
+        <strong>PARC EXPO DE DOUAI GAYANT</strong><br>
+        Route de Tournai – BP 60093<br>
+        59502 Douai Cedex<br><br>
+
+        🌐 <a href="https://gayantexpoconcerts.com" target="_blank" style="color:var(--accent)">gayantexpoconcerts.com</a><br>
+        🧭 <a href="https://waze.com/ul?q=Parc%20Expo%20Douai%20Gayant" target="_blank" style="color:var(--accent)">Ouvrir dans Waze</a>
       </div>
     </div>
+
+    <!-- ⏰ HORAIRES -->
+    <div class="card">
+      <div class="title">⏰ Horaires</div>
+      <div class="description">
+        <strong>Mardi 27 janvier 2026</strong> : 8h30 – 17h30<br>
+        <strong>Mercredi 28 janvier 2026</strong> : 8h30 – 19h00<br>
+        <strong>Jeudi 29 janvier 2026</strong> : 8h30 – 17h00
+      </div>
+    </div>
+
+    <!-- 🏢 ORGANISATION -->
+    <div class="card">
+      <div class="title">🏢 Organisation</div>
+      <div class="description">
+        <strong>GL Events Exhibitions Industrie</strong><br>
+        114 rue de Calonges<br>
+        47440 Casseneuil<br><br>
+
+        📞 +33 (0)5 53 36 78 78
+      </div>
+    </div>
+
+    <!-- 🚗 ACCÈS & PARKINGS -->
+    <div class="card">
+      <div class="title">🚗 Accès & parkings</div>
+      <div class="description">
+        <strong>Parkings gratuits</strong><br>
+        • Parking visiteurs Parc des expositions – 900 places<br>
+        • Parking visiteurs Place du Barlet – 500 places<br>
+        • Parkings exposants 3 / 4 / 5 (voir plan)<br><br>
+
+        <strong>Navettes gratuites</strong><br>
+        Parc des Expos ◀︎ ▶︎ Gare de Douai ◀︎ ▶︎ Place du Barlet<br>
+        Toutes les 15 minutes<br>
+        Mardi : 7h30 – 18h30<br>
+        Mercredi : 7h30 – 22h30<br>
+        Jeudi : 7h30 – 17h30
+      </div>
+    </div>
+
+    <!-- 🚘 ROUTES -->
+    <div class="card">
+      <div class="title">🚘 Accès routier</div>
+      <div class="description">
+        A1 : Paris – Lille – Anvers – Amsterdam<br>
+        A2 : Paris – Valenciennes – Bruxelles<br>
+        A21 : Lens – Valenciennes<br>
+        A23 : Lille – Valenciennes<br>
+        A25 : Dunkerque – Lille<br>
+        A26 : Calais – Reims
+      </div>
+    </div>
+
+    <!-- 🚆 TRANSPORTS -->
+    <div class="card">
+      <div class="title">🚆 Transports</div>
+      <div class="description">
+        <strong>Train</strong><br>
+        30 min de Lille · 1h de Paris · 1h de Bruxelles<br><br>
+
+        <strong>Aéroports</strong><br>
+        Lille–Lesquin : 20 min<br>
+        Roissy–Charles de Gaulle : 1h45<br>
+        Bruxelles–Zaventem : 1h45
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <script>
 /* ===== NAVIGATION SECTIONS ===== */
@@ -538,21 +618,21 @@ function afficher() {
       list.appendChild(c);
     });
 }
-
-
-
 </script>
+
 <script>
-/* ===== HALL IMAGES ===== */
+/* ===== HALL IMAGES (DESKTOP + MOBILE) ===== */
+
 const hallImg = document.getElementById("hallImage");
+
 let scale = 1;
 let posX = 0;
 let posY = 0;
-let startX = 0;
-let startY = 0;
-let dragging = false;
 
-/* Boutons */
+let pointers = new Map();
+let lastDistance = null;
+
+/* ===== Boutons halls ===== */
 document.querySelectorAll(".hall-buttons button").forEach(btn => {
   btn.onclick = () => {
     document.querySelectorAll(".hall-buttons button")
@@ -564,32 +644,75 @@ document.querySelectorAll(".hall-buttons button").forEach(btn => {
   };
 });
 
-/* Zoom molette */
+/* ===== Zoom molette (desktop) ===== */
 hallImg.addEventListener("wheel", e => {
   e.preventDefault();
-  scale += e.deltaY * -0.003;
-  scale = Math.min(Math.max(1, scale), 16);
+
+  const zoom = e.deltaY * -0.003;
+  const newScale = Math.min(Math.max(scale + zoom, 1), 16);
+
+  scale = newScale;
   applyTransform();
 });
 
-/* Drag */
+/* ===== Pointer Down ===== */
 hallImg.addEventListener("pointerdown", e => {
-  dragging = true;
-  startX = e.clientX - posX;
-  startY = e.clientY - posY;
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   hallImg.setPointerCapture(e.pointerId);
 });
 
+/* ===== Pointer Move ===== */
 hallImg.addEventListener("pointermove", e => {
-  if (!dragging) return;
-  posX = e.clientX - startX;
-  posY = e.clientY - startY;
-  applyTransform();
+  if (!pointers.has(e.pointerId)) return;
+
+  const prev = pointers.get(e.pointerId);
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+  /* ☝️ PAN — 1 doigt */
+  if (pointers.size === 1) {
+    posX += e.clientX - prev.x;
+    posY += e.clientY - prev.y;
+    applyTransform();
+  }
+
+  /* ✌️ PINCH — 2 doigts */
+  if (pointers.size === 2) {
+    const [p1, p2] = [...pointers.values()];
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    const distance = Math.hypot(dx, dy);
+
+    if (lastDistance) {
+      const zoomFactor = distance / lastDistance;
+      const newScale = Math.min(Math.max(scale * zoomFactor, 1), 16);
+
+      /* Zoom centré entre les doigts */
+      const rect = hallImg.getBoundingClientRect();
+      const centerX = (p1.x + p2.x) / 2 - rect.left;
+      const centerY = (p1.y + p2.y) / 2 - rect.top;
+
+      posX -= (centerX - posX) * (newScale / scale - 1);
+      posY -= (centerY - posY) * (newScale / scale - 1);
+
+      scale = newScale;
+      applyTransform();
+    }
+
+    lastDistance = distance;
+  }
 });
 
-hallImg.addEventListener("pointerup", () => dragging = false);
-hallImg.addEventListener("pointerleave", () => dragging = false);
+/* ===== Pointer Up / Cancel ===== */
+function removePointer(e) {
+  pointers.delete(e.pointerId);
+  if (pointers.size < 2) lastDistance = null;
+}
 
+hallImg.addEventListener("pointerup", removePointer);
+hallImg.addEventListener("pointercancel", removePointer);
+hallImg.addEventListener("pointerleave", removePointer);
+
+/* ===== Helpers ===== */
 function applyTransform() {
   hallImg.style.transform =
     `translate(${posX}px, ${posY}px) scale(${scale})`;
@@ -602,8 +725,6 @@ function resetZoom() {
   applyTransform();
 }
 </script>
-
-
 
 
 
