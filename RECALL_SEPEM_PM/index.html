@@ -382,12 +382,80 @@ html, body {
   cursor: grab;
 }
 
+/* === TEMPS FORTS === */
+
+.tempsfort-card {
+  background: #121622;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.tempsfort-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tempsfort-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tempsfort-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.tempsfort-time {
+  font-size: .85rem;
+  font-weight: 600;
+  background: linear-gradient(90deg,#ff4d4d,#4da3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tempsfort-desc {
+  font-size: .85rem;
+  line-height: 1.45;
+  color: #dcdcdc;
+  white-space: pre-line;
+}
+
+.tempsfort-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tempsfort-tags span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #1f2433;
+  font-size: .7rem;
+  color: #bfc6ff;
+}
+
+.tempsfort-action a {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: .85rem;
+  text-decoration: none;
+  text-align: center;
+}
 
 
 
 </style>
 
-</style>
 
 </head>
 
@@ -398,6 +466,7 @@ html, body {
   <button class="active" data-target="exposants">Exposants</button>
   <button data-target="halls">Halls</button>
     <button data-target="programme">programme</button>
+    <button data-target="tempsforts">Temps forts</button>
   <button data-target="infos">Infos</button>
 </div>
 
@@ -448,6 +517,12 @@ html, body {
 
 </section>
 
+
+
+<!-- 🟨 SECTION temps forts -->
+<section id="tempsforts" class="section">
+  <div class="container" id="tempsFortsList"></div>
+</section>
 
 
 
@@ -887,6 +962,70 @@ function createSpeaker(img,name,role){
       <strong>${name}</strong><br>${role}
     </div>`;
   return div;
+}
+</script>
+
+<script>
+const tempsFortsList = document.getElementById("tempsFortsList");
+
+fetch("TMP forts.json")
+  .then(r => r.json())
+  .then(data => renderTempsForts(data));
+
+function renderTempsForts(data) {
+  tempsFortsList.innerHTML = "";
+
+  // 🎯 Titre principal
+  if (data[0]?.fieldtext) {
+    const header = document.createElement("div");
+    header.className = "card";
+    header.innerHTML = `
+      <div class="title">${data[0].fieldtext}</div>
+      <div class="description">${data[0]["fieldtext (2)"] || ""}</div>
+    `;
+    tempsFortsList.appendChild(header);
+  }
+
+  // 📦 Cartes
+  data.slice(1).forEach(item => {
+    if (!item["fieldtext"] || item["fieldtext"] === "|") return;
+
+    const card = document.createElement("div");
+    card.className = "tempsfort-card";
+
+    card.innerHTML = `
+      ${item["picture src"] ? `<img class="tempsfort-img" src="${item["picture src"]}">` : ""}
+
+      <div class="tempsfort-content">
+        <div class="tempsfort-title">${item.fieldtext}</div>
+
+        ${item["gradient-rougebleu"] 
+          ? `<div class="tempsfort-time">${item["gradient-rougebleu"]}</div>` 
+          : ""}
+
+        ${item["fieldtext (2)"] 
+          ? `<div class="tempsfort-desc">${item["fieldtext (2)"]}</div>` 
+          : ""}
+
+        <div class="tempsfort-tags">
+          ${Object.keys(item)
+            .filter(k => k.startsWith("fieldtext (") && item[k])
+            .map(k => `<span>${item[k]}</span>`)
+            .join("")}
+        </div>
+
+        ${item["act-7ca248b0-9ec2-4652-e70e-32823d022414 href"]
+          ? `<div class="tempsfort-action">
+               <a href="${item["act-7ca248b0-9ec2-4652-e70e-32823d022414 href"]}" target="_blank">
+                 ${item["act-7ca248b0-9ec2-4652-e70e-32823d022414"]}
+               </a>
+             </div>`
+          : ""}
+      </div>
+    `;
+
+    tempsFortsList.appendChild(card);
+  });
 }
 </script>
 
