@@ -29,6 +29,7 @@
   },
   {
     "fieldtext": "L'exposition des savoir-faire industriels régionaux",
+    "fieldtext (2)": "Les Fleurons de l’Industrie mettent à l’honneur les entreprises du territoire et leurs innovations, symboles du savoir-faire et de l’excellence industrielle française. Les visiteurs y découvrent une vitrine inspirante de l’industrie d’aujourd’hui : des réalisations, projets et savoir-faire porteurs d’avenir. Conçu comme une expérience de découverte et de fierté industrielle, les Fleurons permettent de reconnecter le public avec les entreprises qui produisent, innovent et fabriquent en France.  ",
     "picture src": "https://api-frontassets.inwink.com/event/13b91aa6-4f1f-f011-8b3d-0022488a3681/asset/57efed7c-8ecb-f011-8195-0022487f0371/file/fleurons-hdf",
     "gradient-rougebleu": "🕘 Pendant les 3 jours du salon",
     "fieldtext (3)": "les entreprises du territoire",
@@ -37,12 +38,16 @@
     "fieldtext (7)": "projets",
     "fieldtext (8)": "savoir-faire",
     "fieldtext (10)": "une expérience de découverte et de fierté industrielle",
-    "fieldtext (5)": "Les Fleurons de l’industrie"
+    "fieldtext (5)": "Les Fleurons de l’industrie",
+     "act-7ca248b0-9ec2-4652-e70e-32823d022414 href": "https://douai.sepem-industries.com/content/trophees-sepem",
+    "act-7ca248b0-9ec2-4652-e70e-32823d022414": "En savoir plus"
+    
   },
   {
     "fieldtext": "SEPEM Avenir",
+    "fieldtext (2)": "SEPEM Avenir est un dispositif complet dédié à l’attractivité des métiers de l’industrie et à la valorisation des parcours de formation et d’emploi dans ce secteur.Dans un contexte où l’industrie représente plus de 3 millions d’emplois en France et où de nombreux métiers peinent à recruter, SEPEM Avenir réunit les acteurs de l’orientation, de la formation et de l’emploi pour faire découvrir la diversité des carrières industrielles et les opportunités qu’elles offrent.",
     "gradient-rougebleu": "🕘 Pendant les 3 jours du salon",
-    "act-7ca248b0-9ec2-4652-e70e-32823d022414 href": "https://douai.sepem-industries.com/content/un-espace-metiers-formations-emploi-dans-l-industrie",
+    "act-7ca248b0-9ec2-4652-e70e-32823d022414 href": "https://douai.sepem-industries.com/content/les-fleurons-de-l-industrie-des-hauts-de-france",
     "act-7ca248b0-9ec2-4652-e70e-32823d022414": "En savoir plus",
     "fieldtext (5)": "L’industrie, un avenir à découvrir !"
   },
