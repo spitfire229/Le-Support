@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>SVG Viewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0f0f0f;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Courier New', monospace;
+      touch-action: none;
+    }
+
+    #viewport {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      cursor: grab;
+    }
+    #viewport.grabbing { cursor: grabbing; }
+
+    #canvas {
+      position: absolute;
+      top: 0; left: 0;
+      transform-origin: 0 0;
+      will-change: transform;
+    }
+
+    #canvas svg { display: block; }
+
+    /* HUD */
+    #hud {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      padding: 8px 14px;
+      border-radius: 999px;
+      z-index: 100;
+    }
+    .hud-btn {
+      width: 32px; height: 32px;
+      border: none;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .hud-btn:hover { background: rgba(255,255,255,0.18); }
+    .hud-btn:active { background: rgba(255,255,255,0.28); }
+    #zoom-label {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      min-width: 46px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    #status {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      text-align: center;
+      line-height: 2;
+      pointer-events: none;
+    }
+    #status.hidden { display: none; }
+
+    #drop-overlay {
+      position: fixed; inset: 0;
+      border: 3px dashed rgba(255,255,255,0.3);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 20px;
+    }
+    #drop-overlay.active { display: flex; }
+  </style>
+</head>
+<body>
+
+<div id="viewport">
+  <div id="canvas"></div>
+</div>
+
+<div id="hud">
+  <button class="hud-btn" id="zoom-out-btn">−</button>
+  <span id="zoom-label">50%</span>
+  <button class="hud-btn" id="zoom-in-btn">+</button>
+  <button class="hud-btn" id="reset-btn" style="width:auto;padding:0 12px;border-radius:999px;">↺ reset</button>
+  <label class="hud-btn" style="width:auto;padding:0 12px;border-radius:999px;cursor:pointer;" title="Ouvrir un fichier SVG">
+    📂 <input type="file" id="file-input" accept=".svg,image/svg+xml" style="display:none;">
+  </label>
+</div>
+
+<div id="status">Chargement de forge_model_v1.svg…</div>
+<div id="drop-overlay">Déposer le fichier SVG ici</div>
+
+<script>
+  const SVG_FILE = 'forge_model_v1.svg';
+
+  const viewport    = document.getElementById('viewport');
+  const canvas      = document.getElementById('canvas');
+  const statusEl    = document.getElementById('status');
+  const label       = document.getElementById('zoom-label');
+  const dropOverlay = document.getElementById('drop-overlay');
+
+  let scale = 0.2, tx = 0, ty = 0;
+  let svgW = 800, svgH = 600;
+
+  function applyTransform() {
+    canvas.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`;
+    label.textContent = Math.round(scale * 100) + '%';
+  }
+
+  function initialPosition() {
+    const vw = viewport.clientWidth;
+    const margin = 24;
+    tx = vw - svgW * scale - margin;
+    ty = margin;
+    applyTransform();
+  }
+
+  function injectSVG(svgText) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(svgText, 'image/svg+xml');
+    const svgEl = doc.querySelector('svg');
+    if (!svgEl) { statusEl.textContent = '❌ Fichier SVG invalide.'; return; }
+
+    let w = parseFloat(svgEl.getAttribute('width'))  || 0;
+    let h = parseFloat(svgEl.getAttribute('height')) || 0;
+    if ((!w || !h) && svgEl.getAttribute('viewBox')) {
+      const vb = svgEl.getAttribute('viewBox').trim().split(/[\s,]+/);
+      w = parseFloat(vb[2]) || 800;
+      h = parseFloat(vb[3]) || 600;
+    }
+    svgW = w || 800; svgH = h || 600;
+    svgEl.setAttribute('width', svgW);
+    svgEl.setAttribute('height', svgH);
+
+    canvas.innerHTML = '';
+    canvas.appendChild(document.importNode(svgEl, true));
+    statusEl.classList.add('hidden');
+    scale = 0.2;
+    initialPosition();
+  }
+
+  // Chargement fetch
+  fetch(SVG_FILE)
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
+    .then(injectSVG)
+    .catch(err => {
+      statusEl.innerHTML =
+        `❌ Impossible de charger <b>${SVG_FILE}</b><br>` +
+        `Astuce : ouvrez via un serveur local (<code>npx serve .</code>)<br>` +
+        `ou glissez le fichier SVG directement ici, ou utilisez 📂<br>` +
+        `<small style="opacity:.5">${err.message}</small>`;
+    });
+
+  // Pan souris
+  let dragging = false, lastX = 0, lastY = 0;
+  viewport.addEventListener('mousedown', e => {
+    if (e.button !== 0) return;
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    viewport.classList.add('grabbing');
+  });
+  window.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    tx += e.clientX - lastX; ty += e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    applyTransform();
+  });
+  window.addEventListener('mouseup', () => { dragging = false; viewport.classList.remove('grabbing'); });
+
+  // Pan touch
+  let touches = {}, lastPinchDist = null;
+  viewport.addEventListener('touchstart', e => {
+    e.preventDefault();
+    for (const t of e.changedTouches) touches[t.identifier] = t;
+  }, { passive: false });
+  viewport.addEventListener('touchmove', e => {
+    e.preventDefault();
+    if (e.touches.length === 1) {
+      const t = e.touches[0], prev = touches[t.identifier];
+      if (prev) { tx += t.clientX - prev.clientX; ty += t.clientY - prev.clientY; applyTransform(); }
+      touches[t.identifier] = t; lastPinchDist = null;
+    } else if (e.touches.length === 2) {
+      const t1 = e.touches[0], t2 = e.touches[1];
+      const d = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+      if (lastPinchDist) {
+        const mid = { x: (t1.clientX+t2.clientX)/2, y: (t1.clientY+t2.clientY)/2 };
+        zoomAt(mid.x, mid.y, d / lastPinchDist);
+      }
+      lastPinchDist = d;
+      touches[t1.identifier] = t1; touches[t2.identifier] = t2;
+    }
+  }, { passive: false });
+  viewport.addEventListener('touchend', e => {
+    for (const t of e.changedTouches) delete touches[t.identifier];
+    if (e.touches.length < 2) lastPinchDist = null;
+  });
+
+  // Zoom molette
+  viewport.addEventListener('wheel', e => {
+    e.preventDefault();
+    zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.12 : 1/1.12);
+  }, { passive: false });
+
+  function zoomAt(cx, cy, factor) {
+    const ns = Math.min(Math.max(scale * factor, 0.02), 50);
+    const r = ns / scale;
+    tx = cx + (tx - cx) * r; ty = cy + (ty - cy) * r;
+    scale = ns; applyTransform();
+  }
+
+  // Boutons HUD
+  document.getElementById('zoom-in-btn').addEventListener('click', () => zoomAt(viewport.clientWidth/2, viewport.clientHeight/2, 1.25));
+  document.getElementById('zoom-out-btn').addEventListener('click', () => zoomAt(viewport.clientWidth/2, viewport.clientHeight/2, 1/1.25));
+  document.getElementById('reset-btn').addEventListener('click', () => { scale = 0.2; initialPosition(); });
+
+  // Ouverture fichier bouton
+  document.getElementById('file-input').addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const r = new FileReader();
+    r.onload = ev => injectSVG(ev.target.result);
+    r.readAsText(file);
+  });
+
+  // Drag & drop
+  document.addEventListener('dragover', e => { e.preventDefault(); dropOverlay.classList.add('active'); });
+  document.addEventListener('dragleave', e => { if (!e.relatedTarget) dropOverlay.classList.remove('active'); });
+  document.addEventListener('drop', e => {
+    e.preventDefault(); dropOverlay.classList.remove('active');
+    const file = e.dataTransfer.files[0];
+    if (file) { const r = new FileReader(); r.onload = ev => injectSVG(ev.target.result); r.readAsText(file); }
+  });
+</script>
+</body>
+</html>
