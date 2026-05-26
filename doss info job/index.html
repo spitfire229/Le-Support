@@ -741,7 +741,7 @@
         Vade est un projet de marque de vêtements dont l'objectif n'était pas la commercialisation, mais l'apprentissage des différentes étapes de création d'une marque à partir de zéro.<br><br>
         Le secteur du textile, vaste et en constante évolution, offre aujourd'hui de nombreuses opportunités aux jeunes créateurs. Grâce aux outils désormais accessibles, il est possible de concevoir et développer un projet ambitieux même à petite échelle.
       </p>
-      <img class="logo-vade" src="./images/Vade/vade logo.png" alt="Logo Vade" loading="lazy" width="180">
+      <img class="logo-vade" src="./images/Vade/vade%20logo.png" alt="Logo Vade" loading="lazy" width="180">
       <div class="gallery" id="gallery-vade">
         <div class="gallery-placeholder">Chargement des visuels…</div>
       </div>
@@ -1098,13 +1098,18 @@
       entries.forEach(entry => {
         if (entry.isIntersecting && !galleryFetched) {
           galleryFetched = true;
-          fetch('images/Vade/images.json')
-            .then(r => { if (!r.ok) throw new Error('No images.json'); return r.json(); })
-            .then(buildGallery)
-            .catch(() => {
-              document.getElementById('gallery-vade').innerHTML =
-                '<div class="gallery-placeholder">Aucune image trouvée.</div>';
-            });
+          buildGallery([
+            "aware.png","brain wash.png","breathtaking.png","care .png",
+            "coffee time.png","flying island croissant (saison 2022).png",
+            "hand shake.png","hooked .png","mailbox.png","more space blanc.png",
+            "panda negativ.png","panda.png","radio VF.png","see u soon negatif.png",
+            "see u soon.png","sleeping turtle.png","summer time.png",
+            "vade abstract 1 (print test).png","vade abstract 1 negatif (print test).png",
+            "vade draw (saison 2022).png","vade logo noir.png","vade space travel (noir).png",
+            "vade space travel negatif.png","space traveler front 2.jpg","catalogue.jpg",
+            "overflow1.png","coffee time1.png","see you soon1.png",
+            "space traveler front 3.jpg","hooked front .jpg"
+          ]);
           obs.disconnect();
         }
       });
