@@ -1052,7 +1052,7 @@
 
         const img = document.createElement('img');
         img.alt = name.split('.')[0];
-        img.dataset.src = 'images/Vade/' + name;
+        img.dataset.src = 'images/Vade/' + encodeURIComponent(name);
         // Don't set src yet — lazy observer will do it
 
         img.addEventListener('load', function () {
