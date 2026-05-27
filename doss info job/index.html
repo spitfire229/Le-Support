@@ -91,11 +91,11 @@
     /* ── HERO ── */
     #hero {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       background: linear-gradient(135deg, rgba(200,185,122,0.03), rgba(0,0,0,0.12));
       padding-top: calc(var(--nav-h) + 2rem);
-      padding-bottom: 5rem;
+      padding-bottom: 0.5rem;
       min-height: 100vh;
     }
 
@@ -106,11 +106,21 @@
       display: grid;
       grid-template-columns: 120px 1fr;
       gap: 1.5rem;
-      align-items: center;
+      align-items: start;
       background: var(--bg2);
       border-radius: 16px;
       border: 1px solid var(--border);
       box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+      margin: auto 0;
+    }
+
+    .hero-info-wrapper {
+      width: calc(100% - 30px);
+      max-width: 920px;
+      display: flex;
+      justify-content: center;
+      margin-top: auto;
+      padding-bottom: 2rem;
     }
 
     .hero-profile {
@@ -121,8 +131,13 @@
       border: 4px solid rgba(200,185,122,0.09);
       background: linear-gradient(135deg,#0f0f11,#1b1b1d);
       flex-shrink: 0;
+      align-self: center;
     }
     .hero-profile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .hero-content {
+      justify-self: center;
+    }
 
     #hero h1 {
       font-size: clamp(1.5rem, 3vw, 2.4rem);
@@ -136,6 +151,7 @@
       color: var(--muted);
       margin: 0.25rem 0 1rem;
       max-width: 72ch;
+      margin-bottom: 0;
     }
 
     .hero-ctas { margin-top: 0.5rem; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
@@ -214,7 +230,7 @@
     /* ── GALLERY (Vade) ── */
     .logo-vade {
       display: block;
-      width: 180px;
+      
       margin: 2rem auto;
     }
 
@@ -601,6 +617,25 @@
         gap: 1rem;
       }
       .hero-profile { width: 96px; height: 96px; border-width: 3px; }
+      .hero-info-wrapper { width: calc(100% - 24px); }
+    }
+
+    /* ── INFO BOX ── */
+    .info-box {
+      background: var(--bg2);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 0.35rem 0.75rem;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .info-box p {
+      color: var(--text);
+      font-size: 0.55rem;
+      line-height: 1;
+      margin: 0;
+      margin-bottom: 0;
     }
 
     @media (max-width: 600px) {
@@ -621,6 +656,16 @@
       #hero p { max-width: none; }
       .hero-ctas { justify-content: center; }
       .story-img { width: 100%; display: block; margin: 0.5rem 0; }
+      .hero-info-wrapper { width: calc(100% - 24px); }
+      
+      .info-box {
+        margin: 0.75rem 0 0;
+        padding: 0.6rem 1rem;
+      }
+      .info-box p {
+        font-size: 0.7rem;
+        margin: 0;
+      }
     }
   </style>
 </head>
@@ -651,7 +696,16 @@
         </div>
       </div>
     </div>
+    <div class="hero-info-wrapper">
+      <div class="info-box">
+        <p>Toutes les images présentes sur cette page sont interactives. <br>
+        <p>Cliquez sur une illustration pour l'afficher en plein écran et profiter des détails du visuel.</p>
+      </div>
+    </div>
   </section>
+
+
+
 
   <!-- MODULES FORGE -->
   <section id="forge">
@@ -662,7 +716,7 @@
       <p class="section-intro">
         Modules Forge est une plateforme d'hébergement web intégrant une suite complète d'outils collaboratifs et productifs pour les individus et les équipes. Elle offre une infrastructure centralisée accessible avec des identifiants simples et intuitifs.
       </p>
-      <img class="logo-vade" src="./images/logo forge.svg" alt="Logo Vade" loading="lazy" width="180">
+      <img class="logo-vade" src="./images/logo forge.png" alt="Logo Vade" loading="lazy" width="380">
       
       
       <div style="background: var(--bg3); border: 1px solid var(--accent); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
@@ -678,56 +732,47 @@
           </div>
         </div>
       </div>
-      <a href="https://modules-forge.fr/dashboard" class="btn" style="margin-top: 1.5rem; margin-left: 35%;">Accéder à Modules Forge</a>
+      <a href="https://modules-forge.fr/dashboard" class="btn" style="margin-top: 1.5rem; margin-left: 35%;">Accéder aux Modules Forge</a>
     
 
       <h3>Modules disponibles</h3>
       <div class="modules-container">
         <div class="module">
-          <div style="width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-radius: 8px; margin-bottom: 10px; font-size: 2rem;">
-            
-          </div>
+          
+          <img src="./images/mailer.svg" alt="">
           <h4>Mailer</h4>
           <p>Gestionnaire spécialisé dans l'envoi de mails en masse. Pilotez vos campagnes de communication avec précision et efficacité.</p>
         </div>
+        
         <div class="module">
-          <div style="width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-radius: 8px; margin-bottom: 10px; font-size: 2rem;">
-            
-          </div>
+          
+          <img src="./images/nas.svg" alt="">
           <h4>NAS</h4>
           <p>Espace de stockage cloud décentralisé en plusieurs zones spécialisées pour une collaboration d'équipe optimale.</p>
         </div>
         <div class="module">
-          <div style="width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-radius: 8px; margin-bottom: 10px; font-size: 2rem;">
-            
-          </div>
+          <img src="./images/dropbox.svg" alt="">
           <h4>Drop Box</h4>
           <p>Partage sécurisé de données jusqu'à 50 Go. Échangez vos fichiers volumineux facilement avec votre équipe.</p>
         </div>
         <div class="module">
-          <div style="width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-radius: 8px; margin-bottom: 10px; font-size: 2rem;">
-            
-          </div>
+          <img src="./images/Task.svg" alt="">
           <h4>Gestionnaire de tâches</h4>
           <p>Outil de coordination d'équipe inspiré de Trello. Organisez vos projets et suivez la progression en temps réel.</p>
         </div>
         <div class="module">
-          <div style="width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-radius: 8px; margin-bottom: 0px; font-size: 2rem;">
-            
-          </div>
+         <img src="./images/QR.svg" alt="">
           <h4>Générateur QR</h4>
           <p>Créez des codes QR personnalisés et adaptables. Intégrez-les facilement dans vos documents et supports marketing.</p>
         </div>
         <div class="module">
-          <div style="width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-radius: 8px; margin-bottom: 0px; font-size: 2rem;">
-            
-          </div>
-          <h4>Rédacteur de liens</h4>
+          <img src="./images/link.svg" alt="">
+          <h4>redirecteur de liens</h4>
           <p>Service de redirection et de raccourcissement de liens. Gérez vos URL avec suivi et personnalisation.</p>
         </div>
       </div>
       
-      <a href="https://modules-forge.fr/dashboard" class="btn" style="margin-top: 1.5rem;">Accéder à Modules Forge</a>
+      <a href="https://modules-forge.fr/dashboard" class="btn" style="margin-top: 1.5rem;">Accéder aux Modules Forge</a>
     </div>
   </section>
 
@@ -741,7 +786,8 @@
         Vade est un projet de marque de vêtements dont l'objectif n'était pas la commercialisation, mais l'apprentissage des différentes étapes de création d'une marque à partir de zéro.<br><br>
         Le secteur du textile, vaste et en constante évolution, offre aujourd'hui de nombreuses opportunités aux jeunes créateurs. Grâce aux outils désormais accessibles, il est possible de concevoir et développer un projet ambitieux même à petite échelle.
       </p>
-      <img class="logo-vade" src="./images/vade/vade%20logo.png" alt="Logo Vade" loading="lazy" width="180">
+      <img class="logo-vade" src="./images/vade/vade%20logo.png" alt="Logo Vade" loading="lazy" width="280">
+      <img src="./images/vade/pres.png" alt="Logo Vade" loading="lazy" style="border: 0px solid var(--border); border-radius: 10px; margin: 2rem 0; display: block;" width="100%">
       <div class="gallery" id="gallery-vade">
         <div class="gallery-placeholder">Chargement des visuels…</div>
       </div>
@@ -782,6 +828,36 @@
       <img class="story-img" src="./images/WhatsApp Image 2025-09-15 à 21.01.34_0fac685d.jpg" alt="Story" loading="lazy">
       <img class="story-img" src="./images/simu story.png" alt="Story simu" loading="lazy">
 
+      <h3>Résultats du mandat</h3>
+      <p style="color: var(--muted); margin-bottom: 1.5rem;">
+        Au cours de mon mandat en tant que responsable de la communication de Merídio, j'ai mené une stratégie digitale efficace ayant permis une croissance significative de notre présence sur les réseaux sociaux.
+      </p>
+      
+      <div style="background: var(--bg3); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center; margin: 2rem auto; max-width: 350px;">
+        <p style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Point de départ</p>
+        <p style="font-size: 2.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">450</p>
+        <p style="color: var(--muted); font-size: 0.95rem;">Abonnés au début du mandat</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
+        <div style="background: var(--bg3); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center;">
+          <p style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Décembre → Janvier</p>
+          <p style="font-size: 2.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">+58%</p>
+          <p style="color: var(--muted); font-size: 0.95rem;">Augmentation des vues Instagram</p>
+        </div>
+        
+        <div style="background: var(--bg3); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; text-align: center;">
+          <p style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Janvier → Février</p>
+          <p style="font-size: 2.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">+13%</p>
+          <p style="color: var(--muted); font-size: 0.95rem;">Augmentation de la visibilité</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 1.5rem 0;">
+        <img src="./images/stat2.jpeg" alt="Statistiques Merídio décembre janvier" loading="lazy" style="width: 100%; object-fit: contain; border-radius: 8px; border: 1px solid var(--border); display: block;">
+        <img src="./images/stat1.jpeg" alt="Statistiques Merídio janvier février" loading="lazy" style="width: 100%; object-fit: contain; border-radius: 8px; border: 1px solid var(--border); display: block;">
+      </div>
+
       <h3>Vidéos</h3>
       <div class="insta-placeholder" id="reel-placeholder" data-url="https://www.instagram.com/reel/DOY2SPiCGG9/" data-permalink="https://www.instagram.com/reel/DOY2SPiCGG9/?utm_source=ig_embed&amp;utm_campaign=loading" style="max-width:540px; aspect-ratio: 9/16; min-height: 480px;">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.131 4.602.425 3.635 1.392 2.668 2.359 2.374 3.532 2.315 4.81 2.257 6.09 2.243 6.498 2.243 12s.014 5.91.072 7.19c.059 1.278.353 2.451 1.32 3.418.967.967 2.14 1.261 3.418 1.32C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.451-.353 3.418-1.32.967-.967 1.261-2.14 1.32-3.418.058-1.28.072-1.688.072-7.19s-.014-5.91-.072-7.19c-.059-1.278-.353-2.451-1.32-3.418C20.398.425 19.225.131 17.947.072 16.667.014 16.259 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -796,9 +872,12 @@
     <div class="container">
       <span class="section-tag">Projet 03</span>
       <h2>Dessins</h2>
+      <p class="section-intro">
+      Même si ces réalisations ne s’inscrivent pas directement dans le domaine de la communication, elles restent représentatives de mon univers visuel, de ma sensibilité artistique et des inspirations qui nourrissent mon travail. À travers ces dessins, j’explore différentes approches graphiques mêlant illustration vectorielle, dessin infographique et recherches liées à l’animation. Ces créations traduisent autant mon intérêt pour le character design et les univers visuels marqués que ma volonté d’expérimenter différentes techniques afin de développer un style personnel cohérent et expressif.
+      </p>
       <div class="divider"></div>
       <div class="image-grid">
-        <img src="./images/insta/alien v1.jpg"             alt="Alien v1"      loading="lazy">
+        <img src="./images/insta/raze.jpg"             alt="Alien v1"      loading="lazy">
         <img src="./images/insta/alien v2.png"             alt="Alien v2"      loading="lazy">
         <img src="./images/insta/bakugo2dv.jpg"            alt="Bakugo"        loading="lazy">
         <img src="./images/insta/radio.png"                alt="Radio"         loading="lazy">
@@ -807,9 +886,9 @@
         <img src="./images/insta/queen.png"                alt="Queen"         loading="lazy">
         <img src="./images/insta/valk.png"                 alt="Valk"          loading="lazy">
         <img src="./images/insta/tracer remake b_w.jpg"    alt="Tracer remake" loading="lazy">
-        <img src="./images/karnavf.jpg"                 alt="Valk"          loading="lazy">
-        <img src="./images/samus.jpg"                 alt="Valk"          loading="lazy">
-        <img src="./images/league of legende111.jpg"                 alt="Valk"          loading="lazy">
+        <img src="./images/insta/karnavf.jpg"                 alt="Valk"          loading="lazy">
+        <img src="./images/insta/samus.jpg"                 alt="Valk"          loading="lazy">
+        <img src="./images/insta/approching drop zone.jpg"                 alt="Valk"          loading="lazy">
         
       </div>
     </div>
