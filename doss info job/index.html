@@ -234,6 +234,27 @@
       margin: 2rem auto;
     }
 
+    /* Logo gallery */
+    .logo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 1.5rem 0;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .logo-gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 15px;
+      background: var(--bg3);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .logo-gallery img:hover { transform: scale(1.05); border-color: var(--accent); }
+
     /* Skeleton loader pour la galerie */
     .gallery {
       display: grid;
@@ -272,6 +293,15 @@
       position: relative;
     }
 
+    #gallery-portfolio {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #gallery-portfolio .card-img-wrapper {
+      aspect-ratio: auto;
+      height: 400px;
+    }
+
     /* Skeleton shimmer */
     .card-img-wrapper::before {
       content: '';
@@ -297,6 +327,10 @@
       z-index: 1;
       opacity: 0;
       transition: opacity 0.3s;
+    }
+
+    #gallery-portfolio .card-img-wrapper img {
+      object-fit: contain;
     }
     .card-img-wrapper img.loaded { opacity: 1; }
     /* Hide shimmer once image loaded */
@@ -389,6 +423,24 @@
       border-radius: 8px;
       border: 1px solid var(--border);
       display: block;
+    }
+
+    /* A4 Portrait affiches */
+    .image-container-a4 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 1.5rem 0;
+    }
+    .image-container-a4 img {
+      width: 100%;
+      aspect-ratio: 210 / 297;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+      background: var(--bg3);
+      padding: 8px;
     }
 
     /* ── STORY IMGS ── */
@@ -517,6 +569,26 @@
     }
     .autres-list li { margin-bottom: 6px; }
     .autres-list strong { color: var(--text); }
+
+    /* ── PORTFOLIO GIF ── */
+    .portfolio-gif-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto 3rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg3);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .portfolio-gif-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
 
     /* ── 3D ── */
     .model-container { margin-bottom: 3rem; }
@@ -675,10 +747,12 @@
   <nav>
     <a href="#hero" class="brand">Charles Kremer</a>
     <a href="#forge">Forge</a>
+    <a href="#lycee">Lycée</a>
     <a href="#vade">Vade</a>
-    <a href="#meridio">Merídio</a>
     <a href="#dessins">Dessins</a>
+    <a href="#meridio">Merídio</a>
     <a href="#code">Code</a>
+    <a href="#portfolio">Projets Suivis</a>
     <a href="#3d">3D</a>
   </nav>
 
@@ -714,7 +788,7 @@
       <h2>Modules Forge</h2>
       <div class="divider"></div>
       <p class="section-intro">
-        Modules Forge est une plateforme d'hébergement web intégrant une suite complète d'outils collaboratifs et productifs pour les individus et les équipes. Elle offre une infrastructure centralisée accessible avec des identifiants simples et intuitifs.
+        Modules Forge est une plateforme d'hébergement web intégrant une suite complète d'outils collaboratifs spécialisé pour les equipes de communication. Elle offre une infrastructure simples et sécurisée.
       </p>
       <img class="logo-vade" src="./images/logo forge.png" alt="Logo Vade" loading="lazy" width="380">
       
@@ -776,6 +850,37 @@
     </div>
   </section>
 
+  <!-- LYCÉE SAINT-AUGUSTIN -->
+  <section id="lycee">
+    <div class="container">
+      <span class="section-tag">Premiers pas</span>
+      <h2>Communication du Lycée</h2>
+      <div class="divider"></div>
+      <p class="section-intro">
+        Entre 2022 et 2023, j'ai assuré la gestion complète de la communication du lycée Saint-Augustin. Cette expérience a marqué mes premiers pas dans le domaine de la communication, me permettant de développer des compétences en design graphique, création d'affiches et identité visuelle à travers la conception de logos et supports variés.
+      </p>
+      
+      <h3>Affiches</h3>
+      <p style="color: var(--muted); margin-bottom: 1.5rem;">Affiches de campagnes et d'événements</p>
+      <div class="image-container-a4">
+        <img src="./images/St%20aug/affiche%20bal%20noel%20HP%20(1)_1.png" alt="Affiche Bal de Noël" loading="lazy">
+        <img src="./images/St%20aug/affiche%20talent_4.png" alt="Affiche Talent" loading="lazy">
+        <img src="./images/St%20aug/clash%20royal.jpg" alt="Affiche Clash Royal" loading="lazy">
+      </div>
+
+      <h3>Logos des pôles</h3>
+      <p style="color: var(--muted); margin-bottom: 1.5rem;">Identités visuelles créées pour les différents pôles d'activité du lycée</p>
+      <div class="logo-gallery">
+        <img src="./images/St%20aug/2023-04-23_10-59-07_12.png" alt="Logo pôle" loading="lazy">
+        <img src="./images/St%20aug/2023-04-23_10-59-07_18.png" alt="Logo pôle" loading="lazy">
+        <img src="./images/St%20aug/2023-04-23_10-59-07_19.png" alt="Logo pôle" loading="lazy">
+        <img src="./images/St%20aug/2023-04-23_10-59-07_20.png" alt="Logo pôle" loading="lazy">
+        <img src="./images/St%20aug/2023-04-23_10-59-07_8.png" alt="Logo pôle" loading="lazy">
+        <img src="./images/St%20aug/2023-04-23_10-59-07_9.png" alt="Logo pôle" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <!-- VADE -->
   <section id="vade">
     <div class="container">
@@ -789,16 +894,225 @@
       <img class="logo-vade" src="./images/vade/vade%20logo.png" alt="Logo Vade" loading="lazy" width="280">
       <img src="./images/vade/pres.png" alt="Logo Vade" loading="lazy" style="border: 0px solid var(--border); border-radius: 10px; margin: 2rem 0; display: block;" width="100%">
       <div class="gallery" id="gallery-vade">
-        <div class="gallery-placeholder">Chargement des visuels…</div>
-      </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/aware.png" alt="aware" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">aware</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/brain wash.png" alt="brain wash" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">brain wash</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/breathtaking.png" alt="breathtaking" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">breathtaking</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/care .png" alt="care" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">care</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/coffee time.png" alt="coffee time" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">coffee time</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/coffee time1.png" alt="coffee time 2" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">coffee time 2</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/flying island croissant (saison 2022).png" alt="flying island croissant" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">flying island croissant</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/hand shake.png" alt="hand shake" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">hand shake</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/hooked .png" alt="hooked" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">hooked</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/hooked front .jpg" alt="hooked front" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">hooked front</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/mailbox.png" alt="mailbox" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">mailbox</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/more space blanc.png" alt="more space blanc" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">more space blanc</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/overflow1.png" alt="overflow" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">overflow</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/panda.png" alt="panda" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">panda</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/panda negativ.png" alt="panda négatif" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">panda négatif</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/radio VF.png" alt="radio VF" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">radio VF</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/see u soon.png" alt="see u soon" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">see u soon</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/see u soon negatif.png" alt="see u soon négatif" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">see u soon négatif</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/see you soon1.png" alt="see you soon" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">see you soon</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/sleeping turtle.png" alt="sleeping turtle" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">sleeping turtle</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/summer time.png" alt="summer time" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">summer time</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/vade abstract 1 (print test).png" alt="vade abstract 1" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">vade abstract 1</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/vade abstract 1 negatif (print test).png" alt="vade abstract 1 négatif" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">vade abstract 1 négatif</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/vade draw (saison 2022).png" alt="vade draw" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">vade draw</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/vade logo noir.png" alt="vade logo noir" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">vade logo noir</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/vade space travel (noir).png" alt="vade space travel noir" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">vade space travel noir</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/vade space travel negatif.png" alt="vade space travel négatif" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">vade space travel négatif</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/space traveler front 2.jpg" alt="space traveler front 2" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">space traveler front 2</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/space traveler front 3.jpg" alt="space traveler front 3" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">space traveler front 3</div>
+  </div>
+  <div class="card">
+    <div class="card-img-wrapper img-done">
+      <img src="./images/vade/catalogue.jpg" alt="catalogue" loading="lazy" class="loaded">
+    </div>
+    <div class="caption">catalogue</div>
+  </div>
+</div>
       <a href="./vade.pdf" download class="btn">Télécharger le catalogue de marque</a>
     </div>
   </section>
 
+
+  <!-- DESSINS -->
+  <section id="dessins">
+    <div class="container">
+      <span class="section-tag">Projet 02</span>
+      <h2>Dessins</h2>
+      <p class="section-intro">
+      Même si ces réalisations ne s’inscrivent pas directement dans le domaine de la communication, elles restent représentatives de mon univers visuel, de ma sensibilité artistique et des inspirations qui nourrissent mon travail. À travers ces dessins, j’explore différentes approches graphiques mêlant illustration vectorielle, dessin infographique et recherches liées à l’animation. Ces créations traduisent autant mon intérêt pour le character design et les univers visuels marqués que ma volonté d’expérimenter différentes techniques afin de développer un style personnel cohérent et expressif.
+      </p>
+      <div class="divider"></div>
+      <div class="image-grid">
+        <img src="./images/insta/raze.jpg"             alt="Alien v1"      loading="lazy">
+        <img src="./images/insta/alien v2.png"             alt="Alien v2"      loading="lazy">
+        <img src="./images/insta/bakugo2dv.jpg"            alt="Bakugo"        loading="lazy">
+        <img src="./images/insta/radio.png"                alt="Radio"         loading="lazy">
+        <img src="./images/insta/heart.png"                alt="Heart"         loading="lazy">
+        <img src="./images/insta/rebecca.png"              alt="Rebecca"       loading="lazy">
+        <img src="./images/insta/queen.png"                alt="Queen"         loading="lazy">
+        <img src="./images/insta/valk.png"                 alt="Valk"          loading="lazy">
+        <img src="./images/insta/tracer remake b_w.jpg"    alt="Tracer remake" loading="lazy">
+        <img src="./images/insta/karnavf.jpg"                 alt="Valk"          loading="lazy">
+        <img src="./images/insta/samus.jpg"                 alt="Valk"          loading="lazy">
+        <img src="./images/insta/approching drop zone.jpg"                 alt="Valk"          loading="lazy">
+        
+      </div>
+    </div>
+  </section>
+
+
+  
   <!-- MERIDIO -->
   <section id="meridio">
     <div class="container">
-      <span class="section-tag">Projet 02</span>
+      <span class="section-tag">Projet 03</span>
       <h2>Communication Merídio</h2>
       <div class="divider"></div>
 
@@ -867,32 +1181,6 @@
     </div>
   </section>
 
-  <!-- DESSINS -->
-  <section id="dessins">
-    <div class="container">
-      <span class="section-tag">Projet 03</span>
-      <h2>Dessins</h2>
-      <p class="section-intro">
-      Même si ces réalisations ne s’inscrivent pas directement dans le domaine de la communication, elles restent représentatives de mon univers visuel, de ma sensibilité artistique et des inspirations qui nourrissent mon travail. À travers ces dessins, j’explore différentes approches graphiques mêlant illustration vectorielle, dessin infographique et recherches liées à l’animation. Ces créations traduisent autant mon intérêt pour le character design et les univers visuels marqués que ma volonté d’expérimenter différentes techniques afin de développer un style personnel cohérent et expressif.
-      </p>
-      <div class="divider"></div>
-      <div class="image-grid">
-        <img src="./images/insta/raze.jpg"             alt="Alien v1"      loading="lazy">
-        <img src="./images/insta/alien v2.png"             alt="Alien v2"      loading="lazy">
-        <img src="./images/insta/bakugo2dv.jpg"            alt="Bakugo"        loading="lazy">
-        <img src="./images/insta/radio.png"                alt="Radio"         loading="lazy">
-        <img src="./images/insta/heart.png"                alt="Heart"         loading="lazy">
-        <img src="./images/insta/rebecca.png"              alt="Rebecca"       loading="lazy">
-        <img src="./images/insta/queen.png"                alt="Queen"         loading="lazy">
-        <img src="./images/insta/valk.png"                 alt="Valk"          loading="lazy">
-        <img src="./images/insta/tracer remake b_w.jpg"    alt="Tracer remake" loading="lazy">
-        <img src="./images/insta/karnavf.jpg"                 alt="Valk"          loading="lazy">
-        <img src="./images/insta/samus.jpg"                 alt="Valk"          loading="lazy">
-        <img src="./images/insta/approching drop zone.jpg"                 alt="Valk"          loading="lazy">
-        
-      </div>
-    </div>
-  </section>
 
   <!-- CODE -->
   <section id="code">
@@ -913,7 +1201,7 @@
         <img src="./images/parvis.png"      alt="Parvis"       loading="lazy">
       </div>
       <a href="https://lesupport.me/" class="btn">Visiter le site</a>
-      <a href="/images/livret le support  (2) (1) (1).pdf" download class="btn">Télécharger le catalogue</a>
+      <a href="./catalogue_Support.pdf" download class="btn">Télécharger le catalogue</a>
 
       <h3>Le Support – Logiciel Local</h3>
       <img class="full" src="./images/SUPPORT/accueil.png" alt="Support logiciel" loading="lazy">
@@ -1008,10 +1296,43 @@
     </div>
   </section>
 
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <span class="section-tag">Projet 05</span>
+      <h2>Projets Suivis</h2>
+      <div class="divider"></div>
+      <p class="section-intro">
+        Projets sur lesquels j'ai travaillé l'identité visuelle et la communication. Des logos, animations et guides de style pour diverses marques et projets.
+      </p>
+      <div style="text-align: center; margin: 2rem 0;">
+        <p style="color: var(--muted); margin-bottom: 1rem;">Consultez le projet</p>
+        <a href="https://xp48.github.io/dactyl/" target="_blank" class="btn primary">dactyl.com</a>
+      </div>
+      <div class="portfolio-gif-container">
+        <img src="./images/dactyl/2023-04-19_20-57-34.gif" alt="Animation Dactyl" loading="lazy">
+      </div>
+      <div class="gallery" id="gallery-portfolio">
+        <div class="card">
+          <div class="card-img-wrapper img-done">
+            <img src="./images/dactyl/2023-04-16_14-18-44.png" alt="Identité Dactyl 1" loading="lazy" class="loaded">
+          </div>
+          <div class="caption">Identité Visuelle</div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper img-done">
+            <img src="./images/dactyl/2023-04-16_14-13-11.png" alt="Identité Dactyl 2" loading="lazy" class="loaded">
+          </div>
+          <div class="caption">Identité Visuelle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 3D -->
   <section id="3d">
     <div class="container">
-      <span class="section-tag">Projet 05</span>
+      <span class="section-tag">Projet 06</span>
       <h2>Modèles 3D</h2>
       <div class="divider"></div>
 
