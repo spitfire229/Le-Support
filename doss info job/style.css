@@ -34,13 +34,13 @@
       align-items: center;
       min-height: 100vh;
     }
-    p
-    {
-      font-size: 2em;
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
-        li
-    {
-      font-size: 2em;
+    li {
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     header {
@@ -53,13 +53,13 @@
     }
 
     header h1 {
-      font-size: 5em;
+      font-size: 2.8em;
       margin-bottom: 10px;
     }
 
     header p {
       color: #bbb;
-      font-size: 2.1em;
+      font-size: 1.15em;
     }
 
     /* ---------- SECTIONS ---------- */
@@ -70,7 +70,7 @@
     }
 
     section h2 {
-      font-size: 3.8em;
+      font-size: 1.6em;
       margin-bottom: 25px;
       border-left: 5px solid #f2f2f2;
       padding-left: 15px;
@@ -80,7 +80,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 25px;
     }
 
@@ -98,9 +98,8 @@
       transform: translateY(-5px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
     }
-    h3
-    {
-        font-size: 3em;
+    h3 {
+      font-size: 1.6em;
     }
 
     .card img {
@@ -393,13 +392,13 @@
     padding: 10px;
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 700px; /* limite la taille des images */
-    height: auto; /* garde les proportions */
-    border-radius: 8px; /* coins arrondis pour un look plus harmonieux */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* léger ombrage */
-    transition: transform 0.3s;
+  .image-container img {
+  width: 100%;
+  max-width: 480px; /* limite la taille des images sur bureau */
+  height: auto; /* garde les proportions */
+  border-radius: 8px; /* coins arrondis pour un look plus harmonieux */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* léger ombrage */
+  transition: transform 0.3s;
 }
 
 .image-container img:hover {
@@ -428,7 +427,7 @@
 .image-grid {
   display: grid;
   gap: 10px; /* espace entre les images */
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   padding: 10px;
 }
 
@@ -450,3 +449,35 @@
     gap: 6px;
   }
 }
+
+/* ----- TOP NAV (volets) ----- */
+.top-nav {
+  width: 100%;
+  background: linear-gradient(90deg,#1f1f1f,#151515);
+  border-bottom: 1px solid #2a2a2a;
+}
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  align-items: center;
+}
+.top-nav a.nav-link {
+  color: #dcdcdc;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.top-nav a.nav-link:hover { background: rgba(255,255,255,0.03); }
+.top-nav a.nav-link.active { background: #ff7b00; color: #fff; }
+
+/* Tab panes */
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* Slight spacing under nav */
+section { margin-top: 8px; }
