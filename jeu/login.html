@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Cartes</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        :root {
+            --bg: #0d0d0d;
+            --surface: #1a1a1a;
+            --border: rgba(255,255,255,0.06);
+            --text-primary: #e8e8e8;
+            --text-secondary: #999999;
+            --radius: 8px;
+            --error: #ff5252;
+            --success: #4caf50;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--bg);
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .login-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .login-header h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 0em;
+        }
+
+        .login-header p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--text-primary);
+            box-shadow: 0 0 0 3px rgba(232, 232, 232, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .login-button {
+            padding: 0.85rem 1.5rem;
+            background: linear-gradient(135deg, #7b68ee 0%, #5a4a9f 100%);
+            border: none;
+            border-radius: var(--radius);
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(123, 104, 238, 0.3);
+        }
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+        .login-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-message {
+            padding: 0.75rem 1rem;
+            background: rgba(255, 82, 82, 0.1);
+            border: 1px solid rgba(255, 82, 82, 0.3);
+            border-radius: var(--radius);
+            color: #ff8a80;
+            font-size: 0.85rem;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-info {
+            background: rgba(232, 232, 232, 0.05);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .login-info strong {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-header">
+        <h1>Cartes</h1>
+        <p>Veuillez vous connecter</p>
+    </div>
+
+    <form class="login-form" id="loginForm">
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="form-group">
+            <label for="username">Identifiant</label>
+            <input 
+                type="text" 
+                id="username" 
+                name="username" 
+                placeholder="Entrez votre identifiant"
+                autocomplete="username"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                placeholder="Entrez votre mot de passe"
+                autocomplete="current-password"
+                required
+            >
+        </div>
+
+        <button type="submit" class="login-button" id="submitBtn">Se connecter</button>
+    </form>
+
+
+</div>
+
+<script>
+    // Vérifier si l'utilisateur est déjà connecté
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        window.location.href = 'index.html';
+    }
+
+    // Données des utilisateurs
+    const users = {
+        'zouz': '123',
+        'cha': '123'
+    };
+
+    const loginForm = document.getElementById('loginForm');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('errorMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        errorMessage.classList.remove('show');
+
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value;
+
+        // Validation
+        if (!username || !password) {
+            showError('Veuillez remplir tous les champs');
+            return;
+        }
+
+        // Vérifier les identifiants
+        if (users[username] && users[username] === password) {
+            // Connexion réussie
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('currentUser', username);
+            
+            // Rediriger vers la page principale
+            window.location.href = 'index.html';
+        } else {
+            // Connexion échouée
+            showError('Identifiant ou mot de passe incorrect');
+            passwordInput.value = '';
+            usernameInput.focus();
+        }
+    });
+
+    function showError(message) {
+        errorMessage.textContent = message;
+        errorMessage.classList.add('show');
+    }
+
+    // Focus sur le premier champ
+    usernameInput.focus();
+</script>
+
+</body>
+</html>

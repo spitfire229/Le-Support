@@ -1,0 +1,113 @@
+{
+  "gages": {
+    "cocooning": [
+      { "gage": "Fais un câlin enveloppant à ton partenaire pendant 3 minutes sans un mot, en le/la berçant doucement.", "tag": "Tendresse" },
+      { "gage": "Et un MASSAGE !!! UN!", "tag": "Douceur" },
+      { "gage": "Allonge-toi contre ton partenaire sous la couette et restez blottis en silence pendant 4 minutes.", "tag": "Cocon" },
+      { "gage": "Caresse doucement les cheveux de ton partenaire pendant 5 minutes.", "tag": "Apaisement" },
+      { "gage": "Prépare une playlist douce et dansez lentement collés l’un à l’autre.", "tag": "Intimité" },
+      { "gage": "Fais un massage des mains ou des pieds à ton partenaire.", "tag": "Confort" },
+      { "gage": "Enveloppe ton partenaire dans une couverture et serrez-le/la fort contre toi.", "tag": "Sécurité" },
+      { "gage": "Chuchote 3 compliments sincères à l’oreille de ton partenaire en le/la tenant dans tes bras.", "tag": "Douceur" },
+      { "gage": "Faites un câlin face à face en vous regardant dans les yeux sans parler pendant 2 minutes.", "tag": "Connexion" },
+      { "gage": "Brosse ou coiffe doucement les cheveux de ton partenaire.", "tag": "Soins" },
+      { "gage": "Préparer une boisson chaude à l'autre.", "tag": "Soins" },
+      { "gage": "Installer un plaid et préparer un coin cosy pour regarder un film. ", "tag": "Soins" },
+      { "gage": "Répondre à 3 questions profondes choisies par l'autre.", "tag": "Soins" },
+      { "gage": "Planifier ensemble une sortie future.", "tag": "Soins" },
+      { "gage": "Créer une playlist de 10 chansons pour votre couple.", "tag": "Soins" },
+      { "gage": "Choisir une photo souvenir et raconter ce que vous ressentiez ce jour-là.", "tag": "Soins" },
+      { "gage": "Faire une liste de 10 choses à faire ensemble cette année.", "tag": "Soins" },
+      { "gage": "Choisir le film de la soirée.", "tag": "Soins" },
+      { "gage": "Lire un chapitre d'un livre à voix haute.", "tag": "Soins" },
+      { "gage": "Regarder les étoiles (ou par la fenêtre)", "tag": "Soins" },
+      { "gage": "Dessiner le portrait de l'autre en moins de 2 minutes.", "tag": "Soins" },
+      { "gage": "Écrire un poème de 4 vers.", "tag": "Soins" },
+      { "gage": "Reconstituer un souvenir commun avec des objets de la maison.", "tag": "Soins" },
+      { "gage": "Danser un slow sur la première chanson qui passe.", "tag": "Soins" },
+      { "gage": "Faire rire l'autre en moins d'une minute.", "tag": "Soins" },
+      
+      { "gage": "Hop hop hop, cocooning c'est un niveau de zouave. Tu tires 2 gages sympas ;). Quel veinard/e. ", "tag": "Soins" },
+      { "gage": "Hop hop hop, cocooning c'est un niveau de zouave. Tu tires 2 gages sympas ;). Quel veinard/e. ", "tag": "Soins" },
+      { "gage": "Hop hop hop, cocooning c'est un niveau de zouave. Tu tires 2 gages sympas ;). Quel veinard/e. ", "tag": "Soins" },
+      { "gage": "Hop hop hop, cocooning c'est un niveau de zouave. Tu tires 2 gages sympas ;). Quel veinard/e. ", "tag": "Soins" }  
+    ],
+    "sympas": [
+      { "gage": "Imite ton animal préféré pendant 30 secondes.", "tag": "Fun" },
+      { "gage": "Imite imite une pause du kamasoutra tout seul/e pendant 3 min.", "tag": "Fun" },
+      { "gage": "Fais une danse ridicule pendant 40 secondes sans musique.", "tag": "Humour" },
+      { "gage": "Raconte une blague nulle en faisant des mimiques exagérées.", "tag": "Humour" },
+      { "gage": "Fais 10 pompes (ou squats) en chantant une chanson enfantine.", "tag": "Défi" },
+      { "gage": "Imite la voix de ton partenaire pendant 1 minute.", "tag": "Jeu" },
+      { "gage": "Fais un compliment exagéré et théâtral à ton partenaire.", "tag": "Fun" },
+      { "gage": "Marche comme un mannequin pendant 30 secondes.", "tag": "Humour" },
+      { "gage": "Fais un bisou bruyant sur le front de ton partenaire.", "tag": "Câlin" },
+      { "gage": "Raconte une anecdote embarrassante avec des gestes.", "tag": "Aveu fun" },
+      { "gage": "Chante une chanson d’amour de façon très dramatique.", "tag": "Spectacle" },
+      { "gage": "Fais une publicité de 60 secondes pour une chaussette.", "tag": "Humour" },
+      { "gage": "Parle comme un pirate pendant 2 minutes. ", "tag": "Jeu" },
+      { "gage": "Mime un métier et laisse ton partenaire deviner. s'il ne trouve pas tu continues.", "tag": "Mime" },
+      { "gage": "Invente un slogan pour votre couple. Il sera adopté !!!", "tag": "Fun" },
+      { "gage": "Fais semblant d'être une star interviewée sur un tapis rouge.", "tag": "Spectacle" },
+      { "gage": "Décris ton partenaire comme si c'était un personnage de jeu vidéo.", "tag": "Jeu" },
+      { "gage": "Réalise un défilé de mode avec un objet trouvé dans la pièce.", "tag": "Humour" },
+      { "gage": "Fais deviner un film uniquement avec des bruitages.", "tag": "Jeu" },
+      { "gage": "Récite l'alphabet à l'envers le plus loin possible.", "tag": "Défi" },
+      { "gage": "Transforme une phrase banale en discours épique.", "tag": "Spectacle" },
+      { "gage": "Trouve trois surnoms absurdes pour ton partenaire.", "tag": "Fun" },
+      { "gage": "Fais une déclaration d'amour à un objet de la pièce.", "tag": "Humour" },
+      { "gage": "Joue la météo du lendemain avec des gestes exagérés.", "tag": "Jeu" },
+      { "gage": "Parle sans utiliser la lettre 'e' pendant 1 minute. un gage additionnel par 'e' prononcé.", "tag": "Défi" },
+      { "gage": "Imite un personnage célèbre que ton partenaire doit deviner.", "tag": "Mime" },
+      { "gage": "Danse au ralenti comme dans un film d'action.", "tag": "Humour" },
+      { "gage": "Fais un discours de victoire pour un concours imaginaire. Ton partenaire choisis le concours en question.", "tag": "Spectacle" },
+      { "gage": "Crée une poignée de main spéciale pour votre couple.", "tag": "Complicité" },
+      { "gage": "Fais rire ton partenaire en moins de 60 secondes.", "tag": "Défi" },
+      { "gage": "Raconte l'histoire de votre rencontre comme un commentateur sportif.", "tag": "Fun" },
+      { "gage": "Imite un animal choisi par ton partenaire jusqu'à ce qu'il le devine.", "tag": "Jeu" },
+      { "gage": "Fais un tutoriel absurde sur comment boire un verre d'eau.", "tag": "Humour" },
+      { "gage": "Parle comme un roi ou une reine pendant 2 minutes.", "tag": "Jeu" },
+      { "gage": "Invente une chanson de 20 secondes sur votre soirée.", "tag": "Spectacle" },
+      { "gage": "Fais une pose de super-héros pendant 1 minute.", "tag": "Fun" },
+      { "gage": "Décris ton partenaire avec uniquement des titres de films.", "tag": "Jeu" },
+      { "gage": "Fais semblant de vendre ton partenaire aux enchères avec humour.", "tag": "Humour" },
+      { "gage": "Mime une scène romantique de film sans parler.", "tag": "Mime" },
+      { "gage": "Réalise une chorégraphie de 15 secondes sur place.", "tag": "Défi" },
+
+      { "gage": "Hop hop hop, sympas c'est un niveau de zouave. Tu tires 2 gages cozy ;). Quel veinard/e. ", "tag": "Soins" },
+      { "gage": "Hop hop hop, sympas c'est un niveau de zouave. Tu tires 2 gages cozy ;). Quel veinard/e. ", "tag": "Soins" },
+      { "gage": "Hop hop hop, sympas c'est un niveau de zouave. Tu tires 2 gages cozy ;). Quel veinard/e. ", "tag": "Soins" },
+      { "gage": "Hop hop hop, sympas c'est un niveau de zouave. Tu tires 2 gages cozy ;). Quel veinard/e. ", "tag": "Soins" }  
+    ],
+    "cozy": [
+      { "gage": "Déshabille lentement ton partenaire en embrassant chaque partie de peau qui apparaît.", "tag": "Sensuel" }
+
+    ],
+    "hot": [
+      { "gage": "Embrasse et pince doucement les cuisses de ton partenaire sans toucher les parties intimes.", "tag": "Teasing" }
+
+    ],
+    "veryhot": [
+    { "gage": "Menotte les poignets de ton partenaire à la tête de lit et fais-lui tout ce que tu veux pendant 6 minutes.", "tag": "Contrôle total" }
+
+  ]
+  },
+  "bons": [
+
+    { "text": "Bon pour une boisson chaude servie au lit par ton partenaire. (et j'ai dit juste boisson chaude non mais)", "tag": "Bon surprise" }
+  ],
+  "levelMeta": {
+    "cocooning": { "label": "Cocooning", "pips": 1 },
+    "sympas": { "label": "Sympas", "pips": 2 },
+    "cozy": { "label": "Cozy", "pips": 3 },
+    "hot": { "label": "Hot", "pips": 4 },
+    "veryhot": { "label": "Very Hot", "pips": 5 }
+  },
+  "endMsgs": {
+    "cocooning": "Vous avez partagé de beaux moments de douceur.",
+    "sympas": "Vous avez ri et échangé — la légèreté est une forme de sagesse.",
+    "cozy": "Vous avez osé les vrais gages. Ces moments-là restent.",
+    "hot": "La chaleur était au rendez-vous. Certaines réponses resteront en mémoire.",
+    "veryhot": "Vous avez tout donné. Bravo pour l'audace et l'honnêteté."
+  }
+}
