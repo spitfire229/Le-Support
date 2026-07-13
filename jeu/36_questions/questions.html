@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>36 Questions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0d;
+    --surface: #1a1a1a;
+    --border: rgba(255,255,255,0.06);
+    --border-strong: rgba(255,255,255,0.1);
+    --text-primary: #e8e8e8;
+    --text-secondary: #999999;
+    --radius: 8px;
+    --accent: #7b68ee;
+    --accent2: #ff6b9d;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top, rgba(123,104,238,0.2), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(255,111,157,0.14), transparent 22%),
+      linear-gradient(180deg, #0d0d0d 0%, #111111 100%);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── HEADER ── */
+  header {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-content {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  header h1 {
+    font-size: clamp(1.1rem, 4vw, 1.35rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  header p {
+    margin-top: 0.2rem;
+    font-size: clamp(0.75rem, 3vw, 0.85rem);
+    color: var(--text-secondary);
+  }
+
+  /* ── LAYOUT ── */
+  main {
+    width: 100%;
+    max-width: 520px;
+    padding: 1.75rem 1.5rem 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* ── PICKER ── */
+  .picker-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 500;
+  }
+
+  .picker-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .num-select {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    padding-right: 2.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .num-select:focus {
+    outline: none;
+    border-color: rgba(123,104,238,0.5);
+  }
+
+  .num-select option {
+    background: #1a1a1a;
+    color: #e8e8e8;
+  }
+
+  .btn-go {
+    padding: 0.7rem 1.25rem;
+    background: linear-gradient(135deg, var(--accent), #5a4a9f);
+    border: none;
+    border-radius: var(--radius);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    white-space: nowrap;
+    min-height: 42px;
+  }
+
+  .btn-go:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(123,104,238,0.35);
+  }
+
+  /* ── PROGRESS ── */
+  .progress-bar-wrap {
+    height: 3px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 99px;
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .progress-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 0.4rem;
+  }
+
+  /* ── CARD ── */
+  .card-wrap {
+    perspective: 1000px;
+    min-height: clamp(220px, 50vw, 300px);
+  }
+
+  #card {
+    width: 100%;
+    min-height: clamp(220px, 50vw, 300px);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  #card.flipped { transform: rotateY(180deg); }
+
+  #card.dealing {
+    animation: dealIn 0.35s cubic-bezier(0.4,0,0.2,1) forwards;
+  }
+
+  @keyframes dealIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #card.leave {
+    animation: flyOut 0.3s cubic-bezier(0.4,0,1,1) forwards;
+  }
+
+  @keyframes flyOut {
+    to { opacity: 0; transform: translateY(-14px); }
+  }
+
+  .card-face {
+    position: absolute;
+    inset: 0;
+    min-height: clamp(220px, 50vw, 300px);
+    border-radius: calc(var(--radius) * 1.5);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 1px solid var(--border-strong);
+    overflow: hidden;
+  }
+
+  /* Back face */
+  .card-back {
+    background: linear-gradient(145deg, rgba(123,104,238,0.08), rgba(255,111,157,0.05));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    cursor: pointer;
+  }
+
+  .card-back-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+  }
+
+  .card-back-label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.06em;
+  }
+
+  /* Front face */
+  .card-front {
+    transform: rotateY(180deg);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.25rem, 5vw, 1.75rem);
+    cursor: pointer;
+  }
+
+  .card-front-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .card-tag {
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(123,104,238,0.15);
+    border: 1px solid rgba(123,104,238,0.25);
+    color: #b0a4f8;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .card-num {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .card-question {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 3.8vw, 1.4rem);
+    line-height: 1.6;
+    color: var(--text-primary);
+    text-align: center;
+    font-weight: 400;
+    padding: 0.5rem 0;
+  }
+
+  .card-flip-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    margin-top: 1rem;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── ACTIONS ── */
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    border: none;
+    border-radius: var(--radius);
+    color: var(--bg);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    min-height: 44px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+    opacity: 0.9;
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .btn-ghost {
+    padding: 0.6rem 1.1rem;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 44px;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255,255,255,0.25);
+    color: var(--text-primary);
+  }
+
+  .btn-ghost:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  /* ── END SCREEN ── */
+  #end-screen {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #end-screen.visible { display: flex; }
+
+  .end-card {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: calc(var(--radius) * 1.5);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .end-emoji {
+    font-size: 2rem;
+  }
+
+  .end-card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .end-card p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .end-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  /* ── HIDDEN UTILITY ── */
+  .hidden { display: none !important; }
+
+  @media (hover: none) {
+    .btn-go:hover, .btn-primary:hover, .btn-ghost:hover { transform: none; box-shadow: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <h1>36 Questions</h1>
+    <p>Pour se connaître vraiment.</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- Picker -->
+  <div class="picker-section">
+    <span class="section-label">Commencer à la question</span>
+    <div class="picker-row">
+      <select class="num-select" id="startSelect" aria-label="Numéro de question">
+        <!-- filled by JS -->
+      </select>
+      <button class="btn-go" id="btnGo">Commencer</button>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div id="progressSection" class="hidden">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
+    </div>
+    <div class="progress-text">
+      <span id="progressLabel">Question 1 sur 36</span>
+      <span id="progressPct">0 %</span>
+    </div>
+  </div>
+
+  <!-- Card -->
+  <div class="card-wrap hidden" id="cardWrap">
+    <div id="card">
+      <!-- Back -->
+      <div class="card-face card-back" id="cardBack">
+        <div class="card-back-icon">✦</div>
+        <span class="card-back-label">Appuyer pour révéler</span>
+      </div>
+      <!-- Front -->
+      <div class="card-face card-front" id="cardFront">
+        <div class="card-front-header">
+          <span class="card-tag" id="cardTag">Question</span>
+          <span class="card-num" id="cardNum">1 / 36</span>
+        </div>
+        <div class="card-question" id="cardQuestion"></div>
+        <div class="card-flip-hint">↺ Appuyer pour retourner</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="actions hidden" id="actionsRow">
+    <button class="btn-ghost" id="btnPrev">← Précédente</button>
+    <button class="btn-primary" id="btnNext">Suivante →</button>
+  </div>
+
+  <!-- End Screen -->
+  <div id="end-screen">
+    <div class="end-card">
+      <div class="end-emoji">✨</div>
+      <h2>Vous avez tout exploré.</h2>
+      <p>36 questions, 36 ouvertures. Ces échanges ont peut-être révélé des choses que vous n'auriez jamais dites autrement.</p>
+      <div class="end-actions">
+        <button class="btn-primary" id="btnRestart" style="background: linear-gradient(135deg, var(--accent), #5a4a9f); color: white;">
+          Recommencer
+        </button>
+        <button class="btn-ghost" id="btnFrom1">Depuis la n°1</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  const questions = [
+    { id:1, text:"Si vous aviez le choix de n'importe qui dans le monde, qui aimeriez-vous comme invité à dîner ?" },
+    { id:2, text:"Aimeriez-vous être célèbre ? De quelle manière ?" },
+    { id:3, text:"Avant de passer un coup de téléphone, est-ce que vous répétez ce que vous allez dire ? Pourquoi ?" },
+    { id:4, text:"Qu'est-ce qui constituerait une journée parfaite pour vous ?" },
+    { id:5, text:"Quand avez-vous chanté pour vous-même pour la dernière fois ? À quelqu'un d'autre ?" },
+    { id:6, text:"Si vous pouviez vivre jusqu'à 90 ans en gardant soit l'esprit soit le corps d'un trentenaire pendant les 60 dernières années de votre vie, lequel choisiriez-vous ?" },
+    { id:7, text:"Avez-vous une intuition secrète sur la façon dont vous allez mourir ?" },
+    { id:8, text:"Nommez trois choses que vous et votre partenaire semblez avoir en commun." },
+    { id:9, text:"Pour quoi dans votre vie êtes-vous le plus reconnaissant ?" },
+    { id:10, text:"Si vous pouviez changer quelque chose sur la façon dont vous avez été élevé, qu'est-ce que ce serait ?" },
+    { id:11, text:"Prenez quatre minutes et racontez à votre partenaire l'histoire de votre vie en détail autant que possible." },
+    { id:12, text:"Si vous pouviez vous réveiller demain en ayant acquis une qualité ou une capacité, quelle serait-elle ?" },
+    { id:13, text:"Si une boule de cristal pouvait vous dire la vérité sur vous-même, votre vie, l'avenir ou autre chose, que voudriez-vous savoir ?" },
+    { id:14, text:"Y a-t-il quelque chose que vous avez rêvé de faire depuis longtemps ? Pourquoi ne l'avez-vous pas fait ?" },
+    { id:15, text:"Quelle est la plus grande réalisation de votre vie ?" },
+    { id:16, text:"Qu'est-ce que vous valorisez le plus dans une amitié ?" },
+    { id:17, text:"Quel est votre souvenir le plus précieux ?" },
+    { id:18, text:"Quel est votre souvenir le plus terrible ?" },
+    { id:19, text:"Si vous saviez qu'en un an vous mourriez subitement, changeriez-vous quelque chose sur votre façon de vivre actuellement ? Pourquoi ?" },
+    { id:20, text:"Que signifie l'amitié pour vous ?" },
+    { id:21, text:"Quel rôle jouent l'amour et l'affection dans votre vie ?" },
+    { id:22, text:"Alternez pour partager quelque chose que vous considérez comme une caractéristique positive de votre partenaire. Partagez un total de cinq éléments." },
+    { id:23, text:"Quelle est la proximité et la chaleur de votre famille ? Pensez-vous que votre enfance était plus heureuse que celle de la plupart des autres personnes ?" },
+    { id:24, text:"Que pensez-vous de votre relation avec votre mère ?" },
+    { id:25, text:"Faites trois déclarations « nous » vraies. Par exemple : Nous sommes tous les deux dans cette pièce à ressentir…" },
+    { id:26, text:"Complétez cette phrase : Je souhaite avoir quelqu'un avec qui je pourrais partager…" },
+    { id:27, text:"Si vous deviez devenir un ami proche de votre partenaire, veuillez partager ce qui serait important qu'il ou elle sache." },
+    { id:28, text:"Dites à votre partenaire ce que vous aimez chez lui ou elle ; soyez très honnête, en disant des choses que vous pourriez ne pas dire à quelqu'un que vous venez de rencontrer." },
+    { id:29, text:"Partagez avec votre partenaire un moment embarrassant de votre vie." },
+    { id:30, text:"Quand avez-vous pleuré pour la dernière fois devant une autre personne ? Tout seul ?" },
+    { id:31, text:"Dites à votre partenaire quelque chose que vous aimez déjà chez lui ou elle." },
+    { id:32, text:"Qu'est-ce qui, s'il y a lieu, est trop sérieux pour en plaisanter ?" },
+    { id:33, text:"Si vous deviez mourir ce soir sans possibilité de communiquer avec qui que ce soit, quel serait votre plus grand regret de ne pas avoir dit à quelqu'un ? Pourquoi ne leur avez-vous pas encore dit ?" },
+    { id:34, text:"Votre maison, contenant tout ce que vous possédez, prend feu. Après avoir sauvé vos proches et vos animaux de compagnie, vous avez le temps de faire un dernier sprint pour sauver un objet. Quel serait-il ? Pourquoi ?" },
+    { id:35, text:"Parmi tous les membres de votre famille, la mort de qui vous perturberait le plus ? Pourquoi ?" },
+    { id:36, text:"Partagez un problème personnel et demandez à votre partenaire son avis sur la façon dont il ou elle pourrait le gérer. Demandez aussi comment votre partenaire perçoit ce que vous ressentez par rapport à ce problème." },
+  ];
+
+  // DOM refs
+  const startSelect   = document.getElementById('startSelect');
+  const btnGo         = document.getElementById('btnGo');
+  const progressSection = document.getElementById('progressSection');
+  const progressFill  = document.getElementById('progressFill');
+  const progressLabel = document.getElementById('progressLabel');
+  const progressPct   = document.getElementById('progressPct');
+  const cardWrap      = document.getElementById('cardWrap');
+  const card          = document.getElementById('card');
+  const cardTag       = document.getElementById('cardTag');
+  const cardNum       = document.getElementById('cardNum');
+  const cardQuestion  = document.getElementById('cardQuestion');
+  const actionsRow    = document.getElementById('actionsRow');
+  const btnPrev       = document.getElementById('btnPrev');
+  const btnNext       = document.getElementById('btnNext');
+  const endScreen     = document.getElementById('end-screen');
+  const btnRestart    = document.getElementById('btnRestart');
+  const btnFrom1      = document.getElementById('btnFrom1');
+  const pickerSection = document.querySelector('.picker-section');
+
+  let currentIndex = 0; // index in questions array (0-based)
+  let isFlipped = false;
+  let animating = false;
+
+  // Populate select
+  questions.forEach((q, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = `Question ${q.id}`;
+    startSelect.appendChild(opt);
+  });
+
+  function showCard(index, direction = 'in') {
+    if (animating) return;
+    animating = true;
+
+    // Reset flip
+    isFlipped = false;
+    card.classList.remove('flipped');
+
+    const run = () => {
+      currentIndex = index;
+      const q = questions[index];
+      cardTag.textContent = `Question ${q.id}`;
+      cardNum.textContent = `${q.id} / 36`;
+      cardQuestion.textContent = q.text;
+
+      // Progress
+      const pct = Math.round(((index + 1) / questions.length) * 100);
+      progressFill.style.width = pct + '%';
+      progressLabel.textContent = `Question ${q.id} sur 36`;
+      progressPct.textContent = pct + ' %';
+
+      // Nav state
+      btnPrev.disabled = index === 0;
+      btnNext.textContent = index === questions.length - 1 ? 'Terminer ✓' : 'Suivante →';
+
+      // Animate in
+      card.classList.remove('leave');
+      card.classList.add('dealing');
+      card.addEventListener('animationend', () => {
+        card.classList.remove('dealing');
+        animating = false;
+      }, { once: true });
+    };
+
+    if (direction === 'out') {
+      card.classList.add('leave');
+      card.addEventListener('animationend', run, { once: true });
+    } else {
+      run();
+    }
+  }
+
+  function startFrom(index) {
+    // Hide picker, show game
+    pickerSection.classList.add('hidden');
+    progressSection.classList.remove('hidden');
+    cardWrap.classList.remove('hidden');
+    actionsRow.classList.remove('hidden');
+    endScreen.classList.remove('visible');
+
+    showCard(index);
+  }
+
+  // Go button
+  btnGo.addEventListener('click', () => {
+    const idx = parseInt(startSelect.value, 10);
+    startFrom(idx);
+  });
+
+  // Card flip
+  [card].forEach(el => {
+    el.addEventListener('click', () => {
+      if (animating) return;
+      isFlipped = !isFlipped;
+      card.classList.toggle('flipped', isFlipped);
+    });
+  });
+
+  // Next
+  btnNext.addEventListener('click', () => {
+    if (animating) return;
+    if (currentIndex >= questions.length - 1) {
+      // End
+      cardWrap.classList.add('hidden');
+      actionsRow.classList.add('hidden');
+      progressSection.classList.add('hidden');
+      endScreen.classList.add('visible');
+      return;
+    }
+    showCard(currentIndex + 1, 'out');
+  });
+
+  // Prev
+  btnPrev.addEventListener('click', () => {
+    if (animating || currentIndex === 0) return;
+    showCard(currentIndex - 1, 'out');
+  });
+
+  // Restart
+  btnRestart.addEventListener('click', () => {
+    endScreen.classList.remove('visible');
+    startFrom(currentIndex); // restart from where left off (optional: change to 0)
+    startFrom(0);
+  });
+
+  btnFrom1.addEventListener('click', () => {
+    endScreen.classList.remove('visible');
+    startFrom(0);
+  });
+
+  // Keyboard nav
+  document.addEventListener('keydown', (e) => {
+    if (cardWrap.classList.contains('hidden')) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') btnNext.click();
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') btnPrev.click();
+    if (e.key === ' ') { e.preventDefault(); card.click(); }
+  });
+</script>
+</body>
+</html>

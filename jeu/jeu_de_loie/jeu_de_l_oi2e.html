@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeu de l'Oie</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-primary: #ffffff; --bg-secondary: #f5f5f0; --bg-tertiary: #ededea;
+    --text-primary: #1a1a19; --text-secondary: #6b6b67; --text-tertiary: #9e9e9a;
+    --border: rgba(0,0,0,0.12); --border-md: rgba(0,0,0,0.22);
+    --radius: 8px; --radius-lg: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #1e1e1c; --bg-secondary: #2a2a28; --bg-tertiary: #333330;
+      --text-primary: #f0f0ec; --text-secondary: #a8a8a4; --text-tertiary: #6e6e6b;
+      --border: rgba(255,255,255,0.12); --border-md: rgba(255,255,255,0.22);
+    }
+  }
+  body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-tertiary); color: var(--text-primary); min-height: 100vh; padding: 1rem; }
+  #game { max-width: 720px; margin: 0 auto; background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 1.25rem; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+  h1 { font-size: 24px; font-weight: 600; text-align: center; margin-bottom: 4px; }
+  .subtitle { text-align: center; font-size: 13px; color: var(--text-secondary); margin-bottom: 1.25rem; }
+
+  #board { display: grid; grid-template-columns: repeat(9, 1fr); gap: 3px; margin-bottom: 1rem; }
+  .cell {
+    aspect-ratio: 1; border-radius: 6px; border: 0.5px solid var(--border);
+    background: var(--bg-primary); display: flex; flex-direction: column;
+    align-items: center; justify-content: center; font-size: 9px;
+    font-weight: 500; color: var(--text-secondary); position: relative;
+    overflow: hidden; transition: transform 0.15s;
+  }
+  .cell .num { font-size: 8px; color: var(--text-tertiary); line-height: 1; }
+  .cell .ico { font-size: 14px; line-height: 1; }
+  .cell.goose  { background: #EAF3DE; border-color: #C0DD97; }
+  .cell.bridge { background: #E6F1FB; border-color: #B5D4F4; }
+  .cell.inn    { background: #EEEDFE; border-color: #CECBF6; }
+  .cell.well   { background: #FAEEDA; border-color: #FAC775; }
+  .cell.maze   { background: #FBEAF0; border-color: #F4C0D1; }
+  .cell.trap   { background: #FAECE7; border-color: #F5C4B3; }
+  .cell.death  { background: #FCEBEB; border-color: #F7C1C1; }
+  .cell.end    { background: #EAF3DE; border-color: #639922; }
+  .cell.highlight { transform: scale(1.08); z-index: 2; box-shadow: 0 0 0 2px var(--text-primary); }
+  .pawns { position: absolute; bottom: 2px; left: 0; right: 0; display: flex; justify-content: center; gap: 2px; }
+  .pawn { width: 10px; height: 10px; border-radius: 50%; border: 1px solid white; }
+  .pawn.p1 { background: #E24B4A; }
+  .pawn.p2 { background: #185FA5; }
+
+  .legend-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem; }
+  .leg { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--text-secondary); }
+  .leg-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  #panels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1rem; }
+  .player-card { background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 12px; transition: border-color 0.2s; }
+  .player-card.active.p1 { border-color: #E24B4A; border-width: 2px; }
+  .player-card.active.p2 { border-color: #185FA5; border-width: 2px; }
+  .pname { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot.p1 { background: #E24B4A; }
+  .dot.p2 { background: #185FA5; }
+  .pos-info { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+  .gage-badge { margin-top: 6px; font-size: 11px; padding: 3px 8px; background: #FAEEDA; color: #BA7517; border-radius: var(--radius); display: none; }
+
+  #dice-area { text-align: center; margin-bottom: 1rem; }
+  #roll-label { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; font-weight: 500; }
+  #dice-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; }
+  .die { width: 56px; height: 56px; border-radius: 10px; background: var(--bg-primary); border: 1.5px solid var(--border-md); display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; padding: 7px; gap: 4px; }
+  .pip { width: 9px; height: 9px; border-radius: 50%; background: var(--text-primary); }
+  .pip.hidden { background: transparent; }
+  #roll-btn { padding: 10px 36px; font-size: 15px; font-weight: 600; border-radius: var(--radius-lg); background: var(--bg-primary); border: 1.5px solid var(--border-md); color: var(--text-primary); cursor: pointer; transition: background 0.15s, transform 0.1s; }
+  #roll-btn:hover { background: var(--bg-tertiary); }
+  #roll-btn:active { transform: scale(0.97); }
+  #roll-btn:disabled { opacity: 0.4; cursor: default; }
+
+  #log-box { background: var(--bg-primary); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 10px 14px; min-height: 52px; max-height: 90px; overflow-y: auto; font-size: 12px; color: var(--text-primary); line-height: 1.6; }
+  .log-entry { padding: 1px 0; border-bottom: 0.5px solid var(--border); }
+  .log-entry:last-child { border: none; }
+  .log-entry.ev { color: #A32D2D; font-weight: 500; }
+
+  #winner-banner { display: none; background: #EAF3DE; border: 1.5px solid #C0DD97; border-radius: var(--radius-lg); padding: 16px; text-align: center; margin-bottom: 1rem; }
+  #winner-banner.show { display: block; }
+  #winner-text { font-size: 20px; font-weight: 700; color: #3B6D11; }
+  #restart-btn { margin-top: 10px; padding: 8px 22px; border-radius: var(--radius); background: var(--bg-primary); border: 1.5px solid #C0DD97; color: #3B6D11; font-size: 13px; font-weight: 600; cursor: pointer; }
+  #restart-btn:hover { background: #EAF3DE; }
+
+  #wrapper { position: relative; }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 100; }
+  .modal-overlay.show { display: flex; }
+  .modal-box { background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 28px 32px; max-width: 340px; width: 90%; text-align: center; }
+  .modal-icon { font-size: 36px; margin-bottom: 10px; }
+  .modal-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .modal-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; white-space: pre-line; }
+  .modal-ok { padding: 9px 28px; font-size: 14px; font-weight: 600; border-radius: var(--radius); background: var(--bg-primary); border: 1.5px solid var(--border-md); color: var(--text-primary); cursor: pointer; }
+  .modal-ok:hover { background: var(--bg-secondary); }
+</style>
+</head>
+<body>
+<div id="game">
+  <h1>🪿 Jeu de l'Oie</h1>
+  <p class="subtitle">2 joueurs · 63 cases · Premier arrivé gagne !</p>
+
+  <div id="winner-banner">
+    <div id="winner-text"></div>
+    <button id="restart-btn" onclick="restartGame()">🔄 Rejouer</button>
+  </div>
+
+  <div id="wrapper">
+    <div id="board"></div>
+  </div>
+
+  <div class="legend-row">
+    <div class="leg"><div class="leg-dot" style="background:#639922;"></div>Oie (rejoue)</div>
+    <div class="leg"><div class="leg-dot" style="background:#378ADD;"></div>Pont</div>
+    <div class="leg"><div class="leg-dot" style="background:#7F77DD;"></div>Auberge</div>
+    <div class="leg"><div class="leg-dot" style="background:#D4537E;"></div>Labyrinthe</div>
+    <div class="leg"><div class="leg-dot" style="background:#D85A30;"></div>Piège</div>
+    <div class="leg"><div class="leg-dot" style="background:#BA7517;"></div>Puits</div>
+    <div class="leg"><div class="leg-dot" style="background:#888780;"></div>Mort</div>
+  </div>
+
+  <div id="panels">
+    <div class="player-card active p1" id="card1">
+      <div class="pname"><span class="dot p1"></span> Joueur 1</div>
+      <div class="pos-info" id="pos1">Case 0 (départ)</div>
+      <div class="gage-badge" id="gb1"></div>
+    </div>
+    <div class="player-card" id="card2">
+      <div class="pname"><span class="dot p2"></span> Joueur 2</div>
+      <div class="pos-info" id="pos2">Case 0 (départ)</div>
+      <div class="gage-badge" id="gb2"></div>
+    </div>
+  </div>
+
+  <div id="dice-area">
+    <div id="roll-label">Tour du Joueur 1</div>
+    <div id="dice-row">
+      <div class="die" id="die1"></div>
+      <div class="die" id="die2"></div>
+    </div>
+    <button id="roll-btn" onclick="rollDice()">🎲 Lancer les dés</button>
+  </div>
+
+  <div id="log-box">
+    <div class="log-entry">Bienvenue dans le Jeu de l'Oie ! Joueur 1 commence.</div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="gage-modal">
+  <div class="modal-box">
+    <div class="modal-icon" id="gage-icon"></div>
+    <div class="modal-title" id="gage-title"></div>
+    <div class="modal-desc" id="gage-desc"></div>
+    <button class="modal-ok" onclick="closeGage()">✅ OK, j'accepte !</button>
+  </div>
+</div>
+
+<script>
+const TOTAL = 63;
+const cells = [];
+let players = [{pos:0,skip:0,name:"Joueur 1"},{pos:0,skip:0,name:"Joueur 2"}];
+let current = 0;
+let gameOver = false;
+let pendingGage = null;
+
+const SPECIAL = {
+  6:  {type:"bridge", ico:"🌉",label:"Pont",       title:"Pont magique !",    desc:"Tu sautes jusqu'à la case 12 !",                                          action:(p)=>{p.pos=12;return true;}},
+  9:  {type:"goose",  ico:"🪿",label:"Oie",        title:"Case Oie !",        desc:"Tu rejoues immédiatement !",                                              action:(p)=>{return "reroll";}},
+  18: {type:"inn",    ico:"🏨",label:"Auberge",    title:"Auberge du repos",  desc:"Tu te reposes et passes 1 tour.",                                         action:(p)=>{p.skip=1;return true;}},
+  27: {type:"goose",  ico:"🪿",label:"Oie",        title:"Case Oie !",        desc:"Tu rejoues immédiatement !",                                              action:(p)=>{return "reroll";}},
+  31: {type:"well",   ico:"🪣",label:"Puits",      title:"Le Puits !",        desc:"Tu tombes dans le puits.\nTu passes 2 tours à attendre un sauveteur.",     action:(p)=>{p.skip=2;return true;}},
+  36: {type:"goose",  ico:"🪿",label:"Oie",        title:"Case Oie !",        desc:"Tu rejoues immédiatement !",                                              action:(p)=>{return "reroll";}},
+  42: {type:"maze",   ico:"🌀",label:"Labyrinthe", title:"Le Labyrinthe !",   desc:"Tu es perdu dans les méandres !\nTu recules à la case 39.",               action:(p)=>{p.pos=39;return true;}},
+  45: {type:"goose",  ico:"🪿",label:"Oie",        title:"Case Oie !",        desc:"Tu rejoues immédiatement !",                                              action:(p)=>{return "reroll";}},
+  52: {type:"trap",   ico:"⛓️", label:"Prison",     title:"La Prison !",       desc:"Tu es arrêté par la garde !\nTu passes 1 tour derrière les barreaux.",    action:(p)=>{p.skip=1;return true;}},
+  54: {type:"goose",  ico:"🪿",label:"Oie",        title:"Case Oie !",        desc:"Tu rejoues immédiatement !",                                              action:(p)=>{return "reroll";}},
+  58: {type:"death",  ico:"💀",label:"Mort",       title:"La Mort !",         desc:"Aïe ! Tu reviens à la case 1 !",                                          action:(p)=>{p.pos=1;return true;}},
+  63: {type:"end",    ico:"🏆",label:"Arrivée",    title:"",                  desc:"",                                                                        action:(p)=>{return "win";}},
+};
+
+const GAGES = {
+  bridge: ["Imite une grenouille pendant 5 secondes.", "Chante une note très grave.", "Fais 3 pompes !"],
+  inn:    ["Raconte une blague.", "Décris ton rêve le plus bizarre.", "Nomme 5 fruits en 5 secondes."],
+  well:   ["Avoue un talent caché.", "Imite quelqu'un dans la pièce.", "Chante le refrain d'une chanson."],
+  maze:   ["Marche à reculons jusqu'au mur.", "Fais semblant d'être un robot pendant 1 minute.", "Dis l'alphabet à l'envers jusqu'à P."],
+  trap:   ["Mange quelque chose que tu n'aimes pas.", "Porte un chapeau ridicule pendant 1 tour.", "Dis 'cochon' à chaque phrase pendant 2 minutes."],
+  death:  ["Fais un gage choisi par l'adversaire !", "Chante 'Joyeux anniversaire' à voix haute.", "Danse pendant 10 secondes."],
+};
+
+function pickGage(type) {
+  const arr = GAGES[type] || GAGES.trap;
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function buildBoard() {
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  const order = buildOrder();
+  for (let i = 0; i < order.length; i++) {
+    const n = order[i];
+    const div = document.createElement("div");
+    div.className = "cell";
+    div.id = "cell" + n;
+    const sp = SPECIAL[n];
+    if (n === 0) div.style.background = "var(--bg-secondary)";
+    else if (sp) div.classList.add(sp.type);
+    const ico = document.createElement("div");
+    ico.className = "ico";
+    ico.textContent = sp ? sp.ico : "";
+    const num = document.createElement("div");
+    num.className = "num";
+    num.textContent = n === 0 ? "⛳" : n;
+    const pawns = document.createElement("div");
+    pawns.className = "pawns";
+    div.appendChild(ico);
+    div.appendChild(num);
+    div.appendChild(pawns);
+    cells[n] = div;
+    board.appendChild(div);
+  }
+  renderPawns();
+}
+
+function buildOrder() {
+  const rows = 7, cols = 9;
+  const grid = new Array(rows * cols).fill(0);
+  let n = 1;
+  for (let row = rows - 1; row >= 0; row--) {
+    if ((rows - 1 - row) % 2 === 0) {
+      for (let col = 0; col < cols; col++) grid[row * cols + col] = n++;
+    } else {
+      for (let col = cols - 1; col >= 0; col--) grid[row * cols + col] = n++;
+    }
+  }
+  grid[0] = 0;
+  return grid;
+}
+
+function renderPawns() {
+  for (let i = 0; i <= TOTAL; i++) {
+    if (cells[i]) {
+      const pw = cells[i].querySelector(".pawns");
+      if (pw) pw.innerHTML = "";
+    }
+  }
+  players.forEach((p, idx) => {
+    const cell = cells[p.pos];
+    if (cell) {
+      const pw = cell.querySelector(".pawns");
+      if (pw) {
+        const d = document.createElement("div");
+        d.className = "pawn p" + (idx + 1);
+        pw.appendChild(d);
+      }
+    }
+  });
+}
+
+function highlightCell(n) {
+  document.querySelectorAll(".cell.highlight").forEach(c => c.classList.remove("highlight"));
+  if (cells[n]) cells[n].classList.add("highlight");
+}
+
+const PIP_PATTERNS = {
+  1: [[1,1]], 2: [[0,0],[2,2]], 3: [[0,0],[1,1],[2,2]],
+  4: [[0,0],[0,2],[2,0],[2,2]], 5: [[0,0],[0,2],[1,1],[2,0],[2,2]],
+  6: [[0,0],[0,2],[1,0],[1,2],[2,0],[2,2]],
+};
+
+function drawDie(id, val) {
+  const die = document.getElementById(id);
+  die.innerHTML = "";
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) {
+    const d = document.createElement("div");
+    const active = PIP_PATTERNS[val].some(([pr,pc]) => pr===r && pc===c);
+    d.className = "pip" + (active ? "" : " hidden");
+    die.appendChild(d);
+  }
+}
+
+function animateDice(finalD1, finalD2, cb) {
+  let t = 0;
+  const iv = setInterval(() => {
+    drawDie("die1", Math.ceil(Math.random()*6));
+    drawDie("die2", Math.ceil(Math.random()*6));
+    if (++t >= 8) { clearInterval(iv); drawDie("die1", finalD1); drawDie("die2", finalD2); cb(); }
+  }, 80);
+}
+
+function addLog(msg, ev) {
+  const box = document.getElementById("log-box");
+  const d = document.createElement("div");
+  d.className = "log-entry" + (ev ? " ev" : "");
+  d.textContent = msg;
+  box.insertBefore(d, box.firstChild);
+  while (box.children.length > 25) box.removeChild(box.lastChild);
+}
+
+function updateCards() {
+  players.forEach((p, i) => {
+    const card = document.getElementById("card"+(i+1));
+    card.className = "player-card" + (i===current && !gameOver ? " active p"+(i+1) : "");
+    const sp = SPECIAL[p.pos];
+    document.getElementById("pos"+(i+1)).textContent = "Case " + p.pos + (sp ? " — " + sp.label : "");
+    const gb = document.getElementById("gb"+(i+1));
+    if (p.skip > 0) {
+      gb.style.display = "inline-block";
+      gb.textContent = "⏳ " + p.skip + " tour" + (p.skip>1?"s":"") + " à passer";
+    } else { gb.style.display = "none"; }
+  });
+  document.getElementById("roll-label").textContent = gameOver ? "" : "Tour du " + players[current].name;
+}
+
+function showGage(sp, playerName, cb) {
+  const gageMap = {bridge:"bridge",well:"well",maze:"maze",trap:"trap",death:"death",inn:"inn"};
+  const gageType = gageMap[sp.type];
+  document.getElementById("gage-icon").textContent = sp.ico;
+  document.getElementById("gage-title").textContent = sp.title + " — " + playerName;
+  let desc = sp.desc;
+  if (gageType) desc += "\n\n🎭 Gage : " + pickGage(gageType);
+  document.getElementById("gage-desc").textContent = desc;
+  document.getElementById("gage-modal").classList.add("show");
+  pendingGage = cb;
+}
+
+function closeGage() {
+  document.getElementById("gage-modal").classList.remove("show");
+  if (pendingGage) { pendingGage(); pendingGage = null; }
+}
+
+function rollDice() {
+  if (gameOver) return;
+  const p = players[current];
+  const btn = document.getElementById("roll-btn");
+  btn.disabled = true;
+  if (p.skip > 0) {
+    p.skip--;
+    addLog(p.name + " passe ce tour. (" + (p.skip > 0 ? p.skip + " tour(s) restant(s)" : "libre au prochain") + ")");
+    current = 1 - current;
+    updateCards();
+    setTimeout(() => { btn.disabled = false; }, 400);
+    return;
+  }
+  const d1 = Math.ceil(Math.random()*6);
+  const d2 = Math.ceil(Math.random()*6);
+  animateDice(d1, d2, () => {
+    const total = d1 + d2;
+    let newPos = p.pos + total;
+    if (newPos > TOTAL) newPos = TOTAL - (newPos - TOTAL);
+    p.pos = newPos;
+    renderPawns();
+    highlightCell(newPos);
+    addLog(p.name + " lance " + d1 + "+" + d2 + "=" + total + " → case " + newPos);
+    updateCards();
+    const sp = SPECIAL[newPos];
+    if (sp) {
+      const result = sp.action(p);
+      if (result === "win") {
+        addLog("🏆 " + p.name + " a gagné !", true);
+        gameOver = true;
+        document.getElementById("winner-text").textContent = "🏆 " + p.name + " a gagné !";
+        document.getElementById("winner-banner").classList.add("show");
+        updateCards();
+        return;
+      }
+      if (result === "reroll") {
+        addLog("🪿 " + p.name + " tombe sur une Oie — relance !", true);
+        setTimeout(() => { btn.disabled = false; }, 500);
+        return;
+      }
+      renderPawns();
+      highlightCell(p.pos);
+      updateCards();
+      showGage(sp, p.name, () => {
+        current = 1 - current;
+        updateCards();
+        btn.disabled = false;
+      });
+    } else {
+      current = 1 - current;
+      updateCards();
+      btn.disabled = false;
+    }
+  });
+}
+
+function restartGame() {
+  players = [{pos:0,skip:0,name:"Joueur 1"},{pos:0,skip:0,name:"Joueur 2"}];
+  current = 0; gameOver = false;
+  document.getElementById("winner-banner").classList.remove("show");
+  document.getElementById("roll-btn").disabled = false;
+  document.getElementById("log-box").innerHTML = '<div class="log-entry">Nouvelle partie ! Joueur 1 commence.</div>';
+  document.querySelectorAll(".cell.highlight").forEach(c => c.classList.remove("highlight"));
+  drawDie("die1",1); drawDie("die2",1);
+  buildBoard(); updateCards();
+}
+
+buildBoard();
+drawDie("die1",1); drawDie("die2",1);
+updateCards();
+</script>
+</body>
+</html>

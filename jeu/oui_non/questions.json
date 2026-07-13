@@ -1,0 +1,62 @@
+{
+  "cocooning": [
+    { "id": "c01", "question": "Quel est le souvenir d'enfance qui te fait encore sourire aujourd'hui ?" },
+    { "id": "c02", "question": "Si tu pouvais voyager n'importe où demain matin, où serais-tu au réveil ?" },
+    { "id": "c03", "question": "Quelle odeur te ramène immédiatement à un endroit heureux ?" },
+    { "id": "c04", "question": "C'est quoi ton film doudou — celui que tu regardes quand tu te sens seul·e ?" },
+    { "id": "c05", "question": "Quel est le plus beau cadeau qu'on t'ait jamais fait, sans que ça coûte rien ?" },
+    { "id": "c06", "question": "Qu'est-ce qui te donne l'impression d'être vraiment chez toi, où que tu sois ?" },
+    { "id": "c07", "question": "Si tu pouvais passer une journée idéale sans aucune contrainte, à quoi elle ressemblerait ?" },
+    { "id": "c08", "question": "Quel animal te ressemble le plus, et pourquoi ?" },
+    { "id": "c09", "question": "Quelle chanson tu mettrais en fond sonore de ta vie en ce moment ?" },
+    { "id": "c10", "question": "C'est quoi le dernier truc qui t'a fait rire aux larmes ?" }
+  ],
+  "sympas": [
+    { "id": "s01", "question": "Qu'est-ce que les gens se trompent souvent sur toi à la première impression ?" },
+    { "id": "s02", "question": "Quel est le truc que tu fais tout seul·e mais que tu n'assumes pas toujours en public ?" },
+    { "id": "s03", "question": "C'est quoi la chose dont tu es le plus fier·e sans que ça se voit de l'extérieur ?" },
+    { "id": "s04", "question": "Si tu avais pu choisir ta passion de vie à 10 ans, elle aurait été quoi ?" },
+    { "id": "s05", "question": "Quel compliment t'a touché·e profondément, et pourquoi ?" },
+    { "id": "s06", "question": "C'est quoi ton péché mignon vraiment inavouable ?" },
+    { "id": "s07", "question": "Qu'est-ce qui te ferait changer de vie du jour au lendemain ?" },
+    { "id": "s08", "question": "Quel est le conseil que tu donnerais à toi-même il y a 5 ans ?" },
+    { "id": "s09", "question": "C'est quoi la chose que tu regrettes de ne pas avoir dite à quelqu'un ?" },
+    { "id": "s10", "question": "Qu'est-ce que tu cherches vraiment dans une relation, au fond ?" }
+  ],
+  "cozy": [
+    { "id": "co01", "question": "C'est quoi le moment de notre relation où tu t'es dit « oui, c'est lui / elle » ?" },
+    { "id": "co02", "question": "Qu'est-ce que je fais sans m'en rendre compte qui te fait craquer ?" },
+    { "id": "co03", "question": "Quel est le truc que tu n'as jamais osé me demander ?" },
+    { "id": "co04", "question": "Si tu devais me décrire en trois mots à quelqu'un qui ne me connaît pas, tu dirais quoi ?" },
+    { "id": "co05", "question": "C'est quoi ta façon préférée de te sentir aimé·e ?" },
+    { "id": "co06", "question": "Quel est le souvenir de nous deux que tu garderais si tu ne pouvais en garder qu'un ?" },
+    { "id": "co07", "question": "C'est quoi la chose que je fais et qui t'énerve un peu, mais que tu n'oses pas dire ?" },
+    { "id": "co08", "question": "Dans quelle situation tu as le plus envie de me prendre la main ?" },
+    { "id": "co09", "question": "Qu'est-ce que tu voudrais qu'on fasse ensemble qu'on n'a jamais encore essayé ?" },
+    { "id": "co10", "question": "Où tu nous imagines dans cinq ans, si tout se passe bien ?" }
+  ],
+  "hot": [
+    { "id": "h01", "question": "C'est quoi le truc que je fais qui te donne des idées immédiatement ?" },
+    { "id": "h02", "question": "Décris le moment intime que tu as trouvé le plus intense entre nous." },
+    { "id": "h03", "question": "C'est quoi une chose que tu voudrais qu'on essaie et dont tu n'as jamais parlé ?" },
+    { "id": "h04", "question": "Dans quel endroit improbable tu aurais envie de m'embrasser ?" },
+    { "id": "h05", "question": "C'est quoi le truc qui te fait perdre tous tes moyens chez moi ?" },
+    { "id": "h06", "question": "Quelle tenue ou quelle situation te met dans tous tes états ?" },
+    { "id": "h07", "question": "C'est quoi un fantasme que tu as depuis longtemps mais que tu gardes pour toi ?" },
+    { "id": "h08", "question": "Si tu devais m'écrire un message très suggestif maintenant, tu commencerais comment ?" },
+    { "id": "h09", "question": "C'est quoi la chose qui t'a surpris·e le plus positivement dans notre intimité ?" },
+    { "id": "h10", "question": "Qu'est-ce qui rendrait notre prochaine soirée inoubliable ?" }
+  ],
+  "veryhot": [
+    { "id": "vh01", "question": "Dis-moi en détail le scénario que tu as en tête depuis un moment sans l'avoir dit." },
+    { "id": "vh02", "question": "C'est quoi la limite que tu voudrais qu'on repousse ensemble ?" },
+    { "id": "vh03", "question": "Décris exactement ce que tu aimerais que je te fasse ce soir." },
+    { "id": "vh04", "question": "C'est quoi le rôle que tu voudrais jouer si on s'autorisait un jeu de rôle ?" },
+    { "id": "vh05", "question": "Quel endroit ou quelle situation t'a déjà traversé l'esprit et que tu n'as jamais osé proposer ?" },
+    { "id": "vh06", "question": "C'est quoi la chose la plus audacieuse que tu aies envie de me faire ?" },
+    { "id": "vh07", "question": "Si on se donnait une nuit pour tout explorer sans tabou, tu commencerais par quoi ?" },
+    { "id": "vh08", "question": "C'est quoi un désir que tu penses que je n'imagine même pas que tu aies ?" },
+    { "id": "vh09", "question": "Quelle scène d'un film ou d'un livre tu aurais voulu qu'on vive ?" },
+    { "id": "vh10", "question": "Dis-moi quelque chose que tu n'as jamais dit à voix haute." }
+  ]
+}

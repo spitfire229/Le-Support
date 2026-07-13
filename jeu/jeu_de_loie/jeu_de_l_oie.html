@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeu de l'Oie</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0d;
+    --surface: #1a1a1a;
+    --border: rgba(255,255,255,0.06);
+    --border-strong: rgba(255,255,255,0.1);
+    --text-primary: #e8e8e8;
+    --text-secondary: #999999;
+    --radius: 8px;
+  }
+
+  body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, rgba(123,104,238,0.2), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255,111,157,0.14), transparent 22%),
+                linear-gradient(180deg, #0d0d0d 0%, #111111 100%);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── HEADER ── */
+  header {
+    width: 100%;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+  }
+  .header-content {
+    width: 100%;
+    max-width: 860px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .header-left h1 { font-size: clamp(1.1rem, 4vw, 1.4rem); font-weight: 600; color: var(--text-primary); }
+  .header-left p { margin-top: 0.2rem; font-size: 0.8rem; color: var(--text-secondary); }
+  .btn-ghost-sm {
+    padding: 0.35rem 0.9rem;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: none;
+  }
+  .btn-ghost-sm:hover { border-color: var(--text-primary); color: var(--text-primary); }
+  .btn-ghost-sm.visible { display: block; }
+
+  /* ── MAIN ── */
+  main {
+    width: 100%;
+    max-width: 860px;
+    padding: 1.5rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* ══════════════════════════════
+     ÉCRAN SÉLECTION DIFFICULTÉ
+  ══════════════════════════════ */
+  #screen-difficulty {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+    animation: fadeIn 0.4s ease;
+  }
+  #screen-difficulty.hidden { display: none; }
+
+  .diff-intro { text-align: center; }
+  .diff-intro h2 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #e8e8e8, #999);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .diff-intro p { font-size: 0.9rem; color: var(--text-secondary); }
+
+  .diff-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 560px) {
+    .diff-cards { grid-template-columns: 1fr; }
+  }
+
+  .diff-card {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: calc(var(--radius) * 2);
+    padding: 1.5rem 1.25rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .diff-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .diff-card.facile::before  { background: radial-gradient(circle at top left, rgba(99,153,34,0.15), transparent 60%); }
+  .diff-card.moyen::before   { background: radial-gradient(circle at top left, rgba(255,140,66,0.15), transparent 60%); }
+  .diff-card.hard::before    { background: radial-gradient(circle at top left, rgba(255,64,129,0.2), transparent 60%); }
+  .diff-card:hover::before   { opacity: 1; }
+
+  .diff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+  .diff-card.facile:hover { border-color: rgba(99,153,34,0.5); }
+  .diff-card.moyen:hover  { border-color: rgba(255,140,66,0.5); }
+  .diff-card.hard:hover   { border-color: rgba(255,64,129,0.5); }
+
+  .diff-card-icon { font-size: 2.2rem; }
+  .diff-card-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .diff-card.facile .diff-card-name { color: #8bc34a; }
+  .diff-card.moyen  .diff-card-name { color: #ff8c42; }
+  .diff-card.hard   .diff-card-name { color: #ff4081; }
+
+  .diff-card-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .diff-card-example {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.8rem;
+    line-height: 1.5;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .diff-card-example strong {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+    font-style: normal;
+    opacity: 0.6;
+  }
+  .diff-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    width: fit-content;
+  }
+  .diff-card.facile .diff-card-badge { background: rgba(99,153,34,0.15); color: #8bc34a; }
+  .diff-card.moyen  .diff-card-badge { background: rgba(255,140,66,0.15); color: #ff8c42; }
+  .diff-card.hard   .diff-card-badge { background: rgba(255,64,129,0.15); color: #ff4081; }
+
+  /* ══════════════════════════════
+     ÉCRAN JEU
+  ══════════════════════════════ */
+  #screen-game {
+    display: none;
+    flex-direction: column;
+    gap: 1.25rem;
+    animation: fadeIn 0.4s ease;
+  }
+  #screen-game.visible { display: flex; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── DIFFICULTY PILL ── */
+  .diff-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 1px solid;
+  }
+  .diff-pill.facile { background: rgba(99,153,34,0.1);  border-color: rgba(99,153,34,0.3);  color: #8bc34a; }
+  .diff-pill.moyen  { background: rgba(255,140,66,0.1); border-color: rgba(255,140,66,0.3); color: #ff8c42; }
+  .diff-pill.hard   { background: rgba(255,64,129,0.1); border-color: rgba(255,64,129,0.3); color: #ff4081; }
+
+  /* ── WINNER BANNER ── */
+  #winner-banner {
+    display: none;
+    background: linear-gradient(135deg, rgba(123,104,238,0.15), rgba(255,111,157,0.1));
+    border: 1px solid rgba(123,104,238,0.3);
+    border-radius: calc(var(--radius) * 1.5);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+  }
+  #winner-banner.show { display: block; }
+  #winner-text { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; }
+  .winner-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  #restart-btn, #change-diff-btn {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  #restart-btn { background: linear-gradient(135deg, #fff, #f0f0f0); color: #0d0d0d; }
+  #restart-btn:hover { opacity: 0.85; }
+  #change-diff-btn { background: transparent; border: 1px solid var(--border-strong); color: var(--text-secondary); }
+  #change-diff-btn:hover { border-color: var(--text-primary); color: var(--text-primary); }
+
+  /* ── BOARD ── */
+  #board { display: grid; grid-template-columns: repeat(9, 1fr); gap: 3px; }
+  .cell {
+    aspect-ratio: 1;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.15s;
+  }
+  .cell .num { font-size: clamp(6px,1.3vw,9px); color: var(--text-secondary); opacity: 0.6; line-height: 1; }
+  .cell .ico { font-size: clamp(10px,2vw,16px); line-height: 1; }
+
+  .cell.goose       { background: rgba(99,153,34,0.15);  border-color: rgba(99,153,34,0.3); }
+  .cell.bridge      { background: rgba(55,138,221,0.15); border-color: rgba(55,138,221,0.3); }
+  .cell.inn         { background: rgba(127,119,221,0.15);border-color: rgba(127,119,221,0.3); }
+  .cell.well        { background: rgba(186,117,23,0.15); border-color: rgba(186,117,23,0.3); }
+  .cell.maze        { background: rgba(212,83,126,0.15); border-color: rgba(212,83,126,0.3); }
+  .cell.trap        { background: rgba(216,90,48,0.15);  border-color: rgba(216,90,48,0.3); }
+  .cell.death       { background: rgba(180,40,40,0.15);  border-color: rgba(180,40,40,0.3); }
+  .cell.end         { background: rgba(99,153,34,0.25);  border-color: rgba(99,153,34,0.5); }
+  .cell.normal-gage { background: rgba(123,104,238,0.08);border-color: rgba(123,104,238,0.2); }
+
+  .cell.highlight {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: 0 0 0 2px #7b68ee, 0 4px 16px rgba(123,104,238,0.4);
+  }
+
+  .pawns { position: absolute; bottom: 2px; left: 0; right: 0; display: flex; justify-content: center; gap: 2px; }
+  .pawn { width: clamp(7px,1.5vw,11px); height: clamp(7px,1.5vw,11px); border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); }
+  .pawn.p1 { background: linear-gradient(135deg, #ff6b9d, #ff1744); }
+  .pawn.p2 { background: linear-gradient(135deg, #7b68ee, #5a4a9f); }
+
+  /* ── LEGEND ── */
+  .legend-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .leg { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-secondary); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; }
+  .leg-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  /* ── PLAYER PANELS ── */
+  #panels { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .player-card { background: var(--surface); border: 1px solid var(--border); border-radius: calc(var(--radius) * 1.5); padding: 14px; transition: border-color 0.2s, box-shadow 0.2s; }
+  .player-card.active.p1 { border-color: rgba(255,107,157,0.5); box-shadow: 0 0 0 1px rgba(255,107,157,0.15), 0 4px 20px rgba(255,107,157,0.1); }
+  .player-card.active.p2 { border-color: rgba(123,104,238,0.5); box-shadow: 0 0 0 1px rgba(123,104,238,0.15), 0 4px 20px rgba(123,104,238,0.1); }
+  .pname { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot.p1 { background: linear-gradient(135deg, #ff6b9d, #ff1744); }
+  .dot.p2 { background: linear-gradient(135deg, #7b68ee, #5a4a9f); }
+  .pos-info { font-size: 12px; color: var(--text-secondary); margin-top: 5px; }
+  .gage-badge { margin-top: 8px; font-size: 11px; padding: 4px 10px; background: rgba(186,117,23,0.15); border: 1px solid rgba(186,117,23,0.3); color: #f0a830; border-radius: var(--radius); display: none; }
+
+  /* ── DICE ── */
+  #dice-area { background: var(--surface); border: 1px solid var(--border); border-radius: calc(var(--radius) * 1.5); padding: 1.25rem; text-align: center; }
+  #roll-label { font-size: 13px; color: var(--text-secondary); margin-bottom: 1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
+  #dice-row { display: flex; justify-content: center; gap: 16px; margin-bottom: 1rem; }
+  .die { width: clamp(44px,10vw,56px); height: clamp(44px,10vw,56px); border-radius: 10px; background: #0d0d0d; border: 1px solid var(--border-strong); display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; padding: 7px; gap: 4px; }
+  .pip { width: 8px; height: 8px; border-radius: 50%; background: var(--text-primary); }
+  .pip.hidden { background: transparent; }
+  #roll-btn { padding: 0.7rem 2rem; font-size: 0.95rem; font-weight: 600; border-radius: var(--radius); background: linear-gradient(135deg, #fff, #f0f0f0); border: none; color: #0d0d0d; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: opacity 0.2s, transform 0.1s; }
+  #roll-btn:hover { opacity: 0.88; }
+  #roll-btn:active { transform: scale(0.97); }
+  #roll-btn:disabled { opacity: 0.3; cursor: default; }
+
+  /* ── LOG ── */
+  #log-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; min-height: 52px; max-height: 88px; overflow-y: auto; font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  #log-box::-webkit-scrollbar { width: 4px; }
+  #log-box::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+  .log-entry { padding: 1px 0; border-bottom: 1px solid var(--border); }
+  .log-entry:last-child { border: none; }
+  .log-entry.ev { color: #ff6b9d; font-weight: 500; }
+
+  /* ── MODAL ── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(6px); align-items: center; justify-content: center; z-index: 100; }
+  .modal-overlay.show { display: flex; }
+  .modal-box { background: var(--surface); border: 1px solid var(--border-strong); border-radius: calc(var(--radius) * 2); padding: 2rem; max-width: 360px; width: 90%; text-align: center; animation: popIn 0.3s cubic-bezier(0.4,0,0.2,1); }
+  @keyframes popIn { from { opacity: 0; transform: translateY(16px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  .modal-icon { font-size: 40px; margin-bottom: 12px; }
+  .modal-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary); }
+  .modal-desc { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; white-space: pre-line; }
+  .modal-gage { border-radius: var(--radius); padding: 0.9rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-primary); font-weight: 500; line-height: 1.5; }
+  .modal-gage.facile { background: rgba(99,153,34,0.1);  border: 1px solid rgba(99,153,34,0.25); }
+  .modal-gage.moyen  { background: rgba(255,140,66,0.1); border: 1px solid rgba(255,140,66,0.25); }
+  .modal-gage.hard   { background: rgba(255,64,129,0.1); border: 1px solid rgba(255,64,129,0.25); }
+  .modal-gage-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; font-weight: 700; }
+  .modal-gage.facile .modal-gage-label { color: #8bc34a; }
+  .modal-gage.moyen  .modal-gage-label { color: #ff8c42; }
+  .modal-gage.hard   .modal-gage-label { color: #ff4081; }
+  .modal-ok { padding: 0.65rem 1.6rem; font-size: 0.9rem; font-weight: 600; border-radius: var(--radius); background: linear-gradient(135deg, #fff, #f0f0f0); border: none; color: #0d0d0d; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: opacity 0.2s; }
+  .modal-ok:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="header-left">
+      <h1>🪿 Jeu de l'Oie</h1>
+      <p id="header-sub">2 joueurs · 63 cases · Premier arrivé gagne !</p>
+    </div>
+    <button class="btn-ghost-sm" id="header-restart" onclick="restartGame()">🔄 Rejouer</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══ ÉCRAN SÉLECTION DIFFICULTÉ ══ -->
+  <div id="screen-difficulty">
+    <div class="diff-intro">
+      <h2>Choisissez l'intensité des gages</h2>
+      <p>Sélectionnez un niveau avant de commencer la partie</p>
+    </div>
+    <div class="diff-cards">
+
+      <div class="diff-card facile" onclick="startGame('facile')">
+        <div class="diff-card-badge">🌿 Niveau 1</div>
+        <div class="diff-card-icon">😄</div>
+        <div class="diff-card-name">Doux & Rigolo</div>
+        <div class="diff-card-desc">Des gages simples et amusants pour toute la famille. Parfait pour une soirée détendue.</div>
+        <div class="diff-card-example">
+          <strong>Exemple de gage</strong>
+          "Imite un animal pendant 5 secondes."
+        </div>
+      </div>
+
+      <div class="diff-card moyen" onclick="startGame('moyen')">
+        <div class="diff-card-badge">🔥 Niveau 2</div>
+        <div class="diff-card-icon">😏</div>
+        <div class="diff-card-name">Pimenté</div>
+        <div class="diff-card-desc">Des défis plus créatifs qui sortent de la zone de confort. Pour des amis complices.</div>
+        <div class="diff-card-example">
+          <strong>Exemple de gage</strong>
+          "Appelle quelqu'un et dis-lui que tu l'admires."
+        </div>
+      </div>
+
+      <div class="diff-card hard" onclick="startGame('hard')">
+        <div class="diff-card-badge">💀 Niveau 3</div>
+        <div class="diff-card-icon">🤯</div>
+        <div class="diff-card-name">Extrême</div>
+        <div class="diff-card-desc">Pour les courageux sans limite. Gages osés, embarrassants ou totalement fous.</div>
+        <div class="diff-card-example">
+          <strong>Exemple de gage</strong>
+          "L'adversaire invente ton gage sur le moment !"
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ ÉCRAN JEU ══ -->
+  <div id="screen-game">
+
+    <div id="winner-banner">
+      <div id="winner-text"></div>
+      <div class="winner-actions">
+        <button id="restart-btn" onclick="restartGame()">🔄 Rejouer (même niveau)</button>
+        <button id="change-diff-btn" onclick="changeDifficulty()">⚙️ Changer de niveau</button>
+      </div>
+    </div>
+
+    <div id="board"></div>
+
+    <div class="legend-row">
+      <div class="leg"><div class="leg-dot" style="background:#639922;"></div>Oie (rejoue)</div>
+      <div class="leg"><div class="leg-dot" style="background:#378ADD;"></div>Pont</div>
+      <div class="leg"><div class="leg-dot" style="background:#7F77DD;"></div>Auberge</div>
+      <div class="leg"><div class="leg-dot" style="background:#D4537E;"></div>Labyrinthe</div>
+      <div class="leg"><div class="leg-dot" style="background:#D85A30;"></div>Piège</div>
+      <div class="leg"><div class="leg-dot" style="background:#BA7517;"></div>Puits</div>
+      <div class="leg"><div class="leg-dot" style="background:#888780;"></div>Mort</div>
+      <div class="leg"><div class="leg-dot" style="background:#7b68ee;"></div>Gage</div>
+    </div>
+
+    <div id="panels">
+      <div class="player-card active p1" id="card1">
+        <div class="pname"><span class="dot p1"></span> Joueur 1</div>
+        <div class="pos-info" id="pos1">Case 0 (départ)</div>
+        <div class="gage-badge" id="gb1"></div>
+      </div>
+      <div class="player-card p2" id="card2">
+        <div class="pname"><span class="dot p2"></span> Joueur 2</div>
+        <div class="pos-info" id="pos2">Case 0 (départ)</div>
+        <div class="gage-badge" id="gb2"></div>
+      </div>
+    </div>
+
+    <div id="dice-area">
+      <div id="roll-label">Tour du Joueur 1</div>
+      <div id="dice-row">
+        <div class="die" id="die1"></div>
+        <div class="die" id="die2"></div>
+      </div>
+      <button id="roll-btn" onclick="rollDice()">🎲 Lancer les dés</button>
+    </div>
+
+    <div id="log-box">
+      <div class="log-entry">Bienvenue dans le Jeu de l'Oie ! Joueur 1 commence.</div>
+    </div>
+
+  </div><!-- /screen-game -->
+</main>
+
+<div class="modal-overlay" id="gage-modal">
+  <div class="modal-box">
+    <div class="modal-icon" id="gage-icon"></div>
+    <div class="modal-title" id="gage-title"></div>
+    <div class="modal-desc" id="gage-desc"></div>
+    <div class="modal-gage" id="gage-challenge">
+      <div class="modal-gage-label" id="gage-label-text">🎭 Ton gage</div>
+      <div id="gage-text"></div>
+    </div>
+    <button class="modal-ok" onclick="closeGage()">✅ Gage relevé !</button>
+  </div>
+</div>
+
+<script>
+const TOTAL = 63;
+const cells = [];
+let players = [{pos:0,skip:0,name:"Joueur 1"},{pos:0,skip:0,name:"Joueur 2"}];
+let current = 0;
+let gameOver = false;
+let pendingGage = null;
+let currentDifficulty = null;
+
+/* ══════════════════════════════════════════
+   BANQUES DE GAGES PAR DIFFICULTÉ
+══════════════════════════════════════════ */
+const GAGES = {
+  facile: {
+    normal: [
+      "Fais une grimace pendant 10 secondes.",
+      "Imite un animal de ton choix.",
+      "Chante 3 notes de ta chanson préférée.",
+      "Fais semblant de marcher au ralenti.",
+      "Dis le plus vite possible : 'Les chaussettes de l'archiduchesse'.",
+      "Fais un bruit d'ambiance (vent, pluie, mer…).",
+      "Nomme 5 pays en 5 secondes.",
+      "Raconte une micro-histoire en 3 phrases.",
+      "Fais 5 sauts sur place.",
+      "Imite la voix d'un personnage de dessin animé.",
+      "Dis l'alphabet à l'envers jusqu'à S.",
+      "Décris ta journée idéale en 20 mots max.",
+      "Fais semblant de te bagarrer avec un fantôme.",
+      "Donne un surnom rigolo à l'adversaire.",
+      "Fais 3 tours sur toi-même et marche en ligne droite.",
+      "Mime une activité sportive sans parler.",
+      "Invente un mot et donne sa définition.",
+      "Fais semblant de jouer d'un instrument.",
+      "Nomme 3 célébrités dont le prénom commence par M.",
+      "Fais une pose de super-héros et tiens 5 secondes.",
+      "Imite quelqu'un qui apprend à faire du vélo.",
+      "Dis 'anticonstitutionnellement' sans te tromper.",
+      "Mime une émotion, l'adversaire doit deviner.",
+      "Chante la météo du jour comme un présentateur TV.",
+      "Fais semblant de marcher sur la Lune.",
+      "Nomme 5 légumes en anglais.",
+      "Invente un slogan pour vendre une chaussette.",
+      "Imite un robot qui tombe en panne.",
+      "Fais 10 secondes de danse freestyle.",
+      "Raconte une blague (même mauvaise).",
+      "Fais semblant de nager en slow-motion.",
+      "Nomme 3 films en moins de 5 secondes.",
+      "Fais une révérence royale.",
+      "Chante 'Frère Jacques' en accéléré.",
+      "Dessine dans l'air un objet, l'adversaire devine.",
+      "Dis 5 mots qui riment avec 'chat'.",
+      "Imite quelqu'un qui reçoit un Oscar.",
+      "Fais un bruit de moteur pendant 8 secondes.",
+      "Marche comme un manchot pendant 10 secondes.",
+      "Dis merci en 5 langues différentes.",
+    ],
+    special: {
+      bridge: "Imite une grenouille qui saute sur place 3 fois.",
+      inn:    "Raconte la blague la plus courte que tu connaisses.",
+      well:   "Chante le refrain d'une comptine.",
+      maze:   "Fais semblant d'être perdu dans une forêt pendant 10 secondes.",
+      trap:   "Reste immobile comme une statue pendant 15 secondes.",
+      death:  "Fais la danse du robot pendant 10 secondes.",
+    }
+  },
+
+  moyen: {
+      normal: [
+        "Murmure lentement un compliment très sensuel à l’oreille de ton partenaire pendant 30 secondes.",
+        "Regardez-vous intensément dans les yeux sans parler pendant 1 minute complète. le premier qui détourne le regard doit un biZou à l'autre",
+        "Fais glisser doucement tes doigts le long du bras ou du cou de ton partenaire en le regardant dans les yeux.",
+        "Assieds-toi tout près de ton partenaire et caresse-lui lentement la nuque ou les cheveux.",
+        "Embrasse doucement la main, le poignet et l’intérieur du bras de ton partenaire.",
+        "Dansez collés l’un contre l’autre sur une musique lente, sans parler.",
+        "Chuchote à ton partenaire ce que tu aimes le plus chez lui/elle en le regardant dans les yeux.",
+        "Fais un massage très lent des épaules et de la nuque de ton partenaire pendant 2 minutes.",
+        "Trace des mots doux ou des formes sensuelles avec ton doigt dans le dos de ton partenaire.",
+        "Assieds-toi sur les genoux de ton partenaire face à face et restez front contre front en silence.",
+        "Embrasse lentement le cou et la clavicule de ton partenaire sans aller plus bas.",
+        "Fais glisser tes lèvres très doucement sur la joue, la mâchoire et derrière l’oreille de ton partenaire.",
+        "Caresse lentement les cheveux de ton partenaire tout en lui murmurant des choses coquines.",
+        "Faites un câlin très serré en restant peau contre peau (ou sous un vêtement léger).",
+        "Mets tes mains sur les hanches de ton partenaire et attirez-le/la lentement contre toi.",
+        "Embrasse sensuellement l’intérieur des poignets de ton partenaire un par un.",
+        "Fais un massage sensuel des mains en massant chaque doigt lentement.",
+        "Regardez-vous dans les yeux tout en vous caressant doucement le visage et les lèvres.",
+        "Murmure trois choses que tu as envie de lui faire (sans les faire).",
+        "Danse lentement contre ton partenaire en le/la regardant intensément.",
+        "Laisse ton partenaire te caresser le dos et la nuque pendant 90 secondes sans bouger.",
+        "Fais un bisou très lent dans le creux du cou de ton partenaire.",
+        "Assieds-toi derrière ton partenaire, colle-toi contre lui/elle et caresse-lui le ventre doucement.",
+        "Jouez à « je te regarde » : celui qui détourne le regard en premier perd.",
+        "Embrasse lentement la ligne de la mâchoire de ton partenaire jusqu’à l’oreille.",
+        "Caresse les cuisses de ton partenaire par-dessus le tissu, très lentement.",
+        "Fais un massage sensuel des pieds ou des mollets à ton partenaire.",
+        "Mets tes mains dans le bas du dos de ton partenaire et serrez-le/la fort contre toi.",
+        "Chuchote-lui des compliments sensuels tout en lui mordillant doucement le lobe de l’oreille.",
+        "Faites un slow très serré, mains dans le bas du dos.",
+        "lâche ton meilleur SIX SEVENNNN !!! 2 min complettes."
+      ],
+      special: {
+        bridge: "Fais un câlin très lent et sensuel à ton partenaire en lui murmurant à l’oreille ce que tu ressens.",
+        inn:    "Fais un strip-tease très lent et sensuel (garde tes sous-vêtements).",
+        well:   "Confesse à voix basse un fantasme doux ou une chose que tu trouves très excitante chez ton partenaire.",
+        maze:   "Raconte une scène sensuelle que tu imagines avec ton partenaire (en restant soft).",
+        trap:   "Fais 10 pompes ou 20 squats tout en regardant ton partenaire dans les yeux de façon provocante.",
+        death:  "L’adversaire invente un gage sensuel sur le moment !"
+      }
+    },
+
+  hard: {
+    normal: [
+      "Assieds-toi à califourchon sur ton partenaire et contrôle le rythme des baisers profonds pendant 3 minutes.",
+      "Bande les yeux de ton partenaire et caresse-le/la partout avec tes mains et ta bouche pendant 4 minutes sans qu’il/elle puisse te toucher.",
+      "Mets ton partenaire à genoux et fais-lui embrasser ton corps où tu veux pendant 3 minutes.",
+      "Allonge ton partenaire et explore son corps avec ta bouche 5 minutes, il/elle n’a pas le droit de bouger.",
+      "Mets des menottes (ou ceinture) à ton partenaire et tease-le/la avec tes doigts et ta bouche pendant 4 minutes.",
+      "Fais mettre ton partenaire à quatre pattes et domine-le/la en le/la caressant et en lui donnant des ordres pendant 3 minutes.",
+      "Contrôle la tête de ton partenaire avec tes mains pendant qu’il/elle te donne du plaisir oral pendant 4 minutes.",
+      "guide la tete de ton partenaire ou tu veux pendant 3 minutes.",
+      "Allonge-toi et oblige ton partenaire à t’embrasser et te lécher partout où tu lui indiques pendant 5 minutes.",
+      "Fais un edging : stimule ton partenaire jusqu’au bord de l’orgasme et arrête-toi 2 fois (minimum 4 minutes au total).",
+      "Mets ton partenaire contre le mur, main dans le bas du dos, et contrôle-le/la avec des baisers et caresses intenses pendant 3 minutes.",
+      "Assieds-toi sur les genoux de ton partenaire face à lui/elle et guide ses mains et sa bouche là où tu veux pendant 4 minutes.",
+      "Bande les yeux de ton partenaire et utilise un glaçon ou ton souffle chaud sur tout son corps pendant 3 minutes.",
+      "Fais tenir ton partenaire dans une position sexy (mains en l’air, à quatre pattes, a ta guise…) pendant que tu le/la admires et laisse tes mains explorer pendant 2 minutes.",
+      "Mets ton partenaire à genoux et fais-lui un lap dance sensuel tout en l’empêchant de te toucher pendant 3 minutes.",
+      "Domine ton partenaire en lui donnant des ordres précis pendant 4 minutes.",
+      "Allonge ton partenaire sur le ventre, maintiens-lui les poignets dans le dos et explore son corps avec ta bouche pendant 5 minutes.",
+      "Mets ton partenaire en position cuillère et contrôle tout (rythme, profondeur, caresses) pendant 4 minutes.",
+      "Fais un strip-tease très lent et provocant puis domine ton partenaire avec ton corps pendant 3 minutes.",
+      "Bande les yeux + attache les mains de ton partenaire et fais-lui un teasing pendant 4 minutes.",
+      "Fais mettre ton partenaire à quatre pattes et donne-lui des fessées légères tout en le/la stimulant pendant 3 minutes.",
+      "Maintien ton partenaire contre toi et contrôle ses mouvements avec tes mains pendant un long baiser + caresses pendant 3 minutes.",
+      "Oblige ton partenaire à rester immobile pendant que tu explores son corps avec tes mains et ta langue pendant 4 minutes.",
+      "Mets ton partenaire en position missionnaire, maintiens-lui les poignets au-dessus de la tête et contrôle tout pendant 4 minutes.",
+      "Fais un jeu de permission : ton partenaire doit demander l’autorisation pour chaque mouvement ou caresse pendant 3 minutes.",
+
+     
+      "Embrassez-vous langoureusement pendant 3 minutes tout en vous caressant mutuellement le corps.",
+      "Faites un massage sensuel mutuel (dos, fesses, cuisses) pendant 5 minutes chacun.",
+      "Allongez-vous nus peau contre peau et caressez-vous lentement partout pendant 4 minutes.",
+      "Explorez le corps de l’autre avec vos mains et vos lèvres pendant 4 minutes (tour à tour).",
+
+      "Caressez et stimulez mutuellement vos zones érogènes avec les mains pendant 4 minutes.",
+      "Embrassez et léchez le cou, la poitrine, le ventre et l’intérieur des cuisses de l’autre pendant 4 minutes.",
+      "Assieds-toi sur ton partenaire face à face et bougez lentement ensemble en vous caressant pendant 4 minutes.",
+      "Faites un strip-tease lent et sensuel l’un pour l’autre pendant 2 minutes chacun.",
+      "Position cuillère nue : caressez-vous mutuellement le corps lentement pendant 5 minutes.",
+      "Utilisez vos bouches et vos langues sur tout le corps (sauf parties génitales) pendant 4 minutes.",
+      "Faites un edging mutuel doux : stimulez-vous l’un l’autre jusqu’au bord 2-3 fois (5 minutes au total).",
+      "Allongez-vous l’un contre l’autre et frottez-vous sensuellement sans pénétration pendant 4 minutes.",
+      "Massez-vous mutuellement les fesses et l’intérieur des cuisses avec de l’huile pendant 5 minutes.",
+      "Embrassez-vous profondément tout en vous caressant les seins/torse et les fesses pendant 3 minutes.",
+      "Faites l’amour lentement en missionnaire ou cuillère en vous regardant dans les yeux pendant 5 minutes.",
+      "Caressez et stimulez l’autre avec vos doigts pendant qu’il/elle te fait la même chose (4 minutes).",
+      "Position lotus face à face : bougez lentement en vous embrassant et en vous caressant (4 minutes).",
+      "Lèche et mordille doucement les zones sensibles de ton partenaire pendant 3 minutes, puis inversez.",
+      "Faites un teasing complet avec les mains et la bouche sur tout le corps pendant 5 minutes.",
+      "Allongez-vous tête-bêche et caressez-vous mutuellement avec les mains pendant 4 minutes.",
+      "Dansez nus collés serrés puis passez progressivement à des caresses plus intimes (4 minutes).",
+      "Faites un massage sensuel des pieds, jambes et cuisses puis remontez progressivement (5 minutes chacun).",
+      "Embrassez tout le long de la colonne vertébrale et des fesses de l’autre (3 minutes chacun).",
+      "Stimulez-vous mutuellement avec les mains tout en vous murmurant des compliments coquins (4 minutes).",
+      "Faites un slow très collé nus, mains partout, avec des baisers dans le cou (3 minutes).",
+      "Utilisez un glaçon ou votre souffle chaud sur le corps de l’autre en alternance (3 minutes).",
+      "Caressez et explorez les fesses, hanches et entrejambe par-dessus/sous le tissu pendant 4 minutes.",
+  
+      "Restez enlacés nus en vous caressant doucement et en vous parlant sensuellement pendant 5 minutes."
+   
+    ],
+    special: {
+      bridge: "Domine ton partenaire pendant 6 minutes comme tu le souhaites (menottes, bandeau, ordres… au choix).",
+      inn:    "L’adversaire choisit un gage sexuel de domination dans cette liste et tu dois le faire immédiatement.",
+      well:   "Bande les yeux et menotte ton partenaire, puis fais-lui tout ce que tu veux pendant 5 minutes.",
+      maze:   "Fais un edging très long : amène ton partenaire au bord de l’orgasme 4 fois sans le/la laisser jouir (minimum 7 minutes).",
+      trap:   "Ton partenaire te domine complètement pendant 5 minutes (tu dois obéir à tous ses ordres).",
+      death:  "Gage DOUBLE : l’adversaire invente deux gages de domination et tu dois tous les faire !"
+    }
+  }
+};
+
+const SPECIAL_CELLS = {
+  6:  {type:"bridge", ico:"🌉", label:"Pont",       title:"Pont magique !",    desc:"Tu sautes jusqu'à la case 12 !", action:(p)=>{p.pos=12;return true;}},
+  9:  {type:"goose",  ico:"🪿", label:"Oie",         title:"Case Oie !",        desc:"Tu rejoues immédiatement !",     action:(p)=>{return "reroll";}},
+  18: {type:"inn",    ico:"🏨", label:"Auberge",     title:"Auberge du repos",  desc:"Tu passes 1 tour à te reposer.",  action:(p)=>{p.skip=1;return true;}},
+  27: {type:"goose",  ico:"🪿", label:"Oie",         title:"Case Oie !",        desc:"Tu rejoues immédiatement !",     action:(p)=>{return "reroll";}},
+  31: {type:"well",   ico:"🪣", label:"Puits",       title:"Le Puits !",        desc:"Tu passes 2 tours dans le puits.",action:(p)=>{p.skip=2;return true;}},
+  36: {type:"goose",  ico:"🪿", label:"Oie",         title:"Case Oie !",        desc:"Tu rejoues immédiatement !",     action:(p)=>{return "reroll";}},
+  42: {type:"maze",   ico:"🌀", label:"Labyrinthe",  title:"Le Labyrinthe !",   desc:"Tu recules à la case 39 !",      action:(p)=>{p.pos=39;return true;}},
+  45: {type:"goose",  ico:"🪿", label:"Oie",         title:"Case Oie !",        desc:"Tu rejoues immédiatement !",     action:(p)=>{return "reroll";}},
+  52: {type:"trap",   ico:"⛓️", label:"Prison",      title:"La Prison !",       desc:"Tu passes 1 tour derrière les barreaux.", action:(p)=>{p.skip=1;return true;}},
+  54: {type:"goose",  ico:"🪿", label:"Oie",         title:"Case Oie !",        desc:"Tu rejoues immédiatement !",     action:(p)=>{return "reroll";}},
+  58: {type:"death",  ico:"💀", label:"Mort",        title:"La Mort !",         desc:"Aïe ! Tu reviens à la case 1 !", action:(p)=>{p.pos=1;return true;}},
+  63: {type:"end",    ico:"🏆", label:"Arrivée",     title:"",                  desc:"",                               action:(p)=>{return "win";}},
+};
+
+const DIFF_META = {
+  facile: { label: "😄 Doux & Rigolo", icon: "😄", gageLabel: "🌿 Gage facile" },
+  moyen:  { label: "😏 Pimenté",       icon: "😏", gageLabel: "🔥 Gage pimenté" },
+  hard:   { label: "🤯 Extrême",       icon: "🤯", gageLabel: "💀 Gage extrême" },
+};
+
+/* ══ NAVIGATION ÉCRANS ══ */
+function startGame(difficulty) {
+  currentDifficulty = difficulty;
+  document.getElementById("screen-difficulty").classList.add("hidden");
+  document.getElementById("screen-game").classList.add("visible");
+  document.getElementById("header-restart").classList.add("visible");
+
+  // Pill de difficulté dans le header
+  const sub = document.getElementById("header-sub");
+  sub.innerHTML = `2 joueurs · 63 cases · <span class="diff-pill ${difficulty}">${DIFF_META[difficulty].label}</span>`;
+
+  initGame();
+}
+
+function changeDifficulty() {
+  document.getElementById("screen-game").classList.remove("visible");
+  document.getElementById("screen-difficulty").classList.remove("hidden");
+  document.getElementById("header-restart").classList.remove("visible");
+  document.getElementById("header-sub").textContent = "2 joueurs · 63 cases · Premier arrivé gagne !";
+}
+
+/* ══ LOGIQUE JEU ══ */
+function initGame() {
+  players = [{pos:0,skip:0,name:"Joueur 1"},{pos:0,skip:0,name:"Joueur 2"}];
+  current = 0;
+  gameOver = false;
+  document.getElementById("winner-banner").classList.remove("show");
+  document.getElementById("roll-btn").disabled = false;
+  document.getElementById("log-box").innerHTML = '<div class="log-entry">Nouvelle partie ! Joueur 1 commence.</div>';
+  document.querySelectorAll(".cell.highlight").forEach(c => c.classList.remove("highlight"));
+  drawDie("die1",1); drawDie("die2",1);
+  buildBoard();
+  updateCards();
+}
+
+function restartGame() {
+  if (!currentDifficulty) return;
+  initGame();
+}
+
+function pickGage(pool) {
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function buildBoard() {
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  const order = buildOrder();
+  for (let i = 0; i < order.length; i++) {
+    const n = order[i];
+    const div = document.createElement("div");
+    div.className = "cell";
+    div.id = "cell" + n;
+    const sp = SPECIAL_CELLS[n];
+    if (n === 0) div.style.opacity = "0.3";
+    else if (sp) div.classList.add(sp.type);
+    else div.classList.add("normal-gage");
+
+    const ico = document.createElement("div");
+    ico.className = "ico";
+    ico.textContent = n === 0 ? "⛳" : (sp ? sp.ico : "🎭");
+    const num = document.createElement("div");
+    num.className = "num";
+    num.textContent = n === 0 ? "" : n;
+    const pawns = document.createElement("div");
+    pawns.className = "pawns";
+    div.appendChild(ico);
+    div.appendChild(num);
+    div.appendChild(pawns);
+    cells[n] = div;
+    board.appendChild(div);
+  }
+  renderPawns();
+}
+
+function buildOrder() {
+  const rows = 7, cols = 9;
+  const grid = new Array(rows * cols).fill(0);
+  let n = 1;
+  for (let row = rows - 1; row >= 0; row--) {
+    if ((rows - 1 - row) % 2 === 0) {
+      for (let col = 0; col < cols; col++) grid[row * cols + col] = n++;
+    } else {
+      for (let col = cols - 1; col >= 0; col--) grid[row * cols + col] = n++;
+    }
+  }
+  grid[0] = 0;
+  return grid;
+}
+
+function renderPawns() {
+  for (let i = 0; i <= TOTAL; i++) {
+    if (cells[i]) {
+      const pw = cells[i].querySelector(".pawns");
+      if (pw) pw.innerHTML = "";
+    }
+  }
+  players.forEach((p, idx) => {
+    const cell = cells[p.pos];
+    if (cell) {
+      const pw = cell.querySelector(".pawns");
+      if (pw) {
+        const d = document.createElement("div");
+        d.className = "pawn p" + (idx + 1);
+        pw.appendChild(d);
+      }
+    }
+  });
+}
+
+function highlightCell(n) {
+  document.querySelectorAll(".cell.highlight").forEach(c => c.classList.remove("highlight"));
+  if (cells[n]) cells[n].classList.add("highlight");
+}
+
+const PIP_PATTERNS = {
+  1:[[1,1]],2:[[0,0],[2,2]],3:[[0,0],[1,1],[2,2]],
+  4:[[0,0],[0,2],[2,0],[2,2]],5:[[0,0],[0,2],[1,1],[2,0],[2,2]],
+  6:[[0,0],[0,2],[1,0],[1,2],[2,0],[2,2]],
+};
+
+function drawDie(id, val) {
+  const die = document.getElementById(id);
+  die.innerHTML = "";
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) {
+    const d = document.createElement("div");
+    const active = PIP_PATTERNS[val].some(([pr,pc]) => pr===r && pc===c);
+    d.className = "pip" + (active ? "" : " hidden");
+    die.appendChild(d);
+  }
+}
+
+function animateDice(finalD1, finalD2, cb) {
+  let t = 0;
+  const iv = setInterval(() => {
+    drawDie("die1", Math.ceil(Math.random()*6));
+    drawDie("die2", Math.ceil(Math.random()*6));
+    if (++t >= 8) { clearInterval(iv); drawDie("die1", finalD1); drawDie("die2", finalD2); cb(); }
+  }, 80);
+}
+
+function addLog(msg, ev) {
+  const box = document.getElementById("log-box");
+  const d = document.createElement("div");
+  d.className = "log-entry" + (ev ? " ev" : "");
+  d.textContent = msg;
+  box.insertBefore(d, box.firstChild);
+  while (box.children.length > 25) box.removeChild(box.lastChild);
+}
+
+function updateCards() {
+  players.forEach((p, i) => {
+    const card = document.getElementById("card"+(i+1));
+    card.className = "player-card" + (i===current && !gameOver ? " active p"+(i+1) : "");
+    const sp = SPECIAL_CELLS[p.pos];
+    document.getElementById("pos"+(i+1)).textContent = "Case " + p.pos + (p.pos > 0 ? (sp ? " — " + sp.label : " — Gage 🎭") : " — Départ");
+    const gb = document.getElementById("gb"+(i+1));
+    if (p.skip > 0) {
+      gb.style.display = "inline-block";
+      gb.textContent = "⏳ " + p.skip + " tour" + (p.skip>1?"s":"") + " à passer";
+    } else { gb.style.display = "none"; }
+  });
+  document.getElementById("roll-label").textContent = gameOver ? "" : "Tour du " + players[current].name;
+}
+
+function showModal(icon, title, desc, gage, cb) {
+  const diff = currentDifficulty || "facile";
+  const meta = DIFF_META[diff];
+  document.getElementById("gage-icon").textContent = icon;
+  document.getElementById("gage-title").textContent = title;
+  document.getElementById("gage-desc").textContent = desc;
+  const gageBlock = document.getElementById("gage-challenge");
+  const gageLabel = document.getElementById("gage-label-text");
+  if (gage) {
+    document.getElementById("gage-text").textContent = gage;
+    gageBlock.className = "modal-gage " + diff;
+    gageLabel.textContent = meta.gageLabel;
+    gageBlock.style.display = "block";
+  } else {
+    gageBlock.style.display = "none";
+  }
+  document.getElementById("gage-modal").classList.add("show");
+  pendingGage = cb;
+}
+
+function closeGage() {
+  document.getElementById("gage-modal").classList.remove("show");
+  if (pendingGage) { pendingGage(); pendingGage = null; }
+}
+
+function rollDice() {
+  if (gameOver) return;
+  const p = players[current];
+  const btn = document.getElementById("roll-btn");
+  btn.disabled = true;
+
+  if (p.skip > 0) {
+    p.skip--;
+    addLog(p.name + " passe ce tour. (" + (p.skip > 0 ? p.skip + " tour(s) restant(s)" : "libre au prochain tour") + ")");
+    current = 1 - current;
+    updateCards();
+    setTimeout(() => { btn.disabled = false; }, 400);
+    return;
+  }
+
+  const d1 = Math.ceil(Math.random()*6);
+  const d2 = Math.ceil(Math.random()*6);
+  animateDice(d1, d2, () => {
+    const total = d1 + d2;
+    let newPos = p.pos + total;
+    if (newPos > TOTAL) newPos = TOTAL - (newPos - TOTAL);
+    p.pos = newPos;
+    renderPawns();
+    highlightCell(newPos);
+    addLog(p.name + " lance " + d1 + "+" + d2 + "=" + total + " → case " + newPos);
+    updateCards();
+
+    const sp = SPECIAL_CELLS[newPos];
+    const diff = currentDifficulty || "facile";
+
+    if (sp) {
+      const result = sp.action(p);
+      if (result === "win") {
+        addLog("🏆 " + p.name + " a gagné !", true);
+        gameOver = true;
+        document.getElementById("winner-text").textContent = "🏆 " + p.name + " a gagné !";
+        document.getElementById("winner-banner").classList.add("show");
+        updateCards();
+        return;
+      }
+      if (result === "reroll") {
+        addLog("🪿 " + p.name + " tombe sur une Oie — relance !", true);
+        setTimeout(() => { btn.disabled = false; }, 500);
+        return;
+      }
+      // Case spéciale avec gage selon difficulté
+      renderPawns();
+      highlightCell(p.pos);
+      updateCards();
+      const specialGage = GAGES[diff].special[sp.type] || null;
+      showModal(sp.ico, sp.title + " — " + p.name, sp.desc, specialGage, () => {
+        current = 1 - current;
+        updateCards();
+        btn.disabled = false;
+      });
+    } else {
+      // Case normale : gage aléatoire selon difficulté
+      const gage = pickGage(GAGES[diff].normal);
+      showModal("🎭", "Case " + newPos + " — " + p.name, "Tu dois relever ce gage avant de passer la main !", gage, () => {
+        current = 1 - current;
+        updateCards();
+        btn.disabled = false;
+      });
+    }
+  });
+}
+
+// Init : afficher uniquement l'écran de sélection
+drawDie("die1",1); drawDie("die2",1);
+</script>
+</body>
+</html>

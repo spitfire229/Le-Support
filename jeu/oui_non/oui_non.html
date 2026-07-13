@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À Deux 💛 — Questions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #1a1a1a;
+      --border: rgba(255,255,255,0.06);
+      --border-strong: rgba(255,255,255,0.1);
+      --text-primary: #e8e8e8;
+      --text-secondary: #999999;
+      --radius: 8px;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, rgba(123,104,238,0.2), transparent 30%),
+                  radial-gradient(circle at bottom right, rgba(255,111,157,0.14), transparent 22%),
+                  linear-gradient(180deg, #0d0d0d 0%, #111111 100%);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── HEADER ── */
+    header {
+      width: 100%;
+      padding: 1.25rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+    }
+
+    header > .header-content {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    @media (min-width: 560px) {
+      header { padding: 1.5rem 2rem; }
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.75rem;
+    }
+
+    .header-left { min-width: 0; }
+
+    header h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1.1rem, 4vw, 1.4rem);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    header p {
+      margin-top: 0.25rem;
+      font-size: clamp(0.75rem, 3vw, 0.9rem);
+      color: var(--text-secondary);
+    }
+
+    .btn-back {
+      padding: 0.35rem 0.7rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-secondary);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .btn-back:hover {
+      border-color: var(--text-primary);
+      color: var(--text-primary);
+    }
+
+    .btn-back.visible { display: block; }
+
+    /* ── LAYOUT ── */
+    main {
+      width: 100%;
+      max-width: 480px;
+      padding: 1.5rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 560px) {
+      main { padding: 2rem 1.5rem; }
+    }
+
+    /* ── DIFFICULTY ── */
+    #level-select { display: flex; flex-direction: column; gap: 1rem; }
+    #level-select.hidden { display: none; }
+
+    .section-label {
+      display: block;
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .diff-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      width: 100%;
+    }
+
+    .diff-btn {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border: none;
+      border-radius: calc(var(--radius) * 1.25);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.9rem, 3.5vw, 1rem);
+      font-weight: 600;
+      color: white;
+      min-height: 56px;
+    }
+
+    @media (min-width: 400px) {
+      .diff-btn { min-height: 64px; }
+    }
+
+    .diff-btn:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .diff-btn-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+    }
+
+    .diff-btn-name {
+      font-size: clamp(0.9rem, 3.5vw, 1rem);
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    .diff-btn-desc {
+      font-size: clamp(0.65rem, 2.5vw, 0.75rem);
+      font-weight: 400;
+      opacity: 0.75;
+    }
+
+    .diff-btn-emoji {
+      font-size: clamp(1.4rem, 5vw, 1.8rem);
+      margin-left: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .diff-btn[data-level="cocooning"] {
+      background: linear-gradient(135deg, #7b68ee 0%, #5a4a9f 50%, #3a2a6f 100%);
+    }
+    .diff-btn[data-level="sympas"] {
+      background: linear-gradient(135deg, #ff6b9d 0%, #e75480 50%, #c2185b 100%);
+    }
+    .diff-btn[data-level="cozy"] {
+      background: linear-gradient(135deg, #e91e63 0%, #c2185b 50%, #880e4f 100%);
+    }
+    .diff-btn[data-level="hot"] {
+      background: linear-gradient(135deg, #ff8c42 0%, #ff5722 50%, #d84315 100%);
+    }
+    .diff-btn[data-level="veryhot"] {
+      background: linear-gradient(135deg, #ff4081 0%, #ff1744 50%, #d50000 100%);
+    }
+
+    @media (hover: none) {
+      .diff-btn:hover { transform: none; box-shadow: none; }
+    }
+
+    /* ── CARD AREA ── */
+    #game-area { display: none; flex-direction: column; gap: 1.25rem; }
+    #game-area.visible { display: flex; }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    #level-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+
+    /* ── THE CARD ── */
+    .card-wrap {
+      perspective: 1000px;
+      height: clamp(180px, 45vw, 260px);
+      cursor: pointer;
+    }
+
+    #card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      box-shadow: 0 18px 80px rgba(0,0,0,0.18);
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #card.flipped { transform: rotateY(180deg); }
+
+    #card.dealing {
+      animation: dealIn 0.35s cubic-bezier(0.4,0,0.2,1) forwards;
+    }
+
+    @keyframes dealIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    #card.leave {
+      animation: flyOut 0.35s cubic-bezier(0.4,0,1,1) forwards;
+    }
+
+    @keyframes flyOut {
+      to { opacity: 0; transform: translateY(-12px); }
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .card-back {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .card-back-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card-back-emoji {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-back-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .card-back-hint {
+      font-size: clamp(0.65rem, 2.5vw, 0.7rem);
+      color: var(--text-secondary);
+    }
+
+    .card-front {
+      transform: rotateY(180deg);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      padding: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .card-front-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      gap: 0.5rem;
+    }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: var(--text-secondary);
+      font-size: clamp(0.6rem, 2vw, 0.7rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .card-num {
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .card-question {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.95rem, 3.5vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--text-primary);
+      text-align: center;
+      padding: 0 0.25rem;
+      font-weight: 400;
+    }
+
+    .card-front-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    .level-pip {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .level-pip.filled {
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      box-shadow: 0 0 10px rgba(255,204,51,0.3);
+    }
+
+    /* ── ACTIONS ── */
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: none;
+      padding: 0.65rem 1.4rem;
+      background: linear-gradient(135deg, #fff, #f0f0f0);
+      border: none;
+      border-radius: var(--radius);
+      color: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+      min-height: 44px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      opacity: 0.85;
+    }
+
+    .btn-primary.visible { display: block; }
+
+    .btn-ghost {
+      display: none;
+      padding: 0.5rem 1.2rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-secondary);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-height: 44px;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--text-primary);
+      color: var(--text-primary);
+    }
+
+    .btn-ghost.visible { display: block; }
+
+    @media (hover: none) {
+      .btn-primary:hover { transform: none; box-shadow: none; opacity: 1; }
+      .btn-ghost:hover { border-color: var(--border); color: var(--text-secondary); }
+    }
+
+    /* ── END SCREEN ── */
+    #end-screen {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    #end-screen.visible { display: flex; }
+
+    .end-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .end-emoji { font-size: 2rem; }
+
+    .end-card h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1rem, 3.5vw, 1.15rem);
+      font-weight: 600;
+    }
+
+    .end-card p {
+      font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .end-actions {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="header-left">
+      <h1>À Deux 💛</h1>
+      <p id="header-sub">Choisissez un niveau pour commencer</p>
+    </div>
+    <button class="btn-back" id="btn-back" onclick="goBack()">← Niveaux</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- LEVEL SELECT -->
+  <div id="level-select">
+    <span class="section-label">Choisissez votre ambiance</span>
+    <div class="diff-grid">
+      <button class="diff-btn" data-level="cocooning" onclick="startGame('cocooning')">
+        <div class="diff-btn-left">
+          <span class="diff-btn-name">Cocooning</span>
+          <span class="diff-btn-desc">Doux, curieux, sans pression</span>
+        </div>
+        <span class="diff-btn-emoji">🧸</span>
+      </button>
+      <button class="diff-btn" data-level="sympas" onclick="startGame('sympas')">
+        <div class="diff-btn-left">
+          <span class="diff-btn-name">Sympas</span>
+          <span class="diff-btn-desc">On se découvre vraiment</span>
+        </div>
+        <span class="diff-btn-emoji">💬</span>
+      </button>
+      <button class="diff-btn" data-level="cozy" onclick="startGame('cozy')">
+        <div class="diff-btn-left">
+          <span class="diff-btn-name">Cozy</span>
+          <span class="diff-btn-desc">Un peu plus intimes</span>
+        </div>
+        <span class="diff-btn-emoji">🕯️</span>
+      </button>
+      <button class="diff-btn" data-level="hot" onclick="startGame('hot')">
+        <div class="diff-btn-left">
+          <span class="diff-btn-name">Hot</span>
+          <span class="diff-btn-desc">Ça chauffe sérieusement</span>
+        </div>
+        <span class="diff-btn-emoji">🔥</span>
+      </button>
+      <button class="diff-btn" data-level="veryhot" onclick="startGame('veryhot')">
+        <div class="diff-btn-left">
+          <span class="diff-btn-name">Very Hot</span>
+          <span class="diff-btn-desc">Réservé aux audacieux</span>
+        </div>
+        <span class="diff-btn-emoji">🌶️</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- GAME AREA -->
+  <div id="game-area">
+
+    <div class="card-meta">
+      <span id="level-badge"></span>
+      <span id="progress-info"></span>
+    </div>
+
+    <div class="card-wrap" onclick="flipCard()">
+      <div id="card">
+        <div class="card-face card-back">
+          <div class="card-back-inner">
+            <div class="card-back-emoji" id="card-back-emoji">💛</div>
+            <span class="card-back-title">À Deux</span>
+            <span class="card-back-hint">Appuie pour révéler</span>
+          </div>
+        </div>
+        <div class="card-face card-front">
+          <div class="card-front-header">
+            <span class="card-tag" id="card-tag">Question</span>
+            <span class="card-num" id="card-num">#1</span>
+          </div>
+          <div class="card-question" id="card-question">—</div>
+          <div class="card-front-footer" id="pips"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary visible" id="btn-next" onclick="nextCard()">Carte suivante →</button>
+      <button class="btn-ghost visible" id="btn-shuffle" onclick="shuffleAndRestart()">Mélanger</button>
+    </div>
+
+  </div>
+
+  <!-- END SCREEN -->
+  <div id="end-screen">
+    <div class="end-card">
+      <div class="end-emoji">🎉</div>
+      <h2>Vous avez tout exploré !</h2>
+      <p id="end-text">Toutes les cartes ont été jouées. Que diriez-vous d'un autre niveau, ou de rejouer dans le désordre ?</p>
+      <div class="end-actions">
+        <button class="btn-primary visible" onclick="goBack()">Changer de niveau</button>
+        <button class="btn-ghost visible" onclick="shuffleAndRestart()">Rejouer mélangé</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // ── STATE ──
+  let allCards     = [];
+  let deck         = [];
+  let currentIndex = 0;
+  let isFlipped    = false;
+  let currentLevel = null;
+
+  const LEVELS = {
+    cocooning: { label: 'Cocooning', emoji: '🧸', pips: 1 },
+    sympas:    { label: 'Sympas',    emoji: '💬', pips: 2 },
+    cozy:      { label: 'Cozy',      emoji: '🕯️', pips: 3 },
+    hot:       { label: 'Hot',       emoji: '🔥', pips: 4 },
+    veryhot:   { label: 'Very Hot',  emoji: '🌶️', pips: 5 },
+  };
+
+  // ── LOAD JSON ──
+  async function loadCards(level) {
+    const res  = await fetch('questions.json');
+    const data = await res.json();
+    return data[level] || [];
+  }
+
+  // ── SHUFFLE ──
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  // ── START ──
+  async function startGame(level) {
+    currentLevel = level;
+    allCards = await loadCards(level);
+    if (!allCards.length) { alert('Aucune question trouvée pour ce niveau.'); return; }
+    deck = shuffle(allCards);
+    currentIndex = 0;
+
+    document.getElementById('level-select').classList.add('hidden');
+    document.getElementById('game-area').classList.add('visible');
+    document.getElementById('end-screen').classList.remove('visible');
+    document.getElementById('btn-back').classList.add('visible');
+
+    const meta = LEVELS[level];
+    document.getElementById('header-sub').textContent = meta.label + ' · ' + allCards.length + ' cartes';
+    document.getElementById('level-badge').textContent = meta.emoji + ' ' + meta.label;
+    document.getElementById('card-back-emoji').textContent = meta.emoji;
+
+    showCard(false);
+  }
+
+  // ── SHOW CARD ──
+  function showCard(animate = true) {
+    const card = document.getElementById('card');
+    isFlipped = false;
+    card.classList.remove('flipped');
+
+    if (animate) {
+      card.classList.add('leave');
+      setTimeout(() => {
+        card.classList.remove('leave');
+        renderCard();
+        card.classList.add('dealing');
+        setTimeout(() => card.classList.remove('dealing'), 400);
+      }, 320);
+    } else {
+      renderCard();
+      card.classList.add('dealing');
+      setTimeout(() => card.classList.remove('dealing'), 400);
+    }
+  }
+
+  function renderCard() {
+    const q    = deck[currentIndex];
+    const meta = LEVELS[currentLevel];
+
+    document.getElementById('card-question').textContent = q.question;
+    document.getElementById('card-tag').textContent = meta.label;
+    document.getElementById('card-num').textContent = '#' + (currentIndex + 1);
+    document.getElementById('progress-info').textContent = (currentIndex + 1) + ' / ' + deck.length;
+
+    // pips
+    const pipsEl = document.getElementById('pips');
+    pipsEl.innerHTML = '';
+    const total = 5;
+    for (let i = 0; i < total; i++) {
+      const pip = document.createElement('span');
+      pip.className = 'level-pip' + (i < meta.pips ? ' filled' : '');
+      pipsEl.appendChild(pip);
+    }
+  }
+
+  // ── FLIP ──
+  function flipCard() {
+    const card = document.getElementById('card');
+    isFlipped = !isFlipped;
+    card.classList.toggle('flipped', isFlipped);
+  }
+
+  // ── NEXT ──
+  function nextCard() {
+    if (currentIndex >= deck.length - 1) {
+      showEnd();
+      return;
+    }
+    currentIndex++;
+    showCard(true);
+  }
+
+  // ── SHUFFLE & RESTART ──
+  function shuffleAndRestart() {
+    deck = shuffle(allCards);
+    currentIndex = 0;
+    document.getElementById('end-screen').classList.remove('visible');
+    document.getElementById('game-area').classList.add('visible');
+    showCard(false);
+  }
+
+  // ── END ──
+  function showEnd() {
+    const meta = LEVELS[currentLevel];
+    document.getElementById('game-area').classList.remove('visible');
+    document.getElementById('end-screen').classList.add('visible');
+    document.getElementById('end-text').textContent =
+      'Vous avez joué les ' + deck.length + ' cartes « ' + meta.label + ' ». Bravo à vous deux 💛';
+  }
+
+  // ── BACK ──
+  function goBack() {
+    document.getElementById('level-select').classList.remove('hidden');
+    document.getElementById('game-area').classList.remove('visible');
+    document.getElementById('end-screen').classList.remove('visible');
+    document.getElementById('btn-back').classList.remove('visible');
+    document.getElementById('header-sub').textContent = 'Choisissez un niveau pour commencer';
+  }
+</script>
+</body>
+</html>

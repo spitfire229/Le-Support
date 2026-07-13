@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../assets/CSS/style.css">
+<title>Cartes</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<script>
+  if (localStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+<header>
+  <div class="header-content">
+    <div class="header-left">
+      <h1>Prêt à piocher ?</h1>
+      <p>Choisissez votre ambiance, explorez les cartes, amusez-vous.</p>
+    </div>
+    <div class="header-user">
+      <span class="user-name" id="currentUserName"></span>
+      <button class="btn-logout" id="logoutBtn">Quitter</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- DIFFICULTY -->
+  <section id="difficulty-section">
+    <div class="section-label">Choisissez votre ambiance</div>
+    <div class="diff-grid">
+      <button class="diff-btn" data-level="cocooning"><img src="../assets/IMG/cocooning.png" alt="Cocooning"></button>
+      <button class="diff-btn" data-level="sympas"><img src="../assets/IMG/sympas.png" alt="Sympas"></button>
+      <button class="diff-btn" data-level="cozy"><img src="../assets/IMG/cozy.png" alt="Cozy"></button>
+      <button class="diff-btn" data-level="hot"><img src="../assets/IMG/hot.png" alt="Hot"></button>
+      <button class="diff-btn" data-level="veryhot"><img src="../assets/IMG/very hot.png" alt="Very Hot"></button>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <div id="game-area">
+    <div class="card-meta">
+      <div id="level-badge">—</div>
+      <div id="progress-info">1 / 10</div>
+    </div>
+
+    <div class="card-wrap">
+      <div id="card">
+        <div class="card-face card-back">
+          <div class="card-back-inner">
+            <div class="card-back-title">Découvre ta carte</div>
+            <div class="card-back-hint">Touchez pour dévoiler la question</div>
+          </div>
+        </div>
+        <div class="card-face card-front">
+          <div class="card-front-header">
+            <div class="card-tag" id="card-tag">Gage</div>
+            <div class="card-num" id="card-num">#1</div>
+          </div>
+          <div class="card-question" id="card-question">…</div>
+          <div class="card-front-footer" id="card-pips"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-primary" id="btn-next">Carte suivante</button>
+      <button class="btn-ghost" id="btn-restart">Retour aux ambiances</button>
+    </div>
+  </div>
+
+  <!-- END -->
+  <div id="end-screen">
+    <div class="end-card">
+      <h2 id="end-title">Bravo !</h2>
+      <p id="end-text">Toutes les cartes ont été révélées. Prêt à recommencer ?</p>
+      <div class="end-actions">
+        <button class="btn-primary visible" id="btn-end-replay">Rejouer ce niveau</button>
+        <button class="btn-ghost visible" id="btn-end-menu">Voir d'autres ambiances</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+<script src="../assets/JS/gages.js"></script>
+</body>
+</html>
