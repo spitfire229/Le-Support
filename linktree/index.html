@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Charles Kremer — Liens</title>
+  <meta name="description" content="Charles Kremer — Communication & influence. Retrouvez mes liens : LinkedIn, Instagram, CV, PM – Politique Médiatique et Divertere.">
+  <meta name="theme-color" content="#0b1f3a">
+  <link rel="icon" type="image/jpeg" href="./profil.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f3f5f8;
+      --surface: #ffffff;
+      --border: #e1e6ee;
+      --text: #0f1b2d;
+      --muted: #5b6778;
+      --primary: #0b1f3a;
+      --primary-hover: #152f55;
+      --on-primary: #ffffff;
+      --accent: #b8975a;
+      --radius: 14px;
+      --shadow: 0 1px 2px rgba(15,27,45,0.04), 0 4px 16px rgba(15,27,45,0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0a0f18;
+        --surface: #121a26;
+        --border: #223043;
+        --text: #e8edf4;
+        --muted: #93a0b3;
+        --primary: #e8edf4;
+        --primary-hover: #ffffff;
+        --on-primary: #0b1f3a;
+        --accent: #c9aa6c;
+        --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.25);
+      }
+    }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      min-height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 40px 16px calc(32px + env(safe-area-inset-bottom));
+    }
+
+    /* ── EN-TÊTE ── */
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 16px;
+      border: 3px solid var(--surface);
+      box-shadow: 0 0 0 1px var(--border), var(--shadow);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .rule {
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ── BOUTONS ── */
+    a { color: inherit; text-decoration: none; }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:hover { border-color: var(--muted); }
+    .btn:active { transform: scale(0.98); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+    .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+
+    /* 3 boutons du haut */
+    .top-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .top-actions .btn-cv { grid-column: 1 / -1; }
+
+    /* ── SECTIONS ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .card-head { margin-bottom: 14px; }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 2px;
+    }
+
+    .btn-site {
+      min-height: 60px;
+      font-size: 1rem;
+      justify-content: space-between;
+      padding: 14px 18px;
+    }
+    .btn-site .label { display: flex; align-items: center; gap: 10px; }
+
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .socials .btn {
+      min-height: 48px;
+      padding: 10px 0;
+    }
+    .socials .btn svg { width: 22px; height: 22px; }
+
+    .btn-small {
+      margin-top: 10px;
+      min-height: 44px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .btn-small svg { width: 18px; height: 18px; }
+
+    /* Liens supplémentaires */
+    .links { display: grid; gap: 10px; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 28px;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap;
+    }
+
+    @media (min-width: 640px) {
+      .page { padding-top: 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Icônes réutilisables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  </svg>
+
+  <main class="page">
+
+    <!-- EN-TÊTE -->
+    <header>
+      <img class="avatar" src="./WhatsApp Image 2026-09-19 at sfdv13.png" alt="Charles Kremer" width="104" height="104">
+      <h1>Charles Kremer</h1>
+      <p class="role">Communication 360° &amp; influence</p>
+      <div class="rule"></div>
+    </header>
+
+    <!-- 3 BOUTONS PRINCIPAUX -->
+    <nav class="top-actions" aria-label="Liens personnels">
+      <!-- TODO : remplacer par l'URL de ton profil LinkedIn -->
+      <a class="btn" href="https://www.linkedin.com/in/charles-kremer-/" target="_blank" rel="noopener">
+        <svg><use href="#i-linkedin"/></svg> LinkedIn
+      </a>
+      <a class="btn" href="https://www.instagram.com/charles.kremer/" target="_blank" rel="noopener">
+        <svg><use href="#i-instagram"/></svg> Instagram
+      </a>
+      <a class="btn btn-primary btn-cv" href="../doss info job/index.html">
+        acceder mon CV
+      </a>
+    </nav>
+
+    <!-- PM - POLITIQUE MÉDIATIQUE -->
+    <section class="card" aria-labelledby="pm-title">
+      <div class="card-head">
+        <span class="eyebrow">Vice-président</span>
+        <h2 id="pm-title">PM - Politique Médiatique</h2>
+        <p>Média politique indépendant</p>
+      </div>
+
+      <a class="btn btn-primary btn-site" href="https://www.politiquemediatique.fr/" target="_blank" rel="noopener">
+        <span class="label"><svg><use href="#i-globe"/></svg> Accéder au site</span>
+        <svg><use href="#i-arrow"/></svg>
+      </a>
+
+      <div class="socials">
+        <a class="btn" href="https://www.linkedin.com/company/politique-mediatique/" target="_blank" rel="noopener" aria-label="PM sur LinkedIn">
+          <svg><use href="#i-linkedin"/></svg>
+        </a>
+        <a class="btn" href="https://www.instagram.com/pmlemedia/" target="_blank" rel="noopener" aria-label="PM sur Instagram">
+          <svg><use href="#i-instagram"/></svg>
+        </a>
+        <a class="btn" href="https://www.youtube.com/@politiquemediatique" target="_blank" rel="noopener" aria-label="PM sur YouTube">
+          <svg><use href="#i-youtube"/></svg>
+        </a>
+        <a class="btn" href="https://www.tiktok.com/@politiquemediatique" target="_blank" rel="noopener" aria-label="PM sur TikTok">
+          <svg><use href="#i-tiktok"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- DIVERTERE -->
+    <section class="card" aria-labelledby="div-title">
+      <div class="card-head">
+        <span class="eyebrow">Consultant</span>
+        <h2 id="div-title">Divertere</h2>
+        <p>Agence de communication 360°</p>
+      </div>
+
+      <a class="btn btn-primary btn-site" href="https://www.divertere.fr/" target="_blank" rel="noopener">
+        <span class="label"><svg><use href="#i-globe"/></svg> Accéder au site</span>
+        <svg><use href="#i-arrow"/></svg>
+      </a>
+
+      <!-- TODO : remplacer par l'URL de la page LinkedIn de Divertere -->
+      <a class="btn btn-small" href="https://www.linkedin.com/company/divertere/" target="_blank" rel="noopener">
+        <svg><use href="#i-linkedin"/></svg> Divertere sur LinkedIn
+      </a>
+    </section>
+
+    <!-- AUTRES LIENS : duplique un <a class="btn"> pour en ajouter -->
+    <!--
+    <section class="card" aria-labelledby="autres-title">
+      <div class="card-head">
+        <span class="eyebrow">Projets</span>
+        <h2 id="autres-title">Autres liens</h2>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://lesupport.me/" target="_blank" rel="noopener">Le Support</a>
+      </div>
+    </section>
+    -->
+
+    <footer>© <span id="year">2026</span> Charles Kremer</footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
